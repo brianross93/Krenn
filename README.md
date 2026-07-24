@@ -522,3 +522,70 @@ membership inside the now-certified border case, independently replayable
 Nullstellensatz nonimage certificates if exact membership fails, certified
 backward local-projection laws, and eventually a two-vertex contraction or
 forbidden matching-minor theorem connecting different vertex counts.
+
+## Bounded finite-counterexample campaign
+
+The native `n=6,d=3` campaign now combines singleton closure, exact
+`S_6 x S_3` support representatives, natural-coordinate omission strata,
+support-size quotas, target-aware rank-adaptive gauge charts, hard
+`L2`/`Linf` controls, complex deterministic multistart continuation, and a
+dense all-135-coordinate comparison. The charts remove up to 14
+color-diagonal directions common to `GHZ+t*e_002121`, and up to all 15
+directions for direct GHZ searches. Large, generation-stamped optimizer
+checkpoints remain outside the repository under
+`D:\KrennScratch\counterexample_search`; interrupted jobs resume only after
+their problem hashes replay. The committed result bundle stores selected
+weights and all 729 floating residuals and verifies without the scratch
+directory.
+
+The released bounded run used master seed `60320260724`, eight workers,
+100,000 orbit-closure nodes, a 2,000,000-state memory cap, support sizes
+`22,22,23,23,24,24,79,81,82,83,84,84`, radii `8,16,32`, four starts per
+sparse support, eight dense starts per radius, and 100 LM iterations per
+solve. It completed 168 jobs. No numerical zero crossed `1e-8`, so exact
+reconstruction was not triggered and no exact candidate was certified.
+
+For radii `8,16,32`, respectively, the best residuals were
+`0.567391,0.518492,0.505032` on natural-retaining sparse supports,
+`0.615094,0.555793,0.520867` on natural-omitting sparse supports, and
+`0.240291,0.524698,0.420280` in the dense comparison. All 27 retained
+candidates had finite floating weights, but every one was active on its hard
+norm boundary. Their weights therefore did not converge to a finite interior
+point. The known `Q` monomial is invariant for the 14-dimensional
+moving-target stabilizer but not for the extra direct-GHZ gauge direction;
+the bundle records that qualification explicitly. This is a bounded search
+miss, not a nonexistence proof.
+
+Run the released campaign:
+
+```powershell
+$env:OPENBLAS_NUM_THREADS = "1"
+$env:OMP_NUM_THREADS = "1"
+$env:MKL_NUM_THREADS = "1"
+python -B -m experiments.krenn_quantum_graph.counterexample_campaign `
+  --scratch-directory D:\KrennScratch\counterexample_search\final_gauge_v2 `
+  --results-directory results\krenn_quantum_graph\n6_d3_counterexample_search `
+  --workers 8 --orbit-nodes 100000 `
+  --support-state-cap 2000000 `
+  --retained-supports 6 --omission-supports 6 `
+  --starts-per-support 4 --dense-starts 8 `
+  --radii 8 16 32 --iterations 100 --evaluations 900 `
+  --checkpoint-interval 20 `
+  --continuation-schedule 1 0.5 0.25 0.125 0 `
+  --best-per-radius-class 3 --reconstruction-trigger 1e-8
+```
+
+Verify only the compact committed bundle:
+
+```powershell
+python -B -m experiments.krenn_quantum_graph.counterexample_campaign `
+  --verify-only `
+  --results-directory results\krenn_quantum_graph\n6_d3_counterexample_search
+```
+
+The exact reconstruction layer supports rational, Gaussian-rational, small
+cyclotomic, and bounded degree-at-most-four number fields. Exact affine
+membership is asserted only after the primary sparse system and an
+independently enumerated perfect-matching evaluator both vanish in all 729
+equations. A reconstruction miss, bounded numerical miss, or finite-field
+point is never promoted to a proof.
