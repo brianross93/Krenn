@@ -485,6 +485,164 @@ python -m experiments.krenn_quantum_graph.source_ideal
 python -m unittest tests.test_krenn_source_ideal -v
 ```
 
+## Exact \(k=2\) source-ideal preflight
+
+For \(D^2\), the codomain fine degree is \(2\delta=(2,\ldots,2)\).
+The multiplier of a mixed \(F_c\) has degree
+
+\[
+2\delta-\deg F_c:
+\quad
+1\text{ at }(i,c_i),\qquad
+2\text{ at the other two colors of vertex }i.
+\]
+
+An exact inclusion-exclusion recurrence counts loopless multigraphs on the
+18 vertex-color tokens.  Every residual degree is at most two, so the
+unrestricted components are paths, cycles, and double edges.  The resulting
+fine-graded dimensions are
+
+```text
+multiplier monomials per mixed coloring     206,654,284,635
+raw domain columns                     150,031,010,645,010
+raw codomain rows                        74,680,326,909,360
+raw nonzeros                           2,250,465,159,675,150
+```
+
+Burnside's lemma over the 33 conjugacy-type pairs of
+\(S_6\times S_3\) gives
+
+```text
+compressed domain columns                 34,740,542,451
+compressed codomain rows                   17,291,676,144
+```
+
+with the exact domain-orbit split
+
+```text
+5+1       1,723,078,477
+4+2       4,307,241,637
+4+1+1     4,307,033,332
+3+3       2,871,521,344
+3+2+1    17,224,970,227
+2+2+2     4,306,697,434
+```
+
+The same recurrence independently reproduces every hard \(k=1\) count:
+6,040 multiplier monomials, 11,608,920 codomain monomials, 1,314 domain
+orbits with the published occupation split, and 3,102 codomain orbits.
+
+The support of \(D^2\) has \(120^3=1,728,000\) monomials in 663 orbits.
+Its coefficient and orbit censuses are
+
+| coefficient | monomials | orbits |
+|---:|---:|---:|
+| 1 | 3,375 | 8 |
+| 2 | 70,875 | 45 |
+| 4 | 496,125 | 195 |
+| 8 | 1,157,625 | 415 |
+
+Full matrix construction is refused.  A conventional raw 64-bit CSC payload
+would require about 37.2 PB.  Even before storing one compressed nonzero, its
+64-bit column-pointer array alone needs 277,924,339,616 bytes (258.84 GiB),
+above the reviewed 64 GiB bound.  At the 15-entry-per-column upper bound, the
+compressed fixed-array payload would be about 8.62 TB; dense compressed
+storage would be about 4.81 ZB.  These figures exclude allocator,
+elimination, and temporary overhead.
+
+### Small exact support-row search
+
+The count preflight permits one controlled search on the 663 right-hand-side
+orbits without constructing the full matrix.
+
+- 632 orbits contain a rainbow perfect matching.  A `2+2+2` mixed generator
+  has exactly one of its 15 terms in \(\operatorname{supp}(D^2)\), forcing
+  the corresponding weight of any support-limited dual to vanish.
+- The remaining 31 orbits, containing 34,560 raw monomials, yield 56
+  distinct `4+2` matching-switch constraints from 291 predecessors.
+- A retained \(31\times31\) integer minor has determinant \(-1\).
+
+Thus the only invariant row functional supported on
+\(\operatorname{supp}(D^2)\) that annihilates the source map is zero.
+Reynolds averaging implies that no—not necessarily invariant—dual supported
+only there can pair nontrivially with \(D^2\).  A separate standard-library
+verifier reconstructs the matchings, all 663 orbits, all 632 singleton
+columns, the retained full 15-term switch columns, and the determinant
+without importing the producer.
+
+This is a negative result about a certificate ansatz.  It does **not** decide
+\(D^2\in J_{\rm mix}\), \(D\in\sqrt{J_{\rm mix}}\), affine GHZ membership, or
+global GHZ nonexistence.  A global dual may use codomain monomials outside
+\(\operatorname{supp}(D^2)\).
+
+The matching evidence now has one common combinatorial description.  The
+nine-edge natural support is a properly three-edge-colored triangular prism:
+the defect is its rainbow rung matching and the pole monomial \(Q\) is the
+complementary \(C_3\sqcup C_3\) two-factor.  The \(k=1\) separator uses a
+\(C_6\) multiplier and one alternating four-cycle switch.  Each support-21
+odd cycle is the corresponding three-switch parity circuit in a colored
+\(K_{3,3}\).  Quadratic pairs of the 15 perfect matchings have no incidence
+collisions; the first collisions occur for cubic triples and are exactly the
+ten \(K_{3,3}\) bipartitions.  This explains both the shared mechanism and
+why it does not by itself close the \(k=2\) radical question.
+
+Two other propagation routes also fail cleanly.  For the first support-21
+odd cycle (equations 16, 18, and 188), each full 15-term equation has exactly
+two monomials on those 21 source coordinates.  The other 39 degree-three
+monomials are pairwise distinct and spill outside that source support; this
+is only a support-conditional mechanism audit.  For each rank stratum of a
+bilinear two-vertex contraction, a replayed integer \(52\times52\) Jacobian
+minor is nonzero.
+This exceeds the 51-dimensional upper bound for the \(\Phi_{4,3}\) image,
+so no nonzero such contraction universally preserves the matching image.
+The bound \(51=54-3\) is replayed from the three independent reciprocal
+rescalings of complementary \(K_4\) edge pairs on the dense source torus;
+the matching-incidence law also replays the local-\(\mathrm{GL}_3\)
+equivariance used to reduce contractions to their three rank normal forms.
+The larger ranks 71, 81, and 81 at \(p=31,1009,1000003\) are retained only
+as diagnostics.  The contracted GHZ targets themselves are diagonal
+\(n=4\) tensors with explicit, symbolically replayed \(\Phi_{4,3}\)
+witnesses.  Finally, the all-zero source valuation makes all 15 terms of
+every mixed equation tie, so an additive valuation law alone cannot control
+the required leading-coefficient cancellations.
+
+A one-shell reconnaissance used every averaged column signature with a term
+in \(\operatorname{supp}(D^2)\).  It has 4,493 columns, 39,033 output-row
+orbits, and 60,850 nonzeros.  Ranks at
+\(p=31,1009,1000003\) are \(4493/4494\) before/after adjoining \(D^2\).
+Its deterministic column-orbit and complete sparse-layout fingerprints are
+`f5ca49ab68e93c70640a16b857a2dccce7b995df357277f17a373e0e51a7692a`
+and
+`627ad8463b617c962b44c56af9e470dc8c2b685aaf81b63cf2ef0f5ca19bb156`.
+These modular ranks are nonproof diagnostics.  An exact two-row shell
+separator pairs to 1,080 with \(D^2\), but two explicit support-disjoint
+columns each pair to \(-1\); symbolic replay therefore rejects it as a
+global dual certificate.  A bounded extension search also did not close,
+which is only a search boundary.  The opt-in deterministic rebuild is
+`python -m experiments.krenn_quantum_graph.one_shell_full_recompute --run-full`;
+its large cache, report, and log default to
+`D:\KrennScratch\obstruction_certificate`.
+
+The round-trippable exact certificate, independent verifier receipts, and
+strict claim manifest are under
+`results/krenn_quantum_graph/n6_d3_radical_obstruction/`.  The conclusion
+remains undecided between affine membership and strict border membership:
+the known border membership is exact, while neither \(D^2\in J_{\rm mix}\)
+nor a global \(D^2\) separator has been proved.
+
+```text
+python -m experiments.krenn_quantum_graph.higher_power_source_ideal
+python -m experiments.krenn_quantum_graph.mechanism_audit
+python -m experiments.krenn_quantum_graph.radical_obstruction
+python -m experiments.krenn_quantum_graph.radical_obstruction_artifact \
+  results/krenn_quantum_graph/n6_d3_radical_obstruction --verify
+python -m unittest tests.test_krenn_higher_power_source_ideal -v
+python -m unittest tests.test_krenn_mechanism_audit -v
+python -m unittest tests.test_krenn_one_shell_reconnaissance -v
+python -m unittest tests.test_krenn_radical_obstruction -v
+python -m unittest tests.test_krenn_radical_obstruction_artifact -v
+```
+
 ## Sharp deformation regression
 
 At the `n=4,d=3` fixture, the exact `81 x 54` Jacobian has rank 51 and

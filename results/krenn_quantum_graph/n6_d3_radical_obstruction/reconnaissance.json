@@ -1,0 +1,246 @@
+{
+  "bounded_extension_search": {
+    "best_terminal_violating_column_orbits": 12,
+    "claim": "search boundary only",
+    "exact_extension_found": false,
+    "maximum_functional_support": 12,
+    "role": "nonproof-reconnaissance",
+    "states_seen_from_best_start": 1438
+  },
+  "claims": {
+    "D_in_radical_J_mix_decided": false,
+    "D_squared_global_nonmembership_proved": false,
+    "D_squared_in_J_mix_decided": false,
+    "controlled_one_shell_nonmembership_proved": true,
+    "evidence_status": "global affine membership remains undecided",
+    "exact_affine_GHZ_membership_decided": false,
+    "global_GHZ_nonexistence_proved": false
+  },
+  "computations_performed_in_normal_verification": {
+    "full_39033_by_4493_matrix_reconstructed": false,
+    "selected_full_domain_column_orbits_reconstructed": 3,
+    "selected_row_orbits_reconstructed": 2
+  },
+  "deterministic_sparse_layout": {
+    "column_orbit_fingerprint": "f5ca49ab68e93c70640a16b857a2dccce7b995df357277f17a373e0e51a7692a",
+    "column_orbit_fingerprint_recipe": "encode each canonical column as coloring bytes, ff, multiplier bytes, 0a; lexicographically sort encodings; SHA-256 their concatenation",
+    "column_order": "lexicographic order of the least (6-byte coloring, 15-byte sorted multiplier) pair in each S6 x S3 column orbit",
+    "entry_rule": "number from 0 through 15 of the column's complete polynomial outputs lying in the row orbit",
+    "recomputed_in_normal_verification": false,
+    "row_order": "lexicographic order of the least sorted 18-byte variable-index monomial in each S6 x S3 row orbit",
+    "sparse_signature_fingerprint": "627ad8463b617c962b44c56af9e470dc8c2b685aaf81b63cf2ef0f5ca19bb156",
+    "sparse_signature_fingerprint_recipe": "for each column concatenate its sorted canonical row[18]+coefficient_uint16_big_endian entries and append 0a; sort the column byte strings; SHA-256 their concatenation"
+  },
+  "exact_shell_separator": {
+    "basis": "S6 x S3 invariant row-orbit indicator functionals",
+    "escape_row": {
+      "D_squared_coefficient": 0,
+      "orbit_size": 1080,
+      "role": "off_support_escape",
+      "variable_indices": [
+        0,
+        0,
+        5,
+        13,
+        26,
+        26,
+        58,
+        58,
+        71,
+        90,
+        90,
+        95,
+        107,
+        107,
+        117,
+        117,
+        130,
+        130
+      ],
+      "weight": -1
+    },
+    "exact_symbolic_replay_required": true,
+    "included_touching_column_orbits": 1,
+    "integer_rhs_pairing": 1080,
+    "sole_included_touching_column": {
+      "coloring": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2
+      ],
+      "escape_row_hits": 3,
+      "multiplier_variable_indices": [
+        0,
+        17,
+        17,
+        31,
+        31,
+        62,
+        62,
+        76,
+        76,
+        85,
+        90,
+        90,
+        117,
+        117,
+        134
+      ],
+      "separator_value": 0,
+      "shell_membership": "included_direct_support_hit",
+      "support_row_hits": 1
+    },
+    "support_row": {
+      "D_squared_coefficient": 1,
+      "orbit_size": 360,
+      "role": "D_squared_support",
+      "variable_indices": [
+        0,
+        0,
+        13,
+        13,
+        26,
+        26,
+        53,
+        53,
+        67,
+        67,
+        99,
+        99,
+        108,
+        108,
+        121,
+        121,
+        134,
+        134
+      ],
+      "weight": 3
+    }
+  },
+  "explicit_global_escape_columns": [
+    {
+      "coloring": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "escape_row_hits": 1,
+      "multiplier_variable_indices": [
+        0,
+        5,
+        17,
+        17,
+        31,
+        49,
+        49,
+        80,
+        81,
+        116,
+        116,
+        121,
+        121,
+        126,
+        126
+      ],
+      "separator_value": -1,
+      "shell_membership": "omitted_no_direct_support_hit",
+      "support_row_hits": 0
+    },
+    {
+      "coloring": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2
+      ],
+      "escape_row_hits": 1,
+      "multiplier_variable_indices": [
+        0,
+        17,
+        17,
+        31,
+        31,
+        62,
+        62,
+        76,
+        76,
+        90,
+        90,
+        95,
+        117,
+        117,
+        122
+      ],
+      "separator_value": -1,
+      "shell_membership": "omitted_no_direct_support_hit",
+      "support_row_hits": 0
+    }
+  ],
+  "modular_rank_diagnostics": {
+    "records": [
+      {
+        "augmented_rank": 4494,
+        "matrix_rank": 4493,
+        "prime": 31,
+        "role": "nonproof-reconnaissance"
+      },
+      {
+        "augmented_rank": 4494,
+        "matrix_rank": 4493,
+        "prime": 1009,
+        "role": "nonproof-reconnaissance"
+      },
+      {
+        "augmented_rank": 4494,
+        "matrix_rank": 4493,
+        "prime": 1000003,
+        "role": "nonproof-reconnaissance"
+      }
+    ],
+    "role": "nonproof-reconnaissance",
+    "used_as_characteristic_zero_certificate": false
+  },
+  "power": 2,
+  "receipt_fingerprint": "5963f95dc99fa4efb88c480a10de97498fdfebd1fb1756117876fed1e10fb645",
+  "schema": "krenn.n6_d3.k2.one_shell_reconnaissance.v1",
+  "scope": {
+    "counts": {
+      "D_squared_support_orbits": 663,
+      "S6_x_S3_column_orbits": 4493,
+      "complete_polynomial_output_signatures": 4493,
+      "divisibility_tests": 7220070,
+      "matching_terms_per_generator": 15,
+      "matrix_nonzeros": 60850,
+      "mixed_colorings": 726,
+      "output_raw_rows": 127693,
+      "output_row_orbits": 39033,
+      "raw_columns_hitting_support_representatives": 11148
+    },
+    "coverage_argument": "if m*F_c has output r in supp(D^2), its selected term divides r and m is uniquely r/term; transporting r to one of 663 support representatives transports the column to one of the exhaustively tested divisions",
+    "description": "every mixed-generator column orbit having at least one output in supp(D^2)",
+    "exhaustive_within_declared_scope": true,
+    "full_k2_domain_enumerated": false,
+    "random_seed": null,
+    "recompute_command": "python -m experiments.krenn_quantum_graph.one_shell_full_recompute",
+    "sampled": false
+  },
+  "scratch_artifact_hashes": {
+    "directory": "D:\\KrennScratch\\obstruction_certificate",
+    "role": "recorded-audit-trail-not-read-by-normal-tests",
+    "sha256": {
+      "one_shell_coverage_audit.json": "b4ab8cfe80992698877070da60065f6fe2d9906950bc68974464927759b6e039",
+      "one_shell_full_separator_beam_search.json": "2e2f8dc7c0ac3f5e10614b9328943a83a41bc4b2280d57ebe767ceeb94bd545b",
+      "one_shell_private_analysis.json": "ee589358ad0db8703fb4e09adc75e72cb638bad7ad1d38504419603d6c43f388",
+      "one_shell_result.json": "4f4a7efc4fe34fe9efa65c681d7a86f408b46c05b7c8dfab666268a382ac3b34",
+      "one_shell_separator_expansion.json": "f8e832bdecbfc18a450b8882ddd364bacce35e74a2fed08841a30ecacdf361ab"
+    }
+  }
+}
