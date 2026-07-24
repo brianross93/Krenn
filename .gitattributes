@@ -2,6 +2,7 @@
 *.gitignore text eol=lf
 *.py text eol=lf
 *.md text eol=lf
+*.sing text eol=lf
 *.txt text eol=lf
 **/*.json -text
 **/*.npz -text -diff
