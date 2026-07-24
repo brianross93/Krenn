@@ -1,0 +1,135 @@
+{
+  "artifacts": [
+    {
+      "bytes": 4277,
+      "path": "certificate.json",
+      "sha256": "3c19af844d2454f22d091d2670762c1e49897d6fa5917a89d8f2b4120850b2e2"
+    },
+    {
+      "bytes": 38369,
+      "path": "equal_g_n6_d3_F31.sing",
+      "sha256": "ff4adcabfba23afabb9624a5feda6a3ca74f9138bdb45398015ee95c745536a0"
+    },
+    {
+      "bytes": 192918,
+      "path": "equal_g_n6_d4_F31.sing",
+      "sha256": "117317f05f538e26f54b68223d0894d40b113f42c90a2fb870b103b68694634a"
+    },
+    {
+      "bytes": 209789,
+      "path": "defect_report.json",
+      "sha256": "95aa1367a1f718fc5d1160c36f6d1f7829e2520f0186b595f25a8ee1afa002b6"
+    }
+  ],
+  "inputs": [
+    {
+      "canonical_bytes": 17993,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/border_image.py",
+      "sha256": "59c1d7b5432c6c601a20587d870ad8456d03ab05415e602db7a56413088fa5e9"
+    },
+    {
+      "canonical_bytes": 17197,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/border_valuation.py",
+      "sha256": "e468acc874163eef1202f0190002ac8701a4646ad835ec4821443d08f086d175"
+    },
+    {
+      "canonical_bytes": 11986,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/cyclotomic_shadow.py",
+      "sha256": "30a3593d6487fa0d5879a77e14a4b65c6377c36f54333fa4878a34f39f21a9e2"
+    },
+    {
+      "canonical_bytes": 62127,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/defect_mining.py",
+      "sha256": "3431e3bd98488cdeacea62adfa36dbc0af469551b108bf9706b8e3234ff4b910"
+    },
+    {
+      "canonical_bytes": 887,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/fixtures.py",
+      "sha256": "2205924686c08dd3fdb4949edd260a8bf501e71390be0976c8b4992bcf700454"
+    },
+    {
+      "canonical_bytes": 51104,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/formal_lift.py",
+      "sha256": "eef2ae82b940a239b1259f6c721268fe3fe5b2f1b3af7afda699c0c88034d5e7"
+    },
+    {
+      "canonical_bytes": 25597,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/hafnian_identities.py",
+      "sha256": "53090c323972ebba5b6e80c07208d4e7b019fc2388ccf41280b8b2fae302d5b1"
+    },
+    {
+      "canonical_bytes": 23565,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/n6_deformation.py",
+      "sha256": "fb5fc2504ca9bf8a0165a3d2a952421d3fd783e7b08b1f7df59e1ef046409449"
+    },
+    {
+      "canonical_bytes": 16849,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/shadow_slices.py",
+      "sha256": "6c6b3c44dde56ca155d85d693bd6f98f03e799afd9d9c563b1f68a0b4a7c8a53"
+    },
+    {
+      "canonical_bytes": 36651,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/support_extension.py",
+      "sha256": "de6cde31de41eb5bfe99af4c88a95fd42495ec7634c78609761194e8ab156362"
+    },
+    {
+      "canonical_bytes": 11452,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/system.py",
+      "sha256": "3f64e42efc68b5391b3ec9798e801d1efa1f7c4a9c68c56a4b3b2e78540214a9"
+    },
+    {
+      "canonical_bytes": 13053,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/targets.py",
+      "sha256": "6b3d6239fcb2353352ea468103f920066273db8354a8d8fb60911b338c351baa"
+    },
+    {
+      "canonical_bytes": 14642,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/tensor_invariants.py",
+      "sha256": "89a4bc78af2adbcc2026f678aed590521d17547ba2f6430f7dfe441dbaf8bd76"
+    },
+    {
+      "canonical_bytes": 19540,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/tensor_map.py",
+      "sha256": "9bc2224ba6ad70c894ab6c7bf742c9387b7a3acf34a2a2876dfb7a72f5232f9c"
+    },
+    {
+      "canonical_bytes": 24466,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/ternary_search.py",
+      "sha256": "d56112a45e4bc615e8a17159db4792cab501f18f4b553c76c5a90af56015f488"
+    },
+    {
+      "canonical_bytes": 9112,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/ternary_seed_orbits.py",
+      "sha256": "32be5f98be0b75971933da8dfdb0d1d25e290cac400990f4dd179517dd5330f3"
+    },
+    {
+      "canonical_bytes": 9266,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/transport.py",
+      "sha256": "d28d18984ba033a56c0c328b320ecc12e0ce234f524d60a651d33c874fdc39bb"
+    },
+    {
+      "canonical_bytes": 8389,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/witness.py",
+      "sha256": "cb64d99e80eca4ff17ca66f0f69a4099ca08010ff85ffdbf53aa4a391b7ed7dd"
+    }
+  ],
+  "schema": "krenn-n6-d3-seed-defect-mining-manifest-v4"
+}

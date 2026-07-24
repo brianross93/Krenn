@@ -118,7 +118,7 @@ python -m venv .venv
 python -m pip install -r requirements.txt
 ```
 
-Run the complete 101-test standalone suite from the repository root:
+Run the complete standalone suite from the repository root:
 
 ```bash
 python -m unittest discover -v -s tests -p "test_krenn_*.py"
@@ -146,6 +146,13 @@ python -m experiments.krenn_quantum_graph.ternary_milestone_artifact \
 
 python -m experiments.krenn_quantum_graph.ternary_milestone_artifact \
   results/krenn_quantum_graph/n6_d3_ternary_milestone --verify
+```
+
+Generate or verify the exact near-miss forensic bundle:
+
+```bash
+python -m experiments.krenn_quantum_graph.defect_mining
+python -m experiments.krenn_quantum_graph.defect_mining --verify
 ```
 
 ## Original exact milestones
@@ -204,6 +211,218 @@ The search is fixed-target: it requires each constant GHZ coefficient to be
 exactly one, so it is narrower than projective or local-diagonal GHZ-orbit
 search.
 
+## What the `728/729` defect actually proves
+
+The lone failed equation of the natural seed is equation 70:
+
+```text
+coloring 002121, occupation (2,2,2), target coefficient 0.
+```
+
+Its residual is the full 15-term hafnian coefficient. On the natural
+support, exactly one term survives:
+
+\[
+W_{01}^{00}W_{24}^{22}W_{35}^{11}.
+\]
+
+The eight one-perfect-matching-per-color support orbits have respectively
+
+```text
+24, 12, 6, 6, 5, 2, 1, 3
+```
+
+mixed defects. The same literal equation does not fail on every orbit.
+Instead there is a support dichotomy:
+
+- if two selected color matchings share an edge, they force a `4+2` mixed
+  coloring;
+- if all three are edge-disjoint, their cubic union has a rainbow perfect
+  matching and forces a `2+2+2` coloring.
+
+Every forced coefficient has exactly one active matching monomial. Therefore
+no choice of nonzero signs, phases, or rescalings on those same nine slots can
+cancel it. This proves a finite no-go theorem for the complete
+one-diagonal-perfect-matching-per-color support family, covering all 3,375
+ordered seeds.
+
+It is not a no-go theorem for the full 135-variable map. The fixed-support
+inconsistency has the small exact receipt
+
+\[
+1=DQ-\bigl((P_0-1)P_1P_2+(P_1-1)P_2+(P_2-1)\bigr),
+\]
+
+where `P_a` is the selected constant-color matching product, `D` is a forced
+mixed monomial, and `P_0 P_1 P_2 = DQ`.
+
+The forensic bundle also records:
+
+- all 15 terms of the exact victim polynomial;
+- every residual on all eight orbit representatives;
+- the identity
+  \[
+  \sum_c\Phi(W)_c\prod_i g_i(c_i)
+  =\operatorname{haf}\bigl(g_i^T W_{ij}g_j\bigr);
+  \]
+- the all-ones contraction `haf(s_ij)=4` versus GHZ target sum `3`;
+- negative audits for linear matching dependence, the `S_6` sign character,
+  invariant linear output directions, and an `n=4` contraction
+  obstruction; and
+- deterministic Singular inputs over `F_31` for the equal-`g` `d=3` and
+  `d=4` target fibers.
+
+The equal-`g` systems have 90 variables and 28 equations for `d=3`, and 150
+variables and 84 equations for `d=4`. Concrete integer Jacobian minors reduce
+to nonzero determinants modulo 31 and give full ranks 28 and 84. Hence both
+equal-`g` maps are dominant in characteristic zero: their image closures fill
+the occupation-coefficient spaces. No nonzero universal polynomial invariant
+can live solely in this symmetric shadow.
+
+For `d=3`, the conclusion is stronger. Every perfect matching contains
+exactly one edge incident to vertex `0`. After fixing the 60 non-star shadow
+variables, all 28 equations are jointly linear in the 30 star variables. A
+deterministic `{-1,+1}` choice for the non-star variables gives a `28 x 28`
+minor with exact determinant
+
+\[
+2^{54}.
+\]
+
+Thus this fixed rational slice surjects onto every rational occupation
+target. In particular, an exact rational GHZ shadow solution exists, with
+denominators at most 32. A second sparse certificate over
+\(\mathbf Q(\omega)\), where \(\omega^2+\omega+1=0\), realizes
+
+\[
+\frac{A^3+B^3+C^3+6ABC}{9}=X^3+Y^3+Z^3
+\]
+
+on nine prism edges. These are shadow solutions, not full tensor solutions:
+the sparse lift still has nonzero `002121` amplitude
+\(\frac23\omega^2\). The antisymmetric and distinct-`g_i` equations
+therefore remain the relevant exact-image arena. The special `d=4` shadow
+fiber is still undecided.
+
+## Exact border-image certificate at `n=6,d=3`
+
+The natural near-miss also contains a full-tensor Laurent degeneration. For
+nonzero `t`, replace
+
+```text
+W[0,1,0,0] = t
+W[2,3,0,0] = t^-1
+```
+
+and leave the other seven natural seed weights equal to one. Exact symbolic
+evaluation of all 10,935 matching monomials gives
+
+\[
+\Phi(W(t))=\operatorname{GHZ}_{6,3}
+            +t\,e_{002121}.
+\]
+
+Although the input has a pole at `t=0`, its output extends polynomially and
+specializes there to GHZ. Taking real \(t\to0\) through nonzero values proves
+membership in the ordinary Euclidean closure over \(\mathbf C\), and hence in
+the Zariski closure of the image. This is an exact border-image membership
+certificate. It does not yet prove membership in the strict boundary
+\(\overline{\operatorname{im}\Phi}\setminus\operatorname{im}\Phi\): it is not
+a finite witness and does not decide whether GHZ lies in the affine image
+itself.
+
+The exact differential profile agrees with this degeneration. At the natural
+seed, the full `729 x 135` Jacobian has rank 130 and nullity 5 over `Q`; its
+kernel is exactly the five-dimensional vertex-scalar gauge
+
+\[
+W_{ij}^{ab}\longmapsto\lambda_i\lambda_jW_{ij}^{ab},
+\qquad \prod_i\lambda_i=1.
+\]
+
+After deleting equation 70, the Jacobian has rank 129 and nullity 6. The
+sixth direction is
+
+```text
+delta(W[0,1,0,0]) = -1
+delta(W[2,3,0,0]) = +1
+```
+
+and satisfies \(J\delta=-e_{70}\). The ranks over `Q` are proved by nonzero
+reductions of concrete integer minors modulo 31 together with the exact
+kernel directions giving matching upper bounds; no finite-field solution is
+promoted to characteristic zero.
+
+The pole is not removable by a parameter-dependent vertex gauge. The
+six-weight monomial
+
+\[
+Q=W_{02}^{11}W_{23}^{00}W_{03}^{22}
+  W_{14}^{11}W_{45}^{00}W_{15}^{22}
+\]
+
+has vertex degree two everywhere and is therefore gauge invariant. Along the
+border curve, \(Q=t^{-1}\). Equivalently, a nonnegative integer Farkas vector
+selecting the same six coordinates turns the nine regularity inequalities
+into the contradiction \(-1\geq0\). This remains valid for rational Puiseux
+gauges and positive ramified reparameterizations.
+
+Nor does a finite-order deformation obstruction appear. With \(t=1-s\), the
+repair tangent lifts uniquely in a rational local gauge slice to
+
+\[
+W_{01}^{00}=1-s,\qquad
+W_{23}^{00}=1+s+s^2+\cdots .
+\]
+
+Here “uniquely” has a precise local meaning. Fixing five declared input
+coordinates cuts out a 130-dimensional linear slice through the natural
+seed. The restriction of the five gauge directions to those coordinates has
+determinant \(-2\). Since the full Jacobian kernel is exactly the
+five-dimensional gauge space, the restricted Jacobian has rank 130 and
+nullity zero over \(\mathbf Q\). At each power of \(s\), the next coefficient
+therefore has at most one value in this fixed slice, and the displayed
+geometric-series coefficient supplies it. This does not assert uniqueness of
+all global branches or uniqueness in other gauge slices.
+
+For every \(N\geq1\), the exact polynomial truncation satisfies all 729
+coefficient identities
+
+\[
+\Phi(W^{(N)}(s))
+=\operatorname{GHZ}_{6,3}+(1-s)e_{70}-s^{N+1}e_0.
+\]
+
+Thus the moving target lifts over \(\mathbf Q[[s]]\) to every order, but the
+geometric series has a genuine gauge-invariant pole at \(s=1\). Local
+Jacobian or finite-order cokernel calculations alone cannot decide affine
+membership.
+
+There is also a finite-support obstruction beyond the original nine-slot
+ansatz. Retain all nine natural nonzero coordinates, but permit arbitrary
+additional coordinates and arbitrary nonzero complex values on the resulting
+support. Repairing equation 70 requires at least two new coordinates. Each of
+the six minimum repairs creates two new singleton mixed equations.
+
+A deterministic missing-set closure then follows the first singleton
+equation and branches over every alternative perfect matching that could
+cancel it. The raw, unquotiented traversal visits 1,632,189 supports through
+total support size 21. No support of size at most 20 is singleton-free. At
+size 21 exactly six minimal supports survive the singleton test. Each has 18
+active mixed equations, all binomials, and each contains an odd
+three-binomial exponent cycle. Multiplying the three resulting monomial
+ratios gives
+
+\[
+1=(-1)^3=-1,
+\]
+
+so none is solvable over \(\mathbf C\) (or any field of characteristic not
+two). Therefore any finite exact witness that retains all nine natural slots
+must have at least 22 nonzero coordinates. This remains a support-conditional
+lower bound: it does not exclude witnesses that omit a natural slot, and it
+does not decide whether a support of size 22 or more can realize GHZ.
+
 ## Sharp deformation regression
 
 At the `n=4,d=3` fixture, the exact `81 x 54` Jacobian has rank 51 and
@@ -230,13 +449,14 @@ computation is not used as a proof over `C`.
   emitted, so this application makes no new proof claim for that benchmark.
 - The bounded `n=6,d=3` ternary run proves only what happened at its replayed
   nodes.
-- Projective, local-diagonal-orbit, and border-image modes are named
-  explicitly but do not yet have solvers or proof certificates.
+- Projective and local-diagonal-orbit modes are named explicitly but do not
+  yet have solvers or proof certificates. Border mode now has the specific
+  exact `n=6,d=3` Laurent certificate above, but no general solver.
 - Forward local-projection equivariance is exact. Backward no-go propagation
   still requires an independently certified nonimage result.
 
-The next high-value mathematical outputs are genuine polynomial invariants
-vanishing on the image closure, independently replayable Nullstellensatz
-nonimage certificates, exact-image versus border-image separation, certified
+The next high-value mathematical outputs are a decision on exact affine
+membership inside the now-certified border case, independently replayable
+Nullstellensatz nonimage certificates if exact membership fails, certified
 backward local-projection laws, and eventually a two-vertex contraction or
 forbidden matching-minor theorem connecting different vertex counts.
