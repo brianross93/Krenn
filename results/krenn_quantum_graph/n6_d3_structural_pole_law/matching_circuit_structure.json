@@ -1,0 +1,842 @@
+{
+  "claims": {
+    "D_in_radical_J_mix_decided": false,
+    "exact_affine_GHZ_membership_decided": false,
+    "fixed_coloring_localized_matching_lattice_complete": true,
+    "global_moving_fiber_pole_law_proved": false,
+    "naive_degree_nine_global_identity_exists": false,
+    "natural_symmetry_branches_obey_t_times_S_equals_1": true
+  },
+  "matching_circuit_lattice": {
+    "circuit_relation_rank_over_Q": 5,
+    "circuits": [
+      {
+        "bipartition": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ]
+        ],
+        "even_matching_indices": [
+          7,
+          11,
+          13
+        ],
+        "odd_matching_indices": [
+          8,
+          10,
+          14
+        ],
+        "relation_coefficients": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          1,
+          -1
+        ]
+      },
+      {
+        "bipartition": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            4,
+            5
+          ]
+        ],
+        "even_matching_indices": [
+          4,
+          11,
+          12
+        ],
+        "odd_matching_indices": [
+          5,
+          9,
+          14
+        ],
+        "relation_coefficients": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          -1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "bipartition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2,
+            3,
+            5
+          ]
+        ],
+        "even_matching_indices": [
+          3,
+          8,
+          12
+        ],
+        "odd_matching_indices": [
+          5,
+          6,
+          13
+        ],
+        "relation_coefficients": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1,
+          -1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          -1,
+          0
+        ]
+      },
+      {
+        "bipartition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            2,
+            3,
+            4
+          ]
+        ],
+        "even_matching_indices": [
+          3,
+          7,
+          9
+        ],
+        "odd_matching_indices": [
+          4,
+          6,
+          10
+        ],
+        "relation_coefficients": [
+          0,
+          0,
+          0,
+          1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "bipartition": [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ],
+        "even_matching_indices": [
+          1,
+          10,
+          12
+        ],
+        "odd_matching_indices": [
+          2,
+          9,
+          13
+        ],
+        "relation_coefficients": [
+          0,
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          1,
+          0,
+          1,
+          -1,
+          0
+        ]
+      },
+      {
+        "bipartition": [
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            1,
+            3,
+            5
+          ]
+        ],
+        "even_matching_indices": [
+          0,
+          7,
+          12
+        ],
+        "odd_matching_indices": [
+          2,
+          6,
+          14
+        ],
+        "relation_coefficients": [
+          1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          -1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "bipartition": [
+          [
+            0,
+            2,
+            5
+          ],
+          [
+            1,
+            3,
+            4
+          ]
+        ],
+        "even_matching_indices": [
+          0,
+          8,
+          9
+        ],
+        "odd_matching_indices": [
+          1,
+          6,
+          11
+        ],
+        "relation_coefficients": [
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          1,
+          0,
+          -1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "bipartition": [
+          [
+            0,
+            3,
+            4
+          ],
+          [
+            1,
+            2,
+            5
+          ]
+        ],
+        "even_matching_indices": [
+          0,
+          4,
+          13
+        ],
+        "odd_matching_indices": [
+          1,
+          3,
+          14
+        ],
+        "relation_coefficients": [
+          1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          -1
+        ]
+      },
+      {
+        "bipartition": [
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            2,
+            4
+          ]
+        ],
+        "even_matching_indices": [
+          0,
+          5,
+          10
+        ],
+        "odd_matching_indices": [
+          2,
+          3,
+          11
+        ],
+        "relation_coefficients": [
+          1,
+          0,
+          -1,
+          -1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          -1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "bipartition": [
+          [
+            0,
+            4,
+            5
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "even_matching_indices": [
+          1,
+          5,
+          7
+        ],
+        "odd_matching_indices": [
+          2,
+          4,
+          8
+        ],
+        "relation_coefficients": [
+          0,
+          1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "cubic_collision_fibers": 10,
+    "cubic_incidence_sums": 670,
+    "cubic_multisets": 680,
+    "integral_kernel_generated_by_K3_3_circuits": true,
+    "integral_kernel_rank": 5,
+    "localized_laurent_relation_lattice_complete": true,
+    "matching_incidence_rank_over_Q": 10,
+    "matching_incidence_shape": [
+      15,
+      15
+    ],
+    "perfect_matchings": 15,
+    "polynomial_toric_ideal_generation_claimed": false,
+    "quadratic_collision_fibers": 0,
+    "quadratic_multisets": 120,
+    "scope": "multiplicative relations among the 15 matching terms of one fixed coloring after Laurent localization",
+    "unimodular_minor": {
+      "circuit_rows": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "determinant": 1,
+      "matching_columns": [
+        0,
+        1,
+        3,
+        4,
+        7
+      ],
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  },
+  "naive_global_identity": {
+    "D_expansion_terms": 3375,
+    "D_not_in_J_mix_at_k1_replayed": true,
+    "F_victim_times_S_distinct_terms": 60,
+    "F_victim_times_S_is_in_J_mix": true,
+    "F_victim_times_S_raw_terms": 60,
+    "ansatz": "F_victim * (Q0 + Q1 + Q2 + Q3) = D",
+    "claim_boundary": "The local symmetry law cannot be promoted to the displayed degree-nine polynomial identity, even after adding arbitrary degree-six multiples of mixed generators.  This does not decide radical membership or exclude a higher-degree law.",
+    "degree_six_mixed_multiplier_repair_exists": false,
+    "global_GHZ_nonexistence_proved": false,
+    "k1_exact_dual_lambda_transpose_b": -720,
+    "naive_global_polynomial_identity_holds": false,
+    "naive_global_polynomial_identity_refuted_exactly": true,
+    "ordinary_degree": 9,
+    "outside_D_support_spill_terms": 56,
+    "residual_coefficient_census": {
+      "-1": 56,
+      "1": 3371
+    },
+    "residual_nonzero_terms": 3427,
+    "set_theoretic_or_higher_power_relation_decided": false,
+    "spill_full_group_orbit_representatives": [
+      [
+        0,
+        5,
+        17,
+        49,
+        81,
+        112,
+        125,
+        126,
+        133
+      ],
+      [
+        0,
+        5,
+        17,
+        49,
+        82,
+        108,
+        125,
+        130,
+        132
+      ],
+      [
+        0,
+        12,
+        26,
+        58,
+        70,
+        98,
+        103,
+        119,
+        126
+      ],
+      [
+        0,
+        12,
+        26,
+        58,
+        71,
+        94,
+        107,
+        118,
+        126
+      ]
+    ],
+    "spill_full_group_orbits": 4,
+    "terms_overlapping_D_support": 4
+  },
+  "schema": "krenn.n6_d3.matching_circuit_structure.v1",
+  "victim_symmetry_pole": {
+    "S_definition": "Q0 + Q1 + Q2 + Q3",
+    "S_on_every_literal_path": "t^-1",
+    "actions_per_literal_path": 2,
+    "all_729_outputs_equal_GHZ_plus_t_victim": true,
+    "cross_evaluation_patterns": [
+      [
+        "0",
+        "0",
+        "0",
+        "t^-1"
+      ],
+      [
+        "0",
+        "0",
+        "t^-1",
+        "0"
+      ],
+      [
+        "0",
+        "t^-1",
+        "0",
+        "0"
+      ],
+      [
+        "t^-1",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "each_Q_is_product_one_vertex_gauge_invariant": true,
+    "literal_natural_paths": 24,
+    "literal_paths_per_active_Q": {
+      "0": 6,
+      "1": 6,
+      "2": 6,
+      "3": 6
+    },
+    "local_branch_law_exact": true,
+    "pole_monomial_variable_keys": [
+      [
+        [
+          0,
+          2,
+          1,
+          1
+        ],
+        [
+          0,
+          3,
+          2,
+          2
+        ],
+        [
+          1,
+          4,
+          1,
+          1
+        ],
+        [
+          1,
+          5,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          5,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          1,
+          1
+        ],
+        [
+          0,
+          5,
+          2,
+          2
+        ],
+        [
+          1,
+          3,
+          2,
+          2
+        ],
+        [
+          1,
+          4,
+          1,
+          1
+        ],
+        [
+          2,
+          5,
+          0,
+          0
+        ],
+        [
+          3,
+          4,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          3,
+          2,
+          2
+        ],
+        [
+          0,
+          4,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          5,
+          2,
+          2
+        ],
+        [
+          2,
+          5,
+          0,
+          0
+        ],
+        [
+          3,
+          4,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          4,
+          1,
+          1
+        ],
+        [
+          0,
+          5,
+          2,
+          2
+        ],
+        [
+          1,
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          3,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          5,
+          0,
+          0
+        ]
+      ]
+    ],
+    "pole_monomial_vertex_degrees": [
+      [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    ],
+    "pole_monomials": [
+      [
+        13,
+        26,
+        67,
+        80,
+        81,
+        126
+      ],
+      [
+        13,
+        44,
+        62,
+        67,
+        99,
+        108
+      ],
+      [
+        26,
+        31,
+        49,
+        80,
+        99,
+        108
+      ],
+      [
+        31,
+        44,
+        49,
+        62,
+        81,
+        126
+      ]
+    ],
+    "scope": "all victim-stabilizer copies of the known natural Laurent branch; no claim about other moving-fiber components",
+    "stabilizer_actions": 48,
+    "stabilizer_preserves_S": true,
+    "t_times_S_on_every_literal_path": "1",
+    "victim_coloring": [
+      0,
+      0,
+      2,
+      1,
+      2,
+      1
+    ],
+    "victim_equation": 70
+  }
+}

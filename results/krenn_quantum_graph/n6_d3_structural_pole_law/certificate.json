@@ -1,0 +1,112 @@
+{
+  "claim_boundary": {
+    "D_in_radical_J_mix_decided": false,
+    "all_vertical_components_excluded": false,
+    "exact_affine_GHZ_membership_status": "undecided",
+    "global_finite_GHZ_nonexistence_proved": false,
+    "support_22_or_larger_witness_excluded": false
+  },
+  "exact_candidate_status": {
+    "candidate_field": null,
+    "finite_exact_witness_found": false,
+    "independent_729_equation_verification": "not applicable",
+    "primary_729_equation_verification": "not applicable",
+    "witness_bundle_emitted": false
+  },
+  "exact_results": {
+    "distinct_coordinate_supports_in_atlas": 360,
+    "distinct_global_component_count_decided": false,
+    "finite_exact_support_lower_bound": 22,
+    "fixed_victim_nine_coordinate_orbits_without_nonvictim_singleton": 1,
+    "fixed_victim_nine_coordinate_seed_orbits_under_stabilizer": 104,
+    "known_Laurent_path_is_color_diagonal_orbit_in_moving_line_incidence": true,
+    "localized_matching_lattice_rank": 5,
+    "marked_unique_defect_seed_charts": 360,
+    "natural_coordinate_retention_assumed": false,
+    "natural_local_component_has_no_finite_u_zero_endpoint": true,
+    "natural_local_component_obeys_u_times_Q_equals_1": true,
+    "primitive_K3_3_parity_circuits": 10,
+    "six_retained_coordinate_subspaces_excluded": true,
+    "support_sizes_through_21_excluded": true
+  },
+  "method": {
+    "arithmetic": "integer and rational exact arithmetic",
+    "description": "exact symmetry, gauge characters, matching-incidence lattices, singleton closure, and integer terminal relations",
+    "finite_field_search_used_as_proof": false,
+    "numerical_search_used_as_proof": false,
+    "random_seeds": [],
+    "symmetry_related_weights_equated": false
+  },
+  "next_exact_attempts": [
+    "compute the localized direct-GHZ ideal on each of the eight pure-seed orbit charts; unit ideals on the full cover or an exact point would decide affine membership",
+    "in the moving-line formulation, saturate the natural fixed-victim chart away from u*Q=1 and cover the other 103 fixed-victim seed charts exactly",
+    "classify support-22 singleton-free terminals modulo S_6 x S_3 and test their integer exponent lattices"
+  ],
+  "problem": {
+    "d": 3,
+    "equation_count": 729,
+    "n": 6,
+    "target": "GHZ_6,3",
+    "variable_count": 135,
+    "victim_coloring": [
+      0,
+      0,
+      2,
+      1,
+      2,
+      1
+    ]
+  },
+  "repository_provenance": {
+    "baseline_origin_main": "ab446724a61a293a3268c63b9e9e721c6a360561",
+    "contextual_predecessor_commits_not_merged": [
+      "720f495810e1b9a403e7ea88acbe902f60f938c8",
+      "e304151c7da2e38ff19fe2f404157c976733d33d"
+    ],
+    "feature_branch": "codex/structural-pole-law"
+  },
+  "schema": "krenn.n6_d3.structural_pole.certificate.v1",
+  "support_21_exhaustion": {
+    "addition_cap_over_nine_coordinate_seed": 12,
+    "algorithm": "deterministic first-singleton missing-set closure",
+    "declared_worker_limit": 16,
+    "executed_disposable_command_template": "python -B D:\\KrennScratch\\structural_pole_law\\closure_probe.py --index I --cap 12 --output D:\\KrennScratch\\structural_pole_law\\cap12_I.json",
+    "executed_source_controlled_command_template": "python -B -m experiments.krenn_quantum_graph.vertical_component --root-index I --max-total-support 21 --output D:\\KrennScratch\\structural_pole_law\\official_replay\\official21_I.json",
+    "independent_full_regeneration_test": "PowerShell: $env:KRENN_RUN_LONG_TESTS='1'; python -B -m unittest tests.test_krenn_vertical_component; Remove-Item Env:KRENN_RUN_LONG_TESTS",
+    "large_frontiers_or_caches_committed": false,
+    "long_bundle_verification_available": true,
+    "long_bundle_verification_command": "python -B -m experiments.krenn_quantum_graph.structural_pole_artifact results\\krenn_quantum_graph\\n6_d3_structural_pole_law --verify --long",
+    "max_total_support": 21,
+    "node_cap_per_root": null,
+    "root_nodes_examined": [
+      1570130,
+      1768215,
+      1752008,
+      1529410,
+      1768668,
+      1488355,
+      1632189,
+      1483294
+    ],
+    "routine_bundle_verification_replays_full_closure": false,
+    "routine_validation_scope": "source-bound root counts plus exact recomputation of all 12 terminal lattice contradictions",
+    "singleton_free_terminals": 12,
+    "source_controlled_receipt_directory": "D:\\KrennScratch\\structural_pole_law\\official_replay",
+    "source_controlled_replay_completed": true,
+    "terminal_obstructions": {
+      "odd_mixed_integer_relations": 8,
+      "pure_output_cancellations": 4
+    },
+    "total_nodes_examined": 12992269,
+    "workers": 8
+  },
+  "weight_status": {
+    "Q_full_color_diagonal_character": "inverse of the victim-output character",
+    "finite_bounded_candidate_found": false,
+    "full_color_diagonal_gauge_invariant_quantity": "u*Q",
+    "known_Laurent_branch_weights_remain_finite": false,
+    "known_natural_component_behavior_as_u_tends_to_zero": "Q tends to infinity",
+    "known_natural_component_relation": "u*Q=1",
+    "vertex_scalar_gauge_invariant_quantity": "Q"
+  }
+}

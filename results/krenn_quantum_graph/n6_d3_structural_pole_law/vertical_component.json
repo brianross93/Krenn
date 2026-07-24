@@ -1,0 +1,4525 @@
+{
+  "claims": {
+    "D_in_radical_J_mix_decided": false,
+    "all_fixed_victim_nine_coordinate_strata_classified": true,
+    "all_vertical_components_excluded": false,
+    "exact_affine_GHZ_membership_status": "undecided",
+    "finite_affine_GHZ_membership_decided": false,
+    "finite_exact_support_lower_bound": 22,
+    "known_Laurent_path_is_color_diagonal_orbit_in_moving_line_incidence": true,
+    "known_natural_nine_coordinate_stratum_has_no_vertical_point": true,
+    "routine_replay_support_lower_bound": 12,
+    "supports_omitting_natural_coordinates_included_below_cap": true
+  },
+  "color_gauge_orbit": {
+    "Q_character": [
+      -1,
+      1,
+      0,
+      -1,
+      1,
+      0,
+      0,
+      1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      -1
+    ],
+    "Q_character_on_gamma": -1,
+    "claim_boundary": {
+      "Q_is_invariant_under_full_direct_GHZ_color_gauge": false,
+      "Q_is_inverse_character_to_fixed_victim": true,
+      "global_affine_GHZ_membership_decided": false,
+      "known_path_is_color_diagonal_orbit_in_moving_line_incidence": true,
+      "universal_component_pole_law_proved": false
+    },
+    "effective_gauge_rank_on_natural_support": 6,
+    "exact_checks": {
+      "Q_character_is_negative_victim_character": true,
+      "Q_character_on_gamma_is_minus_one": true,
+      "direct_GHZ_color_gauge_parameter_dimension_15": true,
+      "gamma_reproduces_Laurent_weight_orders": true,
+      "natural_support_effective_gauge_rank_6": true,
+      "natural_support_has_nine_coordinates": true,
+      "negative_gamma_tangent_is_repair_direction": true,
+      "victim_character_on_gamma_is_plus_one": true,
+      "victim_times_Q_equals_three_pure_monomials": true
+    },
+    "gamma": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "identity": "F_victim*Q=M_000*M_111*M_222",
+    "interpretation": "the known Laurent path is a one-parameter color-diagonal orbit in the GHZ-plus-victim moving-line incidence",
+    "natural_support": [
+      0,
+      13,
+      26,
+      67,
+      80,
+      81,
+      98,
+      121,
+      126
+    ],
+    "natural_support_coordinates": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        1
+      ],
+      [
+        0,
+        3,
+        2,
+        2
+      ],
+      [
+        1,
+        4,
+        1,
+        1
+      ],
+      [
+        1,
+        5,
+        2,
+        2
+      ],
+      [
+        2,
+        3,
+        0,
+        0
+      ],
+      [
+        2,
+        4,
+        2,
+        2
+      ],
+      [
+        3,
+        5,
+        1,
+        1
+      ],
+      [
+        4,
+        5,
+        0,
+        0
+      ]
+    ],
+    "natural_support_valuations": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0
+    ],
+    "parameters": {
+      "constraints": [
+        "sum_i theta_(i,0)=0",
+        "sum_i theta_(i,1)=0",
+        "sum_i theta_(i,2)=0"
+      ],
+      "d": 3,
+      "independent_color_gauge_parameters": 15,
+      "n": 6
+    },
+    "schema": "krenn-n6-d3-color-gauge-pole-orbit-v1",
+    "victim_character": [
+      1,
+      -1,
+      0,
+      1,
+      -1,
+      0,
+      0,
+      -1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      1
+    ],
+    "victim_character_on_gamma": 1
+  },
+  "fixed_victim_nine_coordinate_charts": {
+    "claim_boundary": {
+      "all_nine_coordinate_fixed_victim_strata_classified": true,
+      "all_vertical_components_excluded": false,
+      "global_affine_GHZ_membership_decided": false,
+      "higher_support_fixed_victim_strata_classified": false,
+      "vertical_point_on_those_strata_excluded": true
+    },
+    "exact_checks": {
+      "fixed_victim_seed_orbits_104": true,
+      "fixed_victim_stabilizer_order_48": true,
+      "localized_natural_ring_is_torus_dimension_6": true,
+      "no_vertical_victim_zero_point_on_natural_stratum": true,
+      "nonvictim_singleton_kills_103_orbits": true,
+      "ordered_seed_charts_3375": true,
+      "restricted_active_equations_are_three_pure_plus_victim": true,
+      "sole_survivor_is_natural_orbit_size_4": true,
+      "three_pure_exponent_relations_have_rank_3": true,
+      "victim_monomial_is_a_Laurent_unit": true
+    },
+    "natural_restricted_stratum": {
+      "active_equations": [
+        {
+          "coloring": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "equation": 0,
+          "matching_indices": [
+            0
+          ]
+        },
+        {
+          "coloring": [
+            0,
+            0,
+            2,
+            1,
+            2,
+            1
+          ],
+          "equation": 70,
+          "matching_indices": [
+            1
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "equation": 364,
+          "matching_indices": [
+            4
+          ]
+        },
+        {
+          "coloring": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "equation": 728,
+          "matching_indices": [
+            8
+          ]
+        }
+      ],
+      "dimension": 6,
+      "localized_coordinate_ring": "Q[x_1^+-,...,x_9^+-]/(M0-1,M1-1,M2-1)",
+      "pure_exponent_rank": 3,
+      "support": [
+        0,
+        13,
+        26,
+        67,
+        80,
+        81,
+        98,
+        121,
+        126
+      ],
+      "victim_is_unit": true
+    },
+    "orbit_size_histogram": {
+      "1": 1,
+      "12": 8,
+      "16": 1,
+      "24": 33,
+      "4": 2,
+      "48": 50,
+      "6": 5,
+      "8": 4
+    },
+    "orbits_killed_by_nonvictim_singleton": 103,
+    "ordered_seed_charts": 3375,
+    "schema": "krenn-n6-d3-fixed-victim-seed-charts-v1",
+    "seed_orbits": 104,
+    "singleton_receipt_count": 103,
+    "stabilizer_order": 48,
+    "surviving_orbit": {
+      "members": [
+        [
+          0,
+          4,
+          8
+        ],
+        [
+          0,
+          9,
+          13
+        ],
+        [
+          2,
+          4,
+          13
+        ],
+        [
+          2,
+          9,
+          8
+        ]
+      ],
+      "representative": [
+        0,
+        4,
+        8
+      ],
+      "size": 4
+    },
+    "victim_coloring": [
+      0,
+      0,
+      2,
+      1,
+      2,
+      1
+    ],
+    "victim_equation": 70
+  },
+  "next_exact_test": {
+    "direct_GHZ_chart_ideal": "<all 729 GHZ equations, seed-coordinate localizers>",
+    "fixed_line_vertical_test": "after localizing away from the known natural component, test 1 in B+<F_002121>; a larger fixed-line reduction has 104 seed-chart orbits, while direct GHZ has eight",
+    "proof_requirement": "an exact unit-ideal, radical, or exact witness certificate"
+  },
+  "parameters": {
+    "d": 3,
+    "n": 6,
+    "victim_coloring": [
+      0,
+      0,
+      2,
+      1,
+      2,
+      1
+    ],
+    "victim_equation": 70
+  },
+  "recorded_support21_global_audit": {
+    "claim_boundary": {
+      "global_nonexistence_proved": false,
+      "natural_coordinate_retention_assumed": false,
+      "supports_at_size_22_or_above_excluded": false,
+      "symmetry_related_weights_equated": false
+    },
+    "closure_replay": {
+      "algorithm": "deterministic first-singleton missing-set closure",
+      "disposable_worker_receipts_location": "D:\\KrennScratch\\structural_pole_law",
+      "frontiers_exhausted": true,
+      "independent_regeneration_is_gated_long": true,
+      "large_frontiers_or_caches_committed": false,
+      "workers": 8,
+      "workers_within_declared_limit": true
+    },
+    "finite_exact_support_lower_bound": 22,
+    "max_total_support": 21,
+    "root_receipts": [
+      {
+        "nodes_examined": 1570130,
+        "seed": [
+          0,
+          0,
+          0
+        ],
+        "singleton_free_terminal_count": 0
+      },
+      {
+        "nodes_examined": 1768215,
+        "seed": [
+          0,
+          0,
+          1
+        ],
+        "singleton_free_terminal_count": 0
+      },
+      {
+        "nodes_examined": 1752008,
+        "seed": [
+          0,
+          0,
+          4
+        ],
+        "singleton_free_terminal_count": 3
+      },
+      {
+        "nodes_examined": 1529410,
+        "seed": [
+          0,
+          1,
+          2
+        ],
+        "singleton_free_terminal_count": 0
+      },
+      {
+        "nodes_examined": 1768668,
+        "seed": [
+          0,
+          1,
+          3
+        ],
+        "singleton_free_terminal_count": 0
+      },
+      {
+        "nodes_examined": 1488355,
+        "seed": [
+          0,
+          1,
+          5
+        ],
+        "singleton_free_terminal_count": 3
+      },
+      {
+        "nodes_examined": 1632189,
+        "seed": [
+          0,
+          4,
+          8
+        ],
+        "singleton_free_terminal_count": 6
+      },
+      {
+        "nodes_examined": 1483294,
+        "seed": [
+          0,
+          4,
+          13
+        ],
+        "singleton_free_terminal_count": 0
+      }
+    ],
+    "schema": "krenn-n6-d3-unconditional-support-closure-v1",
+    "statement": "Every finite GHZ witness contains a diagonal seed. The exact eight-root closure exhausts every support through size 21. Its 12 singleton-free terminals are all killed by retained integer exponent certificates, so every finite witness has support at least 22 without assuming any natural coordinate.",
+    "terminal_certificates": [
+      {
+        "additions": [
+          1,
+          3,
+          18,
+          19,
+          21,
+          22,
+          45,
+          46,
+          48,
+          49,
+          82,
+          84
+        ],
+        "contradiction": "pure output is forced to 0 but must equal 1",
+        "exact_checks": {
+          "all_active_mixed_equations_are_binomial": true,
+          "combined_exponent_sum_is_zero": true,
+          "exact_support_torus_is_impossible": true,
+          "mixed_coefficient_sum_is_odd": true,
+          "support_has_21_nonzero_coordinates": true
+        },
+        "kind": "pure-cancellation",
+        "mixed_coefficient_sum": -1,
+        "mixed_relation": [
+          {
+            "coefficient": -1,
+            "coloring": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "equation": 4,
+            "exponent_difference": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "first_monomial": [
+              0,
+              81,
+              130
+            ],
+            "second_monomial": [
+              18,
+              45,
+              130
+            ]
+          }
+        ],
+        "pure_cancellation": {
+          "coloring": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "equation": 0,
+          "exponent_difference_coefficient": 1,
+          "first_monomial": [
+            0,
+            81,
+            126
+          ],
+          "forced_output": "M0+M1=0",
+          "forced_ratio": "-1",
+          "required_output": "1",
+          "second_monomial": [
+            18,
+            45,
+            126
+          ]
+        },
+        "seed": [
+          0,
+          0,
+          4
+        ],
+        "support": [
+          0,
+          1,
+          3,
+          4,
+          17,
+          18,
+          19,
+          21,
+          22,
+          45,
+          46,
+          48,
+          49,
+          71,
+          81,
+          82,
+          84,
+          85,
+          125,
+          126,
+          130
+        ],
+        "support_coordinates": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            2,
+            2
+          ],
+          [
+            0,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            1
+          ],
+          [
+            0,
+            3,
+            1,
+            0
+          ],
+          [
+            0,
+            3,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            0,
+            1
+          ],
+          [
+            1,
+            2,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            1,
+            1
+          ],
+          [
+            1,
+            4,
+            2,
+            2
+          ],
+          [
+            2,
+            3,
+            0,
+            0
+          ],
+          [
+            2,
+            3,
+            0,
+            1
+          ],
+          [
+            2,
+            3,
+            1,
+            0
+          ],
+          [
+            2,
+            3,
+            1,
+            1
+          ],
+          [
+            3,
+            5,
+            2,
+            2
+          ],
+          [
+            4,
+            5,
+            0,
+            0
+          ],
+          [
+            4,
+            5,
+            1,
+            1
+          ]
+        ],
+        "terminal_index": 0
+      },
+      {
+        "additions": [
+          1,
+          3,
+          27,
+          28,
+          30,
+          31,
+          72,
+          73,
+          75,
+          76,
+          127,
+          129
+        ],
+        "contradiction": "pure output is forced to 0 but must equal 1",
+        "exact_checks": {
+          "all_active_mixed_equations_are_binomial": true,
+          "combined_exponent_sum_is_zero": true,
+          "exact_support_torus_is_impossible": true,
+          "mixed_coefficient_sum_is_odd": true,
+          "support_has_21_nonzero_coordinates": true
+        },
+        "kind": "pure-cancellation",
+        "mixed_coefficient_sum": -1,
+        "mixed_relation": [
+          {
+            "coefficient": -1,
+            "coloring": [
+              0,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "equation": 36,
+            "exponent_difference": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "first_monomial": [
+              0,
+              85,
+              126
+            ],
+            "second_monomial": [
+              27,
+              72,
+              85
+            ]
+          }
+        ],
+        "pure_cancellation": {
+          "coloring": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "equation": 0,
+          "exponent_difference_coefficient": 1,
+          "first_monomial": [
+            0,
+            81,
+            126
+          ],
+          "forced_output": "M0+M1=0",
+          "forced_ratio": "-1",
+          "required_output": "1",
+          "second_monomial": [
+            27,
+            72,
+            81
+          ]
+        },
+        "seed": [
+          0,
+          0,
+          4
+        ],
+        "support": [
+          0,
+          1,
+          3,
+          4,
+          17,
+          27,
+          28,
+          30,
+          31,
+          71,
+          72,
+          73,
+          75,
+          76,
+          81,
+          85,
+          125,
+          126,
+          127,
+          129,
+          130
+        ],
+        "support_coordinates": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            2,
+            2
+          ],
+          [
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0,
+            1
+          ],
+          [
+            0,
+            4,
+            1,
+            0
+          ],
+          [
+            0,
+            4,
+            1,
+            1
+          ],
+          [
+            1,
+            4,
+            2,
+            2
+          ],
+          [
+            1,
+            5,
+            0,
+            0
+          ],
+          [
+            1,
+            5,
+            0,
+            1
+          ],
+          [
+            1,
+            5,
+            1,
+            0
+          ],
+          [
+            1,
+            5,
+            1,
+            1
+          ],
+          [
+            2,
+            3,
+            0,
+            0
+          ],
+          [
+            2,
+            3,
+            1,
+            1
+          ],
+          [
+            3,
+            5,
+            2,
+            2
+          ],
+          [
+            4,
+            5,
+            0,
+            0
+          ],
+          [
+            4,
+            5,
+            0,
+            1
+          ],
+          [
+            4,
+            5,
+            1,
+            0
+          ],
+          [
+            4,
+            5,
+            1,
+            1
+          ]
+        ],
+        "terminal_index": 1
+      },
+      {
+        "additions": [
+          82,
+          84,
+          99,
+          100,
+          102,
+          103,
+          108,
+          109,
+          111,
+          112,
+          127,
+          129
+        ],
+        "contradiction": "pure output is forced to 0 but must equal 1",
+        "exact_checks": {
+          "all_active_mixed_equations_are_binomial": true,
+          "combined_exponent_sum_is_zero": true,
+          "exact_support_torus_is_impossible": true,
+          "mixed_coefficient_sum_is_odd": true,
+          "support_has_21_nonzero_coordinates": true
+        },
+        "kind": "pure-cancellation",
+        "mixed_coefficient_sum": -1,
+        "mixed_relation": [
+          {
+            "coefficient": -1,
+            "coloring": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "equation": 1,
+            "exponent_difference": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "first_monomial": [
+              0,
+              81,
+              127
+            ],
+            "second_monomial": [
+              0,
+              100,
+              108
+            ]
+          },
+          {
+            "coefficient": -1,
+            "coloring": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "equation": 9,
+            "exponent_difference": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "first_monomial": [
+              0,
+              82,
+              126
+            ],
+            "second_monomial": [
+              0,
+              99,
+              111
+            ]
+          },
+          {
+            "coefficient": 1,
+            "coloring": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "equation": 10,
+            "exponent_difference": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "first_monomial": [
+              0,
+              82,
+              127
+            ],
+            "second_monomial": [
+              0,
+              100,
+              111
+            ]
+          }
+        ],
+        "pure_cancellation": {
+          "coloring": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "equation": 0,
+          "exponent_difference_coefficient": 1,
+          "first_monomial": [
+            0,
+            81,
+            126
+          ],
+          "forced_output": "M0+M1=0",
+          "forced_ratio": "-1",
+          "required_output": "1",
+          "second_monomial": [
+            0,
+            99,
+            108
+          ]
+        },
+        "seed": [
+          0,
+          0,
+          4
+        ],
+        "support": [
+          0,
+          4,
+          17,
+          71,
+          81,
+          82,
+          84,
+          85,
+          99,
+          100,
+          102,
+          103,
+          108,
+          109,
+          111,
+          112,
+          125,
+          126,
+          127,
+          129,
+          130
+        ],
+        "support_coordinates": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            2,
+            2
+          ],
+          [
+            1,
+            4,
+            2,
+            2
+          ],
+          [
+            2,
+            3,
+            0,
+            0
+          ],
+          [
+            2,
+            3,
+            0,
+            1
+          ],
+          [
+            2,
+            3,
+            1,
+            0
+          ],
+          [
+            2,
+            3,
+            1,
+            1
+          ],
+          [
+            2,
+            5,
+            0,
+            0
+          ],
+          [
+            2,
+            5,
+            0,
+            1
+          ],
+          [
+            2,
+            5,
+            1,
+            0
+          ],
+          [
+            2,
+            5,
+            1,
+            1
+          ],
+          [
+            3,
+            4,
+            0,
+            0
+          ],
+          [
+            3,
+            4,
+            0,
+            1
+          ],
+          [
+            3,
+            4,
+            1,
+            0
+          ],
+          [
+            3,
+            4,
+            1,
+            1
+          ],
+          [
+            3,
+            5,
+            2,
+            2
+          ],
+          [
+            4,
+            5,
+            0,
+            0
+          ],
+          [
+            4,
+            5,
+            0,
+            1
+          ],
+          [
+            4,
+            5,
+            1,
+            0
+          ],
+          [
+            4,
+            5,
+            1,
+            1
+          ]
+        ],
+        "terminal_index": 2
+      },
+      {
+        "additions": [
+          1,
+          3,
+          18,
+          21,
+          28,
+          31,
+          45,
+          46,
+          48,
+          49,
+          84,
+          91
+        ],
+        "contradiction": "1=-1",
+        "exact_checks": {
+          "all_active_mixed_equations_are_binomial": true,
+          "combined_exponent_sum_is_zero": true,
+          "exact_support_torus_is_impossible": true,
+          "mixed_coefficient_sum_is_odd": true,
+          "support_has_21_nonzero_coordinates": true
+        },
+        "kind": "odd-mixed-circuit",
+        "mixed_coefficient_sum": 1,
+        "mixed_relation": [
+          {
+            "coefficient": 1,
+            "coloring": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "equation": 243,
+            "exponent_difference": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "first_monomial": [
+              3,
+              81,
+              126
+            ],
+            "second_monomial": [
+              21,
+              45,
+              126
+            ]
+          },
+          {
+            "coefficient": -1,
+            "coloring": [
+              1,
+              0,
+              0,
+              1,
+              1,
+              1
+            ],
+            "equation": 256,
+            "exponent_difference": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "first_monomial": [
+              3,
+              91,
+              121
+            ],
+            "second_monomial": [
+              31,
+              45,
+              121
+            ]
+          },
+          {
+            "coefficient": 1,
+            "coloring": [
+              1,
+              2,
+              0,
+              0,
+              1,
+              2
+            ],
+            "equation": 410,
+            "exponent_difference": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "first_monomial": [
+              21,
+              80,
+              91
+            ],
+            "second_monomial": [
+              31,
+              80,
+              81
+            ]
+          }
+        ],
+        "pure_cancellation": null,
+        "seed": [
+          0,
+          1,
+          5
+        ],
+        "support": [
+          0,
+          1,
+          3,
+          4,
+          17,
+          18,
+          21,
+          28,
+          31,
+          45,
+          46,
+          48,
+          49,
+          80,
+          81,
+          84,
+          91,
+          94,
+          116,
+          121,
+          126
+        ],
+        "support_coordinates": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            2,
+            2
+          ],
+          [
+            0,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            1,
+            0
+          ],
+          [
+            0,
+            4,
+            0,
+            1
+          ],
+          [
+            0,
+            4,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            0,
+            1
+          ],
+          [
+            1,
+            2,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            1,
+            1
+          ],
+          [
+            1,
+            5,
+            2,
+            2
+          ],
+          [
+            2,
+            3,
+            0,
+            0
+          ],
+          [
+            2,
+            3,
+            1,
+            0
+          ],
+          [
+            2,
+            4,
+            0,
+            1
+          ],
+          [
+            2,
+            4,
+            1,
+            1
+          ],
+          [
+            3,
+            4,
+            2,
+            2
+          ],
+          [
+            3,
+            5,
+            1,
+            1
+          ],
+          [
+            4,
+            5,
+            0,
+            0
+          ]
+        ],
+        "terminal_index": 0
+      },
+      {
+        "additions": [
+          1,
+          3,
+          36,
+          37,
+          39,
+          40,
+          55,
+          58,
+          63,
+          66,
+          120,
+          127
+        ],
+        "contradiction": "1=-1",
+        "exact_checks": {
+          "all_active_mixed_equations_are_binomial": true,
+          "combined_exponent_sum_is_zero": true,
+          "exact_support_torus_is_impossible": true,
+          "mixed_coefficient_sum_is_odd": true,
+          "support_has_21_nonzero_coordinates": true
+        },
+        "kind": "odd-mixed-circuit",
+        "mixed_coefficient_sum": 1,
+        "mixed_relation": [
+          {
+            "coefficient": -1,
+            "coloring": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "equation": 1,
+            "exponent_difference": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "first_monomial": [
+              0,
+              81,
+              127
+            ],
+            "second_monomial": [
+              37,
+              63,
+              81
+            ]
+          },
+          {
+            "coefficient": 1,
+            "coloring": [
+              0,
+              0,
+              1,
+              1,
+              1,
+              1
+            ],
+            "equation": 40,
+            "exponent_difference": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "first_monomial": [
+              0,
+              94,
+              121
+            ],
+            "second_monomial": [
+              37,
+              55,
+              94
+            ]
+          },
+          {
+            "coefficient": 1,
+            "coloring": [
+              2,
+              0,
+              2,
+              1,
+              0,
+              1
+            ],
+            "equation": 550,
+            "exponent_difference": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              1
+            ],
+            "first_monomial": [
+              17,
+              55,
+              127
+            ],
+            "second_monomial": [
+              17,
+              63,
+              121
+            ]
+          }
+        ],
+        "pure_cancellation": null,
+        "seed": [
+          0,
+          1,
+          5
+        ],
+        "support": [
+          0,
+          1,
+          3,
+          4,
+          17,
+          36,
+          37,
+          39,
+          40,
+          55,
+          58,
+          63,
+          66,
+          80,
+          81,
+          94,
+          116,
+          120,
+          121,
+          126,
+          127
+        ],
+        "support_coordinates": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            2,
+            2
+          ],
+          [
+            0,
+            5,
+            0,
+            0
+          ],
+          [
+            0,
+            5,
+            0,
+            1
+          ],
+          [
+            0,
+            5,
+            1,
+            0
+          ],
+          [
+            0,
+            5,
+            1,
+            1
+          ],
+          [
+            1,
+            3,
+            0,
+            1
+          ],
+          [
+            1,
+            3,
+            1,
+            1
+          ],
+          [
+            1,
+            4,
+            0,
+            0
+          ],
+          [
+            1,
+            4,
+            1,
+            0
+          ],
+          [
+            1,
+            5,
+            2,
+            2
+          ],
+          [
+            2,
+            3,
+            0,
+            0
+          ],
+          [
+            2,
+            4,
+            1,
+            1
+          ],
+          [
+            3,
+            4,
+            2,
+            2
+          ],
+          [
+            3,
+            5,
+            1,
+            0
+          ],
+          [
+            3,
+            5,
+            1,
+            1
+          ],
+          [
+            4,
+            5,
+            0,
+            0
+          ],
+          [
+            4,
+            5,
+            0,
+            1
+          ]
+        ],
+        "terminal_index": 1
+      },
+      {
+        "additions": [
+          82,
+          84,
+          85,
+          90,
+          91,
+          93,
+          117,
+          118,
+          120,
+          127,
+          129,
+          130
+        ],
+        "contradiction": "pure output is forced to 0 but must equal 1",
+        "exact_checks": {
+          "all_active_mixed_equations_are_binomial": true,
+          "combined_exponent_sum_is_zero": true,
+          "exact_support_torus_is_impossible": true,
+          "mixed_coefficient_sum_is_odd": true,
+          "support_has_21_nonzero_coordinates": true
+        },
+        "kind": "pure-cancellation",
+        "mixed_coefficient_sum": -1,
+        "mixed_relation": [
+          {
+            "coefficient": -1,
+            "coloring": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "equation": 3,
+            "exponent_difference": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "first_monomial": [
+              0,
+              81,
+              129
+            ],
+            "second_monomial": [
+              0,
+              91,
+              117
+            ]
+          },
+          {
+            "coefficient": -1,
+            "coloring": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "equation": 9,
+            "exponent_difference": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "first_monomial": [
+              0,
+              82,
+              126
+            ],
+            "second_monomial": [
+              0,
+              90,
+              120
+            ]
+          },
+          {
+            "coefficient": 1,
+            "coloring": [
+              0,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "equation": 12,
+            "exponent_difference": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "first_monomial": [
+              0,
+              82,
+              129
+            ],
+            "second_monomial": [
+              0,
+              91,
+              120
+            ]
+          }
+        ],
+        "pure_cancellation": {
+          "coloring": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "equation": 0,
+          "exponent_difference_coefficient": 1,
+          "first_monomial": [
+            0,
+            81,
+            126
+          ],
+          "forced_output": "M0+M1=0",
+          "forced_ratio": "-1",
+          "required_output": "1",
+          "second_monomial": [
+            0,
+            90,
+            117
+          ]
+        },
+        "seed": [
+          0,
+          1,
+          5
+        ],
+        "support": [
+          0,
+          4,
+          17,
+          80,
+          81,
+          82,
+          84,
+          85,
+          90,
+          91,
+          93,
+          94,
+          116,
+          117,
+          118,
+          120,
+          121,
+          126,
+          127,
+          129,
+          130
+        ],
+        "support_coordinates": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            2,
+            2
+          ],
+          [
+            1,
+            5,
+            2,
+            2
+          ],
+          [
+            2,
+            3,
+            0,
+            0
+          ],
+          [
+            2,
+            3,
+            0,
+            1
+          ],
+          [
+            2,
+            3,
+            1,
+            0
+          ],
+          [
+            2,
+            3,
+            1,
+            1
+          ],
+          [
+            2,
+            4,
+            0,
+            0
+          ],
+          [
+            2,
+            4,
+            0,
+            1
+          ],
+          [
+            2,
+            4,
+            1,
+            0
+          ],
+          [
+            2,
+            4,
+            1,
+            1
+          ],
+          [
+            3,
+            4,
+            2,
+            2
+          ],
+          [
+            3,
+            5,
+            0,
+            0
+          ],
+          [
+            3,
+            5,
+            0,
+            1
+          ],
+          [
+            3,
+            5,
+            1,
+            0
+          ],
+          [
+            3,
+            5,
+            1,
+            1
+          ],
+          [
+            4,
+            5,
+            0,
+            0
+          ],
+          [
+            4,
+            5,
+            0,
+            1
+          ],
+          [
+            4,
+            5,
+            1,
+            0
+          ],
+          [
+            4,
+            5,
+            1,
+            1
+          ]
+        ],
+        "terminal_index": 2
+      },
+      {
+        "additions": [
+          6,
+          18,
+          20,
+          24,
+          29,
+          35,
+          45,
+          47,
+          83,
+          87,
+          89,
+          92
+        ],
+        "contradiction": "1=-1",
+        "exact_checks": {
+          "all_active_mixed_equations_are_binomial": true,
+          "combined_exponent_sum_is_zero": true,
+          "exact_support_torus_is_impossible": true,
+          "mixed_coefficient_sum_is_odd": true,
+          "support_has_21_nonzero_coordinates": true
+        },
+        "kind": "odd-mixed-circuit",
+        "mixed_coefficient_sum": 1,
+        "mixed_relation": [
+          {
+            "coefficient": -1,
+            "coloring": [
+              0,
+              0,
+              0,
+              1,
+              2,
+              1
+            ],
+            "equation": 16,
+            "exponent_difference": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "first_monomial": [
+              0,
+              92,
+              121
+            ],
+            "second_monomial": [
+              29,
+              45,
+              121
+            ]
+          },
+          {
+            "coefficient": 1,
+            "coloring": [
+              0,
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            "equation": 18,
+            "exponent_difference": [
+              1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "first_monomial": [
+              0,
+              83,
+              126
+            ],
+            "second_monomial": [
+              20,
+              45,
+              126
+            ]
+          },
+          {
+            "coefficient": 1,
+            "coloring": [
+              0,
+              2,
+              0,
+              2,
+              2,
+              2
+            ],
+            "equation": 188,
+            "exponent_difference": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "first_monomial": [
+              20,
+              80,
+              92
+            ],
+            "second_monomial": [
+              29,
+              80,
+              83
+            ]
+          }
+        ],
+        "pure_cancellation": null,
+        "seed": [
+          0,
+          4,
+          8
+        ],
+        "support": [
+          0,
+          6,
+          13,
+          18,
+          20,
+          24,
+          26,
+          29,
+          35,
+          45,
+          47,
+          67,
+          80,
+          81,
+          83,
+          87,
+          89,
+          92,
+          98,
+          121,
+          126
+        ],
+        "support_coordinates": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            1,
+            1
+          ],
+          [
+            0,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            2
+          ],
+          [
+            0,
+            3,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            2,
+            2
+          ],
+          [
+            0,
+            4,
+            0,
+            2
+          ],
+          [
+            0,
+            4,
+            2,
+            2
+          ],
+          [
+            1,
+            2,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            0,
+            2
+          ],
+          [
+            1,
+            4,
+            1,
+            1
+          ],
+          [
+            1,
+            5,
+            2,
+            2
+          ],
+          [
+            2,
+            3,
+            0,
+            0
+          ],
+          [
+            2,
+            3,
+            0,
+            2
+          ],
+          [
+            2,
+            3,
+            2,
+            0
+          ],
+          [
+            2,
+            3,
+            2,
+            2
+          ],
+          [
+            2,
+            4,
+            0,
+            2
+          ],
+          [
+            2,
+            4,
+            2,
+            2
+          ],
+          [
+            3,
+            5,
+            1,
+            1
+          ],
+          [
+            4,
+            5,
+            0,
+            0
+          ]
+        ],
+        "terminal_index": 0
+      },
+      {
+        "additions": [
+          3,
+          9,
+          10,
+          12,
+          37,
+          40,
+          54,
+          55,
+          82,
+          84,
+          85,
+          118
+        ],
+        "contradiction": "1=-1",
+        "exact_checks": {
+          "all_active_mixed_equations_are_binomial": true,
+          "combined_exponent_sum_is_zero": true,
+          "exact_support_torus_is_impossible": true,
+          "mixed_coefficient_sum_is_odd": true,
+          "support_has_21_nonzero_coordinates": true
+        },
+        "kind": "odd-mixed-circuit",
+        "mixed_coefficient_sum": 1,
+        "mixed_relation": [
+          {
+            "coefficient": 1,
+            "coloring": [
+              1,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "equation": 270,
+            "exponent_difference": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "first_monomial": [
+              3,
+              84,
+              126
+            ],
+            "second_monomial": [
+              13,
+              54,
+              126
+            ]
+          },
+          {
+            "coefficient": -1,
+            "coloring": [
+              1,
+              0,
+              2,
+              0,
+              2,
+              1
+            ],
+            "equation": 304,
+            "exponent_difference": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "first_monomial": [
+              3,
+              98,
+              118
+            ],
+            "second_monomial": [
+              40,
+              54,
+              98
+            ]
+          },
+          {
+            "coefficient": 1,
+            "coloring": [
+              1,
+              1,
+              1,
+              0,
+              1,
+              1
+            ],
+            "equation": 355,
+            "exponent_difference": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "first_monomial": [
+              13,
+              67,
+              118
+            ],
+            "second_monomial": [
+              40,
+              67,
+              84
+            ]
+          }
+        ],
+        "pure_cancellation": null,
+        "seed": [
+          0,
+          4,
+          8
+        ],
+        "support": [
+          0,
+          3,
+          9,
+          10,
+          12,
+          13,
+          26,
+          37,
+          40,
+          54,
+          55,
+          67,
+          80,
+          81,
+          82,
+          84,
+          85,
+          98,
+          118,
+          121,
+          126
+        ],
+        "support_coordinates": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            1
+          ],
+          [
+            0,
+            2,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            1,
+            1
+          ],
+          [
+            0,
+            3,
+            2,
+            2
+          ],
+          [
+            0,
+            5,
+            0,
+            1
+          ],
+          [
+            0,
+            5,
+            1,
+            1
+          ],
+          [
+            1,
+            3,
+            0,
+            0
+          ],
+          [
+            1,
+            3,
+            0,
+            1
+          ],
+          [
+            1,
+            4,
+            1,
+            1
+          ],
+          [
+            1,
+            5,
+            2,
+            2
+          ],
+          [
+            2,
+            3,
+            0,
+            0
+          ],
+          [
+            2,
+            3,
+            0,
+            1
+          ],
+          [
+            2,
+            3,
+            1,
+            0
+          ],
+          [
+            2,
+            3,
+            1,
+            1
+          ],
+          [
+            2,
+            4,
+            2,
+            2
+          ],
+          [
+            3,
+            5,
+            0,
+            1
+          ],
+          [
+            3,
+            5,
+            1,
+            1
+          ],
+          [
+            4,
+            5,
+            0,
+            0
+          ]
+        ],
+        "terminal_index": 1
+      },
+      {
+        "additions": [
+          68,
+          70,
+          71,
+          76,
+          77,
+          79,
+          97,
+          106,
+          107,
+          112,
+          113,
+          122
+        ],
+        "contradiction": "1=-1",
+        "exact_checks": {
+          "all_active_mixed_equations_are_binomial": true,
+          "combined_exponent_sum_is_zero": true,
+          "exact_support_torus_is_impossible": true,
+          "mixed_coefficient_sum_is_odd": true,
+          "support_has_21_nonzero_coordinates": true
+        },
+        "kind": "odd-mixed-circuit",
+        "mixed_coefficient_sum": 1,
+        "mixed_relation": [
+          {
+            "coefficient": 1,
+            "coloring": [
+              0,
+              0,
+              2,
+              1,
+              2,
+              1
+            ],
+            "equation": 70,
+            "exponent_difference": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              -1,
+              0,
+              0,
+              -1,
+              1,
+              0,
+              0
+            ],
+            "first_monomial": [
+              0,
+              98,
+              121
+            ],
+            "second_monomial": [
+              0,
+              106,
+              113
+            ]
+          },
+          {
+            "coefficient": -1,
+            "coloring": [
+              1,
+              1,
+              1,
+              1,
+              2,
+              1
+            ],
+            "equation": 367,
+            "exponent_difference": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              1,
+              0,
+              0
+            ],
+            "first_monomial": [
+              13,
+              68,
+              121
+            ],
+            "second_monomial": [
+              13,
+              76,
+              113
+            ]
+          },
+          {
+            "coefficient": 1,
+            "coloring": [
+              2,
+              1,
+              2,
+              2,
+              2,
+              1
+            ],
+            "equation": 646,
+            "exponent_difference": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "first_monomial": [
+              26,
+              68,
+              106
+            ],
+            "second_monomial": [
+              26,
+              76,
+              98
+            ]
+          }
+        ],
+        "pure_cancellation": null,
+        "seed": [
+          0,
+          4,
+          8
+        ],
+        "support": [
+          0,
+          13,
+          26,
+          67,
+          68,
+          70,
+          71,
+          76,
+          77,
+          79,
+          80,
+          81,
+          97,
+          98,
+          106,
+          107,
+          112,
+          113,
+          121,
+          122,
+          126
+        ],
+        "support_coordinates": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            1,
+            1
+          ],
+          [
+            0,
+            3,
+            2,
+            2
+          ],
+          [
+            1,
+            4,
+            1,
+            1
+          ],
+          [
+            1,
+            4,
+            1,
+            2
+          ],
+          [
+            1,
+            4,
+            2,
+            1
+          ],
+          [
+            1,
+            4,
+            2,
+            2
+          ],
+          [
+            1,
+            5,
+            1,
+            1
+          ],
+          [
+            1,
+            5,
+            1,
+            2
+          ],
+          [
+            1,
+            5,
+            2,
+            1
+          ],
+          [
+            1,
+            5,
+            2,
+            2
+          ],
+          [
+            2,
+            3,
+            0,
+            0
+          ],
+          [
+            2,
+            4,
+            2,
+            1
+          ],
+          [
+            2,
+            4,
+            2,
+            2
+          ],
+          [
+            2,
+            5,
+            2,
+            1
+          ],
+          [
+            2,
+            5,
+            2,
+            2
+          ],
+          [
+            3,
+            4,
+            1,
+            1
+          ],
+          [
+            3,
+            4,
+            1,
+            2
+          ],
+          [
+            3,
+            5,
+            1,
+            1
+          ],
+          [
+            3,
+            5,
+            1,
+            2
+          ],
+          [
+            4,
+            5,
+            0,
+            0
+          ]
+        ],
+        "terminal_index": 2
+      },
+      {
+        "additions": [
+          14,
+          16,
+          17,
+          22,
+          23,
+          25,
+          95,
+          103,
+          106,
+          113,
+          116,
+          124
+        ],
+        "contradiction": "1=-1",
+        "exact_checks": {
+          "all_active_mixed_equations_are_binomial": true,
+          "combined_exponent_sum_is_zero": true,
+          "exact_support_torus_is_impossible": true,
+          "mixed_coefficient_sum_is_odd": true,
+          "support_has_21_nonzero_coordinates": true
+        },
+        "kind": "odd-mixed-circuit",
+        "mixed_coefficient_sum": 1,
+        "mixed_relation": [
+          {
+            "coefficient": 1,
+            "coloring": [
+              0,
+              0,
+              2,
+              1,
+              2,
+              1
+            ],
+            "equation": 70,
+            "exponent_difference": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              -1,
+              -1,
+              0,
+              1,
+              0,
+              0
+            ],
+            "first_monomial": [
+              0,
+              98,
+              121
+            ],
+            "second_monomial": [
+              0,
+              106,
+              113
+            ]
+          },
+          {
+            "coefficient": -1,
+            "coloring": [
+              1,
+              1,
+              2,
+              1,
+              1,
+              1
+            ],
+            "equation": 391,
+            "exponent_difference": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "first_monomial": [
+              14,
+              67,
+              121
+            ],
+            "second_monomial": [
+              22,
+              67,
+              106
+            ]
+          },
+          {
+            "coefficient": 1,
+            "coloring": [
+              1,
+              2,
+              2,
+              1,
+              2,
+              2
+            ],
+            "equation": 476,
+            "exponent_difference": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "first_monomial": [
+              14,
+              80,
+              113
+            ],
+            "second_monomial": [
+              22,
+              80,
+              98
+            ]
+          }
+        ],
+        "pure_cancellation": null,
+        "seed": [
+          0,
+          4,
+          8
+        ],
+        "support": [
+          0,
+          13,
+          14,
+          16,
+          17,
+          22,
+          23,
+          25,
+          26,
+          67,
+          80,
+          81,
+          95,
+          98,
+          103,
+          106,
+          113,
+          116,
+          121,
+          124,
+          126
+        ],
+        "support_coordinates": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            2,
+            1
+          ],
+          [
+            0,
+            2,
+            2,
+            2
+          ],
+          [
+            0,
+            3,
+            1,
+            1
+          ],
+          [
+            0,
+            3,
+            1,
+            2
+          ],
+          [
+            0,
+            3,
+            2,
+            1
+          ],
+          [
+            0,
+            3,
+            2,
+            2
+          ],
+          [
+            1,
+            4,
+            1,
+            1
+          ],
+          [
+            1,
+            5,
+            2,
+            2
+          ],
+          [
+            2,
+            3,
+            0,
+            0
+          ],
+          [
+            2,
+            4,
+            1,
+            2
+          ],
+          [
+            2,
+            4,
+            2,
+            2
+          ],
+          [
+            2,
+            5,
+            1,
+            1
+          ],
+          [
+            2,
+            5,
+            2,
+            1
+          ],
+          [
+            3,
+            4,
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            2,
+            2
+          ],
+          [
+            3,
+            5,
+            1,
+            1
+          ],
+          [
+            3,
+            5,
+            2,
+            1
+          ],
+          [
+            4,
+            5,
+            0,
+            0
+          ]
+        ],
+        "terminal_index": 3
+      },
+      {
+        "additions": [
+          1,
+          36,
+          37,
+          55,
+          58,
+          63,
+          64,
+          66,
+          120,
+          127,
+          129,
+          130
+        ],
+        "contradiction": "1=-1",
+        "exact_checks": {
+          "all_active_mixed_equations_are_binomial": true,
+          "combined_exponent_sum_is_zero": true,
+          "exact_support_torus_is_impossible": true,
+          "mixed_coefficient_sum_is_odd": true,
+          "support_has_21_nonzero_coordinates": true
+        },
+        "kind": "odd-mixed-circuit",
+        "mixed_coefficient_sum": 1,
+        "mixed_relation": [
+          {
+            "coefficient": -1,
+            "coloring": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "equation": 1,
+            "exponent_difference": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "first_monomial": [
+              0,
+              81,
+              127
+            ],
+            "second_monomial": [
+              37,
+              63,
+              81
+            ]
+          },
+          {
+            "coefficient": 1,
+            "coloring": [
+              0,
+              0,
+              2,
+              1,
+              2,
+              1
+            ],
+            "equation": 70,
+            "exponent_difference": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "first_monomial": [
+              0,
+              98,
+              121
+            ],
+            "second_monomial": [
+              37,
+              55,
+              98
+            ]
+          },
+          {
+            "coefficient": 1,
+            "coloring": [
+              1,
+              0,
+              1,
+              1,
+              0,
+              1
+            ],
+            "equation": 280,
+            "exponent_difference": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              1,
+              0,
+              0
+            ],
+            "first_monomial": [
+              13,
+              55,
+              127
+            ],
+            "second_monomial": [
+              13,
+              63,
+              121
+            ]
+          }
+        ],
+        "pure_cancellation": null,
+        "seed": [
+          0,
+          4,
+          8
+        ],
+        "support": [
+          0,
+          1,
+          13,
+          26,
+          36,
+          37,
+          55,
+          58,
+          63,
+          64,
+          66,
+          67,
+          80,
+          81,
+          98,
+          120,
+          121,
+          126,
+          127,
+          129,
+          130
+        ],
+        "support_coordinates": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            2,
+            1,
+            1
+          ],
+          [
+            0,
+            3,
+            2,
+            2
+          ],
+          [
+            0,
+            5,
+            0,
+            0
+          ],
+          [
+            0,
+            5,
+            0,
+            1
+          ],
+          [
+            1,
+            3,
+            0,
+            1
+          ],
+          [
+            1,
+            3,
+            1,
+            1
+          ],
+          [
+            1,
+            4,
+            0,
+            0
+          ],
+          [
+            1,
+            4,
+            0,
+            1
+          ],
+          [
+            1,
+            4,
+            1,
+            0
+          ],
+          [
+            1,
+            4,
+            1,
+            1
+          ],
+          [
+            1,
+            5,
+            2,
+            2
+          ],
+          [
+            2,
+            3,
+            0,
+            0
+          ],
+          [
+            2,
+            4,
+            2,
+            2
+          ],
+          [
+            3,
+            5,
+            1,
+            0
+          ],
+          [
+            3,
+            5,
+            1,
+            1
+          ],
+          [
+            4,
+            5,
+            0,
+            0
+          ],
+          [
+            4,
+            5,
+            0,
+            1
+          ],
+          [
+            4,
+            5,
+            1,
+            0
+          ],
+          [
+            4,
+            5,
+            1,
+            1
+          ]
+        ],
+        "terminal_index": 4
+      },
+      {
+        "additions": [
+          2,
+          27,
+          29,
+          47,
+          53,
+          72,
+          74,
+          78,
+          96,
+          128,
+          132,
+          134
+        ],
+        "contradiction": "1=-1",
+        "exact_checks": {
+          "all_active_mixed_equations_are_binomial": true,
+          "combined_exponent_sum_is_zero": true,
+          "exact_support_torus_is_impossible": true,
+          "mixed_coefficient_sum_is_odd": true,
+          "support_has_21_nonzero_coordinates": true
+        },
+        "kind": "odd-mixed-circuit",
+        "mixed_coefficient_sum": 1,
+        "mixed_relation": [
+          {
+            "coefficient": -1,
+            "coloring": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ],
+            "equation": 2,
+            "exponent_difference": [
+              1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "first_monomial": [
+              0,
+              81,
+              128
+            ],
+            "second_monomial": [
+              27,
+              74,
+              81
+            ]
+          },
+          {
+            "coefficient": 1,
+            "coloring": [
+              0,
+              0,
+              2,
+              1,
+              0,
+              1
+            ],
+            "equation": 64,
+            "exponent_difference": [
+              1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "first_monomial": [
+              0,
+              96,
+              121
+            ],
+            "second_monomial": [
+              27,
+              47,
+              121
+            ]
+          },
+          {
+            "coefficient": 1,
+            "coloring": [
+              2,
+              0,
+              2,
+              2,
+              0,
+              2
+            ],
+            "equation": 560,
+            "exponent_difference": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "first_monomial": [
+              26,
+              47,
+              128
+            ],
+            "second_monomial": [
+              26,
+              74,
+              96
+            ]
+          }
+        ],
+        "pure_cancellation": null,
+        "seed": [
+          0,
+          4,
+          8
+        ],
+        "support": [
+          0,
+          2,
+          13,
+          26,
+          27,
+          29,
+          47,
+          53,
+          67,
+          72,
+          74,
+          78,
+          80,
+          81,
+          96,
+          98,
+          121,
+          126,
+          128,
+          132,
+          134
+        ],
+        "support_coordinates": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            2
+          ],
+          [
+            0,
+            2,
+            1,
+            1
+          ],
+          [
+            0,
+            3,
+            2,
+            2
+          ],
+          [
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            2,
+            2
+          ],
+          [
+            1,
+            4,
+            1,
+            1
+          ],
+          [
+            1,
+            5,
+            0,
+            0
+          ],
+          [
+            1,
+            5,
+            0,
+            2
+          ],
+          [
+            1,
+            5,
+            2,
+            0
+          ],
+          [
+            1,
+            5,
+            2,
+            2
+          ],
+          [
+            2,
+            3,
+            0,
+            0
+          ],
+          [
+            2,
+            4,
+            2,
+            0
+          ],
+          [
+            2,
+            4,
+            2,
+            2
+          ],
+          [
+            3,
+            5,
+            1,
+            1
+          ],
+          [
+            4,
+            5,
+            0,
+            0
+          ],
+          [
+            4,
+            5,
+            0,
+            2
+          ],
+          [
+            4,
+            5,
+            2,
+            0
+          ],
+          [
+            4,
+            5,
+            2,
+            2
+          ]
+        ],
+        "terminal_index": 5
+      }
+    ],
+    "totals": {
+      "nodes_examined": 12992269,
+      "odd_mixed_circuit_terminals": 8,
+      "pure_cancellation_terminals": 4,
+      "singleton_free_terminals": 12
+    }
+  },
+  "schema": "krenn-n6-d3-vertical-component-charts-v1",
+  "small_direct_support_census": {
+    "addition_counts": [
+      0,
+      1,
+      2
+    ],
+    "cases_examined": [
+      8,
+      1008,
+      63000
+    ],
+    "claim_boundary": {
+      "global_nonexistence_proved": false,
+      "natural_coordinate_retention_assumed": false,
+      "supports_of_size_12_or_more_examined": false
+    },
+    "exact": true,
+    "finite_exact_support_lower_bound": 12,
+    "singleton_free_cases": [
+      0,
+      0,
+      0
+    ],
+    "total_cases_examined": 64016,
+    "total_support_sizes": [
+      9,
+      10,
+      11
+    ]
+  },
+  "unconditional_support_closure": {
+    "claim_boundary": {
+      "global_nonexistence_proved": false,
+      "natural_coordinate_retention_assumed": false,
+      "only_singleton_necessary_condition_used": true,
+      "supports_above_cap_excluded": false,
+      "symmetry_related_weights_equated": false
+    },
+    "exhaustive": true,
+    "finite_exact_support_lower_bound": 12,
+    "parameters": {
+      "d": 3,
+      "full_group_seed_orbits": 8,
+      "max_total_support": 11,
+      "n": 6,
+      "raw_supports_without_symmetry_weight_equalities": true
+    },
+    "roots": [
+      {
+        "discovered_by_addition_size": [
+          1,
+          0,
+          6
+        ],
+        "excludes_all_supports_through_cap": true,
+        "exhaustive": true,
+        "max_total_support": 11,
+        "nodes_examined": 7,
+        "seed": [
+          0,
+          0,
+          0
+        ],
+        "seed_support": [
+          0,
+          4,
+          8,
+          81,
+          85,
+          89,
+          126,
+          130,
+          134
+        ],
+        "singleton_free_support_count": 0,
+        "singleton_free_supports": [],
+        "supports_discovered": 7,
+        "termination": "frontier-exhausted"
+      },
+      {
+        "discovered_by_addition_size": [
+          1,
+          0,
+          6
+        ],
+        "excludes_all_supports_through_cap": true,
+        "exhaustive": true,
+        "max_total_support": 11,
+        "nodes_examined": 7,
+        "seed": [
+          0,
+          0,
+          1
+        ],
+        "seed_support": [
+          0,
+          4,
+          8,
+          81,
+          85,
+          98,
+          125,
+          126,
+          130
+        ],
+        "singleton_free_support_count": 0,
+        "singleton_free_supports": [],
+        "supports_discovered": 7,
+        "termination": "frontier-exhausted"
+      },
+      {
+        "discovered_by_addition_size": [
+          1,
+          0,
+          6
+        ],
+        "excludes_all_supports_through_cap": true,
+        "exhaustive": true,
+        "max_total_support": 11,
+        "nodes_examined": 7,
+        "seed": [
+          0,
+          0,
+          4
+        ],
+        "seed_support": [
+          0,
+          4,
+          17,
+          71,
+          81,
+          85,
+          125,
+          126,
+          130
+        ],
+        "singleton_free_support_count": 0,
+        "singleton_free_supports": [],
+        "supports_discovered": 7,
+        "termination": "frontier-exhausted"
+      },
+      {
+        "discovered_by_addition_size": [
+          1,
+          0,
+          6
+        ],
+        "excludes_all_supports_through_cap": true,
+        "exhaustive": true,
+        "max_total_support": 11,
+        "nodes_examined": 7,
+        "seed": [
+          0,
+          1,
+          2
+        ],
+        "seed_support": [
+          0,
+          4,
+          8,
+          81,
+          94,
+          107,
+          116,
+          121,
+          126
+        ],
+        "singleton_free_support_count": 0,
+        "singleton_free_supports": [],
+        "supports_discovered": 7,
+        "termination": "frontier-exhausted"
+      },
+      {
+        "discovered_by_addition_size": [
+          1,
+          0,
+          6
+        ],
+        "excludes_all_supports_through_cap": true,
+        "exhaustive": true,
+        "max_total_support": 11,
+        "nodes_examined": 7,
+        "seed": [
+          0,
+          1,
+          3
+        ],
+        "seed_support": [
+          0,
+          4,
+          17,
+          62,
+          81,
+          94,
+          121,
+          126,
+          134
+        ],
+        "singleton_free_support_count": 0,
+        "singleton_free_supports": [],
+        "supports_discovered": 7,
+        "termination": "frontier-exhausted"
+      },
+      {
+        "discovered_by_addition_size": [
+          1,
+          0,
+          6
+        ],
+        "excludes_all_supports_through_cap": true,
+        "exhaustive": true,
+        "max_total_support": 11,
+        "nodes_examined": 7,
+        "seed": [
+          0,
+          1,
+          5
+        ],
+        "seed_support": [
+          0,
+          4,
+          17,
+          80,
+          81,
+          94,
+          116,
+          121,
+          126
+        ],
+        "singleton_free_support_count": 0,
+        "singleton_free_supports": [],
+        "supports_discovered": 7,
+        "termination": "frontier-exhausted"
+      },
+      {
+        "discovered_by_addition_size": [
+          1,
+          0,
+          6
+        ],
+        "excludes_all_supports_through_cap": true,
+        "exhaustive": true,
+        "max_total_support": 11,
+        "nodes_examined": 7,
+        "seed": [
+          0,
+          4,
+          8
+        ],
+        "seed_support": [
+          0,
+          13,
+          26,
+          67,
+          80,
+          81,
+          98,
+          121,
+          126
+        ],
+        "singleton_free_support_count": 0,
+        "singleton_free_supports": [],
+        "supports_discovered": 7,
+        "termination": "frontier-exhausted"
+      },
+      {
+        "discovered_by_addition_size": [
+          1,
+          0,
+          6
+        ],
+        "excludes_all_supports_through_cap": true,
+        "exhaustive": true,
+        "max_total_support": 11,
+        "nodes_examined": 7,
+        "seed": [
+          0,
+          4,
+          13
+        ],
+        "seed_support": [
+          0,
+          13,
+          44,
+          62,
+          67,
+          81,
+          98,
+          121,
+          126
+        ],
+        "singleton_free_support_count": 0,
+        "singleton_free_supports": [],
+        "supports_discovered": 7,
+        "termination": "frontier-exhausted"
+      }
+    ],
+    "schema": "krenn-n6-d3-unconditional-support-closure-v1",
+    "statement": "Every finite GHZ witness contains one nonzero pure matching per color. The eight S6 x S3 seed charts and exhaustive singleton closure exclude all total supports at most 11; any finite witness therefore has support at least 12.",
+    "totals": {
+      "nodes_examined": 56,
+      "singleton_free_supports": 0,
+      "supports_discovered": 56
+    }
+  }
+}
