@@ -1,0 +1,244 @@
+{
+  "Reynolds_reduction": {
+    "D_factor_set_stable": true,
+    "averaging_denominator_nonzero_over_Q": true,
+    "group_order": 4320,
+    "invariant_search_lossless_over_Q": true,
+    "mixed_generator_set_stable": true
+  },
+  "claims": {
+    "D_in_J_mix_at_k1": false,
+    "D_outside_radical_J_mix_proved": false,
+    "GHZ_nonexistence_proved": false,
+    "exact_Q_nonmembership_proved": true,
+    "modular_ranks_needed_for_Q_claim": false
+  },
+  "compression_convention": {
+    "codomain_row": "sum of all raw equations in one codomain monomial orbit",
+    "domain_coordinate": "one common coefficient on every raw (coloring, multiplier) basis element in one domain orbit",
+    "matrix_entry": "total raw incidences from a domain orbit into a codomain orbit",
+    "rhs_entry": "sum of D coefficients across the codomain orbit"
+  },
+  "exact_integer_dual": {
+    "claim_boundary": "This proves D is not in J_mix at k=1. It does not prove D is outside radical(J_mix), because a higher power D^k may still lie in J_mix.",
+    "compression_convention": {
+      "codomain_row": "sum of all raw equations in one codomain monomial orbit",
+      "domain_coordinate": "one common coefficient on every raw (coloring, multiplier) basis element in one domain orbit",
+      "matrix_entry": "total raw incidences from a domain orbit into a codomain orbit",
+      "rhs_entry": "sum of D coefficients across the codomain orbit"
+    },
+    "exact_Q_nonmembership_proved": true,
+    "integer_lambda": [
+      1,
+      -1
+    ],
+    "lambda_transpose_B_zero": true,
+    "lambda_transpose_b": -720,
+    "normalized_Q_dual": {
+      "denominator": 720,
+      "numerators": [
+        1,
+        -1
+      ],
+      "rows": [
+        568,
+        550
+      ],
+      "transpose_b": 1
+    },
+    "row_indices": [
+      550,
+      568
+    ],
+    "row_keys": [
+      [
+        0,
+        4,
+        17,
+        62,
+        90,
+        94,
+        117,
+        121,
+        134
+      ],
+      [
+        0,
+        4,
+        17,
+        62,
+        90,
+        103,
+        112,
+        117,
+        134
+      ]
+    ],
+    "row_orbit_sizes_and_rhs": [
+      360,
+      1080
+    ],
+    "row_variable_keys": [
+      [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          2,
+          2
+        ],
+        [
+          1,
+          3,
+          2,
+          2
+        ],
+        [
+          2,
+          4,
+          0,
+          0
+        ],
+        [
+          2,
+          4,
+          1,
+          1
+        ],
+        [
+          3,
+          5,
+          0,
+          0
+        ],
+        [
+          3,
+          5,
+          1,
+          1
+        ],
+        [
+          4,
+          5,
+          2,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          2,
+          2
+        ],
+        [
+          1,
+          3,
+          2,
+          2
+        ],
+        [
+          2,
+          4,
+          0,
+          0
+        ],
+        [
+          2,
+          5,
+          1,
+          1
+        ],
+        [
+          3,
+          4,
+          1,
+          1
+        ],
+        [
+          3,
+          5,
+          0,
+          0
+        ],
+        [
+          4,
+          5,
+          2,
+          2
+        ]
+      ]
+    ],
+    "shared_column_coefficient": 2160,
+    "shared_column_index": 142
+  },
+  "fine_grading": {
+    "D_degree": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "complementary_multiplier_description_exact": true,
+    "lattice_rank": 18,
+    "variable_degree": "e_(i,a)+e_(j,b)"
+  },
+  "orbit_census": {
+    "D_orbits": 8,
+    "codomain_orbits": 3102,
+    "domain_orbits": 1314,
+    "domain_orbits_by_occupation": {
+      "2+2+2": 202,
+      "3+2+1": 556,
+      "3+3": 126,
+      "4+1+1": 188,
+      "4+2": 172,
+      "5+1": 70
+    }
+  },
+  "raw_census": {
+    "D_monomials": 3375,
+    "codomain_monomials": 11608920,
+    "domain_columns": 4385040,
+    "mixed_colorings": 726,
+    "multipliers_per_coloring": 6040
+  },
+  "schema": "krenn.n6_d3.source_ideal.k1.v1"
+}

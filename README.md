@@ -423,6 +423,68 @@ must have at least 22 nonzero coordinates. This remains a support-conditional
 lower bound: it does not exclude witnesses that omit a natural slot, and it
 does not decide whether a support of size 22 or more can realize GHZ.
 
+## Exact \(k=1\) source-ideal obstruction
+
+For a coloring \(c=(c_0,\ldots,c_5)\in\{0,1,2\}^6\), write
+
+\[
+F_c(W)=\sum_{M\in\operatorname{PM}(K_6)}
+       \prod_{\{i,j\}\in M}W_{ij}^{c_i c_j},
+\qquad
+D=F_{000000}F_{111111}F_{222222},
+\]
+
+and let \(J_{\mathrm{mix}}=\langle F_c:c\text{ is not all-equal}\rangle\).
+The fine grading
+
+\[
+\deg W_{ij}^{ab}=e_{i,a}+e_{j,b}
+\]
+
+makes \(D\) homogeneous with one copy of every vertex-color degree. Thus any
+identity \(D=\sum_c A_cF_c\) can be reduced without loss to degree-six
+multipliers \(A_c\): at vertex \(i\), an admissible multiplier uses exactly
+the two colors complementary to \(c_i\). There are 6,040 such monomials for
+each of the 726 mixed colorings. The raw linear system has 4,385,040 columns
+and 11,608,920 rows; exact \(S_6\times S_3\) Reynolds averaging reduces it to
+1,314 domain orbits and 3,102 codomain orbits. The polynomial \(D\) has 3,375
+monomials in eight codomain orbits.
+
+In the orbit-total integer system \(Bx=b\), rows 550 and 568 correspond to
+
+\[
+\begin{aligned}
+m_{550}={}&
+W_{01}^{00}W_{01}^{11}W_{02}^{22}W_{13}^{22}
+W_{24}^{00}W_{24}^{11}W_{35}^{00}W_{35}^{11}W_{45}^{22},\\
+m_{568}={}&
+W_{01}^{00}W_{01}^{11}W_{02}^{22}W_{13}^{22}
+W_{24}^{00}W_{25}^{11}W_{34}^{11}W_{35}^{00}W_{45}^{22}.
+\end{aligned}
+\]
+
+Their \(B\)-row profiles are identical: each has only column 142, with
+coefficient 2,160. Their \(D\)-orbit totals are respectively 360 and 1,080.
+Consequently the integer dual \(\lambda=e_{550}-e_{568}\) satisfies
+
+\[
+\lambda^{\mathsf T}B=0,
+\qquad
+\lambda^{\mathsf T}b=360-1080=-720.
+\]
+
+This is an exact certificate that \(D\notin J_{\mathrm{mix}}\) over
+\(\mathbf Q\), and over every characteristic-zero field. Modular ranks
+\(\operatorname{rank}(B)/\operatorname{rank}([B\mid b])=1193/1194\) at
+\(p=31,1009,1000003\) are diagnostics only. The result does **not** prove
+\(D\notin\sqrt{J_{\mathrm{mix}}}\), GHZ nonexistence, or nonmembership of the
+GHZ tensor in the exact affine image.
+
+```text
+python -m experiments.krenn_quantum_graph.source_ideal
+python -m unittest tests.test_krenn_source_ideal -v
+```
+
 ## Sharp deformation regression
 
 At the `n=4,d=3` fixture, the exact `81 x 54` Jacobian has rank 51 and

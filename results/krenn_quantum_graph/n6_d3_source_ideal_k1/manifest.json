@@ -1,0 +1,36 @@
+{
+  "artifacts": [
+    {
+      "bytes": 4404,
+      "path": "certificate.json",
+      "sha256": "5c38c44b39ca7d0dce98482bd8f31f2fad529cbc985e21b4f40f90a35e06d522"
+    }
+  ],
+  "inputs": [
+    {
+      "canonical_bytes": 49042,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/source_ideal.py",
+      "sha256": "a6d6c6918110d4d1e1bf5191954f134eb82918caf87a9b2e53e1442cb973b76a"
+    },
+    {
+      "canonical_bytes": 11452,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/system.py",
+      "sha256": "3f64e42efc68b5391b3ec9798e801d1efa1f7c4a9c68c56a4b3b2e78540214a9"
+    },
+    {
+      "canonical_bytes": 13053,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/targets.py",
+      "sha256": "6b3d6239fcb2353352ea468103f920066273db8354a8d8fb60911b338c351baa"
+    }
+  ],
+  "producer": {
+    "canonical_bytes": 17064,
+    "hash_mode": "canonical-lf-text-v1",
+    "path": "experiments/krenn_quantum_graph/source_ideal_artifact.py",
+    "sha256": "3303f4c9d1a1b6f6d1da52c9882aa38d072d850e782cf283c3daa11c1c64e7d6"
+  },
+  "schema": "krenn.n6_d3.source_ideal.artifact_manifest.v1"
+}
