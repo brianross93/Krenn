@@ -1,0 +1,11 @@
+{
+  "no_solution_certificate_emitted": false,
+  "parameters": {
+    "d": 4,
+    "n": 6
+  },
+  "schema": "krenn-quantum-graph-claim-boundary-v1",
+  "search_performed": false,
+  "statement": "The compact 4,096-equation production system is generated and structurally verified. Bounded native support analysis has begun and tests only necessary combinatorial conditions. No complex weight search was performed, and no witness or nonexistence certificate is emitted.",
+  "status": "bounded-native-support-analysis-begun"
+}

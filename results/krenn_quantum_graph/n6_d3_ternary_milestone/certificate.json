@@ -1,0 +1,63 @@
+{
+  "artifacts": {
+    "bounded_search": "bounded_search.json",
+    "certificate": "certificate.json",
+    "manifest": "manifest.json",
+    "orbit_census": "orbit_census.json"
+  },
+  "bounded_search": {
+    "best_nonzero_residual_count": 1,
+    "best_residual_l1": 1,
+    "best_support_size": 8,
+    "frontier_cap": 400,
+    "frontier_remaining": 59,
+    "node_cap": 32,
+    "nodes_examined": 32,
+    "support_cap": 12,
+    "termination": "node-cap-reached",
+    "time_cap_seconds": 30.0,
+    "total_nodes_examined": 32
+  },
+  "bundle_schema": "krenn-quantum-graph-ternary-milestone-bundle-v1",
+  "claim_boundary": {
+    "bounded_search_only": true,
+    "exhaustive_nonexistence": false,
+    "nonexistence_proved": false,
+    "orbit_indexing_only": true,
+    "proof_over_C": false,
+    "search_exhaustive": false,
+    "solution_certified": false,
+    "statement": "A bounded fixed-target ternary search was replayed. A capped miss proves only that no exact zero was found among the explored nodes.",
+    "symmetry_weight_equalities": 0,
+    "tree_certificate_complete": false
+  },
+  "counts": {
+    "color_unordered_multisets": 680,
+    "equations": 729,
+    "monomials": 10935,
+    "ordered_seeds": 3375,
+    "perfect_matchings": 15,
+    "seed_orbits": 8,
+    "variables": 135
+  },
+  "exact_checks": {
+    "best_candidate_original_equations_replayed": true,
+    "bounded_search_fully_replayed": true,
+    "checkpoint_exactly_replayed": true,
+    "eight_seed_orbits_replayed": true,
+    "orbit_census_recomputed": true,
+    "ordered_seed_count_3375": true
+  },
+  "parameters": {
+    "d": 3,
+    "domain": [
+      -1,
+      0,
+      1
+    ],
+    "n": 6,
+    "search_mode": "fixed-target"
+  },
+  "schema": "krenn-quantum-graph-ternary-certificate-v1",
+  "status": "bounded-fixed-target-ternary-search-no-zero-found"
+}

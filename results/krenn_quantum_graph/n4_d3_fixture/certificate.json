@@ -1,0 +1,65 @@
+{
+  "artifacts": {
+    "certificate": "certificate.json",
+    "claim_boundary": null,
+    "deformation": "deformation_certificate.json",
+    "manifest": "manifest.json",
+    "system": "system.npz",
+    "witness": "witness.json"
+  },
+  "claim_boundary": {
+    "finite_field": "An F_31 replay alone is not a proof over C.",
+    "search": {
+      "no_solution_certificate_emitted": false,
+      "search_performed": false
+    },
+    "symmetry": "Variables remain independent; S_n x S_d is used only for transport and verification, never to equate weights.",
+    "witness": "The exact-Q replay certifies the listed rational witness, hence the same point over C."
+  },
+  "compact_encoding": {
+    "equation_offsets_shape": [
+      82
+    ],
+    "rhs_shape": [
+      81
+    ],
+    "structure_sha256": "f958315ba9b7edd863ab956008686b4c72b1aa54533e84685927b048f979617e",
+    "variable_index_dtype": "uint16",
+    "variable_index_terms_shape": [
+      243,
+      2
+    ]
+  },
+  "counts": {
+    "constant_rhs_equations": 3,
+    "degree": 2,
+    "equations": 81,
+    "matchings_per_equation": 3,
+    "monomials": 243,
+    "variables": 54,
+    "witness_support": 6
+  },
+  "exact_checks": {
+    "deformation_certificate_exact": true,
+    "independent_sparse_system_replay": true,
+    "independent_witness_replay": true,
+    "primary_sparse_system_valid": true,
+    "witness_exact_over_F31": true,
+    "witness_exact_over_Q": true
+  },
+  "ordering": {
+    "colorings": "lexicographic; last vertex changes fastest",
+    "edges": "lexicographic canonical endpoints i<j",
+    "endpoint_colors": "a major, b minor",
+    "matchings": "least unused vertex paired with partners ascending",
+    "monomials": "flattened by equation then deterministic matching",
+    "variables": "edge major, then a, then b"
+  },
+  "parameters": {
+    "d": 3,
+    "n": 4
+  },
+  "schema": "krenn-quantum-graph-artifact-certificate-v1",
+  "status": "exact-witness-and-deformation-certified",
+  "system_schema": "krenn-quantum-graph-sparse-system-v1"
+}

@@ -1,0 +1,75 @@
+{
+  "d": 3,
+  "entries": [
+    {
+      "coordinate": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "denominator": 1,
+      "numerator": 1,
+      "variable_index": 0
+    },
+    {
+      "coordinate": [
+        0,
+        2,
+        1,
+        1
+      ],
+      "denominator": 1,
+      "numerator": 1,
+      "variable_index": 13
+    },
+    {
+      "coordinate": [
+        0,
+        3,
+        2,
+        2
+      ],
+      "denominator": 1,
+      "numerator": 1,
+      "variable_index": 26
+    },
+    {
+      "coordinate": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "denominator": 1,
+      "numerator": 1,
+      "variable_index": 35
+    },
+    {
+      "coordinate": [
+        1,
+        3,
+        1,
+        1
+      ],
+      "denominator": 1,
+      "numerator": 1,
+      "variable_index": 40
+    },
+    {
+      "coordinate": [
+        2,
+        3,
+        0,
+        0
+      ],
+      "denominator": 1,
+      "numerator": 1,
+      "variable_index": 45
+    }
+  ],
+  "n": 4,
+  "omitted_coordinates": "zero",
+  "schema": "krenn-quantum-graph-sparse-witness-v1",
+  "support_size": 6
+}

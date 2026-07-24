@@ -1,0 +1,11 @@
+{
+  "no_solution_certificate_emitted": false,
+  "parameters": {
+    "d": 4,
+    "n": 4
+  },
+  "schema": "krenn-quantum-graph-claim-boundary-v1",
+  "search_performed": false,
+  "statement": "The benchmark is recorded as having no solution, but this milestone emits no new independently checkable nonexistence certificate and makes no computational-proof claim.",
+  "status": "known-negative-benchmark-not-reproved"
+}

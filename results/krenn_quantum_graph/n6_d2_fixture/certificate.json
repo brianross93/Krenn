@@ -1,0 +1,64 @@
+{
+  "artifacts": {
+    "certificate": "certificate.json",
+    "claim_boundary": null,
+    "deformation": null,
+    "manifest": "manifest.json",
+    "system": "system.npz",
+    "witness": "witness.json"
+  },
+  "claim_boundary": {
+    "finite_field": "An F_31 replay alone is not a proof over C.",
+    "search": {
+      "no_solution_certificate_emitted": false,
+      "search_performed": false
+    },
+    "symmetry": "Variables remain independent; S_n x S_d is used only for transport and verification, never to equate weights.",
+    "witness": "The exact-Q replay certifies the listed rational witness, hence the same point over C."
+  },
+  "compact_encoding": {
+    "equation_offsets_shape": [
+      65
+    ],
+    "rhs_shape": [
+      64
+    ],
+    "structure_sha256": "9ac068e1a3d87a78d8eded53d83f98be620f399683e7dab70ee20dcaf95ef928",
+    "variable_index_dtype": "uint16",
+    "variable_index_terms_shape": [
+      960,
+      3
+    ]
+  },
+  "counts": {
+    "constant_rhs_equations": 2,
+    "degree": 3,
+    "equations": 64,
+    "matchings_per_equation": 15,
+    "monomials": 960,
+    "variables": 60,
+    "witness_support": 6
+  },
+  "exact_checks": {
+    "independent_sparse_system_replay": true,
+    "independent_witness_replay": true,
+    "primary_sparse_system_valid": true,
+    "witness_exact_over_F31": true,
+    "witness_exact_over_Q": true
+  },
+  "ordering": {
+    "colorings": "lexicographic; last vertex changes fastest",
+    "edges": "lexicographic canonical endpoints i<j",
+    "endpoint_colors": "a major, b minor",
+    "matchings": "least unused vertex paired with partners ascending",
+    "monomials": "flattened by equation then deterministic matching",
+    "variables": "edge major, then a, then b"
+  },
+  "parameters": {
+    "d": 2,
+    "n": 6
+  },
+  "schema": "krenn-quantum-graph-artifact-certificate-v1",
+  "status": "exact-witness-certified",
+  "system_schema": "krenn-quantum-graph-sparse-system-v1"
+}

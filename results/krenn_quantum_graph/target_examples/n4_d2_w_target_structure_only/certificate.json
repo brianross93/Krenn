@@ -1,0 +1,66 @@
+{
+  "artifacts": {
+    "certificate": "certificate.json",
+    "manifest": "manifest.json",
+    "target": "target.json",
+    "tensor_map": "tensor_map.npz",
+    "witness": null
+  },
+  "claims": {
+    "border_image_membership_certified": false,
+    "complex_affine_image_membership_certified": false,
+    "exact_rational_affine_image_membership_certified": false,
+    "local_diagonal_orbit_membership_certified": false,
+    "nonexistence_certificate_emitted": false,
+    "projective_image_membership_certified": false,
+    "statement": "This bundle records an exact rational target and the canonical matching map only. Without a witness it certifies no affine, projective, local-diagonal, border-image, or nonexistence claim.",
+    "witness_emitted": false
+  },
+  "compact_encoding": {
+    "archive_keys": [
+      "equation_offsets",
+      "monomial_variable_indices"
+    ],
+    "equation_offsets_shape": [
+      17
+    ],
+    "structure_sha256": "5fca012d94c1e2a123fa74b0fb220272db3d637c6f9f2cdb35a4449ecdc367fc",
+    "variable_index_dtype": "uint16",
+    "variable_index_terms_shape": [
+      48,
+      2
+    ]
+  },
+  "counts": {
+    "coefficients": 16,
+    "degree": 2,
+    "matchings_per_coefficient": 3,
+    "monomials": 48,
+    "target_support": 4,
+    "variables": 24,
+    "witness_support": 0
+  },
+  "exact_checks": {
+    "independent_matching_reconstruction": true,
+    "independent_target_semantic_replay": true,
+    "primary_tensor_map_structure_replay": true,
+    "target_independent_archive_has_no_rhs": true,
+    "target_json_round_trip_exact": true
+  },
+  "ordering": {
+    "colorings": "colorings (c_0,...,c_{n-1}) in range(d)^n; lexicographic order with c_{n-1} changing fastest",
+    "edges": "lexicographic canonical endpoints i<j",
+    "endpoint_colors": "a major, b minor",
+    "matchings": "least unused vertex paired with partners ascending",
+    "monomials": "flattened by coloring then deterministic matching",
+    "variables": "edge major, then a, then b"
+  },
+  "parameters": {
+    "d": 2,
+    "n": 4
+  },
+  "schema": "krenn-rational-target-problem-certificate-v1",
+  "status": "target-problem-structure-only-no-witness",
+  "target_schema": "krenn-computational-basis-target-v1",
+  "tensor_map_schema": "krenn-perfect-matching-tensor-map-v1"
+}

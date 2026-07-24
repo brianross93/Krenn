@@ -1,0 +1,114 @@
+{
+  "claim_boundary": {
+    "characteristic_zero": "The native exact-Q split quotient proves that the three gauge directions are the full Jacobian kernel and that the induced 51-dimensional Jacobian is injective; this persists after scalar extension to C.",
+    "finite_field": "The standalone F_31 calculation is an optional arithmetic regression and is not used as a proof over C."
+  },
+  "exact_checks": {
+    "gauge_action_preserves_every_system_monomial": true,
+    "gauge_rank_3_over_Q": true,
+    "jacobian_kills_gauge_over_Q": true,
+    "jacobian_nullity_3_over_Q": true,
+    "jacobian_rank_51_over_Q": true,
+    "native_quotient_jacobian_factorization_over_Q": true,
+    "native_quotient_jacobian_injective_over_Q": true,
+    "native_quotient_kernel_equals_gauge_over_Q": true,
+    "native_quotient_map_kills_gauge_over_Q": true,
+    "native_quotient_section_identity_over_Q": true,
+    "raw_kernel_equals_gauge_over_Q": true,
+    "witness_exact_over_Q": true
+  },
+  "jacobian": {
+    "nullity_over_Q": 3,
+    "rank_over_Q": 51,
+    "shape": [
+      81,
+      54
+    ]
+  },
+  "native_gauge_quotient_over_Q": {
+    "ambient_dimension": 54,
+    "construction": "deterministic exact pivot-row complement",
+    "gauge_image_dimension": 3,
+    "induced_jacobian_nullity": 0,
+    "induced_jacobian_rank": 51,
+    "induced_jacobian_shape": [
+      81,
+      51
+    ],
+    "pivot_rows": [
+      0,
+      13,
+      26
+    ],
+    "quotient_dimension": 51,
+    "quotient_map_shape": [
+      51,
+      54
+    ],
+    "section_shape": [
+      54,
+      51
+    ]
+  },
+  "optional_arithmetic_regression_F31": {
+    "checks": {
+      "gauge_rank_3_over_F31": true,
+      "jacobian_kills_gauge_over_F31": true,
+      "jacobian_nullity_3_over_F31": true,
+      "jacobian_rank_51_over_F31": true,
+      "raw_kernel_equals_gauge_over_F31": true,
+      "witness_exact_over_F31": true
+    },
+    "gauge_rank": 3,
+    "jacobian_nullity": 3,
+    "jacobian_rank": 51,
+    "passed": true,
+    "proof_role": "supplemental arithmetic regression; not used in the characteristic-zero quotient proof"
+  },
+  "parameters": {
+    "d": 3,
+    "n": 4,
+    "prime": 31
+  },
+  "reciprocal_edge_rescaling_gauge": {
+    "action": "all color slots on the positive edge scale by lambda; all slots on its complementary negative edge scale by lambda^-1",
+    "directions": [
+      {
+        "negative_edge": [
+          2,
+          3
+        ],
+        "positive_edge": [
+          0,
+          1
+        ]
+      },
+      {
+        "negative_edge": [
+          1,
+          3
+        ],
+        "positive_edge": [
+          0,
+          2
+        ]
+      },
+      {
+        "negative_edge": [
+          1,
+          2
+        ],
+        "positive_edge": [
+          0,
+          3
+        ]
+      }
+    ],
+    "rank_over_Q": 3,
+    "shape": [
+      54,
+      3
+    ]
+  },
+  "schema": "krenn-quantum-graph-deformation-certificate-v2"
+}

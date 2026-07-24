@@ -1,0 +1,64 @@
+{
+  "artifacts": [
+    {
+      "bytes": 36127,
+      "path": "bounded_search.json",
+      "sha256": "a3e644322fb71c980cffb796969577dfc3c7072f87b85540b8d3dffdaa10a7bf"
+    },
+    {
+      "bytes": 1879,
+      "path": "certificate.json",
+      "sha256": "0d5af25063dc8db0100fb0097d9d5da90865aa0d7772bc4aee2a0d79f78c5fea"
+    },
+    {
+      "bytes": 7801,
+      "path": "orbit_census.json",
+      "sha256": "48a4a15061879630db09f706aef981d3e52c5eaca0db6dc4d202682d586f4295"
+    }
+  ],
+  "inputs": [
+    {
+      "canonical_bytes": 11452,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/system.py",
+      "sha256": "3f64e42efc68b5391b3ec9798e801d1efa1f7c4a9c68c56a4b3b2e78540214a9"
+    },
+    {
+      "canonical_bytes": 13053,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/targets.py",
+      "sha256": "6b3d6239fcb2353352ea468103f920066273db8354a8d8fb60911b338c351baa"
+    },
+    {
+      "canonical_bytes": 24466,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/ternary_search.py",
+      "sha256": "d56112a45e4bc615e8a17159db4792cab501f18f4b553c76c5a90af56015f488"
+    },
+    {
+      "canonical_bytes": 9112,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/ternary_seed_orbits.py",
+      "sha256": "32be5f98be0b75971933da8dfdb0d1d25e290cac400990f4dd179517dd5330f3"
+    },
+    {
+      "canonical_bytes": 9266,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/transport.py",
+      "sha256": "d28d18984ba033a56c0c328b320ecc12e0ce234f524d60a651d33c874fdc39bb"
+    },
+    {
+      "canonical_bytes": 8389,
+      "hash_mode": "canonical-lf-text-v1",
+      "path": "experiments/krenn_quantum_graph/witness.py",
+      "sha256": "cb64d99e80eca4ff17ca66f0f69a4099ca08010ff85ffdbf53aa4a391b7ed7dd"
+    }
+  ],
+  "producer": {
+    "canonical_bytes": 18837,
+    "hash_mode": "canonical-lf-text-v1",
+    "path": "experiments/krenn_quantum_graph/ternary_milestone_artifact.py",
+    "sha256": "64e88292b1bffa13e20bd718c9535bc22c309207dcc5dde0bfa3c39605e76673"
+  },
+  "schema": "krenn-quantum-graph-ternary-manifest-v1"
+}

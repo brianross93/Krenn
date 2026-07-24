@@ -1,0 +1,69 @@
+{
+  "artifacts": {
+    "certificate": "certificate.json",
+    "claim_boundary": "claim_boundary.json",
+    "deformation": null,
+    "manifest": "manifest.json",
+    "system": "system.npz",
+    "witness": null
+  },
+  "claim_boundary": {
+    "finite_field": "An F_31 replay alone is not a proof over C.",
+    "search": {
+      "no_solution_certificate_emitted": false,
+      "parameters": {
+        "d": 4,
+        "n": 6
+      },
+      "schema": "krenn-quantum-graph-claim-boundary-v1",
+      "search_performed": false,
+      "statement": "The compact 4,096-equation production system is generated and structurally verified. Bounded native support analysis has begun and tests only necessary combinatorial conditions. No complex weight search was performed, and no witness or nonexistence certificate is emitted.",
+      "status": "bounded-native-support-analysis-begun"
+    },
+    "symmetry": "Variables remain independent; S_n x S_d is used only for transport and verification, never to equate weights.",
+    "witness": "No solution witness is asserted by this structural bundle."
+  },
+  "compact_encoding": {
+    "equation_offsets_shape": [
+      4097
+    ],
+    "rhs_shape": [
+      4096
+    ],
+    "structure_sha256": "3c9c32790875037e6149646ba53646ce44caec80c0700bd51028f9a3b11a4025",
+    "variable_index_dtype": "uint16",
+    "variable_index_terms_shape": [
+      61440,
+      3
+    ]
+  },
+  "counts": {
+    "constant_rhs_equations": 4,
+    "degree": 3,
+    "equations": 4096,
+    "matchings_per_equation": 15,
+    "monomials": 61440,
+    "variables": 240,
+    "witness_support": 0
+  },
+  "exact_checks": {
+    "claim_boundary_explicit": true,
+    "independent_sparse_system_replay": true,
+    "primary_sparse_system_valid": true
+  },
+  "ordering": {
+    "colorings": "lexicographic; last vertex changes fastest",
+    "edges": "lexicographic canonical endpoints i<j",
+    "endpoint_colors": "a major, b minor",
+    "matchings": "least unused vertex paired with partners ascending",
+    "monomials": "flattened by equation then deterministic matching",
+    "variables": "edge major, then a, then b"
+  },
+  "parameters": {
+    "d": 4,
+    "n": 6
+  },
+  "schema": "krenn-quantum-graph-artifact-certificate-v1",
+  "status": "bounded-native-support-analysis-begun",
+  "system_schema": "krenn-quantum-graph-sparse-system-v1"
+}

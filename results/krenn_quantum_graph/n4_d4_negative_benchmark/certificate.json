@@ -1,0 +1,69 @@
+{
+  "artifacts": {
+    "certificate": "certificate.json",
+    "claim_boundary": "claim_boundary.json",
+    "deformation": null,
+    "manifest": "manifest.json",
+    "system": "system.npz",
+    "witness": null
+  },
+  "claim_boundary": {
+    "finite_field": "An F_31 replay alone is not a proof over C.",
+    "search": {
+      "no_solution_certificate_emitted": false,
+      "parameters": {
+        "d": 4,
+        "n": 4
+      },
+      "schema": "krenn-quantum-graph-claim-boundary-v1",
+      "search_performed": false,
+      "statement": "The benchmark is recorded as having no solution, but this milestone emits no new independently checkable nonexistence certificate and makes no computational-proof claim.",
+      "status": "known-negative-benchmark-not-reproved"
+    },
+    "symmetry": "Variables remain independent; S_n x S_d is used only for transport and verification, never to equate weights.",
+    "witness": "No solution witness is asserted by this structural bundle."
+  },
+  "compact_encoding": {
+    "equation_offsets_shape": [
+      257
+    ],
+    "rhs_shape": [
+      256
+    ],
+    "structure_sha256": "7ef224a2364e380990193fdb754164187c8414b3e09c7799a56f4c860d440008",
+    "variable_index_dtype": "uint16",
+    "variable_index_terms_shape": [
+      768,
+      2
+    ]
+  },
+  "counts": {
+    "constant_rhs_equations": 4,
+    "degree": 2,
+    "equations": 256,
+    "matchings_per_equation": 3,
+    "monomials": 768,
+    "variables": 96,
+    "witness_support": 0
+  },
+  "exact_checks": {
+    "claim_boundary_explicit": true,
+    "independent_sparse_system_replay": true,
+    "primary_sparse_system_valid": true
+  },
+  "ordering": {
+    "colorings": "lexicographic; last vertex changes fastest",
+    "edges": "lexicographic canonical endpoints i<j",
+    "endpoint_colors": "a major, b minor",
+    "matchings": "least unused vertex paired with partners ascending",
+    "monomials": "flattened by equation then deterministic matching",
+    "variables": "edge major, then a, then b"
+  },
+  "parameters": {
+    "d": 4,
+    "n": 4
+  },
+  "schema": "krenn-quantum-graph-artifact-certificate-v1",
+  "status": "known-negative-benchmark-not-reproved",
+  "system_schema": "krenn-quantum-graph-sparse-system-v1"
+}

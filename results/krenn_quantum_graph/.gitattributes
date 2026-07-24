@@ -1,0 +1,3 @@
+**/*.json -text
+**/*.npz -text -diff
+

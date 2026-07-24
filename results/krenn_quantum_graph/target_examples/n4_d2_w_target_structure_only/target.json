@@ -1,0 +1,48 @@
+{
+  "basis_convention": "colorings (c_0,...,c_{n-1}) in range(d)^n; lexicographic order with c_{n-1} changing fastest",
+  "d": 2,
+  "entries": [
+    {
+      "coloring": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "denominator": 1,
+      "numerator": 1
+    },
+    {
+      "coloring": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "denominator": 1,
+      "numerator": 1
+    },
+    {
+      "coloring": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "denominator": 1,
+      "numerator": 1
+    },
+    {
+      "coloring": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "denominator": 1,
+      "numerator": 1
+    }
+  ],
+  "n": 4,
+  "schema": "krenn-computational-basis-target-v1"
+}
