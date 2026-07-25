@@ -326,10 +326,46 @@ Although the input has a pole at `t=0`, its output extends polynomially and
 specializes there to GHZ. Taking real \(t\to0\) through nonzero values proves
 membership in the ordinary Euclidean closure over \(\mathbf C\), and hence in
 the Zariski closure of the image. This is an exact border-image membership
-certificate. It does not yet prove membership in the strict boundary
-\(\overline{\operatorname{im}\Phi}\setminus\operatorname{im}\Phi\): it is not
-a finite witness and does not decide whether GHZ lies in the affine image
-itself.
+certificate. On its own, a Laurent degeneration does not decide whether GHZ
+also lies in the affine image. The external nonimage theorem recorded below
+supplies that missing half.
+
+## External `n=6,d=3` affine-nonimage theorem
+
+The external repository
+[`algal/krenn-gu-6x3-certificate`](https://github.com/algal/krenn-gu-6x3-certificate)
+proves at proof-content commit
+`105ffbc50b0443433fc53c248272617cc022f3e2`:
+
+```text
+not exists W : MonochromaticQuantumGraph.WeightsN 6 3 C,
+  MonochromaticQuantumGraph.EqSystemN 6 3 W
+```
+
+Its published verification record reports a clean 8,421-job Lean build, all
+50 artifact hashes passing, no `sorryAx`, and the axiom closure
+`[propext, Classical.choice, Lean.ofReduceBool, Lean.trustCompiler,
+Quot.sound]`. The use of `native_decide` makes this a compiler-trusting Lean
+proof rather than a kernel-only reduction proof. The external repository has
+no license file, so no source or proof artifact is vendored here.
+
+The pinned provenance and exact trust boundary are recorded in
+`results/krenn_quantum_graph/n6_d3_external_nonimage_reference/reference.json`.
+Our local static audit checked the theorem statement, the official
+fifteen-matching bridge, and all 50 committed hashes. A redundant local full
+rebuild was stopped and is not claimed.
+
+Accepting the external theorem and combining it with the independently
+replayed Laurent identity above gives the strict statement
+
+\[
+\operatorname{GHZ}_{6,3}\in
+\overline{\operatorname{im}\Phi}\setminus\operatorname{im}\Phi.
+\]
+
+Color restriction also rules out canonical six-vertex solutions for every
+`d >= 3`: any three colors would give the forbidden `d=3` system. This
+settles six vertices, not the global conjecture.
 
 The exact differential profile agrees with this degeneration. At the natural
 seed, the full `729 x 135` Jacobian has rank 130 and nullity 5 over `Q`; its
@@ -511,21 +547,35 @@ computation is not used as a proof over `C`.
   emitted, so this application makes no new proof claim for that benchmark.
 - The bounded `n=6,d=3` ternary run proves only what happened at its replayed
   nodes.
+- The pinned external Lean theorem decides affine nonmembership at
+  `n=6,d=3`. Together with the local Laurent certificate it proves strict
+  border membership for that case.
+- Color restriction extends the six-vertex nonexistence conclusion to every
+  canonical `d >= 3` target. It does not relate different vertex counts.
 - Projective and local-diagonal-orbit modes are named explicitly but do not
   yet have solvers or proof certificates. Border mode now has the specific
   exact `n=6,d=3` Laurent certificate above, but no general solver.
 - Forward local-projection equivariance is exact. Backward no-go propagation
   still requires an independently certified nonimage result.
 
-The next high-value mathematical outputs are a decision on exact affine
-membership inside the now-certified border case, independently replayable
-Nullstellensatz nonimage certificates if exact membership fails, certified
-backward local-projection laws, and eventually a two-vertex contraction or
-forbidden matching-minor theorem connecting different vertex counts.
+The next unsettled even vertex count is eight. The structural program in
+`results/krenn_quantum_graph/n_ge_8_structural_program` combines exact
+simultaneous star/cofactor identities with the minimal-prime decomposition of
+the perfect-matching monomial ideal. There are six blocker orbit types at
+`n=8`, representing 1,408 labelled blockers. Two qutrit blocker systems are
+square, with independently replayed top Chow coefficients 30 and 24. The
+missing theorem is boundary escape: the EqSystem constraints must prevent
+all projective blocker solutions from being confined to coordinate
+boundaries. Positive intersection counts alone do not prove that statement.
 
-## Bounded finite-counterexample campaign
+## Historical bounded finite-counterexample campaign
 
-The native `n=6,d=3` campaign now combines singleton closure, exact
+This campaign predates and is superseded as decision work by the external
+six-vertex nonimage theorem. It remains as a reproducible record of the
+numerical and exact-search machinery; rerunning it cannot change the decided
+`n=6,d=3` conclusion.
+
+The native `n=6,d=3` campaign combines singleton closure, exact
 `S_6 x S_3` support representatives, natural-coordinate omission strata,
 support-size quotas, target-aware rank-adaptive gauge charts, hard
 `L2`/`Linf` controls, complex deterministic multistart continuation, and a

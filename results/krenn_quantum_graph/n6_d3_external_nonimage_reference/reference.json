@@ -1,0 +1,69 @@
+{
+  "schema": "krenn-external-n6-d3-nonimage-reference-v1",
+  "status": "external_formal_theorem_reference",
+  "external_repository": {
+    "url": "https://github.com/algal/krenn-gu-6x3-certificate",
+    "observed_head": "c04696e515e0c02be140353fb52ea60c62e827b1",
+    "proof_content_commit": "105ffbc50b0443433fc53c248272617cc022f3e2",
+    "verification_record_commit": "c04696e515e0c02be140353fb52ea60c62e827b1",
+    "license_file_present": false,
+    "external_material_vendored_here": false
+  },
+  "formal_statement": {
+    "name": "KrennGuCertificate.eqSystem6_no_solution_d3",
+    "text": "not exists W : MonochromaticQuantumGraph.WeightsN 6 3 C, MonochromaticQuantumGraph.EqSystemN 6 3 W",
+    "scope": {
+      "vertices": 6,
+      "colors": 3,
+      "field": "complex",
+      "normalized_target": "canonical GHZ",
+      "unrestricted_weights": true
+    }
+  },
+  "pinned_environment": {
+    "lean_toolchain": "leanprover/lean4:v4.27.0",
+    "formal_conjectures_commit": "e751934294a381afd2d5fc1124c5953c8e25f9fa",
+    "mathlib_commit": "a3a10db0e9d66acbebf76c5e6a135066525ac900",
+    "lake_manifest_git_object": "bab87de6cdb90226d8e4a4be94b815d6e3da0f8e"
+  },
+  "external_authors_reported_verification": {
+    "date": "2026-07-24",
+    "full_build_jobs": 8421,
+    "wall_seconds": 1338.034,
+    "committed_hashes_passed": 50,
+    "committed_hashes_total": 50,
+    "optional_producer_tests_passed": 111,
+    "axiom_closure": [
+      "propext",
+      "Classical.choice",
+      "Lean.ofReduceBool",
+      "Lean.trustCompiler",
+      "Quot.sound"
+    ],
+    "sorryAx_present": false,
+    "trust_boundary": "compiler-trusting native_decide proof, not kernel-only reduction"
+  },
+  "local_static_audit": {
+    "committed_hashes_passed": 50,
+    "committed_hashes_total": 50,
+    "formal_statement_inspected": true,
+    "official_fifteen_matching_bridge_inspected": true,
+    "local_full_lean_build_completed": false,
+    "local_leancheck_run": false,
+    "note": "A redundant local replay was stopped at the user's request. This is neither a failed proof check nor a claimed local replay."
+  },
+  "composition_with_this_repository": {
+    "internal_exact_identity": "Phi(W(t)) = GHZ_6_3 + t e_002121 for nonzero t",
+    "internal_conclusion": "GHZ_6_3 lies in the affine-image closure",
+    "external_conclusion": "GHZ_6_3 is not in the affine image",
+    "combined_conclusion": "GHZ_6_3 lies in the strict border of the affine image",
+    "dependency": "The strict-border conclusion accepts the pinned external theorem; the Laurent certificate remains independently replayable here."
+  },
+  "claim_boundary": {
+    "settles_n6_d3": true,
+    "settles_general_krenn_gu": false,
+    "implies_canonical_n6_all_d_at_least_3_by_color_restriction": true,
+    "next_unsettled_even_vertex_count": 8,
+    "local_rebuild_required_to_claim_independent_local_lean_replay": true
+  }
+}

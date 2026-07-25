@@ -1,0 +1,11 @@
+{
+  "schema": "krenn-external-n6-d3-reference-manifest-v1",
+  "files": {
+    "reference.json": "4b4be3d2a10e259dfe7c48dba6c526c15b5d1a2ca03cb966e5d8df86fba8ac95"
+  },
+  "claim_boundary": {
+    "external_proof_vendored": false,
+    "local_full_lean_replay_claimed": false,
+    "static_reference_only": true
+  }
+}

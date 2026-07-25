@@ -1,0 +1,190 @@
+{
+  "schema": "krenn-perfect-matching-blocker-orbits-v1",
+  "classification": {
+    "ideal": "J_n = < product_(e in M) b_e : M is a perfect matching of K_n >",
+    "minimal_prime": "P_B = < b_e : e in B > for an inclusion-minimal perfect-matching edge blocker B",
+    "complement_form": "K_s join (K_a1 disjoint_union ... disjoint_union K_a_(s+2))",
+    "conditions": "0 <= s <= n/2-1; all a_i positive odd; sum a_i = n-s"
+  },
+  "censuses": [
+    {
+      "n": 4,
+      "orbit_type_count": 2,
+      "labeled_blocker_count": 8,
+      "types": [
+        {
+          "barrier_size": 0,
+          "odd_component_sizes": [
+            3,
+            1
+          ],
+          "blocker_edge_count": 3,
+          "live_edge_count": 3,
+          "labeled_orbit_size": 4
+        },
+        {
+          "barrier_size": 1,
+          "odd_component_sizes": [
+            1,
+            1,
+            1
+          ],
+          "blocker_edge_count": 3,
+          "live_edge_count": 3,
+          "labeled_orbit_size": 4
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "orbit_type_count": 4,
+      "labeled_blocker_count": 91,
+      "types": [
+        {
+          "barrier_size": 0,
+          "odd_component_sizes": [
+            5,
+            1
+          ],
+          "blocker_edge_count": 5,
+          "live_edge_count": 10,
+          "labeled_orbit_size": 6
+        },
+        {
+          "barrier_size": 0,
+          "odd_component_sizes": [
+            3,
+            3
+          ],
+          "blocker_edge_count": 9,
+          "live_edge_count": 6,
+          "labeled_orbit_size": 10
+        },
+        {
+          "barrier_size": 1,
+          "odd_component_sizes": [
+            3,
+            1,
+            1
+          ],
+          "blocker_edge_count": 7,
+          "live_edge_count": 8,
+          "labeled_orbit_size": 60
+        },
+        {
+          "barrier_size": 2,
+          "odd_component_sizes": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "blocker_edge_count": 6,
+          "live_edge_count": 9,
+          "labeled_orbit_size": 15
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "orbit_type_count": 6,
+      "labeled_blocker_count": 1408,
+      "types": [
+        {
+          "barrier_size": 0,
+          "odd_component_sizes": [
+            7,
+            1
+          ],
+          "blocker_edge_count": 7,
+          "live_edge_count": 21,
+          "labeled_orbit_size": 8,
+          "qutrit_chart_variables": 16,
+          "qutrit_chart_is_square": false
+        },
+        {
+          "barrier_size": 0,
+          "odd_component_sizes": [
+            5,
+            3
+          ],
+          "blocker_edge_count": 15,
+          "live_edge_count": 13,
+          "labeled_orbit_size": 56,
+          "qutrit_chart_variables": 16,
+          "qutrit_chart_is_square": false
+        },
+        {
+          "barrier_size": 1,
+          "odd_component_sizes": [
+            5,
+            1,
+            1
+          ],
+          "blocker_edge_count": 11,
+          "live_edge_count": 17,
+          "labeled_orbit_size": 168,
+          "qutrit_chart_variables": 14,
+          "qutrit_chart_is_square": false
+        },
+        {
+          "barrier_size": 1,
+          "odd_component_sizes": [
+            3,
+            3,
+            1
+          ],
+          "blocker_edge_count": 15,
+          "live_edge_count": 13,
+          "labeled_orbit_size": 560,
+          "qutrit_chart_variables": 14,
+          "qutrit_chart_is_square": false
+        },
+        {
+          "barrier_size": 2,
+          "odd_component_sizes": [
+            3,
+            1,
+            1,
+            1
+          ],
+          "blocker_edge_count": 12,
+          "live_edge_count": 16,
+          "labeled_orbit_size": 560,
+          "qutrit_chart_variables": 12,
+          "qutrit_chart_is_square": true,
+          "top_chow_coefficient": 30
+        },
+        {
+          "barrier_size": 3,
+          "odd_component_sizes": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "blocker_edge_count": 10,
+          "live_edge_count": 18,
+          "labeled_orbit_size": 56,
+          "qutrit_chart_variables": 10,
+          "qutrit_chart_is_square": true,
+          "top_chow_coefficient": 24
+        }
+      ]
+    }
+  ],
+  "independent_exact_checks": {
+    "minimal_blocker_check": "primary perfect-matching enumeration",
+    "chow_method_1": "truncated coefficient multiplication",
+    "chow_method_2": "brute-force endpoint orientations",
+    "n8_square_degrees_agree": true
+  },
+  "claim_boundary": {
+    "classifies_scalar_zero_pattern_blockers": true,
+    "classifies_colored_weight_cancellations": false,
+    "positive_chow_degree_proves_projective_intersection_nonempty": true,
+    "positive_chow_degree_proves_selected_affine_color_chart_nonempty": false,
+    "missing_lemma": "boundary escape under simultaneous EqSystem and multi-star constraints"
+  }
+}

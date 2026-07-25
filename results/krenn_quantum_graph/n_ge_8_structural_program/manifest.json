@@ -1,0 +1,21 @@
+{
+  "schema": "krenn-n-ge-8-structural-program-manifest-v1",
+  "bundle_files": {
+    "README.md": "f20070a44355eca009045e5905c4f44c3146deb31906ebd4cca78734feed7cc5",
+    "blocker_orbits.json": "678b0998d36dbc2eade72b20bf795af0bf3b3a2ff4f52375e7e389cc8246609e",
+    "identity_regressions.json": "068d54e5c2c2b134a28c28fbc543eeac486fd9754419d0f236b6b2f607bac1c5",
+    "symmetry_census.json": "47d8904b5abe1741450ce67ff89e4d84219349031648f74fc9047313af7f7e82"
+  },
+  "source_files": {
+    "experiments/krenn_quantum_graph/multi_star_identities.py": "0b9d1cff658c5b1b6c5d46b719e392772247ccaceb144dd1fa7a7abec642853b",
+    "experiments/krenn_quantum_graph/perfect_matching_blocker_ideals.py": "89807dfb76382f76a5ec5f38d05db5ac73a30e5bc83fb0024c481e7c2f9fc3ff",
+    "experiments/krenn_quantum_graph/symmetry_structure.py": "c63fba533e16f9eb018b0955a369ce4ae1d13d2300b0cd87600e721a58ca40e7"
+  },
+  "claim_boundary": {
+    "exact_identities_replayed": true,
+    "finite_blocker_census_replayed": true,
+    "n8_square_chow_degrees_replayed": true,
+    "n8_boundary_escape_proved": false,
+    "global_krenn_gu_proved": false
+  }
+}

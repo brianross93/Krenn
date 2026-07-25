@@ -1,0 +1,53 @@
+{
+  "schema": "krenn-multi-star-identity-regressions-v1",
+  "cases": [
+    {
+      "fixture": "fixture_n4_d3",
+      "n": 4,
+      "d": 3,
+      "output": "canonical_ghz",
+      "certificate": {
+        "schema": "krenn-multi-star-identity-certificate-v1",
+        "star_coefficient_checks": 324,
+        "cofactor_recursion_checks": 108,
+        "shared_edge_entry_checks": 54,
+        "two_star_coefficient_checks": 486,
+        "exact": true
+      }
+    },
+    {
+      "fixture": "fixture_n6_d2",
+      "n": 6,
+      "d": 2,
+      "output": "canonical_ghz",
+      "certificate": {
+        "schema": "krenn-multi-star-identity-certificate-v1",
+        "star_coefficient_checks": 384,
+        "cofactor_recursion_checks": 960,
+        "shared_edge_entry_checks": 60,
+        "two_star_coefficient_checks": 960,
+        "exact": true
+      }
+    },
+    {
+      "fixture": "n6_d3_seed_witness",
+      "n": 6,
+      "d": 3,
+      "output": "canonical_ghz_plus_e_002121",
+      "certificate": {
+        "schema": "krenn-multi-star-identity-certificate-v1",
+        "star_coefficient_checks": 4374,
+        "cofactor_recursion_checks": 4860,
+        "shared_edge_entry_checks": 135,
+        "two_star_coefficient_checks": 10935,
+        "exact": true
+      }
+    }
+  ],
+  "claim_boundary": {
+    "universal_combinatorial_identities": true,
+    "adds_independent_equations_to_the_tensor_map": false,
+    "proves_n8_nonexistence": false,
+    "proves_induction_between_vertex_counts": false
+  }
+}
