@@ -1,0 +1,2606 @@
+{
+  "charts": [
+    {
+      "defect_count": 24,
+      "defects": [
+        {
+          "coloring": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 4,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            9,
+            18,
+            28,
+            37,
+            45,
+            54,
+            64,
+            73,
+            91,
+            100,
+            109,
+            118
+          ],
+          "repair_core_local_variables": [
+            6,
+            15,
+            25,
+            34,
+            42,
+            51,
+            61,
+            70,
+            85,
+            94,
+            103,
+            112
+          ]
+        },
+        {
+          "coloring": [
+            0,
+            0,
+            0,
+            0,
+            2,
+            2
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 8,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            9,
+            18,
+            29,
+            38,
+            45,
+            54,
+            65,
+            74,
+            92,
+            101,
+            110,
+            119
+          ],
+          "repair_core_local_variables": [
+            6,
+            15,
+            26,
+            35,
+            42,
+            51,
+            62,
+            71,
+            86,
+            95,
+            104,
+            113
+          ]
+        },
+        {
+          "coloring": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 36,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            10,
+            19,
+            27,
+            36,
+            46,
+            55,
+            63,
+            72,
+            93,
+            102,
+            111,
+            120
+          ],
+          "repair_core_local_variables": [
+            7,
+            16,
+            24,
+            33,
+            43,
+            52,
+            60,
+            69,
+            87,
+            96,
+            105,
+            114
+          ]
+        },
+        {
+          "coloring": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 40,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            10,
+            19,
+            28,
+            37,
+            46,
+            55,
+            64,
+            73,
+            94,
+            103,
+            112,
+            121
+          ],
+          "repair_core_local_variables": [
+            7,
+            16,
+            25,
+            34,
+            43,
+            52,
+            61,
+            70,
+            88,
+            97,
+            106,
+            115
+          ]
+        },
+        {
+          "coloring": [
+            0,
+            0,
+            1,
+            1,
+            2,
+            2
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 44,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            10,
+            19,
+            29,
+            38,
+            46,
+            55,
+            65,
+            74,
+            95,
+            104,
+            113,
+            122
+          ],
+          "repair_core_local_variables": [
+            7,
+            16,
+            26,
+            35,
+            43,
+            52,
+            62,
+            71,
+            89,
+            98,
+            107,
+            116
+          ]
+        },
+        {
+          "coloring": [
+            0,
+            0,
+            2,
+            2,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 72,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            11,
+            20,
+            27,
+            36,
+            47,
+            56,
+            63,
+            72,
+            96,
+            105,
+            114,
+            123
+          ],
+          "repair_core_local_variables": [
+            8,
+            17,
+            24,
+            33,
+            44,
+            53,
+            60,
+            69,
+            90,
+            99,
+            108,
+            117
+          ]
+        },
+        {
+          "coloring": [
+            0,
+            0,
+            2,
+            2,
+            1,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 76,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            11,
+            20,
+            28,
+            37,
+            47,
+            56,
+            64,
+            73,
+            97,
+            106,
+            115,
+            124
+          ],
+          "repair_core_local_variables": [
+            8,
+            17,
+            25,
+            34,
+            44,
+            53,
+            61,
+            70,
+            91,
+            100,
+            109,
+            118
+          ]
+        },
+        {
+          "coloring": [
+            0,
+            0,
+            2,
+            2,
+            2,
+            2
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 80,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            11,
+            20,
+            29,
+            38,
+            47,
+            56,
+            65,
+            74,
+            98,
+            107,
+            116,
+            125
+          ],
+          "repair_core_local_variables": [
+            8,
+            17,
+            26,
+            35,
+            44,
+            53,
+            62,
+            71,
+            92,
+            101,
+            110,
+            119
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 324,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            12,
+            21,
+            30,
+            39,
+            48,
+            57,
+            66,
+            75,
+            90,
+            99,
+            108,
+            117
+          ],
+          "repair_core_local_variables": [
+            9,
+            18,
+            27,
+            36,
+            45,
+            54,
+            63,
+            72,
+            84,
+            93,
+            102,
+            111
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 328,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            12,
+            21,
+            31,
+            40,
+            48,
+            57,
+            67,
+            76,
+            91,
+            100,
+            109,
+            118
+          ],
+          "repair_core_local_variables": [
+            9,
+            18,
+            28,
+            37,
+            45,
+            54,
+            64,
+            73,
+            85,
+            94,
+            103,
+            112
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            1,
+            0,
+            0,
+            2,
+            2
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 332,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            12,
+            21,
+            32,
+            41,
+            48,
+            57,
+            68,
+            77,
+            92,
+            101,
+            110,
+            119
+          ],
+          "repair_core_local_variables": [
+            9,
+            18,
+            29,
+            38,
+            45,
+            54,
+            65,
+            74,
+            86,
+            95,
+            104,
+            113
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 360,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            13,
+            22,
+            30,
+            39,
+            49,
+            58,
+            66,
+            75,
+            93,
+            102,
+            111,
+            120
+          ],
+          "repair_core_local_variables": [
+            10,
+            19,
+            27,
+            36,
+            46,
+            55,
+            63,
+            72,
+            87,
+            96,
+            105,
+            114
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            1,
+            1,
+            1,
+            2,
+            2
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 368,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            13,
+            22,
+            32,
+            41,
+            49,
+            58,
+            68,
+            77,
+            95,
+            104,
+            113,
+            122
+          ],
+          "repair_core_local_variables": [
+            10,
+            19,
+            29,
+            38,
+            46,
+            55,
+            65,
+            74,
+            89,
+            98,
+            107,
+            116
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            1,
+            2,
+            2,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 396,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            14,
+            23,
+            30,
+            39,
+            50,
+            59,
+            66,
+            75,
+            96,
+            105,
+            114,
+            123
+          ],
+          "repair_core_local_variables": [
+            11,
+            20,
+            27,
+            36,
+            47,
+            56,
+            63,
+            72,
+            90,
+            99,
+            108,
+            117
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            1,
+            2,
+            2,
+            1,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 400,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            14,
+            23,
+            31,
+            40,
+            50,
+            59,
+            67,
+            76,
+            97,
+            106,
+            115,
+            124
+          ],
+          "repair_core_local_variables": [
+            11,
+            20,
+            28,
+            37,
+            47,
+            56,
+            64,
+            73,
+            91,
+            100,
+            109,
+            118
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            1,
+            2,
+            2,
+            2,
+            2
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 404,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            14,
+            23,
+            32,
+            41,
+            50,
+            59,
+            68,
+            77,
+            98,
+            107,
+            116,
+            125
+          ],
+          "repair_core_local_variables": [
+            11,
+            20,
+            29,
+            38,
+            47,
+            56,
+            65,
+            74,
+            92,
+            101,
+            110,
+            119
+          ]
+        },
+        {
+          "coloring": [
+            2,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 648,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            15,
+            24,
+            33,
+            42,
+            51,
+            60,
+            69,
+            78,
+            90,
+            99,
+            108,
+            117
+          ],
+          "repair_core_local_variables": [
+            12,
+            21,
+            30,
+            39,
+            48,
+            57,
+            66,
+            75,
+            84,
+            93,
+            102,
+            111
+          ]
+        },
+        {
+          "coloring": [
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 652,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            15,
+            24,
+            34,
+            43,
+            51,
+            60,
+            70,
+            79,
+            91,
+            100,
+            109,
+            118
+          ],
+          "repair_core_local_variables": [
+            12,
+            21,
+            31,
+            40,
+            48,
+            57,
+            67,
+            76,
+            85,
+            94,
+            103,
+            112
+          ]
+        },
+        {
+          "coloring": [
+            2,
+            2,
+            0,
+            0,
+            2,
+            2
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 656,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            15,
+            24,
+            35,
+            44,
+            51,
+            60,
+            71,
+            80,
+            92,
+            101,
+            110,
+            119
+          ],
+          "repair_core_local_variables": [
+            12,
+            21,
+            32,
+            41,
+            48,
+            57,
+            68,
+            77,
+            86,
+            95,
+            104,
+            113
+          ]
+        },
+        {
+          "coloring": [
+            2,
+            2,
+            1,
+            1,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 684,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            16,
+            25,
+            33,
+            42,
+            52,
+            61,
+            69,
+            78,
+            93,
+            102,
+            111,
+            120
+          ],
+          "repair_core_local_variables": [
+            13,
+            22,
+            30,
+            39,
+            49,
+            58,
+            66,
+            75,
+            87,
+            96,
+            105,
+            114
+          ]
+        },
+        {
+          "coloring": [
+            2,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 688,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            16,
+            25,
+            34,
+            43,
+            52,
+            61,
+            70,
+            79,
+            94,
+            103,
+            112,
+            121
+          ],
+          "repair_core_local_variables": [
+            13,
+            22,
+            31,
+            40,
+            49,
+            58,
+            67,
+            76,
+            88,
+            97,
+            106,
+            115
+          ]
+        },
+        {
+          "coloring": [
+            2,
+            2,
+            1,
+            1,
+            2,
+            2
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 692,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            16,
+            25,
+            35,
+            44,
+            52,
+            61,
+            71,
+            80,
+            95,
+            104,
+            113,
+            122
+          ],
+          "repair_core_local_variables": [
+            13,
+            22,
+            32,
+            41,
+            49,
+            58,
+            68,
+            77,
+            89,
+            98,
+            107,
+            116
+          ]
+        },
+        {
+          "coloring": [
+            2,
+            2,
+            2,
+            2,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 720,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            17,
+            26,
+            33,
+            42,
+            53,
+            62,
+            69,
+            78,
+            96,
+            105,
+            114,
+            123
+          ],
+          "repair_core_local_variables": [
+            14,
+            23,
+            30,
+            39,
+            50,
+            59,
+            66,
+            75,
+            90,
+            99,
+            108,
+            117
+          ]
+        },
+        {
+          "coloring": [
+            2,
+            2,
+            2,
+            2,
+            1,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 724,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            17,
+            26,
+            34,
+            43,
+            53,
+            62,
+            70,
+            79,
+            97,
+            106,
+            115,
+            124
+          ],
+          "repair_core_local_variables": [
+            14,
+            23,
+            31,
+            40,
+            50,
+            59,
+            67,
+            76,
+            91,
+            100,
+            109,
+            118
+          ]
+        }
+      ],
+      "exhibited_disjoint_defect_equations": [
+        4,
+        36,
+        80,
+        324,
+        368,
+        400,
+        656,
+        688,
+        720
+      ],
+      "maximum_pairwise_disjoint_defect_cores": 9,
+      "orbit_index": 0,
+      "repair_core_union_size": 108,
+      "seed": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "defect_count": 12,
+      "defects": [
+        {
+          "coloring": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 4,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            9,
+            18,
+            28,
+            37,
+            45,
+            54,
+            64,
+            73,
+            91,
+            100,
+            109,
+            118
+          ],
+          "repair_core_local_variables": [
+            6,
+            15,
+            25,
+            34,
+            42,
+            51,
+            61,
+            70,
+            86,
+            94,
+            103,
+            112
+          ]
+        },
+        {
+          "coloring": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 36,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            10,
+            19,
+            27,
+            36,
+            46,
+            55,
+            63,
+            72,
+            93,
+            102,
+            111,
+            120
+          ],
+          "repair_core_local_variables": [
+            7,
+            16,
+            24,
+            33,
+            43,
+            52,
+            60,
+            69,
+            88,
+            96,
+            105,
+            114
+          ]
+        },
+        {
+          "coloring": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 40,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            10,
+            19,
+            28,
+            37,
+            46,
+            55,
+            64,
+            73,
+            94,
+            103,
+            112,
+            121
+          ],
+          "repair_core_local_variables": [
+            7,
+            16,
+            25,
+            34,
+            43,
+            52,
+            61,
+            70,
+            89,
+            97,
+            106,
+            115
+          ]
+        },
+        {
+          "coloring": [
+            0,
+            0,
+            2,
+            2,
+            2,
+            2
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 80,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            11,
+            20,
+            29,
+            38,
+            47,
+            56,
+            65,
+            74,
+            89,
+            107,
+            116,
+            134
+          ],
+          "repair_core_local_variables": [
+            8,
+            17,
+            26,
+            35,
+            44,
+            53,
+            62,
+            71,
+            84,
+            101,
+            110,
+            125
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 324,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            12,
+            21,
+            30,
+            39,
+            48,
+            57,
+            66,
+            75,
+            90,
+            99,
+            108,
+            117
+          ],
+          "repair_core_local_variables": [
+            9,
+            18,
+            27,
+            36,
+            45,
+            54,
+            63,
+            72,
+            85,
+            93,
+            102,
+            111
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 328,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            12,
+            21,
+            31,
+            40,
+            48,
+            57,
+            67,
+            76,
+            91,
+            100,
+            109,
+            118
+          ],
+          "repair_core_local_variables": [
+            9,
+            18,
+            28,
+            37,
+            45,
+            54,
+            64,
+            73,
+            86,
+            94,
+            103,
+            112
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 360,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            13,
+            22,
+            30,
+            39,
+            49,
+            58,
+            66,
+            75,
+            93,
+            102,
+            111,
+            120
+          ],
+          "repair_core_local_variables": [
+            10,
+            19,
+            27,
+            36,
+            46,
+            55,
+            63,
+            72,
+            88,
+            96,
+            105,
+            114
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            1,
+            2,
+            2,
+            2,
+            2
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 404,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            14,
+            23,
+            32,
+            41,
+            50,
+            59,
+            68,
+            77,
+            89,
+            107,
+            116,
+            134
+          ],
+          "repair_core_local_variables": [
+            11,
+            20,
+            29,
+            38,
+            47,
+            56,
+            65,
+            74,
+            84,
+            101,
+            110,
+            125
+          ]
+        },
+        {
+          "coloring": [
+            2,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 648,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            15,
+            24,
+            33,
+            42,
+            51,
+            60,
+            69,
+            78,
+            90,
+            99,
+            108,
+            117
+          ],
+          "repair_core_local_variables": [
+            12,
+            21,
+            30,
+            39,
+            48,
+            57,
+            66,
+            75,
+            85,
+            93,
+            102,
+            111
+          ]
+        },
+        {
+          "coloring": [
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 652,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            15,
+            24,
+            34,
+            43,
+            51,
+            60,
+            70,
+            79,
+            91,
+            100,
+            109,
+            118
+          ],
+          "repair_core_local_variables": [
+            12,
+            21,
+            31,
+            40,
+            48,
+            57,
+            67,
+            76,
+            86,
+            94,
+            103,
+            112
+          ]
+        },
+        {
+          "coloring": [
+            2,
+            2,
+            1,
+            1,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 684,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            16,
+            25,
+            33,
+            42,
+            52,
+            61,
+            69,
+            78,
+            93,
+            102,
+            111,
+            120
+          ],
+          "repair_core_local_variables": [
+            13,
+            22,
+            30,
+            39,
+            49,
+            58,
+            66,
+            75,
+            88,
+            96,
+            105,
+            114
+          ]
+        },
+        {
+          "coloring": [
+            2,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 688,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            16,
+            25,
+            34,
+            43,
+            52,
+            61,
+            70,
+            79,
+            94,
+            103,
+            112,
+            121
+          ],
+          "repair_core_local_variables": [
+            13,
+            22,
+            31,
+            40,
+            49,
+            58,
+            67,
+            76,
+            89,
+            97,
+            106,
+            115
+          ]
+        }
+      ],
+      "exhibited_disjoint_defect_equations": [
+        4,
+        36,
+        80,
+        324,
+        688
+      ],
+      "maximum_pairwise_disjoint_defect_cores": 5,
+      "orbit_index": 1,
+      "repair_core_union_size": 84,
+      "seed": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "defect_count": 6,
+      "defects": [
+        {
+          "coloring": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 4,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            9,
+            18,
+            28,
+            37,
+            45,
+            54,
+            64,
+            73,
+            91,
+            100,
+            109,
+            118
+          ],
+          "repair_core_local_variables": [
+            7,
+            15,
+            25,
+            34,
+            42,
+            51,
+            61,
+            69,
+            85,
+            94,
+            103,
+            112
+          ]
+        },
+        {
+          "coloring": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 36,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            10,
+            19,
+            27,
+            36,
+            46,
+            55,
+            63,
+            72,
+            93,
+            102,
+            111,
+            120
+          ],
+          "repair_core_local_variables": [
+            8,
+            16,
+            24,
+            33,
+            43,
+            52,
+            60,
+            68,
+            87,
+            96,
+            105,
+            114
+          ]
+        },
+        {
+          "coloring": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 40,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            10,
+            19,
+            28,
+            37,
+            46,
+            55,
+            64,
+            73,
+            94,
+            103,
+            112,
+            121
+          ],
+          "repair_core_local_variables": [
+            8,
+            16,
+            25,
+            34,
+            43,
+            52,
+            61,
+            69,
+            88,
+            97,
+            106,
+            115
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 324,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            12,
+            21,
+            30,
+            39,
+            48,
+            57,
+            66,
+            75,
+            90,
+            99,
+            108,
+            117
+          ],
+          "repair_core_local_variables": [
+            10,
+            18,
+            27,
+            36,
+            45,
+            54,
+            63,
+            71,
+            84,
+            93,
+            102,
+            111
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 328,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            12,
+            21,
+            31,
+            40,
+            48,
+            57,
+            67,
+            76,
+            91,
+            100,
+            109,
+            118
+          ],
+          "repair_core_local_variables": [
+            10,
+            18,
+            28,
+            37,
+            45,
+            54,
+            64,
+            72,
+            85,
+            94,
+            103,
+            112
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 360,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            13,
+            22,
+            30,
+            39,
+            49,
+            58,
+            66,
+            75,
+            93,
+            102,
+            111,
+            120
+          ],
+          "repair_core_local_variables": [
+            11,
+            19,
+            27,
+            36,
+            46,
+            55,
+            63,
+            71,
+            87,
+            96,
+            105,
+            114
+          ]
+        }
+      ],
+      "exhibited_disjoint_defect_equations": [
+        4,
+        36,
+        324
+      ],
+      "maximum_pairwise_disjoint_defect_cores": 3,
+      "orbit_index": 2,
+      "repair_core_union_size": 48,
+      "seed": [
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "defect_count": 6,
+      "defects": [
+        {
+          "coloring": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 40,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            10,
+            19,
+            28,
+            37,
+            46,
+            55,
+            64,
+            73,
+            85,
+            103,
+            112,
+            130
+          ],
+          "repair_core_local_variables": [
+            7,
+            16,
+            25,
+            34,
+            43,
+            52,
+            61,
+            70,
+            81,
+            98,
+            106,
+            121
+          ]
+        },
+        {
+          "coloring": [
+            0,
+            0,
+            2,
+            2,
+            2,
+            2
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 80,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            11,
+            20,
+            29,
+            38,
+            47,
+            56,
+            65,
+            74,
+            89,
+            98,
+            125,
+            134
+          ],
+          "repair_core_local_variables": [
+            8,
+            17,
+            26,
+            35,
+            44,
+            53,
+            62,
+            71,
+            85,
+            93,
+            117,
+            125
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 324,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            12,
+            21,
+            30,
+            39,
+            48,
+            57,
+            66,
+            75,
+            90,
+            99,
+            108,
+            117
+          ],
+          "repair_core_local_variables": [
+            9,
+            18,
+            27,
+            36,
+            45,
+            54,
+            63,
+            72,
+            86,
+            94,
+            102,
+            110
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            1,
+            2,
+            2,
+            2,
+            2
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 404,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            14,
+            23,
+            32,
+            41,
+            50,
+            59,
+            68,
+            77,
+            89,
+            98,
+            125,
+            134
+          ],
+          "repair_core_local_variables": [
+            11,
+            20,
+            29,
+            38,
+            47,
+            56,
+            65,
+            74,
+            85,
+            93,
+            117,
+            125
+          ]
+        },
+        {
+          "coloring": [
+            2,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 648,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            15,
+            24,
+            33,
+            42,
+            51,
+            60,
+            69,
+            78,
+            90,
+            99,
+            108,
+            117
+          ],
+          "repair_core_local_variables": [
+            12,
+            21,
+            30,
+            39,
+            48,
+            57,
+            66,
+            75,
+            86,
+            94,
+            102,
+            110
+          ]
+        },
+        {
+          "coloring": [
+            2,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 688,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            16,
+            25,
+            34,
+            43,
+            52,
+            61,
+            70,
+            79,
+            85,
+            103,
+            112,
+            130
+          ],
+          "repair_core_local_variables": [
+            13,
+            22,
+            31,
+            40,
+            49,
+            58,
+            67,
+            76,
+            81,
+            98,
+            106,
+            121
+          ]
+        }
+      ],
+      "exhibited_disjoint_defect_equations": [
+        40,
+        80,
+        324
+      ],
+      "maximum_pairwise_disjoint_defect_cores": 3,
+      "orbit_index": 3,
+      "repair_core_union_size": 60,
+      "seed": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "defect_count": 5,
+      "defects": [
+        {
+          "coloring": [
+            0,
+            0,
+            0,
+            0,
+            2,
+            2
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 8,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            9,
+            18,
+            29,
+            38,
+            45,
+            54,
+            65,
+            74,
+            92,
+            101,
+            110,
+            119
+          ],
+          "repair_core_local_variables": [
+            7,
+            15,
+            26,
+            35,
+            42,
+            51,
+            61,
+            70,
+            87,
+            95,
+            104,
+            113
+          ]
+        },
+        {
+          "coloring": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 40,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            10,
+            19,
+            28,
+            37,
+            46,
+            55,
+            64,
+            73,
+            85,
+            103,
+            112,
+            130
+          ],
+          "repair_core_local_variables": [
+            8,
+            16,
+            25,
+            34,
+            43,
+            52,
+            60,
+            69,
+            80,
+            97,
+            106,
+            122
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 324,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            12,
+            21,
+            30,
+            39,
+            48,
+            57,
+            66,
+            75,
+            90,
+            99,
+            108,
+            117
+          ],
+          "repair_core_local_variables": [
+            10,
+            18,
+            27,
+            36,
+            45,
+            54,
+            62,
+            71,
+            85,
+            93,
+            102,
+            111
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            1,
+            0,
+            0,
+            2,
+            2
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 332,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            12,
+            21,
+            32,
+            41,
+            48,
+            57,
+            68,
+            77,
+            92,
+            101,
+            110,
+            119
+          ],
+          "repair_core_local_variables": [
+            10,
+            18,
+            29,
+            38,
+            45,
+            54,
+            64,
+            73,
+            87,
+            95,
+            104,
+            113
+          ]
+        },
+        {
+          "coloring": [
+            2,
+            2,
+            2,
+            2,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 720,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            8,
+            26,
+            33,
+            42,
+            53,
+            69,
+            78,
+            89,
+            96,
+            105,
+            114,
+            123
+          ],
+          "repair_core_local_variables": [
+            6,
+            23,
+            30,
+            39,
+            50,
+            65,
+            74,
+            84,
+            90,
+            99,
+            108,
+            116
+          ]
+        }
+      ],
+      "exhibited_disjoint_defect_equations": [
+        8,
+        40,
+        324,
+        720
+      ],
+      "maximum_pairwise_disjoint_defect_cores": 4,
+      "orbit_index": 4,
+      "repair_core_union_size": 52,
+      "seed": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "defect_count": 2,
+      "defects": [
+        {
+          "coloring": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 40,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            10,
+            19,
+            28,
+            37,
+            46,
+            55,
+            64,
+            73,
+            85,
+            103,
+            112,
+            130
+          ],
+          "repair_core_local_variables": [
+            8,
+            16,
+            25,
+            34,
+            43,
+            52,
+            61,
+            70,
+            80,
+            97,
+            106,
+            121
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 324,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            12,
+            21,
+            30,
+            39,
+            48,
+            57,
+            66,
+            75,
+            90,
+            99,
+            108,
+            117
+          ],
+          "repair_core_local_variables": [
+            10,
+            18,
+            27,
+            36,
+            45,
+            54,
+            63,
+            72,
+            85,
+            93,
+            102,
+            110
+          ]
+        }
+      ],
+      "exhibited_disjoint_defect_equations": [
+        40,
+        324
+      ],
+      "maximum_pairwise_disjoint_defect_cores": 2,
+      "orbit_index": 5,
+      "repair_core_union_size": 24,
+      "seed": [
+        0,
+        1,
+        5
+      ]
+    },
+    {
+      "defect_count": 1,
+      "defects": [
+        {
+          "coloring": [
+            0,
+            0,
+            2,
+            1,
+            2,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 70,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            11,
+            19,
+            29,
+            37,
+            47,
+            55,
+            65,
+            73,
+            88,
+            106,
+            113,
+            133
+          ],
+          "repair_core_local_variables": [
+            10,
+            17,
+            26,
+            34,
+            44,
+            52,
+            62,
+            69,
+            82,
+            99,
+            106,
+            124
+          ]
+        }
+      ],
+      "exhibited_disjoint_defect_equations": [
+        70
+      ],
+      "maximum_pairwise_disjoint_defect_cores": 1,
+      "orbit_index": 6,
+      "repair_core_union_size": 12,
+      "seed": [
+        0,
+        4,
+        8
+      ]
+    },
+    {
+      "defect_count": 3,
+      "defects": [
+        {
+          "coloring": [
+            0,
+            0,
+            2,
+            1,
+            2,
+            1
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 70,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            11,
+            19,
+            29,
+            37,
+            47,
+            55,
+            65,
+            73,
+            88,
+            106,
+            113,
+            133
+          ],
+          "repair_core_local_variables": [
+            10,
+            17,
+            27,
+            35,
+            44,
+            52,
+            61,
+            68,
+            82,
+            99,
+            106,
+            124
+          ]
+        },
+        {
+          "coloring": [
+            1,
+            2,
+            1,
+            2,
+            0,
+            0
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 450,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            5,
+            23,
+            30,
+            39,
+            52,
+            69,
+            78,
+            86,
+            93,
+            102,
+            114,
+            123
+          ],
+          "repair_core_local_variables": [
+            4,
+            21,
+            28,
+            37,
+            49,
+            64,
+            73,
+            80,
+            87,
+            95,
+            107,
+            115
+          ]
+        },
+        {
+          "coloring": [
+            2,
+            1,
+            0,
+            0,
+            1,
+            2
+          ],
+          "cubic_repair_terms": 8,
+          "equation": 572,
+          "quadratic_repair_terms": 6,
+          "repair_core_ambient_weights": [
+            7,
+            15,
+            24,
+            34,
+            48,
+            57,
+            77,
+            91,
+            101,
+            109,
+            119,
+            131
+          ],
+          "repair_core_local_variables": [
+            6,
+            13,
+            22,
+            32,
+            45,
+            54,
+            72,
+            85,
+            94,
+            102,
+            112,
+            122
+          ]
+        }
+      ],
+      "exhibited_disjoint_defect_equations": [
+        70,
+        450,
+        572
+      ],
+      "maximum_pairwise_disjoint_defect_cores": 3,
+      "orbit_index": 7,
+      "repair_core_union_size": 36,
+      "seed": [
+        0,
+        4,
+        13
+      ]
+    }
+  ],
+  "claim_boundary": {
+    "excludes_entire_chart": false,
+    "excludes_only_a_small_neighborhood_of_each_seed_germ": true,
+    "proves_nonexistence": false
+  },
+  "exact_checks": {
+    "all_defects_have_six_quadratics_and_eight_cubics": true,
+    "each_core_variable_occurs_in_two_cubics": true,
+    "pairwise_core_intersections_are_zero_or_four": true,
+    "quadratic_cores_are_six_disjoint_pairs": true,
+    "rho_isolated_exactly": true
+  },
+  "schema": "krenn-n6-d3-localized-chart-germ-separation-v1",
+  "universal_defect_equation": {
+    "approximate_positive_root": "0.33882535",
+    "constant_terms": 1,
+    "coordinate_sup_norm_inequality": "1 <= 6 R^2 + 8 R^3",
+    "cubic_repair_terms": 8,
+    "gauge_invariant_statement": "some alternative matching monomial has absolute value at least 1/14",
+    "positive_root_isolating_interval": {
+      "lower": [
+        13553,
+        40000
+      ],
+      "upper": [
+        169413,
+        500000
+      ]
+    },
+    "positive_root_polynomial": "8*r^3 + 6*r^2 - 1",
+    "quadratic_repair_terms": 6,
+    "slice_dependent_coordinate_statement": true
+  }
+}

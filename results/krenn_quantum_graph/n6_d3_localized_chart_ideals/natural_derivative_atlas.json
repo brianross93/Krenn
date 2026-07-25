@@ -1,0 +1,96 @@
+{
+  "claim_boundary": {
+    "full_eight_chart_cover_decided": false,
+    "natural_chart_decided": false,
+    "proper_ideal_certificates_emitted": 0,
+    "unit_ideal_certificates_emitted": 0
+  },
+  "conclusion": "the twelve derivative opens cover the natural defect hypersurface exactly over characteristic zero",
+  "decision_rule": {
+    "both_verified_unit": "excludes the full natural chart",
+    "either_verified_proper": "proves a finite point exists over algebraic closure of Q"
+  },
+  "defect_equation": 70,
+  "eliminated_charts": [
+    {
+      "derivative_inverse_variable": 128,
+      "eliminated_ambient_weight": 11,
+      "eliminated_original_local_variable": 10,
+      "maximum_degree": 6,
+      "recovery": "eliminated weight = - derivative_inverse * constant_part",
+      "retained_original_chart_variables": 128,
+      "schema": "krenn-n6-d3-natural-defect-eliminated-chart-v1",
+      "sha256": "8ded365ca886e47c587faebacb5842dc6eb6f50eb61ac9739fe0848b5ad5887b",
+      "sparse_terms": 13567,
+      "total_generators": 729,
+      "total_variables": 129
+    },
+    {
+      "derivative_inverse_variable": 128,
+      "eliminated_ambient_weight": 29,
+      "eliminated_original_local_variable": 26,
+      "maximum_degree": 6,
+      "recovery": "eliminated weight = - derivative_inverse * constant_part",
+      "retained_original_chart_variables": 128,
+      "schema": "krenn-n6-d3-natural-defect-eliminated-chart-v1",
+      "sha256": "ab57dcc699cbbb33e1655d8f62de130981cb81a803a96899e68685a09cc6e8c1",
+      "sparse_terms": 13567,
+      "total_generators": 729,
+      "total_variables": 129
+    }
+  ],
+  "natural_chart_seed": [
+    0,
+    4,
+    8
+  ],
+  "repair_core_ambient_weights": [
+    11,
+    19,
+    29,
+    37,
+    47,
+    55,
+    65,
+    73,
+    88,
+    106,
+    113,
+    133
+  ],
+  "schema": "krenn-n6-d3-natural-defect-smoothness-v1",
+  "smoothness_certificate": {
+    "exact_replay": true,
+    "field": "Q",
+    "generators": 13,
+    "identity": "sum_i multiplier_i * (f, partials)_i = 1",
+    "multiplier_polynomials": 13,
+    "multiplier_sha256": "21eec6004088e83cc1effe8acac3d01d5b140cbfd30e6a2bc255b023bc1ee6b8"
+  },
+  "strict_stabilizer": {
+    "derivative_orbits": [
+      [
+        11,
+        19,
+        65,
+        73,
+        88,
+        133
+      ],
+      [
+        29,
+        37,
+        47,
+        55,
+        106,
+        113
+      ]
+    ],
+    "order": 12,
+    "representatives": [
+      11,
+      29
+    ],
+    "symmetry_related_weights_equated": false
+  }
+}

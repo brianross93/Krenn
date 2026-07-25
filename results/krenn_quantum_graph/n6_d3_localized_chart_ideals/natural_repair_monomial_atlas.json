@@ -1,0 +1,207 @@
+{
+  "charts": [
+    {
+      "branch_inverse_variable": 128,
+      "fixed_to_one_ambient_weights": [
+        11
+      ],
+      "localized_ambient_weight": 65,
+      "maximum_degree": 4,
+      "representative_ambient_monomial": [
+        11,
+        65
+      ],
+      "retained_original_chart_variables": 128,
+      "schema": "krenn-n6-d3-natural-repair-monomial-chart-v1",
+      "sha256": "723442dec1ff060502254b45f1894f790e15051c23045714de1675a6fd74b6a8",
+      "sparse_terms": 10940,
+      "total_generators": 730,
+      "total_variables": 129
+    },
+    {
+      "branch_inverse_variable": 128,
+      "fixed_to_one_ambient_weights": [
+        29
+      ],
+      "localized_ambient_weight": 47,
+      "maximum_degree": 4,
+      "representative_ambient_monomial": [
+        29,
+        47
+      ],
+      "retained_original_chart_variables": 128,
+      "schema": "krenn-n6-d3-natural-repair-monomial-chart-v1",
+      "sha256": "4ae038edac7985d0e4cf5e9ae1e70a032c09c4b8cd3218dbe47968a183dcd510",
+      "sparse_terms": 10940,
+      "total_generators": 730,
+      "total_variables": 129
+    },
+    {
+      "branch_inverse_variable": 127,
+      "fixed_to_one_ambient_weights": [
+        11,
+        55
+      ],
+      "localized_ambient_weight": 133,
+      "maximum_degree": 4,
+      "representative_ambient_monomial": [
+        11,
+        55,
+        133
+      ],
+      "retained_original_chart_variables": 127,
+      "schema": "krenn-n6-d3-natural-repair-monomial-chart-v1",
+      "sha256": "001fe4879a4786a959a1326bac63dd15dc83b4509495c9f54ed1cc2686a596e9",
+      "sparse_terms": 10940,
+      "total_generators": 730,
+      "total_variables": 128
+    },
+    {
+      "branch_inverse_variable": 127,
+      "fixed_to_one_ambient_weights": [
+        29,
+        55
+      ],
+      "localized_ambient_weight": 106,
+      "maximum_degree": 4,
+      "representative_ambient_monomial": [
+        29,
+        55,
+        106
+      ],
+      "retained_original_chart_variables": 127,
+      "schema": "krenn-n6-d3-natural-repair-monomial-chart-v1",
+      "sha256": "db480201d8f7a5863e99dfab58bb4f5638d0c80cad975857998d380562f35be6",
+      "sparse_terms": 10940,
+      "total_generators": 730,
+      "total_variables": 128
+    }
+  ],
+  "claim_boundary": {
+    "full_eight_chart_cover_decided": false,
+    "natural_chart_decided": false,
+    "proper_ideal_certificates_emitted": 0,
+    "unit_certificates_emitted": 0
+  },
+  "decision_rule": {
+    "all_four_verified_unit": "excludes the natural chart",
+    "one_verified_proper": "proves a finite point over algebraic closure of Q"
+  },
+  "defect_equation": 70,
+  "natural_seed": [
+    0,
+    4,
+    8
+  ],
+  "repair_terms": {
+    "cubic": 8,
+    "nonzero_cover_reason": "their sum is -1 on the normalized defect hypersurface",
+    "quadratic": 6,
+    "total": 14
+  },
+  "residual_torus_gauge": {
+    "all_unfixed_weights_remain_independent": true,
+    "fixed_factor_characters_are_independent": true,
+    "rank": 9,
+    "surjective_over_algebraic_closure": true
+  },
+  "schema": "krenn-n6-d3-natural-repair-monomial-atlas-v1",
+  "strict_stabilizer": {
+    "order": 12,
+    "repair_monomial_orbits": [
+      [
+        [
+          11,
+          65
+        ],
+        [
+          19,
+          73
+        ],
+        [
+          88,
+          133
+        ]
+      ],
+      [
+        [
+          29,
+          47
+        ],
+        [
+          37,
+          55
+        ],
+        [
+          106,
+          113
+        ]
+      ],
+      [
+        [
+          11,
+          55,
+          133
+        ],
+        [
+          11,
+          73,
+          113
+        ],
+        [
+          19,
+          47,
+          133
+        ],
+        [
+          19,
+          65,
+          106
+        ],
+        [
+          29,
+          73,
+          88
+        ],
+        [
+          37,
+          65,
+          88
+        ]
+      ],
+      [
+        [
+          29,
+          55,
+          106
+        ],
+        [
+          37,
+          47,
+          113
+        ]
+      ]
+    ],
+    "representatives": [
+      [
+        11,
+        65
+      ],
+      [
+        29,
+        47
+      ],
+      [
+        11,
+        55,
+        133
+      ],
+      [
+        29,
+        55,
+        106
+      ]
+    ],
+    "symmetry_related_weights_equated": false
+  }
+}

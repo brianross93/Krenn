@@ -1,0 +1,99 @@
+{
+  "claim_boundary": {
+    "border_membership_changed": false,
+    "counterexample_found": false,
+    "global_nonexistence_proved": false
+  },
+  "files": [
+    {
+      "path": "bounded_degree_six.json",
+      "sha256": "1c270c57175aaa84b69005768c291392724d0b34e919c12e423b883fc1153cd7"
+    },
+    {
+      "path": "chart_cover.json",
+      "sha256": "2f792f693aabe75803ccb4df0a4f090b4a97abc66a245814c31e772cc3202132"
+    },
+    {
+      "path": "germ_separation.json",
+      "sha256": "89d4261fa2901157dd38d84317cc858d1befceee4a706e9b753adec3109e22fd"
+    },
+    {
+      "path": "natural_derivative_atlas.json",
+      "sha256": "52315254d03f8db10e91e0b1def1833fe21e12a875cd69298e865869c8e62ff4"
+    },
+    {
+      "path": "natural_repair_monomial_atlas.json",
+      "sha256": "62ba723fac913dc8b978dbcffb5ff65d288eefd498b8edc99d9be99355851fa8"
+    },
+    {
+      "path": "preflight_ledger.json",
+      "sha256": "dfad47e24168d155e1a0fe8239eda7b7cd79e0b5209adcda835dfbc9863abbf7"
+    }
+  ],
+  "headline": {
+    "exact_bounded_certificate_degree_excluded": 6,
+    "finite_affine_GHZ_membership_status": "undecided",
+    "ordered_seed_charts": 3375,
+    "symmetry_representatives": 8
+  },
+  "parameters": {
+    "d": 3,
+    "n": 6
+  },
+  "schema": "krenn-n6-d3-localized-chart-manifest-v1",
+  "source_ledger": [
+    {
+      "path": "experiments/__init__.py",
+      "sha256": "a5f16985353b7acaa3234cc14df74d60d48a23405ba1953f238974f160f21c3b"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/__init__.py",
+      "sha256": "553ee953b3cf78ae95be8f046e7e420a22970abc158ab26f0213995aa83e9d13"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/localized_chart_artifact.py",
+      "sha256": "526692ebcb4a989166217f05268ec0d002ead561b7b93cdb40f40db7c9e21dec"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/localized_chart_derivative.py",
+      "sha256": "10b0375ab78ddbc164826f01a191deb336802aba74836bc68fe548e00d52e915"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/localized_chart_ideals.py",
+      "sha256": "13b6665cce406c10369442fbe9fc335ee5a29006c47da87757c47352074d02ce"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/localized_chart_independent.py",
+      "sha256": "07a6bd82fb2e1f019ace796af0e8482fae19cf2756d8f6fa9d69e4fce4c8cb60"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/localized_chart_macaulay.py",
+      "sha256": "58b195d0012d79b7d2714b76376cc50a5a9039b93c3b10c57a98249c9a7cd108"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/localized_chart_monomial_atlas.py",
+      "sha256": "29d7c44bbcaa7989df29e1e12a005acf6af5d0cf099fab600b15168cbfda7dad"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/system.py",
+      "sha256": "3f64e42efc68b5391b3ec9798e801d1efa1f7c4a9c68c56a4b3b2e78540214a9"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/targets.py",
+      "sha256": "6b3d6239fcb2353352ea468103f920066273db8354a8d8fb60911b338c351baa"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/ternary_seed_orbits.py",
+      "sha256": "32be5f98be0b75971933da8dfdb0d1d25e290cac400990f4dd179517dd5330f3"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/transport.py",
+      "sha256": "d28d18984ba033a56c0c328b320ecc12e0ce234f524d60a651d33c874fdc39bb"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/witness.py",
+      "sha256": "cb64d99e80eca4ff17ca66f0f69a4099ca08010ff85ffdbf53aa4a391b7ed7dd"
+    }
+  ],
+  "status": "exact-localized-chart-membership-undecided"
+}

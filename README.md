@@ -419,9 +419,10 @@ ratios gives
 
 so none is solvable over \(\mathbf C\) (or any field of characteristic not
 two). Therefore any finite exact witness that retains all nine natural slots
-must have at least 22 nonzero coordinates. This remains a support-conditional
-lower bound: it does not exclude witnesses that omit a natural slot, and it
-does not decide whether a support of size 22 or more can realize GHZ.
+must have at least 22 nonzero coordinates. The later eight-root
+\(S_6\times S_3\) closure removes the natural-slot assumption: every finite
+exact \(n=6,d=3\) GHZ witness has support at least 22, including witnesses
+that omit natural coordinates. Supports of size 22 and above remain open.
 
 ## Exact \(k=1\) source-ideal obstruction
 
@@ -483,6 +484,58 @@ GHZ tensor in the exact affine image.
 ```text
 python -m experiments.krenn_quantum_graph.source_ideal
 python -m unittest tests.test_krenn_source_ideal -v
+```
+
+## Exact localized affine chart cover
+
+Direct affine GHZ membership is equivalent to vanishing of all 726 mixed
+outputs together with nonvanishing of the three pure outputs. Each nonzero
+pure hafnian contains a nonzero perfect-matching monomial, giving
+\(15^3=3375\) ordered seed charts. Their exact \(S_6\times S_3\) quotient has
+eight representatives.
+
+On each seed chart the full endpoint-color torus sets all nine selected
+diagonal weights to one. This is a split rank-nine slice, verified by an
+explicit identity minor; it does not equate symmetry-related weights. Adding
+three inverse-amplitude variables gives an ordinary affine ideal
+
+\[
+K_r=\langle F_c|_{S_r=1}:c\ {\rm mixed}\rangle+
+    \langle u_aF_{a^6}|_{S_r=1}-1:a=0,1,2\rangle .
+\]
+
+Every \(K_r\) has 129 variables, 729 generators, 10,938 sparse terms, and
+maximum degree four. All eight systems are reconstructed bit-for-bit by a
+second perfect-matching enumerator.
+
+The residual rank-nine torus grading and each ordered-seed stabilizer give a
+lossless bounded Nullstellensatz reduction. Through total certificate degree
+six, exact averaged Koszul relations provide rational source-rank upper
+bounds, and nonzero minors modulo 1009 attain those bounds while the
+adjoined constant raises rank. Therefore none of the eight ideals has a
+Nullstellensatz identity of total degree at most six over \(\mathbf Q\).
+This is an exact bounded statement, not a unit-ideal or nonexistence proof.
+
+The natural chart has one universal defect
+
+\[
+1+6\text{ quadratic repair monomials}
+ +8\text{ cubic repair monomials}=0.
+\]
+
+A retained rational identity proves
+\(1\in\langle f,\partial f\rangle\), so this defect hypersurface is smooth.
+Its 12 derivative opens reduce to two exact symmetry representatives. A
+second finite atlas uses the fact that one of the 14 repair monomials must be
+nonzero; residual gauge and symmetry reduce those opens to four
+representatives. Generic Gröbner preflights on the top-level and reduced
+charts timed out inside their recorded caps, so exact affine membership
+remains undecided.
+
+```text
+python -B -m experiments.krenn_quantum_graph.localized_chart_artifact verify
+python -B -m unittest tests.test_krenn_localized_chart_ideals -v
+python -B -m unittest tests.test_krenn_localized_chart_macaulay -v
 ```
 
 ## Sharp deformation regression

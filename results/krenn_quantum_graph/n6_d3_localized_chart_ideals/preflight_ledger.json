@@ -1,0 +1,167 @@
+{
+  "claim_boundary": {
+    "a_bounded_certificate_miss_is_a_global_decision": false,
+    "a_modular_basis_is_an_exact_chart_decision": false,
+    "a_timeout_is_a_decision": false,
+    "smooth_defect_hypersurface_decides_full_chart": false,
+    "unretained_timeout_stdout_is_a_certificate": false
+  },
+  "exact_macaulay": {
+    "charts": 8,
+    "command": "python -B -m experiments.krenn_quantum_graph.localized_chart_artifact generate --output results/krenn_quantum_graph/n6_d3_localized_chart_ideals",
+    "deterministic": true,
+    "prime": 1009,
+    "result": "exact bounded nonmembership through total degree six on all eight charts",
+    "total_degree_bound": 6
+  },
+  "host_policy": {
+    "cpu_workers": 1,
+    "maximum_allowed_workers": 16,
+    "network": "disabled for every Docker run",
+    "random_seeds": [],
+    "scratch_root": "D:\\KrennScratch\\localized_chart_ideals"
+  },
+  "schema": "krenn-n6-d3-localized-chart-campaign-v1",
+  "singular_engine": {
+    "coefficient_fields": [
+      "F_31",
+      "Q"
+    ],
+    "docker_image": "hodgepodge-singular:ubuntu24.04",
+    "image_id": "sha256:6613ac51738965fafd2ebb2839a02452811ac4e35416cfbbda0485ed1995e75",
+    "runs": [
+      {
+        "algorithm": "slimgb",
+        "budget_seconds": 60,
+        "characteristic": 31,
+        "command": "docker run --rm --network none --cpus 2 --memory 8g --entrypoint timeout -v \"D:\\KrennScratch\\localized_chart_ideals\\unshifted_slimgb:/work:ro\" hodgepodge-singular:ubuntu24.04 60s Singular /work/chart6_char31_slimgb.sing",
+        "cpus": 2,
+        "ideal": "natural unshifted chart",
+        "input_script": {
+          "bytes": 128719,
+          "path": "D:\\KrennScratch\\localized_chart_ideals\\unshifted_slimgb\\chart6_char31_slimgb.sing",
+          "sha256": "0fdc5574372dd447100b64829ef584a258069d8942bd895f8677e0c9b20c09b1"
+        },
+        "marker_receipt": {
+          "completion_marker": "KRENN_CHART_GROEBNER_DONE",
+          "completion_marker_observed_live": false,
+          "parse_marker": "KRENN_CHART_PARSE_OK",
+          "parse_marker_observed_live": true,
+          "stdout_bytes_retained": false
+        },
+        "memory_gib": 8,
+        "status": "timeout-after-parse"
+      },
+      {
+        "algorithm": "std",
+        "budget_seconds": 60,
+        "characteristic": 31,
+        "command": "docker run --rm --network none --cpus 2 --memory 8g --entrypoint timeout -v \"D:\\KrennScratch\\localized_chart_ideals\\derivative_atlas:/work:ro\" hodgepodge-singular:ubuntu24.04 60s Singular /work/natural_derivative_11_p31_std.sing",
+        "cpus": 2,
+        "ideal": "derivative elimination ambient 11",
+        "input_script": {
+          "bytes": 200201,
+          "path": "D:\\KrennScratch\\localized_chart_ideals\\derivative_atlas\\natural_derivative_11_p31_std.sing",
+          "sha256": "6c16496e96db48d427aa5e1b3e99f122e480a7918edb3ee04f9f95ed5ee1bbce"
+        },
+        "marker_receipt": {
+          "completion_marker": "KRENN_DERIVATIVE_GROEBNER_DONE",
+          "completion_marker_observed_live": false,
+          "parse_marker": "KRENN_DERIVATIVE_PARSE_OK",
+          "parse_marker_observed_live": true,
+          "stdout_bytes_retained": false
+        },
+        "memory_gib": 8,
+        "status": "timeout-after-parse"
+      },
+      {
+        "algorithm": "std",
+        "budget_seconds": 30,
+        "characteristic": 31,
+        "command": "docker run --rm --network none --cpus 2 --memory 8g --entrypoint timeout -v \"D:\\KrennScratch\\localized_chart_ideals\\derivative_atlas:/work:ro\" hodgepodge-singular:ubuntu24.04 30s Singular /work/natural_derivative_29_p31_std.sing",
+        "cpus": 2,
+        "ideal": "derivative elimination ambient 29",
+        "input_script": {
+          "bytes": 199414,
+          "path": "D:\\KrennScratch\\localized_chart_ideals\\derivative_atlas\\natural_derivative_29_p31_std.sing",
+          "sha256": "ea22026f710c7de477f495923ced9887a8b10c1a63efe6fc0c71153a0141f7bd"
+        },
+        "marker_receipt": {
+          "completion_marker": "KRENN_DERIVATIVE_GROEBNER_DONE",
+          "completion_marker_observed_live": false,
+          "parse_marker": "KRENN_DERIVATIVE_PARSE_OK",
+          "parse_marker_observed_live": true,
+          "stdout_bytes_retained": false
+        },
+        "memory_gib": 8,
+        "status": "timeout-after-parse"
+      },
+      {
+        "algorithm": "std",
+        "budget_seconds": 60,
+        "characteristic": 31,
+        "command": "docker run --rm --network none --cpus 2 --memory 8g --entrypoint timeout -v \"D:\\KrennScratch\\localized_chart_ideals\\repair_monomial_atlas:/work:ro\" hodgepodge-singular:ubuntu24.04 60s Singular /work/repair_11_55_133_p31_std.sing",
+        "cpus": 2,
+        "ideal": "repair monomial 11,55,133",
+        "input_script": {
+          "bytes": 126118,
+          "path": "D:\\KrennScratch\\localized_chart_ideals\\repair_monomial_atlas\\repair_11_55_133_p31_std.sing",
+          "sha256": "d59f13e043d04861e7e2e2a7ab46d5df5dace5feafba55aee986090e6d99c83e"
+        },
+        "marker_receipt": {
+          "completion_marker": "KRENN_REPAIR_CHART_GROEBNER_DONE",
+          "completion_marker_observed_live": false,
+          "parse_marker": "KRENN_REPAIR_CHART_PARSE_OK",
+          "parse_marker_observed_live": true,
+          "stdout_bytes_retained": false
+        },
+        "memory_gib": 8,
+        "status": "timeout-after-parse"
+      },
+      {
+        "algorithm": "std",
+        "budget_seconds": 30,
+        "characteristic": 31,
+        "command": "docker run --rm --network none --cpus 2 --memory 8g --entrypoint timeout -v \"D:\\KrennScratch\\localized_chart_ideals\\repair_monomial_atlas:/work:ro\" hodgepodge-singular:ubuntu24.04 30s Singular /work/repair_29_55_106_p31_std.sing",
+        "cpus": 2,
+        "ideal": "repair monomial 29,55,106",
+        "input_script": {
+          "bytes": 126115,
+          "path": "D:\\KrennScratch\\localized_chart_ideals\\repair_monomial_atlas\\repair_29_55_106_p31_std.sing",
+          "sha256": "e4c47a3486cde8a06376d9e0f21fb830822904251d2e721f839d1dfdc3ebb3ac"
+        },
+        "marker_receipt": {
+          "completion_marker": "KRENN_REPAIR_CHART_GROEBNER_DONE",
+          "completion_marker_observed_live": false,
+          "parse_marker": "KRENN_REPAIR_CHART_PARSE_OK",
+          "parse_marker_observed_live": true,
+          "stdout_bytes_retained": false
+        },
+        "memory_gib": 8,
+        "status": "timeout-after-parse"
+      },
+      {
+        "algorithm": "modStd exact final verification plus lift",
+        "budget_seconds": 120,
+        "characteristic": 0,
+        "command": "docker run --rm --network none --cpus 2 --memory 4g --entrypoint timeout -v \"C:\\tmp:/work:ro\" hodgepodge-singular:ubuntu24.04 120s Singular /work/krenn_natural_core_smooth.sing",
+        "cpus": 2,
+        "ideal": "12-variable natural defect critical ideal",
+        "input_script": {
+          "bytes": 856,
+          "path": "C:\\tmp\\krenn_natural_core_smooth.sing",
+          "sha256": "7e609684df16f02f6d09c929f7d8abb061f47a54440972b9313c503e1776b274"
+        },
+        "memory_gib": 4,
+        "native_exact_certificate_replayed": true,
+        "selected_stdout": [
+          "unit=1",
+          "certificate_replay=1",
+          "certificate_rows=13"
+        ],
+        "status": "unit-certificate-extracted-and-replayed"
+      }
+    ],
+    "version": "4.3.2"
+  }
+}

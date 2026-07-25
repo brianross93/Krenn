@@ -1,0 +1,270 @@
+{
+  "charts": [
+    {
+      "augmented_rank_mod_p": 656,
+      "bounded_nonmembership_over_q_certified": true,
+      "claim_boundary": {
+        "bounded_miss_is_global_nonexistence_proof": false,
+        "finite_affine_GHZ_membership_decided": false,
+        "full_chart_unit_ideal_decided": false,
+        "modular_solution_is_rational_certificate": false
+      },
+      "exact_koszul_relations": 15,
+      "exact_reason_if_certified": "exact averaged Koszul relations give a source-rank upper bound over Q; modular source and augmented minors attain that bound and raise it for the constant",
+      "independent_koszul_relation_rank_mod_p": 15,
+      "invariant_columns": 670,
+      "invariant_rows": 2504,
+      "koszul_relation_sha256": "518572c45168ebcd9a2e884205837775aaba752de7a92b03f6e39cddf7ae995a",
+      "nonzero_entries": 5706,
+      "orbit_index": 0,
+      "prime": 1009,
+      "raw_torus_pairs": 82869,
+      "schema": "krenn-n6-d3-localized-chart-bounded-macaulay-v1",
+      "seed": [
+        0,
+        0,
+        0
+      ],
+      "source_rank_mod_p": 655,
+      "source_rank_upper_bound_over_q": 655,
+      "stabilizer_order": 288,
+      "target_in_span_mod_p": false,
+      "total_degree_bound": 6
+    },
+    {
+      "augmented_rank_mod_p": 6437,
+      "bounded_nonmembership_over_q_certified": true,
+      "claim_boundary": {
+        "bounded_miss_is_global_nonexistence_proof": false,
+        "finite_affine_GHZ_membership_decided": false,
+        "full_chart_unit_ideal_decided": false,
+        "modular_solution_is_rational_certificate": false
+      },
+      "exact_koszul_relations": 74,
+      "exact_reason_if_certified": "exact averaged Koszul relations give a source-rank upper bound over Q; modular source and augmented minors attain that bound and raise it for the constant",
+      "independent_koszul_relation_rank_mod_p": 74,
+      "invariant_columns": 6510,
+      "invariant_rows": 36880,
+      "koszul_relation_sha256": "0645fc13a9edc79344c315e6a6956b985a8b134a23220ca076bbbaa96489f0b8",
+      "nonzero_entries": 76475,
+      "orbit_index": 1,
+      "prime": 1009,
+      "raw_torus_pairs": 73281,
+      "schema": "krenn-n6-d3-localized-chart-bounded-macaulay-v1",
+      "seed": [
+        0,
+        0,
+        1
+      ],
+      "source_rank_mod_p": 6436,
+      "source_rank_upper_bound_over_q": 6436,
+      "stabilizer_order": 16,
+      "target_in_span_mod_p": false,
+      "total_degree_bound": 6
+    },
+    {
+      "augmented_rank_mod_p": 6026,
+      "bounded_nonmembership_over_q_certified": true,
+      "claim_boundary": {
+        "bounded_miss_is_global_nonexistence_proof": false,
+        "finite_affine_GHZ_membership_decided": false,
+        "full_chart_unit_ideal_decided": false,
+        "modular_solution_is_rational_certificate": false
+      },
+      "exact_koszul_relations": 24,
+      "exact_reason_if_certified": "exact averaged Koszul relations give a source-rank upper bound over Q; modular source and augmented minors attain that bound and raise it for the constant",
+      "independent_koszul_relation_rank_mod_p": 24,
+      "invariant_columns": 6049,
+      "invariant_rows": 45931,
+      "koszul_relation_sha256": "ac17a3d6339c77ed7d1f5f13374209fc8695bfbd895a77ad7cd56826182bd04c",
+      "nonzero_entries": 88017,
+      "orbit_index": 2,
+      "prime": 1009,
+      "raw_torus_pairs": 68487,
+      "schema": "krenn-n6-d3-localized-chart-bounded-macaulay-v1",
+      "seed": [
+        0,
+        0,
+        4
+      ],
+      "source_rank_mod_p": 6025,
+      "source_rank_upper_bound_over_q": 6025,
+      "stabilizer_order": 12,
+      "target_in_span_mod_p": false,
+      "total_degree_bound": 6
+    },
+    {
+      "augmented_rank_mod_p": 1938,
+      "bounded_nonmembership_over_q_certified": true,
+      "claim_boundary": {
+        "bounded_miss_is_global_nonexistence_proof": false,
+        "finite_affine_GHZ_membership_decided": false,
+        "full_chart_unit_ideal_decided": false,
+        "modular_solution_is_rational_certificate": false
+      },
+      "exact_koszul_relations": 10,
+      "exact_reason_if_certified": "exact averaged Koszul relations give a source-rank upper bound over Q; modular source and augmented minors attain that bound and raise it for the constant",
+      "independent_koszul_relation_rank_mod_p": 10,
+      "invariant_columns": 1947,
+      "invariant_rows": 11624,
+      "koszul_relation_sha256": "e679c46ea99e91ec18989a64cc0bce870519c01f7717d60fc1abd8f5112e85d8",
+      "nonzero_entries": 22868,
+      "orbit_index": 3,
+      "prime": 1009,
+      "raw_torus_pairs": 66411,
+      "schema": "krenn-n6-d3-localized-chart-bounded-macaulay-v1",
+      "seed": [
+        0,
+        1,
+        2
+      ],
+      "source_rank_mod_p": 1937,
+      "source_rank_upper_bound_over_q": 1937,
+      "stabilizer_order": 48,
+      "target_in_span_mod_p": false,
+      "total_degree_bound": 6
+    },
+    {
+      "augmented_rank_mod_p": 17163,
+      "bounded_nonmembership_over_q_certified": true,
+      "claim_boundary": {
+        "bounded_miss_is_global_nonexistence_proof": false,
+        "finite_affine_GHZ_membership_decided": false,
+        "full_chart_unit_ideal_decided": false,
+        "modular_solution_is_rational_certificate": false
+      },
+      "exact_koszul_relations": 72,
+      "exact_reason_if_certified": "exact averaged Koszul relations give a source-rank upper bound over Q; modular source and augmented minors attain that bound and raise it for the constant",
+      "independent_koszul_relation_rank_mod_p": 72,
+      "invariant_columns": 17234,
+      "invariant_rows": 133117,
+      "koszul_relation_sha256": "80fd7f29657a26691382285efd0491148c2d7f48a1cf8c2944a90a5fed9af275",
+      "nonzero_entries": 253729,
+      "orbit_index": 4,
+      "prime": 1009,
+      "raw_torus_pairs": 66538,
+      "schema": "krenn-n6-d3-localized-chart-bounded-macaulay-v1",
+      "seed": [
+        0,
+        1,
+        3
+      ],
+      "source_rank_mod_p": 17162,
+      "source_rank_upper_bound_over_q": 17162,
+      "stabilizer_order": 4,
+      "target_in_span_mod_p": false,
+      "total_degree_bound": 6
+    },
+    {
+      "augmented_rank_mod_p": 16002,
+      "bounded_nonmembership_over_q_certified": true,
+      "claim_boundary": {
+        "bounded_miss_is_global_nonexistence_proof": false,
+        "finite_affine_GHZ_membership_decided": false,
+        "full_chart_unit_ideal_decided": false,
+        "modular_solution_is_rational_certificate": false
+      },
+      "exact_koszul_relations": 35,
+      "exact_reason_if_certified": "exact averaged Koszul relations give a source-rank upper bound over Q; modular source and augmented minors attain that bound and raise it for the constant",
+      "independent_koszul_relation_rank_mod_p": 35,
+      "invariant_columns": 16036,
+      "invariant_rows": 128168,
+      "koszul_relation_sha256": "346d1ee7a190634c8b1b2eb2e0dadd2062c54f22a1ba89e1da67c630306e44fe",
+      "nonzero_entries": 238416,
+      "orbit_index": 5,
+      "prime": 1009,
+      "raw_torus_pairs": 63103,
+      "schema": "krenn-n6-d3-localized-chart-bounded-macaulay-v1",
+      "seed": [
+        0,
+        1,
+        5
+      ],
+      "source_rank_mod_p": 16001,
+      "source_rank_upper_bound_over_q": 16001,
+      "stabilizer_order": 4,
+      "target_in_span_mod_p": false,
+      "total_degree_bound": 6
+    },
+    {
+      "augmented_rank_mod_p": 5311,
+      "bounded_nonmembership_over_q_certified": true,
+      "claim_boundary": {
+        "bounded_miss_is_global_nonexistence_proof": false,
+        "finite_affine_GHZ_membership_decided": false,
+        "full_chart_unit_ideal_decided": false,
+        "modular_solution_is_rational_certificate": false
+      },
+      "exact_koszul_relations": 8,
+      "exact_reason_if_certified": "exact averaged Koszul relations give a source-rank upper bound over Q; modular source and augmented minors attain that bound and raise it for the constant",
+      "independent_koszul_relation_rank_mod_p": 8,
+      "invariant_columns": 5318,
+      "invariant_rows": 42683,
+      "koszul_relation_sha256": "e600eedafeb506f3b70c51aadb59a4009392d9969da4178103fcdf610b66434e",
+      "nonzero_entries": 77840,
+      "orbit_index": 6,
+      "prime": 1009,
+      "raw_torus_pairs": 61154,
+      "schema": "krenn-n6-d3-localized-chart-bounded-macaulay-v1",
+      "seed": [
+        0,
+        4,
+        8
+      ],
+      "source_rank_mod_p": 5310,
+      "source_rank_upper_bound_over_q": 5310,
+      "stabilizer_order": 12,
+      "target_in_span_mod_p": false,
+      "total_degree_bound": 6
+    },
+    {
+      "augmented_rank_mod_p": 1901,
+      "bounded_nonmembership_over_q_certified": true,
+      "claim_boundary": {
+        "bounded_miss_is_global_nonexistence_proof": false,
+        "finite_affine_GHZ_membership_decided": false,
+        "full_chart_unit_ideal_decided": false,
+        "modular_solution_is_rational_certificate": false
+      },
+      "exact_koszul_relations": 3,
+      "exact_reason_if_certified": "exact averaged Koszul relations give a source-rank upper bound over Q; modular source and augmented minors attain that bound and raise it for the constant",
+      "independent_koszul_relation_rank_mod_p": 3,
+      "invariant_columns": 1903,
+      "invariant_rows": 14890,
+      "koszul_relation_sha256": "e66c7126b99c2e2c107b5173337b35b32e7e83aedc6bea9935f45336d7b054e8",
+      "nonzero_entries": 27164,
+      "orbit_index": 7,
+      "prime": 1009,
+      "raw_torus_pairs": 62640,
+      "schema": "krenn-n6-d3-localized-chart-bounded-macaulay-v1",
+      "seed": [
+        0,
+        4,
+        13
+      ],
+      "source_rank_mod_p": 1900,
+      "source_rank_upper_bound_over_q": 1900,
+      "stabilizer_order": 36,
+      "target_in_span_mod_p": false,
+      "total_degree_bound": 6
+    }
+  ],
+  "claim_boundary": {
+    "bounded_degree_miss_is_global_proof": false,
+    "finite_affine_GHZ_membership_status": "undecided",
+    "finite_field_result_alone_is_proof": false,
+    "full_chart_unit_ideals_decided": 0,
+    "proper_chart_ideals_decided": 0
+  },
+  "exact_conclusion": "over Q, none of the eight normalized chart ideals has a Nullstellensatz identity of total degree at most six",
+  "method": {
+    "coefficient_field_for_rank_minors": "F_1009",
+    "exact_integer_koszul_relations": true,
+    "ordered_seed_stabilizer_reynolds_average": true,
+    "prime_coprime_to_every_stabilizer_order": true,
+    "residual_torus_weight_projection": true,
+    "total_certificate_degree_bound": 6
+  },
+  "proof_logic": "independent exact Koszul relations bound each rational source rank above; a nonzero modular source minor attains that bound; a larger augmented modular minor puts 1 outside the Q-span",
+  "schema": "krenn-n6-d3-localized-chart-campaign-v1"
+}
