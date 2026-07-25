@@ -528,9 +528,21 @@ A retained rational identity proves
 Its 12 derivative opens reduce to two exact symmetry representatives. A
 second finite atlas uses the fact that one of the 14 repair monomials must be
 nonzero; residual gauge and symmetry reduce those opens to four
-representatives. Generic Gröbner preflights on the top-level and reduced
-charts timed out inside their recorded caps, so exact affine membership
-remains undecided.
+representatives. Seven generic \(F_{31}\) Gröbner probes—the natural chart,
+both derivative representatives, and all four repair representatives—each
+parsed and then timed out after a full 600-second engine budget. Their
+byte-exact logs and exit-124 receipts are retained as reconnaissance only.
+The next campaign therefore uses the exact residual \(\mathbf Z^9\) grading
+to decompose certificate and saturation computations instead of extending
+the generic timeouts. After the repair-factor gauges, the four repair
+charts have residual character ranks \(8,8,7,7\); exact replay verifies
+that all 730 generators in every chart are homogeneous in the corresponding
+split integral quotient. This grading supplies gauge lineality for later
+Gröbner or tropical calculations, but it does not itself enumerate tropical
+cones or decide an ideal. The two derivative opens also admit exact sparse
+gauge slices \(d=1\): each keeps 129 variables, has 730 generators and
+10,942 terms of degree at most four, replacing the older degree-six
+elimination formulation. Exact affine membership remains undecided.
 
 ```text
 python -B -m experiments.krenn_quantum_graph.localized_chart_artifact verify

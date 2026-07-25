@@ -8,6 +8,18 @@ import json
 from pathlib import Path
 from typing import Mapping
 
+from experiments.krenn_quantum_graph.localized_chart_cas_runner import (
+    DEFAULT_SCRATCH_ROOT,
+    DOCKER_IMAGE,
+    DOCKER_IMAGE_ID,
+    ENGINE_BUDGET_SECONDS,
+    OUTPUT_SUBDIRECTORY,
+    PROBES,
+    RUNNER_SCHEMA,
+    SUITE_SCHEMA,
+    docker_argv,
+    probe_input_path,
+)
 from experiments.krenn_quantum_graph.localized_chart_derivative import (
     natural_derivative_atlas_audit,
 )
@@ -27,6 +39,10 @@ from experiments.krenn_quantum_graph.localized_chart_macaulay import (
 from experiments.krenn_quantum_graph.localized_chart_monomial_atlas import (
     natural_repair_monomial_atlas_audit,
 )
+from experiments.krenn_quantum_graph.localized_chart_residual_grading import (
+    residual_grading_audit,
+    verify_residual_grading_audit,
+)
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -45,16 +61,19 @@ DATA_FILES = (
     "natural_derivative_atlas.json",
     "natural_repair_monomial_atlas.json",
     "preflight_ledger.json",
+    "residual_grading.json",
 )
 SOURCE_FILES = (
     "experiments/__init__.py",
     "experiments/krenn_quantum_graph/__init__.py",
     "experiments/krenn_quantum_graph/localized_chart_artifact.py",
+    "experiments/krenn_quantum_graph/localized_chart_cas_runner.py",
     "experiments/krenn_quantum_graph/localized_chart_derivative.py",
     "experiments/krenn_quantum_graph/localized_chart_ideals.py",
     "experiments/krenn_quantum_graph/localized_chart_independent.py",
     "experiments/krenn_quantum_graph/localized_chart_macaulay.py",
     "experiments/krenn_quantum_graph/localized_chart_monomial_atlas.py",
+    "experiments/krenn_quantum_graph/localized_chart_residual_grading.py",
     "experiments/krenn_quantum_graph/system.py",
     "experiments/krenn_quantum_graph/targets.py",
     "experiments/krenn_quantum_graph/ternary_seed_orbits.py",
@@ -88,6 +107,116 @@ EXPECTED_DEGREE_SIX_RELATION_HASHES = (
     "e600eedafeb506f3b70c51aadb59a4009392d9969da4178103fcdf610b66434e",
     "e66c7126b99c2e2c107b5173337b35b32e7e83aedc6bea9935f45336d7b054e8",
 )
+EMPTY_SHA256 = (
+    "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+)
+RETAINED_TEN_MINUTE_RESULTS = {
+    "natural_chart_p31_slimgb": {
+        "started_at_utc": "2026-07-25T02:12:04.865755+00:00",
+        "elapsed_seconds": 600.622037,
+        "stdout_bytes": 550,
+        "stdout_sha256": (
+            "5809e3b66b083ce0f0938d4fae0c4cb799cda19fb2f2a9b"
+            "dcedacf6bd13b37bb"
+        ),
+        "receipt_bytes": 2_134,
+        "receipt_sha256": (
+            "e73c8fdfcee0b0901d78326d6f151fea11e2574e6b364de"
+            "7d401e483e0eb414e"
+        ),
+        "hardened_command": False,
+    },
+    "derivative_11_p31_std": {
+        "started_at_utc": "2026-07-25T02:12:04.865738+00:00",
+        "elapsed_seconds": 600.563928,
+        "stdout_bytes": 513,
+        "stdout_sha256": (
+            "d713aca1608371584c51f0c0576d07dd9fde3fc564366b28"
+            "952037faa8b5c1b2"
+        ),
+        "receipt_bytes": 2_169,
+        "receipt_sha256": (
+            "ff2a249c96ce8272a0bef932fdee7df4c4207732835c416c"
+            "8f2a93bf18f848fb"
+        ),
+        "hardened_command": False,
+    },
+    "derivative_29_p31_std": {
+        "started_at_utc": "2026-07-25T02:12:04.865714+00:00",
+        "elapsed_seconds": 600.587278,
+        "stdout_bytes": 513,
+        "stdout_sha256": (
+            "147ac26cb492b03013d6c4cc0cb3fc5bc10778b3d0fe7562"
+            "e8cdc3ea67626d35"
+        ),
+        "receipt_bytes": 2_169,
+        "receipt_sha256": (
+            "ddcfe27760040188fd06fe417e1efe1d0d6c6a0fcb55b354"
+            "0bb7fd8f71926411"
+        ),
+        "hardened_command": False,
+    },
+    "repair_11_65_p31_std": {
+        "started_at_utc": "2026-07-25T02:33:02.844489+00:00",
+        "elapsed_seconds": 600.455603,
+        "stdout_bytes": 507,
+        "stdout_sha256": (
+            "ac8844314393526f1692b20e1a3ee1a23788a954d23067a5"
+            "fa42aa6637bbed96"
+        ),
+        "receipt_bytes": 2_266,
+        "receipt_sha256": (
+            "24d236c95e09c6cf6f496f3a9a3a3872f94c8572135ef7b"
+            "78a77a66db7657cdc"
+        ),
+        "hardened_command": True,
+    },
+    "repair_29_47_p31_std": {
+        "started_at_utc": "2026-07-25T02:33:02.846202+00:00",
+        "elapsed_seconds": 600.451384,
+        "stdout_bytes": 507,
+        "stdout_sha256": (
+            "28a1a8768fd71ddadfffb71b6788f10c342b2ba6ac7ca6a6"
+            "a88dd8d7c06ee15f"
+        ),
+        "receipt_bytes": 2_266,
+        "receipt_sha256": (
+            "10301a96f9398556839a76faa2b467e85e8f050835addf4f"
+            "27c1dfc1efce82ab"
+        ),
+        "hardened_command": True,
+    },
+    "repair_11_55_133_p31_std": {
+        "started_at_utc": "2026-07-25T02:22:05.478353+00:00",
+        "elapsed_seconds": 600.406723,
+        "stdout_bytes": 511,
+        "stdout_sha256": (
+            "59c96d2c3669179f498dd120ddb1764bf8a90861bc563b4a"
+            "df4ce66d87ca189c"
+        ),
+        "receipt_bytes": 2_174,
+        "receipt_sha256": (
+            "53ab8cd44d5aab2b5b2881cad2ed5d5de4c1dd5c23693d4"
+            "374771e1eb11a3ad7"
+        ),
+        "hardened_command": False,
+    },
+    "repair_29_55_106_p31_std": {
+        "started_at_utc": "2026-07-25T02:22:05.503417+00:00",
+        "elapsed_seconds": 600.492321,
+        "stdout_bytes": 511,
+        "stdout_sha256": (
+            "7eccf2f5b8219175f23984f051525a4869c1619c6ef109ac"
+            "2828701a8069b46d"
+        ),
+        "receipt_bytes": 2_174,
+        "receipt_sha256": (
+            "60fe0819abd5f4eb6ad7f346b61ef7e7e76971e3e7d3cc2"
+            "d7b3cb6157e8008e5"
+        ),
+        "hardened_command": False,
+    },
+}
 
 
 class KrennLocalizedArtifactError(RuntimeError):
@@ -267,8 +396,8 @@ def bounded_degree_six_audit() -> dict:
     return payload
 
 
-def preflight_ledger() -> dict:
-    """Record deterministic budgets and the bounded CAS outcomes."""
+def _superseded_short_preflight_ledger() -> dict:
+    """Retain the original smoke-test receipts as historical provenance."""
 
     return {
         "schema": ARTIFACT_SCHEMA,
@@ -299,7 +428,7 @@ def preflight_ledger() -> dict:
             "docker_image": "hodgepodge-singular:ubuntu24.04",
             "image_id": (
                 "sha256:6613ac51738965fafd2ebb2839a02452811ac4e3"
-                "5416cfbbda0485ed1995e75"
+                "e5416cfbbda0485ed1995e75"
             ),
             "version": "4.3.2",
             "coefficient_fields": ["F_31", "Q"],
@@ -531,6 +660,179 @@ def preflight_ledger() -> dict:
     }
 
 
+def _retained_ten_minute_runs() -> list[dict]:
+    if set(RETAINED_TEN_MINUTE_RESULTS) != {
+        probe.key for probe in PROBES
+    }:
+        raise KrennLocalizedArtifactError(
+            "the retained ten-minute CAS result keys changed"
+        )
+    rows = []
+    output_root = DEFAULT_SCRATCH_ROOT / OUTPUT_SUBDIRECTORY
+    for probe in PROBES:
+        retained = RETAINED_TEN_MINUTE_RESULTS[probe.key]
+        hardened = retained["hardened_command"]
+        if (
+            retained["elapsed_seconds"] < ENGINE_BUDGET_SECONDS
+            or retained["elapsed_seconds"] >= 610
+        ):
+            raise KrennLocalizedArtifactError(
+                "a retained ten-minute elapsed time changed"
+            )
+        rows.append({
+            "runner_schema": RUNNER_SCHEMA,
+            "key": probe.key,
+            "ideal": probe.ideal,
+            "algorithm": probe.algorithm,
+            "characteristic": probe.characteristic,
+            "budget_seconds": ENGINE_BUDGET_SECONDS,
+            "cpus": 2,
+            "memory_gib": 8,
+            "command_profile": (
+                "pinned-image-forced-kill"
+                if hardened else "verified-image-tag"
+            ),
+            "command_argv": list(docker_argv(
+                probe,
+                DEFAULT_SCRATCH_ROOT,
+                hardened=hardened,
+            )),
+            "input_script": {
+                "path": str(probe_input_path(
+                    probe, DEFAULT_SCRATCH_ROOT
+                )),
+                "bytes": probe.input_bytes,
+                "sha256": probe.input_sha256,
+            },
+            "started_at_utc": retained["started_at_utc"],
+            "elapsed_seconds": retained["elapsed_seconds"],
+            "return_code": 124,
+            "stdout": {
+                "path": str(output_root / f"{probe.key}.stdout.txt"),
+                "bytes": retained["stdout_bytes"],
+                "sha256": retained["stdout_sha256"],
+            },
+            "stderr": {
+                "path": str(output_root / f"{probe.key}.stderr.txt"),
+                "bytes": 0,
+                "sha256": EMPTY_SHA256,
+            },
+            "receipt": {
+                "path": str(
+                    output_root / f"{probe.key}.receipt.json"
+                ),
+                "bytes": retained["receipt_bytes"],
+                "sha256": retained["receipt_sha256"],
+            },
+            "marker_receipt": {
+                "parse_marker": probe.parse_marker,
+                "parse_marker_observed": True,
+                "completion_marker": probe.completion_marker,
+                "completion_marker_observed": False,
+            },
+            "status": "timeout-after-parse",
+            "claim_boundary": {
+                "timeout_is_a_chart_decision": False,
+                "F31_result_is_an_exact_Q_proof": False,
+            },
+        })
+    return rows
+
+
+def preflight_ledger() -> dict:
+    """Record the completed exact and ten-minute bounded computations."""
+
+    historical = _superseded_short_preflight_ledger()
+    return {
+        "schema": ARTIFACT_SCHEMA,
+        "host_policy": {
+            "exact_macaulay_workers": 1,
+            "maximum_allowed_workers": 16,
+            "maximum_observed_concurrent_CAS_probes": 3,
+            "maximum_observed_concurrent_CAS_cpus": 6,
+            "maximum_observed_concurrent_CAS_memory_gib": 24,
+            "network": "disabled for every Docker run",
+            "scratch_root": str(DEFAULT_SCRATCH_ROOT),
+            "random_seeds": [],
+        },
+        "exact_macaulay": historical["exact_macaulay"],
+        "singular_engine": {
+            "docker_image": DOCKER_IMAGE,
+            "image_id": DOCKER_IMAGE_ID,
+            "version": "4.3.2",
+            "coefficient_fields": ["F_31", "Q"],
+            "ten_minute_F31_reconnaissance": {
+                "runner_schema": RUNNER_SCHEMA,
+                "suite_schema": SUITE_SCHEMA,
+                "probe_count": len(PROBES),
+                "budget_seconds_per_probe": ENGINE_BUDGET_SECONDS,
+                "aggregate_scratch_manifest": {
+                    "path": str(
+                        DEFAULT_SCRATCH_ROOT
+                        / OUTPUT_SUBDIRECTORY
+                        / "ten_minute_run_manifest.json"
+                    ),
+                    "bytes": 4_972,
+                    "sha256": (
+                        "9919270a4bfa7bcfa2c79bb0be102c809d87c27e"
+                        "8feb6682492fe81def79f4b2"
+                    ),
+                },
+                "execution_batches": [
+                    {
+                        "worker_limit": 3,
+                        "maximum_cpus": 6,
+                        "maximum_memory_gib": 24,
+                        "new_probe_keys": [
+                            "natural_chart_p31_slimgb",
+                            "derivative_11_p31_std",
+                            "derivative_29_p31_std",
+                            "repair_11_55_133_p31_std",
+                            "repair_29_55_106_p31_std",
+                        ],
+                    },
+                    {
+                        "worker_limit": 2,
+                        "maximum_cpus": 4,
+                        "maximum_memory_gib": 16,
+                        "new_probe_keys": [
+                            "repair_11_65_p31_std",
+                            "repair_29_47_p31_std",
+                        ],
+                    },
+                ],
+                "runs": _retained_ten_minute_runs(),
+                "outcome": (
+                    "all seven probes parsed and timed out after the full "
+                    "600-second engine budget without a completion marker"
+                ),
+            },
+            "superseded_smoke_preflights": {
+                "purpose": "tractability smoke tests only",
+                "runs": [
+                    {
+                        "ideal": row["ideal"],
+                        "budget_seconds": row["budget_seconds"],
+                        "status": row["status"],
+                    }
+                    for row in historical["singular_engine"]["runs"][:5]
+                ],
+            },
+            "exact_Q_runs": [
+                historical["singular_engine"]["runs"][5]
+            ],
+        },
+        "claim_boundary": {
+            "a_timeout_is_a_decision": False,
+            "an_F31_result_is_an_exact_Q_decision": False,
+            "a_bounded_certificate_miss_is_a_global_decision": False,
+            "retained_timeout_logs_are_a_certificate": False,
+            "smooth_defect_hypersurface_decides_full_chart": False,
+            "finite_affine_GHZ_membership_status": "undecided",
+        },
+    }
+
+
 def _write_json(path: Path, payload: Mapping) -> None:
     if path.exists() and (path.is_symlink() or not path.is_file()):
         raise KrennLocalizedArtifactError(
@@ -560,6 +862,7 @@ def _expected_manifest(output_directory: Path) -> dict:
             "ordered_seed_charts": 3_375,
             "symmetry_representatives": 8,
             "exact_bounded_certificate_degree_excluded": 6,
+            "repair_residual_character_ranks": [8, 8, 7, 7],
             "finite_affine_GHZ_membership_status": "undecided",
         },
         "claim_boundary": {
@@ -601,6 +904,7 @@ def write_localized_chart_bundle(
         "natural_repair_monomial_atlas.json":
             natural_repair_monomial_atlas_audit(),
         "preflight_ledger.json": preflight_ledger(),
+        "residual_grading.json": residual_grading_audit(),
     }
     for name, payload in payloads.items():
         _write_json(output_directory / name, payload)
@@ -667,6 +971,9 @@ def verify_localized_chart_bundle(
         raise KrennLocalizedArtifactError(
             "preflight ledger failed exact replay"
         )
+    verify_residual_grading_audit(
+        _load_strict_json(output_directory / "residual_grading.json")
+    )
     bounded = _load_strict_json(
         output_directory / "bounded_degree_six.json"
     )

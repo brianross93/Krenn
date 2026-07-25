@@ -1,0 +1,763 @@
+{
+  "ambient_residual_character_lattice": "Z^9",
+  "claim_boundary": {
+    "chart_unit_or_proper_status_decided": false,
+    "finite_counterexample_found": false,
+    "global_nonexistence_proved": false,
+    "tropical_cones_enumerated": false
+  },
+  "exact_checks": {
+    "all_730_generator_sets_homogeneous": true,
+    "all_fixed_character_quotients_split_over_Z": true,
+    "all_four_repair_representatives_covered": true
+  },
+  "interpretation": {
+    "character_grading": "exact algebraic-torus weights used to block polynomial linear algebra",
+    "relationship": "cocharacter pairing with character weights supplies lineality, not the remaining tropical cones",
+    "tropical_valuation": "orders of a one-parameter or Puiseux family"
+  },
+  "natural_seed": [
+    0,
+    4,
+    8
+  ],
+  "repair_charts": [
+    {
+      "claim_boundary": {
+        "chart_unit_or_proper_status_decided": false,
+        "finite_affine_GHZ_membership_decided": false,
+        "grading_is_a_tropical_decomposition": false,
+        "tropical_prevariety_computed": false,
+        "tropical_variety_computed": false
+      },
+      "fixed_original_chart_variables": [
+        10
+      ],
+      "generators": {
+        "all_terms_residual_homogeneous": true,
+        "block_multiplicity_histogram": [
+          {
+            "blocks": 415,
+            "multiplicity": 1
+          },
+          {
+            "blocks": 126,
+            "multiplicity": 2
+          },
+          {
+            "blocks": 8,
+            "multiplicity": 3
+          },
+          {
+            "blocks": 8,
+            "multiplicity": 4
+          },
+          {
+            "blocks": 1,
+            "multiplicity": 7
+          }
+        ],
+        "character_blocks": 558,
+        "count": 730,
+        "variable_and_generator_character_sha256": "c5246fd9056a4f32d10eb68f8a9574ed1593346d87263318d5886cdeddcab50c",
+        "zero_character_generators": 7
+      },
+      "integral_character_quotient": {
+        "ambient_rank": 9,
+        "fixed_character_lattice_saturated": true,
+        "fixed_factor_rank": 1,
+        "projection_rows": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "quotient_is_split_over_Z": true,
+        "residual_rank": 8,
+        "section_minor_determinant": 1,
+        "section_source_coordinates": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "smith_diagonal": [
+          1
+        ],
+        "unit_pivot_coordinates_in_successive_quotients": [
+          0
+        ]
+      },
+      "localized_original_chart_variable": 62,
+      "repair_monomial_character_sum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "representative_ambient_monomial": [
+        11,
+        65
+      ],
+      "valuation_lineality": {
+        "dimension": 8,
+        "initial_forms_constant_along_this_subspace": true,
+        "map": "lambda -> (<lambda, chi_j>)_j on repair variables",
+        "quotienting_removes_gauge_redundancy": true,
+        "reason": "characters label a torus action; valuation directions are cocharacters paired with them, and genuine cones live only after quotienting by this lineality",
+        "tropical_or_grobner_cones_enumerated": false,
+        "tropical_valuation_vectors_enumerated": false
+      },
+      "variables": {
+        "branch_inverse_character_is_zero_after_quotient": true,
+        "count": 129,
+        "zero_character_variables": 5
+      }
+    },
+    {
+      "claim_boundary": {
+        "chart_unit_or_proper_status_decided": false,
+        "finite_affine_GHZ_membership_decided": false,
+        "grading_is_a_tropical_decomposition": false,
+        "tropical_prevariety_computed": false,
+        "tropical_variety_computed": false
+      },
+      "fixed_original_chart_variables": [
+        26
+      ],
+      "generators": {
+        "all_terms_residual_homogeneous": true,
+        "block_multiplicity_histogram": [
+          {
+            "blocks": 567,
+            "multiplicity": 1
+          },
+          {
+            "blocks": 66,
+            "multiplicity": 2
+          },
+          {
+            "blocks": 8,
+            "multiplicity": 3
+          },
+          {
+            "blocks": 1,
+            "multiplicity": 7
+          }
+        ],
+        "character_blocks": 642,
+        "count": 730,
+        "variable_and_generator_character_sha256": "c43c11b2443fc10439853b600f02bc8ae199cd814968878db1605f8c15de06ab",
+        "zero_character_generators": 7
+      },
+      "integral_character_quotient": {
+        "ambient_rank": 9,
+        "fixed_character_lattice_saturated": true,
+        "fixed_factor_rank": 1,
+        "projection_rows": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "quotient_is_split_over_Z": true,
+        "residual_rank": 8,
+        "section_minor_determinant": -1,
+        "section_source_coordinates": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "smith_diagonal": [
+          1
+        ],
+        "unit_pivot_coordinates_in_successive_quotients": [
+          0
+        ]
+      },
+      "localized_original_chart_variable": 44,
+      "repair_monomial_character_sum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "representative_ambient_monomial": [
+        29,
+        47
+      ],
+      "valuation_lineality": {
+        "dimension": 8,
+        "initial_forms_constant_along_this_subspace": true,
+        "map": "lambda -> (<lambda, chi_j>)_j on repair variables",
+        "quotienting_removes_gauge_redundancy": true,
+        "reason": "characters label a torus action; valuation directions are cocharacters paired with them, and genuine cones live only after quotienting by this lineality",
+        "tropical_or_grobner_cones_enumerated": false,
+        "tropical_valuation_vectors_enumerated": false
+      },
+      "variables": {
+        "branch_inverse_character_is_zero_after_quotient": true,
+        "count": 129,
+        "zero_character_variables": 5
+      }
+    },
+    {
+      "claim_boundary": {
+        "chart_unit_or_proper_status_decided": false,
+        "finite_affine_GHZ_membership_decided": false,
+        "grading_is_a_tropical_decomposition": false,
+        "tropical_prevariety_computed": false,
+        "tropical_variety_computed": false
+      },
+      "fixed_original_chart_variables": [
+        10,
+        52
+      ],
+      "generators": {
+        "all_terms_residual_homogeneous": true,
+        "block_multiplicity_histogram": [
+          {
+            "blocks": 243,
+            "multiplicity": 1
+          },
+          {
+            "blocks": 132,
+            "multiplicity": 2
+          },
+          {
+            "blocks": 28,
+            "multiplicity": 3
+          },
+          {
+            "blocks": 20,
+            "multiplicity": 4
+          },
+          {
+            "blocks": 8,
+            "multiplicity": 6
+          },
+          {
+            "blocks": 1,
+            "multiplicity": 11
+          }
+        ],
+        "character_blocks": 432,
+        "count": 730,
+        "variable_and_generator_character_sha256": "4900679206ad139f515b18b97664bd8b5e13097ec400fbd064c24469cb7f7057",
+        "zero_character_generators": 11
+      },
+      "integral_character_quotient": {
+        "ambient_rank": 9,
+        "fixed_character_lattice_saturated": true,
+        "fixed_factor_rank": 2,
+        "projection_rows": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "quotient_is_split_over_Z": true,
+        "residual_rank": 7,
+        "section_minor_determinant": -1,
+        "section_source_coordinates": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7
+        ],
+        "smith_diagonal": [
+          1,
+          1
+        ],
+        "unit_pivot_coordinates_in_successive_quotients": [
+          0,
+          4
+        ]
+      },
+      "localized_original_chart_variable": 124,
+      "repair_monomial_character_sum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "representative_ambient_monomial": [
+        11,
+        55,
+        133
+      ],
+      "valuation_lineality": {
+        "dimension": 7,
+        "initial_forms_constant_along_this_subspace": true,
+        "map": "lambda -> (<lambda, chi_j>)_j on repair variables",
+        "quotienting_removes_gauge_redundancy": true,
+        "reason": "characters label a torus action; valuation directions are cocharacters paired with them, and genuine cones live only after quotienting by this lineality",
+        "tropical_or_grobner_cones_enumerated": false,
+        "tropical_valuation_vectors_enumerated": false
+      },
+      "variables": {
+        "branch_inverse_character_is_zero_after_quotient": true,
+        "count": 128,
+        "zero_character_variables": 8
+      }
+    },
+    {
+      "claim_boundary": {
+        "chart_unit_or_proper_status_decided": false,
+        "finite_affine_GHZ_membership_decided": false,
+        "grading_is_a_tropical_decomposition": false,
+        "tropical_prevariety_computed": false,
+        "tropical_variety_computed": false
+      },
+      "fixed_original_chart_variables": [
+        26,
+        52
+      ],
+      "generators": {
+        "all_terms_residual_homogeneous": true,
+        "block_multiplicity_histogram": [
+          {
+            "blocks": 491,
+            "multiplicity": 1
+          },
+          {
+            "blocks": 36,
+            "multiplicity": 2
+          },
+          {
+            "blocks": 36,
+            "multiplicity": 3
+          },
+          {
+            "blocks": 12,
+            "multiplicity": 4
+          },
+          {
+            "blocks": 1,
+            "multiplicity": 11
+          }
+        ],
+        "character_blocks": 576,
+        "count": 730,
+        "variable_and_generator_character_sha256": "3f2c95e2deba62e06696918e0e7733ec4d5848c44dc4193b5c57651b530a63ba",
+        "zero_character_generators": 11
+      },
+      "integral_character_quotient": {
+        "ambient_rank": 9,
+        "fixed_character_lattice_saturated": true,
+        "fixed_factor_rank": 2,
+        "projection_rows": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "quotient_is_split_over_Z": true,
+        "residual_rank": 7,
+        "section_minor_determinant": 1,
+        "section_source_coordinates": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7
+        ],
+        "smith_diagonal": [
+          1,
+          1
+        ],
+        "unit_pivot_coordinates_in_successive_quotients": [
+          0,
+          4
+        ]
+      },
+      "localized_original_chart_variable": 99,
+      "repair_monomial_character_sum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "representative_ambient_monomial": [
+        29,
+        55,
+        106
+      ],
+      "valuation_lineality": {
+        "dimension": 7,
+        "initial_forms_constant_along_this_subspace": true,
+        "map": "lambda -> (<lambda, chi_j>)_j on repair variables",
+        "quotienting_removes_gauge_redundancy": true,
+        "reason": "characters label a torus action; valuation directions are cocharacters paired with them, and genuine cones live only after quotienting by this lineality",
+        "tropical_or_grobner_cones_enumerated": false,
+        "tropical_valuation_vectors_enumerated": false
+      },
+      "variables": {
+        "branch_inverse_character_is_zero_after_quotient": true,
+        "count": 128,
+        "zero_character_variables": 8
+      }
+    }
+  ],
+  "schema": "krenn-n6-d3-natural-repair-residual-grading-v1"
+}

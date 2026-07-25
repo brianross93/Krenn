@@ -23,6 +23,7 @@ from dataclasses import dataclass
 from fractions import Fraction
 import hashlib
 import json
+from math import gcd
 import re
 from typing import Mapping, Sequence
 
@@ -35,7 +36,9 @@ from experiments.krenn_quantum_graph.localized_chart_ideals import (
     validate_singular_characteristic,
 )
 from experiments.krenn_quantum_graph.localized_chart_macaulay import (
+    generator_characters,
     ordered_seed_stabilizer,
+    residual_torus_characters,
 )
 
 
@@ -53,6 +56,9 @@ DERIVATIVE_REPRESENTATIVES = (11, 29)
 SMOOTHNESS_SCHEMA = "krenn-n6-d3-natural-defect-smoothness-v1"
 DERIVATIVE_CHART_SCHEMA = (
     "krenn-n6-d3-natural-defect-eliminated-chart-v1"
+)
+SPARSE_DERIVATIVE_SLICE_SCHEMA = (
+    "krenn-n6-d3-natural-defect-sparse-gauge-slice-v1"
 )
 
 
@@ -377,6 +383,297 @@ def _local_multiply(
     return result
 
 
+def _extended_gcd(left: int, right: int) -> tuple[int, int, int]:
+    """Return ``g,s,t`` with ``s*left+t*right=g=gcd(left,right)``."""
+
+    left = int(left)
+    right = int(right)
+    old_remainder, remainder = abs(left), abs(right)
+    old_left, current_left = 1, 0
+    old_right, current_right = 0, 1
+    while remainder:
+        quotient = old_remainder // remainder
+        old_remainder, remainder = (
+            remainder,
+            old_remainder - quotient * remainder,
+        )
+        old_left, current_left = (
+            current_left,
+            old_left - quotient * current_left,
+        )
+        old_right, current_right = (
+            current_right,
+            old_right - quotient * current_right,
+        )
+    return (
+        old_remainder,
+        old_left * (-1 if left < 0 else 1),
+        old_right * (-1 if right < 0 else 1),
+    )
+
+
+def _primitive_bezout_cocharacter(
+    character: Sequence[int],
+) -> tuple[int, ...]:
+    """Return an integral cocharacter pairing to one with a primitive weight."""
+
+    coefficients: list[int] = []
+    common_divisor = 0
+    for raw_value in character:
+        value = int(raw_value)
+        new_divisor, old_multiplier, value_multiplier = _extended_gcd(
+            common_divisor, value
+        )
+        coefficients = [
+            old_multiplier * coefficient for coefficient in coefficients
+        ]
+        coefficients.append(value_multiplier)
+        common_divisor = new_divisor
+    if common_divisor != 1:
+        raise KrennDerivativeChartError(
+            "the selected derivative character is not primitive"
+        )
+    result = tuple(coefficients)
+    if sum(
+        int(value) * coefficient
+        for value, coefficient in zip(character, result, strict=True)
+    ) != 1:
+        raise KrennDerivativeChartError(
+            "the primitive derivative Bezout identity failed"
+        )
+    return result
+
+
+def _local_monomial_character(
+    monomial: Sequence[int],
+    characters: Sequence[Sequence[int]],
+) -> tuple[int, ...]:
+    return tuple(
+        sum(
+            int(characters[variable][coordinate])
+            for variable in monomial
+        )
+        for coordinate in range(9)
+    )
+
+
+def _natural_defect_derivative(
+    derivative_ambient_weight: int,
+) -> tuple[int, SparseChartPolynomial]:
+    """Return the natural-chart variable and exact defect derivative."""
+
+    derivative_ambient_weight = int(derivative_ambient_weight)
+    if derivative_ambient_weight not in DERIVATIVE_REPRESENTATIVES:
+        raise KrennDerivativeChartError(
+            "only strict derivative representatives 11 and 29 are built"
+        )
+    chart = normalized_seed_chart(NATURAL_ORBIT_INDEX)
+    try:
+        local_variable = chart.remaining_weight_indices.index(
+            derivative_ambient_weight
+        )
+    except ValueError as error:
+        raise KrennDerivativeChartError(
+            "the derivative ambient weight is not in the natural chart"
+        ) from error
+    defect_position = chart.generator_labels.index(
+        ("mixed", NATURAL_DEFECT_EQUATION)
+    )
+    derivative: dict[tuple[int, ...], int] = {}
+    for coefficient, monomial in chart.generators[
+        defect_position
+    ].terms:
+        multiplicity = monomial.count(local_variable)
+        if not multiplicity:
+            continue
+        if multiplicity != 1:
+            raise KrennDerivativeChartError(
+                "the natural defect is not multi-affine"
+            )
+        reduced_monomial = list(monomial)
+        reduced_monomial.remove(local_variable)
+        _local_add(derivative, reduced_monomial, coefficient)
+    if not derivative:
+        raise KrennDerivativeChartError(
+            "the selected natural defect derivative vanished"
+        )
+    return local_variable, SparseChartPolynomial.from_mapping(derivative)
+
+
+@dataclass(frozen=True)
+class SparseDerivativeGaugeSlice:
+    """Natural equations plus ``d=1``, representing the open ``d!=0``."""
+
+    derivative_ambient_weight: int
+    derivative_original_local_variable: int
+    derivative_character: tuple[int, ...]
+    normalizing_cocharacter: tuple[int, ...]
+    derivative_polynomial: SparseChartPolynomial
+    generator_labels: tuple[tuple[str, int], ...]
+    generators: tuple[SparseChartPolynomial, ...]
+    schema: str = SPARSE_DERIVATIVE_SLICE_SCHEMA
+
+    def __post_init__(self) -> None:
+        chart = normalized_seed_chart(NATURAL_ORBIT_INDEX)
+        expected_variable, expected_derivative = (
+            _natural_defect_derivative(self.derivative_ambient_weight)
+        )
+        if (
+            self.schema != SPARSE_DERIVATIVE_SLICE_SCHEMA
+            or self.derivative_ambient_weight
+            not in DERIVATIVE_REPRESENTATIVES
+            or not 0 <= self.derivative_original_local_variable
+            < CHART_VARIABLE_COUNT
+            or chart.remaining_weight_indices[
+                self.derivative_original_local_variable
+            ] != self.derivative_ambient_weight
+            or self.derivative_original_local_variable
+            != expected_variable
+            or self.derivative_polynomial != expected_derivative
+            or len(self.derivative_character) != 9
+            or len(self.normalizing_cocharacter) != 9
+            or len(self.generator_labels) != 730
+            or len(self.generators) != 730
+            or self.generator_labels[:-1] != chart.generator_labels
+            or self.generators[:-1] != chart.generators
+            or self.generator_labels[-1]
+            != ("derivative-gauge", self.derivative_ambient_weight)
+        ):
+            raise KrennDerivativeChartError(
+                "a sparse derivative gauge slice failed metadata replay"
+            )
+        expected_gauge = {
+            monomial: coefficient
+            for coefficient, monomial in self.derivative_polynomial.terms
+        }
+        _local_add(expected_gauge, (), -1)
+        if (
+            self.generators[-1]
+            != SparseChartPolynomial.from_mapping(expected_gauge)
+            or self.term_count != 10_942
+            or self.maximum_degree != 4
+        ):
+            raise KrennDerivativeChartError(
+                "the sparse derivative gauge equations changed"
+            )
+
+        variable_characters = residual_torus_characters(
+            NATURAL_ORBIT_INDEX
+        )
+        defect_position = chart.generator_labels.index(
+            ("mixed", NATURAL_DEFECT_EQUATION)
+        )
+        defect_character = generator_characters(
+            NATURAL_ORBIT_INDEX
+        )[defect_position]
+        expected_character = tuple(
+            generator_component - variable_component
+            for generator_component, variable_component in zip(
+                defect_character,
+                variable_characters[
+                    self.derivative_original_local_variable
+                ],
+                strict=True,
+            )
+        )
+        term_characters = {
+            _local_monomial_character(monomial, variable_characters)
+            for _coefficient, monomial in self.derivative_polynomial.terms
+        }
+        primitive_divisor = 0
+        for component in self.derivative_character:
+            primitive_divisor = gcd(primitive_divisor, abs(component))
+        pairing = sum(
+            character * cocharacter
+            for character, cocharacter in zip(
+                self.derivative_character,
+                self.normalizing_cocharacter,
+                strict=True,
+            )
+        )
+        if (
+            self.derivative_character != expected_character
+            or term_characters != {self.derivative_character}
+            or primitive_divisor != 1
+            or pairing != 1
+        ):
+            raise KrennDerivativeChartError(
+                "the derivative is not a primitively split semi-invariant"
+            )
+
+    @property
+    def retained_original_chart_variables(self) -> tuple[int, ...]:
+        return tuple(range(CHART_VARIABLE_COUNT))
+
+    @property
+    def variable_count(self) -> int:
+        return CHART_VARIABLE_COUNT
+
+    @property
+    def term_count(self) -> int:
+        return sum(polynomial.term_count for polynomial in self.generators)
+
+    @property
+    def maximum_degree(self) -> int:
+        return max(polynomial.degree for polynomial in self.generators)
+
+    def fingerprint(self) -> str:
+        digest = hashlib.sha256()
+        digest.update(
+            (
+                f"{self.schema}|{self.derivative_ambient_weight}|"
+                f"{self.derivative_original_local_variable}|"
+                f"{self.derivative_character}|"
+                f"{self.normalizing_cocharacter}\n"
+            ).encode("ascii")
+        )
+        for label, polynomial in zip(
+            self.generator_labels, self.generators, strict=True
+        ):
+            digest.update(f"{label[0]}:{label[1]}|".encode("ascii"))
+            for coefficient, monomial in polynomial.terms:
+                digest.update(
+                    f"{coefficient}:{','.join(map(str, monomial))};".encode(
+                        "ascii"
+                    )
+                )
+            digest.update(b"\n")
+        return digest.hexdigest()
+
+    def summary(self) -> dict:
+        return {
+            "schema": self.schema,
+            "derivative_ambient_weight":
+                self.derivative_ambient_weight,
+            "derivative_original_local_variable":
+                self.derivative_original_local_variable,
+            "retained_original_chart_variables": CHART_VARIABLE_COUNT,
+            "variables": self.variable_count,
+            "generators": len(self.generators),
+            "sparse_terms": self.term_count,
+            "maximum_degree": self.maximum_degree,
+            "derivative_terms": self.derivative_polynomial.term_count,
+            "residual_character": list(self.derivative_character),
+            "character_gcd": 1,
+            "normalizing_cocharacter": list(
+                self.normalizing_cocharacter
+            ),
+            "character_cocharacter_pairing": 1,
+            "natural_generators_homogeneous": True,
+            "open_slice_equivalence": (
+                "for every field-valued point with d!=0, the residual "
+                "torus cocharacter scales d to 1; conversely d=1 implies "
+                "d!=0"
+            ),
+            "sha256": self.fingerprint(),
+            "claim_boundary": {
+                "unit_ideal_decided": False,
+                "proper_ideal_decided": False,
+                "natural_chart_decided": False,
+            },
+        }
+
+
 @dataclass(frozen=True)
 class EliminatedDerivativeChart:
     """One derivative-localized natural chart after exact substitution."""
@@ -577,6 +874,59 @@ def eliminated_derivative_chart(
     )
 
 
+def sparse_derivative_gauge_slice(
+    derivative_ambient_weight: int,
+) -> SparseDerivativeGaugeSlice:
+    """Build the exact low-degree slice equivalent to the derivative open."""
+
+    chart = normalized_seed_chart(NATURAL_ORBIT_INDEX)
+    local_variable, derivative = _natural_defect_derivative(
+        derivative_ambient_weight
+    )
+    variable_characters = residual_torus_characters(NATURAL_ORBIT_INDEX)
+    all_generator_characters = generator_characters(NATURAL_ORBIT_INDEX)
+    defect_position = chart.generator_labels.index(
+        ("mixed", NATURAL_DEFECT_EQUATION)
+    )
+    derivative_character = tuple(
+        generator_component - variable_component
+        for generator_component, variable_component in zip(
+            all_generator_characters[defect_position],
+            variable_characters[local_variable],
+            strict=True,
+        )
+    )
+    term_characters = {
+        _local_monomial_character(monomial, variable_characters)
+        for _coefficient, monomial in derivative.terms
+    }
+    if term_characters != {derivative_character}:
+        raise KrennDerivativeChartError(
+            "the selected defect derivative is not a semi-invariant"
+        )
+    cocharacter = _primitive_bezout_cocharacter(derivative_character)
+    gauge_polynomial = {
+        monomial: coefficient
+        for coefficient, monomial in derivative.terms
+    }
+    _local_add(gauge_polynomial, (), -1)
+    return SparseDerivativeGaugeSlice(
+        derivative_ambient_weight=int(derivative_ambient_weight),
+        derivative_original_local_variable=local_variable,
+        derivative_character=derivative_character,
+        normalizing_cocharacter=cocharacter,
+        derivative_polynomial=derivative,
+        generator_labels=(
+            *chart.generator_labels,
+            ("derivative-gauge", int(derivative_ambient_weight)),
+        ),
+        generators=(
+            *chart.generators,
+            SparseChartPolynomial.from_mapping(gauge_polynomial),
+        ),
+    )
+
+
 def natural_derivative_atlas_audit() -> dict:
     """Return a fail-closed audit of smoothness and the two-chart reduction."""
 
@@ -584,6 +934,10 @@ def natural_derivative_atlas_audit() -> dict:
     derivative_orbits = natural_derivative_orbits()
     charts = tuple(
         eliminated_derivative_chart(variable)
+        for variable in DERIVATIVE_REPRESENTATIVES
+    )
+    sparse_slices = tuple(
+        sparse_derivative_gauge_slice(variable)
         for variable in DERIVATIVE_REPRESENTATIVES
     )
     return json.loads(json.dumps({
@@ -609,6 +963,18 @@ def natural_derivative_atlas_audit() -> dict:
             "symmetry_related_weights_equated": False,
         },
         "eliminated_charts": [chart.summary() for chart in charts],
+        "sparse_gauge_slices": [
+            chart.summary() for chart in sparse_slices
+        ],
+        "preferred_next_formulation": {
+            "kind": "primitive residual-character gauge slice",
+            "reason": (
+                "retains the sparse degree-four natural chart and appends "
+                "derivative-1 instead of creating degree-six substitution "
+                "terms"
+            ),
+            "existence_equivalent_to_derivative_open": True,
+        },
         "decision_rule": {
             "both_verified_unit": "excludes the full natural chart",
             "either_verified_proper": (
@@ -702,6 +1068,70 @@ def singular_eliminated_derivative_script(
         "int is_unit=0;",
         "if (unit_remainder==0) { is_unit=1; }",
         'print("KRENN_DERIVATIVE_GROEBNER_DONE");',
+        'print("timer_ticks="+string(elapsed));',
+        'print("basis_size="+string(size(G)));',
+        'print("unit_ideal="+string(is_unit));',
+        "exit;",
+        "",
+    ))
+
+
+def singular_sparse_derivative_gauge_script(
+    derivative_ambient_weight: int,
+    *,
+    characteristic: int = 31,
+    algorithm: str = "std",
+) -> str:
+    """Export the exact sparse ``d=1`` derivative slice to Singular."""
+
+    try:
+        characteristic = validate_singular_characteristic(characteristic)
+    except KrennLocalizedChartError as error:
+        raise KrennDerivativeChartError(
+            "Singular characteristic must be zero or prime"
+        ) from error
+    if algorithm not in ("std", "slimgb"):
+        raise KrennDerivativeChartError(
+            "Singular algorithm must be std or slimgb"
+        )
+    chart = sparse_derivative_gauge_slice(derivative_ambient_weight)
+    names = ",".join(
+        f"x{index}" for index in range(chart.variable_count)
+    )
+    generators = ",\n".join(
+        _singular_polynomial_text(polynomial, characteristic)
+        for polynomial in chart.generators
+    )
+    return "\n".join((
+        "// Exact sparse derivative-gauge natural Krenn chart.",
+        f"// schema={SPARSE_DERIVATIVE_SLICE_SCHEMA}",
+        (
+            "// derivative_ambient_weight="
+            f"{chart.derivative_ambient_weight}"
+        ),
+        (
+            "// primitive_derivative_character="
+            f"{chart.derivative_character}"
+        ),
+        "// the final generator is d-1; no variable was eliminated.",
+        f"ring r={characteristic},({names}),dp;",
+        f"ideal I={generators};",
+        'print("KRENN_SPARSE_DERIVATIVE_PARSE_OK");',
+        (
+            'print("derivative_ambient_weight='
+            f'{chart.derivative_ambient_weight}");'
+        ),
+        f'print("characteristic={characteristic}");',
+        f'print("algorithm={algorithm}");',
+        'print("variables="+string(nvars(basering)));',
+        'print("generators="+string(size(I)));',
+        "int started=timer;",
+        f"ideal G={algorithm}(I);",
+        "int elapsed=timer-started;",
+        "poly unit_remainder=reduce(1,G);",
+        "int is_unit=0;",
+        "if (unit_remainder==0) { is_unit=1; }",
+        'print("KRENN_SPARSE_DERIVATIVE_GROEBNER_DONE");',
         'print("timer_ticks="+string(elapsed));',
         'print("basis_size="+string(size(G)));',
         'print("unit_ideal="+string(is_unit));',

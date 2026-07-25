@@ -44,6 +44,11 @@
     4,
     8
   ],
+  "preferred_next_formulation": {
+    "existence_equivalent_to_derivative_open": true,
+    "kind": "primitive residual-character gauge slice",
+    "reason": "retains the sparse degree-four natural chart and appends derivative-1 instead of creating degree-six substitution terms"
+  },
   "repair_core_ambient_weights": [
     11,
     19,
@@ -67,6 +72,94 @@
     "multiplier_polynomials": 13,
     "multiplier_sha256": "21eec6004088e83cc1effe8acac3d01d5b140cbfd30e6a2bc255b023bc1ee6b8"
   },
+  "sparse_gauge_slices": [
+    {
+      "character_cocharacter_pairing": 1,
+      "character_gcd": 1,
+      "claim_boundary": {
+        "natural_chart_decided": false,
+        "proper_ideal_decided": false,
+        "unit_ideal_decided": false
+      },
+      "derivative_ambient_weight": 11,
+      "derivative_original_local_variable": 10,
+      "derivative_terms": 3,
+      "generators": 730,
+      "maximum_degree": 4,
+      "natural_generators_homogeneous": true,
+      "normalizing_cocharacter": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "open_slice_equivalence": "for every field-valued point with d!=0, the residual torus cocharacter scales d to 1; conversely d=1 implies d!=0",
+      "residual_character": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "retained_original_chart_variables": 129,
+      "schema": "krenn-n6-d3-natural-defect-sparse-gauge-slice-v1",
+      "sha256": "5e5f6513ec148dd27c54c3708cef6de23fbf473b66ae6444dd49731c2c600a93",
+      "sparse_terms": 10942,
+      "variables": 129
+    },
+    {
+      "character_cocharacter_pairing": 1,
+      "character_gcd": 1,
+      "claim_boundary": {
+        "natural_chart_decided": false,
+        "proper_ideal_decided": false,
+        "unit_ideal_decided": false
+      },
+      "derivative_ambient_weight": 29,
+      "derivative_original_local_variable": 26,
+      "derivative_terms": 3,
+      "generators": 730,
+      "maximum_degree": 4,
+      "natural_generators_homogeneous": true,
+      "normalizing_cocharacter": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "open_slice_equivalence": "for every field-valued point with d!=0, the residual torus cocharacter scales d to 1; conversely d=1 implies d!=0",
+      "residual_character": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "retained_original_chart_variables": 129,
+      "schema": "krenn-n6-d3-natural-defect-sparse-gauge-slice-v1",
+      "sha256": "8e1b49eacbf437348fca9cb08e821f192f2b2156ebfd6f37c347b843337e0611",
+      "sparse_terms": 10942,
+      "variables": 129
+    }
+  ],
   "strict_stabilizer": {
     "derivative_orbits": [
       [

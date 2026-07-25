@@ -1,10 +1,11 @@
 {
   "claim_boundary": {
     "a_bounded_certificate_miss_is_a_global_decision": false,
-    "a_modular_basis_is_an_exact_chart_decision": false,
     "a_timeout_is_a_decision": false,
-    "smooth_defect_hypersurface_decides_full_chart": false,
-    "unretained_timeout_stdout_is_a_certificate": false
+    "an_F31_result_is_an_exact_Q_decision": false,
+    "finite_affine_GHZ_membership_status": "undecided",
+    "retained_timeout_logs_are_a_certificate": false,
+    "smooth_defect_hypersurface_decides_full_chart": false
   },
   "exact_macaulay": {
     "charts": 8,
@@ -15,8 +16,11 @@
     "total_degree_bound": 6
   },
   "host_policy": {
-    "cpu_workers": 1,
+    "exact_macaulay_workers": 1,
     "maximum_allowed_workers": 16,
+    "maximum_observed_concurrent_CAS_cpus": 6,
+    "maximum_observed_concurrent_CAS_memory_gib": 24,
+    "maximum_observed_concurrent_CAS_probes": 3,
     "network": "disabled for every Docker run",
     "random_seeds": [],
     "scratch_root": "D:\\KrennScratch\\localized_chart_ideals"
@@ -28,118 +32,7 @@
       "Q"
     ],
     "docker_image": "hodgepodge-singular:ubuntu24.04",
-    "image_id": "sha256:6613ac51738965fafd2ebb2839a02452811ac4e35416cfbbda0485ed1995e75",
-    "runs": [
-      {
-        "algorithm": "slimgb",
-        "budget_seconds": 60,
-        "characteristic": 31,
-        "command": "docker run --rm --network none --cpus 2 --memory 8g --entrypoint timeout -v \"D:\\KrennScratch\\localized_chart_ideals\\unshifted_slimgb:/work:ro\" hodgepodge-singular:ubuntu24.04 60s Singular /work/chart6_char31_slimgb.sing",
-        "cpus": 2,
-        "ideal": "natural unshifted chart",
-        "input_script": {
-          "bytes": 128719,
-          "path": "D:\\KrennScratch\\localized_chart_ideals\\unshifted_slimgb\\chart6_char31_slimgb.sing",
-          "sha256": "0fdc5574372dd447100b64829ef584a258069d8942bd895f8677e0c9b20c09b1"
-        },
-        "marker_receipt": {
-          "completion_marker": "KRENN_CHART_GROEBNER_DONE",
-          "completion_marker_observed_live": false,
-          "parse_marker": "KRENN_CHART_PARSE_OK",
-          "parse_marker_observed_live": true,
-          "stdout_bytes_retained": false
-        },
-        "memory_gib": 8,
-        "status": "timeout-after-parse"
-      },
-      {
-        "algorithm": "std",
-        "budget_seconds": 60,
-        "characteristic": 31,
-        "command": "docker run --rm --network none --cpus 2 --memory 8g --entrypoint timeout -v \"D:\\KrennScratch\\localized_chart_ideals\\derivative_atlas:/work:ro\" hodgepodge-singular:ubuntu24.04 60s Singular /work/natural_derivative_11_p31_std.sing",
-        "cpus": 2,
-        "ideal": "derivative elimination ambient 11",
-        "input_script": {
-          "bytes": 200201,
-          "path": "D:\\KrennScratch\\localized_chart_ideals\\derivative_atlas\\natural_derivative_11_p31_std.sing",
-          "sha256": "6c16496e96db48d427aa5e1b3e99f122e480a7918edb3ee04f9f95ed5ee1bbce"
-        },
-        "marker_receipt": {
-          "completion_marker": "KRENN_DERIVATIVE_GROEBNER_DONE",
-          "completion_marker_observed_live": false,
-          "parse_marker": "KRENN_DERIVATIVE_PARSE_OK",
-          "parse_marker_observed_live": true,
-          "stdout_bytes_retained": false
-        },
-        "memory_gib": 8,
-        "status": "timeout-after-parse"
-      },
-      {
-        "algorithm": "std",
-        "budget_seconds": 30,
-        "characteristic": 31,
-        "command": "docker run --rm --network none --cpus 2 --memory 8g --entrypoint timeout -v \"D:\\KrennScratch\\localized_chart_ideals\\derivative_atlas:/work:ro\" hodgepodge-singular:ubuntu24.04 30s Singular /work/natural_derivative_29_p31_std.sing",
-        "cpus": 2,
-        "ideal": "derivative elimination ambient 29",
-        "input_script": {
-          "bytes": 199414,
-          "path": "D:\\KrennScratch\\localized_chart_ideals\\derivative_atlas\\natural_derivative_29_p31_std.sing",
-          "sha256": "ea22026f710c7de477f495923ced9887a8b10c1a63efe6fc0c71153a0141f7bd"
-        },
-        "marker_receipt": {
-          "completion_marker": "KRENN_DERIVATIVE_GROEBNER_DONE",
-          "completion_marker_observed_live": false,
-          "parse_marker": "KRENN_DERIVATIVE_PARSE_OK",
-          "parse_marker_observed_live": true,
-          "stdout_bytes_retained": false
-        },
-        "memory_gib": 8,
-        "status": "timeout-after-parse"
-      },
-      {
-        "algorithm": "std",
-        "budget_seconds": 60,
-        "characteristic": 31,
-        "command": "docker run --rm --network none --cpus 2 --memory 8g --entrypoint timeout -v \"D:\\KrennScratch\\localized_chart_ideals\\repair_monomial_atlas:/work:ro\" hodgepodge-singular:ubuntu24.04 60s Singular /work/repair_11_55_133_p31_std.sing",
-        "cpus": 2,
-        "ideal": "repair monomial 11,55,133",
-        "input_script": {
-          "bytes": 126118,
-          "path": "D:\\KrennScratch\\localized_chart_ideals\\repair_monomial_atlas\\repair_11_55_133_p31_std.sing",
-          "sha256": "d59f13e043d04861e7e2e2a7ab46d5df5dace5feafba55aee986090e6d99c83e"
-        },
-        "marker_receipt": {
-          "completion_marker": "KRENN_REPAIR_CHART_GROEBNER_DONE",
-          "completion_marker_observed_live": false,
-          "parse_marker": "KRENN_REPAIR_CHART_PARSE_OK",
-          "parse_marker_observed_live": true,
-          "stdout_bytes_retained": false
-        },
-        "memory_gib": 8,
-        "status": "timeout-after-parse"
-      },
-      {
-        "algorithm": "std",
-        "budget_seconds": 30,
-        "characteristic": 31,
-        "command": "docker run --rm --network none --cpus 2 --memory 8g --entrypoint timeout -v \"D:\\KrennScratch\\localized_chart_ideals\\repair_monomial_atlas:/work:ro\" hodgepodge-singular:ubuntu24.04 30s Singular /work/repair_29_55_106_p31_std.sing",
-        "cpus": 2,
-        "ideal": "repair monomial 29,55,106",
-        "input_script": {
-          "bytes": 126115,
-          "path": "D:\\KrennScratch\\localized_chart_ideals\\repair_monomial_atlas\\repair_29_55_106_p31_std.sing",
-          "sha256": "e4c47a3486cde8a06376d9e0f21fb830822904251d2e721f839d1dfdc3ebb3ac"
-        },
-        "marker_receipt": {
-          "completion_marker": "KRENN_REPAIR_CHART_GROEBNER_DONE",
-          "completion_marker_observed_live": false,
-          "parse_marker": "KRENN_REPAIR_CHART_PARSE_OK",
-          "parse_marker_observed_live": true,
-          "stdout_bytes_retained": false
-        },
-        "memory_gib": 8,
-        "status": "timeout-after-parse"
-      },
+    "exact_Q_runs": [
       {
         "algorithm": "modStd exact final verification plus lift",
         "budget_seconds": 120,
@@ -162,6 +55,530 @@
         "status": "unit-certificate-extracted-and-replayed"
       }
     ],
+    "image_id": "sha256:6613ac51738965fafd2ebb2839a02452811ac4e3e5416cfbbda0485ed1995e75",
+    "superseded_smoke_preflights": {
+      "purpose": "tractability smoke tests only",
+      "runs": [
+        {
+          "budget_seconds": 60,
+          "ideal": "natural unshifted chart",
+          "status": "timeout-after-parse"
+        },
+        {
+          "budget_seconds": 60,
+          "ideal": "derivative elimination ambient 11",
+          "status": "timeout-after-parse"
+        },
+        {
+          "budget_seconds": 30,
+          "ideal": "derivative elimination ambient 29",
+          "status": "timeout-after-parse"
+        },
+        {
+          "budget_seconds": 60,
+          "ideal": "repair monomial 11,55,133",
+          "status": "timeout-after-parse"
+        },
+        {
+          "budget_seconds": 30,
+          "ideal": "repair monomial 29,55,106",
+          "status": "timeout-after-parse"
+        }
+      ]
+    },
+    "ten_minute_F31_reconnaissance": {
+      "aggregate_scratch_manifest": {
+        "bytes": 4972,
+        "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\ten_minute_run_manifest.json",
+        "sha256": "9919270a4bfa7bcfa2c79bb0be102c809d87c27e8feb6682492fe81def79f4b2"
+      },
+      "budget_seconds_per_probe": 600,
+      "execution_batches": [
+        {
+          "maximum_cpus": 6,
+          "maximum_memory_gib": 24,
+          "new_probe_keys": [
+            "natural_chart_p31_slimgb",
+            "derivative_11_p31_std",
+            "derivative_29_p31_std",
+            "repair_11_55_133_p31_std",
+            "repair_29_55_106_p31_std"
+          ],
+          "worker_limit": 3
+        },
+        {
+          "maximum_cpus": 4,
+          "maximum_memory_gib": 16,
+          "new_probe_keys": [
+            "repair_11_65_p31_std",
+            "repair_29_47_p31_std"
+          ],
+          "worker_limit": 2
+        }
+      ],
+      "outcome": "all seven probes parsed and timed out after the full 600-second engine budget without a completion marker",
+      "probe_count": 7,
+      "runner_schema": "krenn-n6-d3-localized-chart-cas-run-v1",
+      "runs": [
+        {
+          "algorithm": "slimgb",
+          "budget_seconds": 600,
+          "characteristic": 31,
+          "claim_boundary": {
+            "F31_result_is_an_exact_Q_proof": false,
+            "timeout_is_a_chart_decision": false
+          },
+          "command_argv": [
+            "docker",
+            "run",
+            "--rm",
+            "--network",
+            "none",
+            "--cpus",
+            "2",
+            "--memory",
+            "8g",
+            "--entrypoint",
+            "timeout",
+            "-v",
+            "D:\\KrennScratch\\localized_chart_ideals\\unshifted_slimgb:/work:ro",
+            "hodgepodge-singular:ubuntu24.04",
+            "600s",
+            "Singular",
+            "/work/chart6_char31_slimgb.sing"
+          ],
+          "command_profile": "verified-image-tag",
+          "cpus": 2,
+          "elapsed_seconds": 600.622037,
+          "ideal": "natural unshifted chart",
+          "input_script": {
+            "bytes": 128719,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\unshifted_slimgb\\chart6_char31_slimgb.sing",
+            "sha256": "0fdc5574372dd447100b64829ef584a258069d8942bd895f8677e0c9b20c09b1"
+          },
+          "key": "natural_chart_p31_slimgb",
+          "marker_receipt": {
+            "completion_marker": "KRENN_CHART_GROEBNER_DONE",
+            "completion_marker_observed": false,
+            "parse_marker": "KRENN_CHART_PARSE_OK",
+            "parse_marker_observed": true
+          },
+          "memory_gib": 8,
+          "receipt": {
+            "bytes": 2134,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\natural_chart_p31_slimgb.receipt.json",
+            "sha256": "e73c8fdfcee0b0901d78326d6f151fea11e2574e6b364de7d401e483e0eb414e"
+          },
+          "return_code": 124,
+          "runner_schema": "krenn-n6-d3-localized-chart-cas-run-v1",
+          "started_at_utc": "2026-07-25T02:12:04.865755+00:00",
+          "status": "timeout-after-parse",
+          "stderr": {
+            "bytes": 0,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\natural_chart_p31_slimgb.stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 550,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\natural_chart_p31_slimgb.stdout.txt",
+            "sha256": "5809e3b66b083ce0f0938d4fae0c4cb799cda19fb2f2a9bdcedacf6bd13b37bb"
+          }
+        },
+        {
+          "algorithm": "std",
+          "budget_seconds": 600,
+          "characteristic": 31,
+          "claim_boundary": {
+            "F31_result_is_an_exact_Q_proof": false,
+            "timeout_is_a_chart_decision": false
+          },
+          "command_argv": [
+            "docker",
+            "run",
+            "--rm",
+            "--network",
+            "none",
+            "--cpus",
+            "2",
+            "--memory",
+            "8g",
+            "--entrypoint",
+            "timeout",
+            "-v",
+            "D:\\KrennScratch\\localized_chart_ideals\\derivative_atlas:/work:ro",
+            "hodgepodge-singular:ubuntu24.04",
+            "600s",
+            "Singular",
+            "/work/natural_derivative_11_p31_std.sing"
+          ],
+          "command_profile": "verified-image-tag",
+          "cpus": 2,
+          "elapsed_seconds": 600.563928,
+          "ideal": "derivative elimination ambient 11",
+          "input_script": {
+            "bytes": 200201,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\derivative_atlas\\natural_derivative_11_p31_std.sing",
+            "sha256": "6c16496e96db48d427aa5e1b3e99f122e480a7918edb3ee04f9f95ed5ee1bbce"
+          },
+          "key": "derivative_11_p31_std",
+          "marker_receipt": {
+            "completion_marker": "KRENN_DERIVATIVE_GROEBNER_DONE",
+            "completion_marker_observed": false,
+            "parse_marker": "KRENN_DERIVATIVE_PARSE_OK",
+            "parse_marker_observed": true
+          },
+          "memory_gib": 8,
+          "receipt": {
+            "bytes": 2169,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\derivative_11_p31_std.receipt.json",
+            "sha256": "ff2a249c96ce8272a0bef932fdee7df4c4207732835c416c8f2a93bf18f848fb"
+          },
+          "return_code": 124,
+          "runner_schema": "krenn-n6-d3-localized-chart-cas-run-v1",
+          "started_at_utc": "2026-07-25T02:12:04.865738+00:00",
+          "status": "timeout-after-parse",
+          "stderr": {
+            "bytes": 0,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\derivative_11_p31_std.stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 513,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\derivative_11_p31_std.stdout.txt",
+            "sha256": "d713aca1608371584c51f0c0576d07dd9fde3fc564366b28952037faa8b5c1b2"
+          }
+        },
+        {
+          "algorithm": "std",
+          "budget_seconds": 600,
+          "characteristic": 31,
+          "claim_boundary": {
+            "F31_result_is_an_exact_Q_proof": false,
+            "timeout_is_a_chart_decision": false
+          },
+          "command_argv": [
+            "docker",
+            "run",
+            "--rm",
+            "--network",
+            "none",
+            "--cpus",
+            "2",
+            "--memory",
+            "8g",
+            "--entrypoint",
+            "timeout",
+            "-v",
+            "D:\\KrennScratch\\localized_chart_ideals\\derivative_atlas:/work:ro",
+            "hodgepodge-singular:ubuntu24.04",
+            "600s",
+            "Singular",
+            "/work/natural_derivative_29_p31_std.sing"
+          ],
+          "command_profile": "verified-image-tag",
+          "cpus": 2,
+          "elapsed_seconds": 600.587278,
+          "ideal": "derivative elimination ambient 29",
+          "input_script": {
+            "bytes": 199414,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\derivative_atlas\\natural_derivative_29_p31_std.sing",
+            "sha256": "ea22026f710c7de477f495923ced9887a8b10c1a63efe6fc0c71153a0141f7bd"
+          },
+          "key": "derivative_29_p31_std",
+          "marker_receipt": {
+            "completion_marker": "KRENN_DERIVATIVE_GROEBNER_DONE",
+            "completion_marker_observed": false,
+            "parse_marker": "KRENN_DERIVATIVE_PARSE_OK",
+            "parse_marker_observed": true
+          },
+          "memory_gib": 8,
+          "receipt": {
+            "bytes": 2169,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\derivative_29_p31_std.receipt.json",
+            "sha256": "ddcfe27760040188fd06fe417e1efe1d0d6c6a0fcb55b3540bb7fd8f71926411"
+          },
+          "return_code": 124,
+          "runner_schema": "krenn-n6-d3-localized-chart-cas-run-v1",
+          "started_at_utc": "2026-07-25T02:12:04.865714+00:00",
+          "status": "timeout-after-parse",
+          "stderr": {
+            "bytes": 0,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\derivative_29_p31_std.stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 513,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\derivative_29_p31_std.stdout.txt",
+            "sha256": "147ac26cb492b03013d6c4cc0cb3fc5bc10778b3d0fe7562e8cdc3ea67626d35"
+          }
+        },
+        {
+          "algorithm": "std",
+          "budget_seconds": 600,
+          "characteristic": 31,
+          "claim_boundary": {
+            "F31_result_is_an_exact_Q_proof": false,
+            "timeout_is_a_chart_decision": false
+          },
+          "command_argv": [
+            "docker",
+            "run",
+            "--rm",
+            "--pull",
+            "never",
+            "--network",
+            "none",
+            "--cpus",
+            "2",
+            "--memory",
+            "8g",
+            "--entrypoint",
+            "timeout",
+            "-v",
+            "D:\\KrennScratch\\localized_chart_ideals\\repair_monomial_atlas:/work:ro",
+            "sha256:6613ac51738965fafd2ebb2839a02452811ac4e3e5416cfbbda0485ed1995e75",
+            "--signal=TERM",
+            "--kill-after=15s",
+            "600s",
+            "Singular",
+            "/work/repair_11_65_p31_std.sing"
+          ],
+          "command_profile": "pinned-image-forced-kill",
+          "cpus": 2,
+          "elapsed_seconds": 600.455603,
+          "ideal": "repair monomial 11,65",
+          "input_script": {
+            "bytes": 127325,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\repair_monomial_atlas\\repair_11_65_p31_std.sing",
+            "sha256": "b3d4423d5b8bc0cebefd2505a683f1d0a43367c4e77c1b4f39be44961b0b6624"
+          },
+          "key": "repair_11_65_p31_std",
+          "marker_receipt": {
+            "completion_marker": "KRENN_REPAIR_CHART_GROEBNER_DONE",
+            "completion_marker_observed": false,
+            "parse_marker": "KRENN_REPAIR_CHART_PARSE_OK",
+            "parse_marker_observed": true
+          },
+          "memory_gib": 8,
+          "receipt": {
+            "bytes": 2266,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\repair_11_65_p31_std.receipt.json",
+            "sha256": "24d236c95e09c6cf6f496f3a9a3a3872f94c8572135ef7b78a77a66db7657cdc"
+          },
+          "return_code": 124,
+          "runner_schema": "krenn-n6-d3-localized-chart-cas-run-v1",
+          "started_at_utc": "2026-07-25T02:33:02.844489+00:00",
+          "status": "timeout-after-parse",
+          "stderr": {
+            "bytes": 0,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\repair_11_65_p31_std.stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 507,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\repair_11_65_p31_std.stdout.txt",
+            "sha256": "ac8844314393526f1692b20e1a3ee1a23788a954d23067a5fa42aa6637bbed96"
+          }
+        },
+        {
+          "algorithm": "std",
+          "budget_seconds": 600,
+          "characteristic": 31,
+          "claim_boundary": {
+            "F31_result_is_an_exact_Q_proof": false,
+            "timeout_is_a_chart_decision": false
+          },
+          "command_argv": [
+            "docker",
+            "run",
+            "--rm",
+            "--pull",
+            "never",
+            "--network",
+            "none",
+            "--cpus",
+            "2",
+            "--memory",
+            "8g",
+            "--entrypoint",
+            "timeout",
+            "-v",
+            "D:\\KrennScratch\\localized_chart_ideals\\repair_monomial_atlas:/work:ro",
+            "sha256:6613ac51738965fafd2ebb2839a02452811ac4e3e5416cfbbda0485ed1995e75",
+            "--signal=TERM",
+            "--kill-after=15s",
+            "600s",
+            "Singular",
+            "/work/repair_29_47_p31_std.sing"
+          ],
+          "command_profile": "pinned-image-forced-kill",
+          "cpus": 2,
+          "elapsed_seconds": 600.451384,
+          "ideal": "repair monomial 29,47",
+          "input_script": {
+            "bytes": 127325,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\repair_monomial_atlas\\repair_29_47_p31_std.sing",
+            "sha256": "11414ca087bd8a8033ab24484fc019c7cbec9dcd74140b388382c898fe13ab43"
+          },
+          "key": "repair_29_47_p31_std",
+          "marker_receipt": {
+            "completion_marker": "KRENN_REPAIR_CHART_GROEBNER_DONE",
+            "completion_marker_observed": false,
+            "parse_marker": "KRENN_REPAIR_CHART_PARSE_OK",
+            "parse_marker_observed": true
+          },
+          "memory_gib": 8,
+          "receipt": {
+            "bytes": 2266,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\repair_29_47_p31_std.receipt.json",
+            "sha256": "10301a96f9398556839a76faa2b467e85e8f050835addf4f27c1dfc1efce82ab"
+          },
+          "return_code": 124,
+          "runner_schema": "krenn-n6-d3-localized-chart-cas-run-v1",
+          "started_at_utc": "2026-07-25T02:33:02.846202+00:00",
+          "status": "timeout-after-parse",
+          "stderr": {
+            "bytes": 0,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\repair_29_47_p31_std.stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 507,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\repair_29_47_p31_std.stdout.txt",
+            "sha256": "28a1a8768fd71ddadfffb71b6788f10c342b2ba6ac7ca6a6a88dd8d7c06ee15f"
+          }
+        },
+        {
+          "algorithm": "std",
+          "budget_seconds": 600,
+          "characteristic": 31,
+          "claim_boundary": {
+            "F31_result_is_an_exact_Q_proof": false,
+            "timeout_is_a_chart_decision": false
+          },
+          "command_argv": [
+            "docker",
+            "run",
+            "--rm",
+            "--network",
+            "none",
+            "--cpus",
+            "2",
+            "--memory",
+            "8g",
+            "--entrypoint",
+            "timeout",
+            "-v",
+            "D:\\KrennScratch\\localized_chart_ideals\\repair_monomial_atlas:/work:ro",
+            "hodgepodge-singular:ubuntu24.04",
+            "600s",
+            "Singular",
+            "/work/repair_11_55_133_p31_std.sing"
+          ],
+          "command_profile": "verified-image-tag",
+          "cpus": 2,
+          "elapsed_seconds": 600.406723,
+          "ideal": "repair monomial 11,55,133",
+          "input_script": {
+            "bytes": 126118,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\repair_monomial_atlas\\repair_11_55_133_p31_std.sing",
+            "sha256": "d59f13e043d04861e7e2e2a7ab46d5df5dace5feafba55aee986090e6d99c83e"
+          },
+          "key": "repair_11_55_133_p31_std",
+          "marker_receipt": {
+            "completion_marker": "KRENN_REPAIR_CHART_GROEBNER_DONE",
+            "completion_marker_observed": false,
+            "parse_marker": "KRENN_REPAIR_CHART_PARSE_OK",
+            "parse_marker_observed": true
+          },
+          "memory_gib": 8,
+          "receipt": {
+            "bytes": 2174,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\repair_11_55_133_p31_std.receipt.json",
+            "sha256": "53ab8cd44d5aab2b5b2881cad2ed5d5de4c1dd5c23693d4374771e1eb11a3ad7"
+          },
+          "return_code": 124,
+          "runner_schema": "krenn-n6-d3-localized-chart-cas-run-v1",
+          "started_at_utc": "2026-07-25T02:22:05.478353+00:00",
+          "status": "timeout-after-parse",
+          "stderr": {
+            "bytes": 0,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\repair_11_55_133_p31_std.stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 511,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\repair_11_55_133_p31_std.stdout.txt",
+            "sha256": "59c96d2c3669179f498dd120ddb1764bf8a90861bc563b4adf4ce66d87ca189c"
+          }
+        },
+        {
+          "algorithm": "std",
+          "budget_seconds": 600,
+          "characteristic": 31,
+          "claim_boundary": {
+            "F31_result_is_an_exact_Q_proof": false,
+            "timeout_is_a_chart_decision": false
+          },
+          "command_argv": [
+            "docker",
+            "run",
+            "--rm",
+            "--network",
+            "none",
+            "--cpus",
+            "2",
+            "--memory",
+            "8g",
+            "--entrypoint",
+            "timeout",
+            "-v",
+            "D:\\KrennScratch\\localized_chart_ideals\\repair_monomial_atlas:/work:ro",
+            "hodgepodge-singular:ubuntu24.04",
+            "600s",
+            "Singular",
+            "/work/repair_29_55_106_p31_std.sing"
+          ],
+          "command_profile": "verified-image-tag",
+          "cpus": 2,
+          "elapsed_seconds": 600.492321,
+          "ideal": "repair monomial 29,55,106",
+          "input_script": {
+            "bytes": 126115,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\repair_monomial_atlas\\repair_29_55_106_p31_std.sing",
+            "sha256": "e4c47a3486cde8a06376d9e0f21fb830822904251d2e721f839d1dfdc3ebb3ac"
+          },
+          "key": "repair_29_55_106_p31_std",
+          "marker_receipt": {
+            "completion_marker": "KRENN_REPAIR_CHART_GROEBNER_DONE",
+            "completion_marker_observed": false,
+            "parse_marker": "KRENN_REPAIR_CHART_PARSE_OK",
+            "parse_marker_observed": true
+          },
+          "memory_gib": 8,
+          "receipt": {
+            "bytes": 2174,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\repair_29_55_106_p31_std.receipt.json",
+            "sha256": "60fe0819abd5f4eb6ad7f346b61ef7e7e76971e3e7d3cc2d7b3cb6157e8008e5"
+          },
+          "return_code": 124,
+          "runner_schema": "krenn-n6-d3-localized-chart-cas-run-v1",
+          "started_at_utc": "2026-07-25T02:22:05.503417+00:00",
+          "status": "timeout-after-parse",
+          "stderr": {
+            "bytes": 0,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\repair_29_55_106_p31_std.stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 511,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\repair_29_55_106_p31_std.stdout.txt",
+            "sha256": "7eccf2f5b8219175f23984f051525a4869c1619c6ef109ac2828701a8069b46d"
+          }
+        }
+      ],
+      "suite_schema": "krenn-n6-d3-localized-chart-cas-suite-v1"
+    },
     "version": "4.3.2"
   }
 }

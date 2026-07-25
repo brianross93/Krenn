@@ -19,7 +19,7 @@
     },
     {
       "path": "natural_derivative_atlas.json",
-      "sha256": "52315254d03f8db10e91e0b1def1833fe21e12a875cd69298e865869c8e62ff4"
+      "sha256": "bca34af837ff7ffa5c651a9cf7d66f10c2238f7d44a253903d77505ad3d09ab0"
     },
     {
       "path": "natural_repair_monomial_atlas.json",
@@ -27,13 +27,23 @@
     },
     {
       "path": "preflight_ledger.json",
-      "sha256": "dfad47e24168d155e1a0fe8239eda7b7cd79e0b5209adcda835dfbc9863abbf7"
+      "sha256": "d8313c2e41cc2262461b7814a0002f73b9d35a2620f8b7e3ff55d8fe036ab924"
+    },
+    {
+      "path": "residual_grading.json",
+      "sha256": "f927107eaa0b7a8143ca5ed397fe45300d46f077aadc681842daf983d42e5eea"
     }
   ],
   "headline": {
     "exact_bounded_certificate_degree_excluded": 6,
     "finite_affine_GHZ_membership_status": "undecided",
     "ordered_seed_charts": 3375,
+    "repair_residual_character_ranks": [
+      8,
+      8,
+      7,
+      7
+    ],
     "symmetry_representatives": 8
   },
   "parameters": {
@@ -52,11 +62,15 @@
     },
     {
       "path": "experiments/krenn_quantum_graph/localized_chart_artifact.py",
-      "sha256": "526692ebcb4a989166217f05268ec0d002ead561b7b93cdb40f40db7c9e21dec"
+      "sha256": "b746244ae3a22dceadaf3ccace4699a9603aa0de6ce2cc2cf5b75c85c8fd1e30"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/localized_chart_cas_runner.py",
+      "sha256": "088553f6affea6e7f9edd743578dd9c5cd60290790f6667116dd4b7da5f8b071"
     },
     {
       "path": "experiments/krenn_quantum_graph/localized_chart_derivative.py",
-      "sha256": "10b0375ab78ddbc164826f01a191deb336802aba74836bc68fe548e00d52e915"
+      "sha256": "615314882e7a3f5603e8b70ac8cf744b223fd94ff57bf61c56fb8a1a5085ecb9"
     },
     {
       "path": "experiments/krenn_quantum_graph/localized_chart_ideals.py",
@@ -73,6 +87,10 @@
     {
       "path": "experiments/krenn_quantum_graph/localized_chart_monomial_atlas.py",
       "sha256": "29d7c44bbcaa7989df29e1e12a005acf6af5d0cf099fab600b15168cbfda7dad"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/localized_chart_residual_grading.py",
+      "sha256": "78c53e34894d1005341843a696594b06bb8193478d624da5d23e11b1b39a0a71"
     },
     {
       "path": "experiments/krenn_quantum_graph/system.py",

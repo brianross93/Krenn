@@ -36,6 +36,90 @@ class KrennLocalizedChartArtifactTest(unittest.TestCase):
             manifest["claim_boundary"]["global_nonexistence_proved"]
         )
 
+    def test_all_seven_generic_probes_have_retained_ten_minute_receipts(self):
+        ledger = json.loads(
+            (
+                DEFAULT_RESULT_DIRECTORY / "preflight_ledger.json"
+            ).read_text(encoding="utf-8")
+        )
+        campaign = ledger["singular_engine"][
+            "ten_minute_F31_reconnaissance"
+        ]
+        self.assertEqual(campaign["probe_count"], 7)
+        self.assertEqual(
+            campaign["budget_seconds_per_probe"], 600
+        )
+        self.assertEqual(
+            ledger["host_policy"][
+                "maximum_observed_concurrent_CAS_cpus"
+            ],
+            6,
+        )
+        for row in campaign["runs"]:
+            self.assertEqual(row["budget_seconds"], 600)
+            self.assertGreaterEqual(row["elapsed_seconds"], 600)
+            self.assertEqual(row["return_code"], 124)
+            self.assertEqual(row["status"], "timeout-after-parse")
+            self.assertTrue(
+                row["marker_receipt"]["parse_marker_observed"]
+            )
+            self.assertFalse(
+                row["marker_receipt"]["completion_marker_observed"]
+            )
+            self.assertGreater(row["stdout"]["bytes"], 0)
+            self.assertEqual(len(row["stdout"]["sha256"]), 64)
+            self.assertEqual(len(row["receipt"]["sha256"]), 64)
+            self.assertFalse(
+                row["claim_boundary"]["timeout_is_a_chart_decision"]
+            )
+
+    def test_residual_grading_is_exact_but_not_promoted_to_a_decision(self):
+        payload = json.loads(
+            (
+                DEFAULT_RESULT_DIRECTORY / "residual_grading.json"
+            ).read_text(encoding="utf-8")
+        )
+        self.assertEqual(
+            [
+                row["integral_character_quotient"]["residual_rank"]
+                for row in payload["repair_charts"]
+            ],
+            [8, 8, 7, 7],
+        )
+        self.assertTrue(
+            payload["exact_checks"][
+                "all_730_generator_sets_homogeneous"
+            ]
+        )
+        self.assertFalse(
+            payload["claim_boundary"]["tropical_cones_enumerated"]
+        )
+        self.assertFalse(
+            payload["claim_boundary"]["finite_counterexample_found"]
+        )
+
+    def test_sparse_derivative_slices_replace_the_degree_six_blowup(self):
+        payload = json.loads(
+            (
+                DEFAULT_RESULT_DIRECTORY
+                / "natural_derivative_atlas.json"
+            ).read_text(encoding="utf-8")
+        )
+        self.assertTrue(
+            payload["preferred_next_formulation"][
+                "existence_equivalent_to_derivative_open"
+            ]
+        )
+        self.assertEqual(len(payload["sparse_gauge_slices"]), 2)
+        for row in payload["sparse_gauge_slices"]:
+            self.assertEqual(row["variables"], 129)
+            self.assertEqual(row["generators"], 730)
+            self.assertEqual(row["sparse_terms"], 10_942)
+            self.assertEqual(row["maximum_degree"], 4)
+            self.assertFalse(
+                row["claim_boundary"]["natural_chart_decided"]
+            )
+
     def test_escalated_claim_corruption_is_rejected(self):
         with tempfile.TemporaryDirectory() as temporary:
             copied = Path(temporary) / "bundle"
