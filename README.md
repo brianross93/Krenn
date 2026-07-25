@@ -568,6 +568,28 @@ missing theorem is boundary escape: the EqSystem constraints must prevent
 all projective blocker solutions from being confined to coordinate
 boundaries. Positive intersection counts alone do not prove that statement.
 
+The exact degree-24 quotient reconnaissance in
+`results/krenn_quantum_graph/n8_d3_degree24_quotient_reconnaissance`
+validates the standalone Singular exporter and independent multiplication-
+matrix replay on one fixed dense `K5` specialization. It certifies a
+24-dimensional cyclic quotient over `Q` and a 22-dimensional cyclic
+quotient over `F_31`. This proves only that the fixed rational blocker chart is
+proper over `Qbar`; no EqSystem constraints were imposed, so it is neither
+an `n=8` witness nor a boundary-escape result. Full matrices remain under
+`D:\KrennScratch\counterexample_search\n8_k5_quotient_v2`.
+
+The weighted Bogdanov seed-chart census is now exact as well. Choosing one
+nonzero monochromatic perfect-matching term for each color gives
+`105^3 = 1,157,625` ordered `n=8` seeds, but generator-action BFS reduces
+them to 31 `S_8 x S_3` orbits. Every orbit has a mixed coloring represented
+by exactly one term on its 12 selected coordinates, so any complex witness
+must activate an outside repair term. Only two orbit types have all three
+pairwise unions Hamiltonian; they have respectively two and three singleton
+victims. The three-victim type has an exact primitive six-monomial product
+circuit, while the five-monomial two-victim type is internally independent.
+Neither fact controls unrestricted repair sums, so this is an exhaustive
+chart reduction and mechanism certificate, not an `n=8` no-go proof.
+
 ## Historical bounded finite-counterexample campaign
 
 This campaign predates and is superseded as decision work by the external

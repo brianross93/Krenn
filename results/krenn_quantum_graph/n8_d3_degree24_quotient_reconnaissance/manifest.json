@@ -1,0 +1,66 @@
+{
+  "bundle_files": {
+    "README.md": {
+      "bytes": 5186,
+      "sha256": "f382734ceb8979a621b504fc5c9f1b2a8c1ef1bd67734351edc82ddc12d33133"
+    },
+    "reconnaissance.json": {
+      "bytes": 4564,
+      "sha256": "e706c5336506d3fe3f52ca1d80a2b3fd33573116f14ff4453f00600f0ea115f2"
+    },
+    "seed_80320260725_p31_slimgb.receipt.json": {
+      "bytes": 3866,
+      "sha256": "0e414ea5358afbc56d7d50153b286911f3b104bb5a00cf62f3868297d99b0b76"
+    },
+    "seed_80320260725_q_slimgb.receipt.json": {
+      "bytes": 3857,
+      "sha256": "00885e3207460593ec7eef26867bb1e562864db058df045a15e810131f52c8ca"
+    }
+  },
+  "claim_boundary": {
+    "all_56_labeled_k5_blockers_checked": false,
+    "degree24_k5_covers_degree30_type": false,
+    "distinct_points_counted": false,
+    "eqsystem_constraints_imposed": false,
+    "full_quotient_dimension_independently_certified": false,
+    "generic_degree_implies_all_specializations": false,
+    "modular_lift_proved": false,
+    "modular_result_is_Q_or_C_proof": false,
+    "n8_boundary_escape_proved": false,
+    "n8_nonexistence_proved": false,
+    "quotient_length_counts_distinct_points": false,
+    "quotient_radical_proved": false,
+    "quotient_reduced_proved": false,
+    "rational_point_over_Q_proved": false,
+    "symbolic_90_parameter_quotient_built": false,
+    "timeout_or_miss_is_proof": false,
+    "unit_ideal_independently_certified": false
+  },
+  "schema": "krenn-n8-d3-degree24-quotient-artifact-manifest-v1",
+  "source_files": {
+    ".gitattributes": {
+      "bytes": 185,
+      "sha256": "4d8985e3f51a86f79cfc1d3fbfc2041513377f645bb84e0a0ef2830ee46ea481"
+    },
+    "experiments/krenn_quantum_graph/blocker_quotient_reconnaissance.py": {
+      "bytes": 44250,
+      "sha256": "fb3b92dfe2cfb0bfcedf011c04db0d555c3024218d5bc4e9f8506a5245563515"
+    },
+    "experiments/krenn_quantum_graph/blocker_quotient_runner.py": {
+      "bytes": 25359,
+      "sha256": "f699165ef6ce7a0915e5f53b663a457e35a5db7cde16fd51d8b3a993a570f4c4"
+    },
+    "experiments/krenn_quantum_graph/n8_k5_singular.Dockerfile": {
+      "bytes": 266,
+      "sha256": "5728a7eade496a9e558c8f9cad43add29d5f5ced81937e16154781da0919f278"
+    },
+    "experiments/krenn_quantum_graph/perfect_matching_blocker_ideals.py": {
+      "bytes": 25229,
+      "sha256": "89807dfb76382f76a5ec5f38d05db5ac73a30e5bc83fb0024c481e7c2f9fc3ff"
+    },
+    "experiments/krenn_quantum_graph/witness.py": {
+      "bytes": 8389,
+      "sha256": "cb64d99e80eca4ff17ca66f0f69a4099ca08010ff85ffdbf53aa4a391b7ed7dd"
+    }
+  }
+}

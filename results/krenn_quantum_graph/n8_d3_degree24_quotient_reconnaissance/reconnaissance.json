@@ -1,0 +1,122 @@
+{
+  "chart": {
+    "blocker_type": {
+      "barrier_size": 3,
+      "odd_component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "outside_graph": "K5"
+    },
+    "chart_sha256": "66a0e966a591ed1d28fd7cd98251f274940a746892a203603ff76e6e33595ab5",
+    "coefficient_height": 127,
+    "coefficient_slots": 90,
+    "coefficient_values_distinct": 90,
+    "colors": 3,
+    "equation_count": 10,
+    "every_coefficient_nonzero_mod_31": true,
+    "every_coefficient_nonzero_over_Q": true,
+    "normalized_color": 0,
+    "specialization_seed": 80320260725,
+    "variable_count": 10,
+    "vertices": 8
+  },
+  "claim_boundary": {
+    "all_56_labeled_k5_blockers_checked": false,
+    "degree24_k5_covers_degree30_type": false,
+    "distinct_points_counted": false,
+    "eqsystem_constraints_imposed": false,
+    "full_quotient_dimension_independently_certified": false,
+    "generic_degree_implies_all_specializations": false,
+    "modular_lift_proved": false,
+    "modular_result_is_Q_or_C_proof": false,
+    "n8_boundary_escape_proved": false,
+    "n8_nonexistence_proved": false,
+    "quotient_length_counts_distinct_points": false,
+    "quotient_radical_proved": false,
+    "quotient_reduced_proved": false,
+    "rational_point_over_Q_proved": false,
+    "symbolic_90_parameter_quotient_built": false,
+    "timeout_or_miss_is_proof": false,
+    "unit_ideal_independently_certified": false
+  },
+  "exact_conclusions": {
+    "F31bar_point_for_fixed_specialization": true,
+    "Qbar_and_complex_point_for_fixed_specialization": true,
+    "f31_nonzero_unital_cyclic_quotient_dimension": 22,
+    "q_nonzero_unital_cyclic_quotient_dimension": 24
+  },
+  "pilots": [
+    {
+      "algorithm": "slimgb",
+      "backend_quotient_dimension": 22,
+      "claim": "proper fixed specialized affine ideal over F_31 only",
+      "engine_budget_seconds": 600,
+      "engine_subprocess_wall_seconds": 0.324389,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 22,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "field": "F_31",
+      "groebner_basis_size": 56,
+      "input_sha256": "a991811ae7a2d21b6f6675b366ffec0bf0d8b564595011eac2f4abf7c5c6f355",
+      "key": "seed_80320260725_p31_slimgb",
+      "krull_dimension": 0,
+      "memory_gib": 4,
+      "receipt_file": "seed_80320260725_p31_slimgb.receipt.json",
+      "representation_bytes": 62180,
+      "representation_sha256": "7cc7f0aa7ef6fbac20e1b4bc76121de8ef44b4713e6f773d872ee8d99fe0bb01",
+      "scratch_receipt_sha256": "0e414ea5358afbc56d7d50153b286911f3b104bb5a00cf62f3868297d99b0b76",
+      "stdout_bytes": 31943,
+      "stdout_sha256": "19cc8a5eed63f3c4ec62795ff64cc6e308ba79bc4f3c6a21a90c5fe390462801",
+      "timer_ticks": 0
+    },
+    {
+      "algorithm": "slimgb",
+      "backend_quotient_dimension": 24,
+      "claim": "proper fixed specialized affine ideal over Q; point over Qbar and C",
+      "engine_budget_seconds": 1800,
+      "engine_subprocess_wall_seconds": 73.255729,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 24,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "field": "Q",
+      "groebner_basis_size": 58,
+      "input_sha256": "5b739a656839133d04dc954ca3d9ddc58ce03b960a824b04d0702ce8524944d6",
+      "key": "seed_80320260725_q_slimgb",
+      "krull_dimension": 0,
+      "memory_gib": 8,
+      "receipt_file": "seed_80320260725_q_slimgb.receipt.json",
+      "representation_bytes": 5601312,
+      "representation_sha256": "a76032221e135bf72f2dc803fa005d7db2024e0936ef909f68171eb242f6dab9",
+      "scratch_receipt_sha256": "00885e3207460593ec7eef26867bb1e562864db058df045a15e810131f52c8ca",
+      "stdout_bytes": 5374192,
+      "stdout_sha256": "f14f090cd795223d562c9ecb1dcb832cb58560cfb3cd851da193153548fecbd8",
+      "timer_ticks": 70
+    }
+  ],
+  "schema": "krenn-n8-d3-degree24-quotient-reconnaissance-v1",
+  "scratch": {
+    "large_matrices_committed_to_repository": false,
+    "required_for_full_matrix_replay": true,
+    "root": "D:\\KrennScratch\\counterexample_search\\n8_k5_quotient_v2"
+  },
+  "singular_engine": {
+    "cpus": 2,
+    "dockerfile_sha256": "5728a7eade496a9e558c8f9cad43add29d5f5ced81937e16154781da0919f278",
+    "image": "krenn-n8-singular:ubuntu24.04-v1",
+    "image_id": "sha256:f9d3378746fb922f73802e52117c8e67893c45af2497275e50b5a940b1a751df",
+    "maximum_workers": 1,
+    "network": "none",
+    "version": "4.3.2"
+  },
+  "status": "fixed-specialization-cyclic-quotient-pipeline-validated"
+}
