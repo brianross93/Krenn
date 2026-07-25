@@ -1,0 +1,39 @@
+{
+  "bundle_files": {
+    "README.md": {
+      "bytes": 4818,
+      "sha256": "64d0a33006535c3543f41d0dceb4b2f7b8b39017574725d2533a2e7861943dc7"
+    },
+    "census.json": {
+      "bytes": 139826,
+      "sha256": "475c0563cc1c0752427ce1cb250021a38fa62b46aa1b78855dbd0be9a606ce25"
+    }
+  },
+  "claim_boundary": {
+    "all_n10_seed_triples_classified": false,
+    "eqsystem_solutions_classified": false,
+    "n10_boundary_membership_proved": false,
+    "n10_existence_proved": false,
+    "n10_nonexistence_proved": false,
+    "pairwise_hamiltonian_seed_support_can_be_repaired": false,
+    "pairwise_hamiltonian_seed_support_is_unrepairable": false,
+    "singleton_victim_is_global_nonexistence_proof": false,
+    "ten_orbit_types_persist_for_general_n": false,
+    "weights_on_symmetry_related_coordinates_are_equal": false
+  },
+  "schema": "krenn-n10-pairwise-hamiltonian-seed-census-manifest-v1",
+  "source_files": {
+    "experiments/krenn_quantum_graph/n10_pairwise_hamiltonian_seed_orbits.py": {
+      "bytes": 45392,
+      "sha256": "4a7a60a4ef83a4a206a80690f19e5fb73cfd1788d59a3ad88f5f3fce93bcb4fb"
+    },
+    "experiments/krenn_quantum_graph/system.py": {
+      "bytes": 11452,
+      "sha256": "3f64e42efc68b5391b3ec9798e801d1efa1f7c4a9c68c56a4b3b2e78540214a9"
+    },
+    "tests/test_krenn_n10_pairwise_hamiltonian_seed_orbits.py": {
+      "bytes": 7523,
+      "sha256": "12ca99aa0ddbe1a146ff1ff55a049f8e207d0bc694ebff6bbf03b4da10ced0c1"
+    }
+  }
+}

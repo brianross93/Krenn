@@ -11,6 +11,11 @@ color swaps.  It also replays every mixed equation supported on the twelve
 seed coordinates and records the two representatives for which every pair
 of seed matchings forms a Hamilton cycle.
 
+The labels ``H5`` and ``H6`` are mnemonic: ``H`` records the all-pairs-
+Hamiltonian property, while the numeral is the number of physical perfect
+matchings internal to the representative's three-colored union.  They are
+not ordinal case numbers and do not imply missing ``H1``--``H4`` cases.
+
 The ``H6`` representative has a primitive six-term relation in the *colored
 source-coordinate* exponent lattice.  It is not identified with the
 uncolored ``K3,3``-plus-common-edge circuit.  The ``H5`` representative's
@@ -743,6 +748,16 @@ def _hard_case_payload(
         )
     payload: dict[str, object] = {
         "label": label,
+        "label_semantics": {
+            "prefix": "H",
+            "prefix_meaning": (
+                "all_three_pairwise_unions_are_Hamilton_cycles"
+            ),
+            "numeric_suffix_meaning": (
+                "internal_physical_perfect_matching_count"
+            ),
+            "ordinal_case_number": False,
+        },
         "representative_matching_indices": list(seed),
         "pair_union_component_sizes": [
             list(profile) for profile in _pair_profiles(seed)
@@ -1086,6 +1101,9 @@ def _build_census_payload() -> dict[str, object]:
             "H5_has_no_relation_in_the_full_source_system": False,
             "H6_circuit_closes_unrestricted_spill_terms": False,
             "H6_odd_relation_alone_proves_contradiction": False,
+            "non_pairwise_hamiltonian_29_unrestricted_repair_branches_excluded": (
+                False
+            ),
             "classical_pfaffian_or_plucker_identity_claimed": False,
             "blocker_boundary_escape_proved": False,
             "n8_nonexistence_proved": False,

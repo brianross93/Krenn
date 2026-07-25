@@ -578,17 +578,60 @@ proper over `Qbar`; no EqSystem constraints were imposed, so it is neither
 an `n=8` witness nor a boundary-escape result. Full matrices remain under
 `D:\KrennScratch\counterexample_search\n8_k5_quotient_v2`.
 
+The follow-up exact sweep in
+`results/krenn_quantum_graph/n8_d3_square_blocker_prime_sweep` checks both
+square blocker types at the first twenty primes above 254, where every fixed
+integer coefficient remains nonzero and distinct within its chart. All
+twenty degree-24 cyclic modules have dimension 24, and all twenty degree-30
+modules have dimension 30. Thus the earlier 22 at `F_31` is isolated to the
+coefficient-colliding control in this measurement; this does not prove that
+31 is a special fiber. The modular modules do not independently certify the
+full quotient, lift to `Q` or `C`, impose the EqSystem, or prove boundary
+escape. Full matrices remain under
+`D:\KrennScratch\counterexample_search\n8_square_blocker_prime_sweep_v3`.
+
 The weighted Bogdanov seed-chart census is now exact as well. Choosing one
 nonzero monochromatic perfect-matching term for each color gives
 `105^3 = 1,157,625` ordered `n=8` seeds, but generator-action BFS reduces
 them to 31 `S_8 x S_3` orbits. Every orbit has a mixed coloring represented
 by exactly one term on its 12 selected coordinates, so any complex witness
-must activate an outside repair term. Only two orbit types have all three
-pairwise unions Hamiltonian; they have respectively two and three singleton
-victims. The three-victim type has an exact primitive six-monomial product
-circuit, while the five-monomial two-victim type is internally independent.
-Neither fact controls unrestricted repair sums, so this is an exhaustive
-chart reduction and mechanism certificate, not an `n=8` no-go proof.
+must activate an outside repair term. All 31 unrestricted repair branches
+therefore remain open. Exactly two orbit types additionally have all three
+pairwise unions Hamiltonian. Their mnemonic labels `H5` and `H6` record their
+five and six internal physical perfect matchings; they are not ordinal case
+numbers. The two types have respectively two and three singleton victims.
+The three-victim type has an exact primitive six-monomial product circuit,
+while the five-monomial two-victim type is internally independent. Neither
+fact controls unrestricted repair sums, so this is an exhaustive seed-triple
+classification and a two-orbit pilot selection, not a reduction of the open
+weighted problem to two branches or an `n=8` no-go proof.
+
+The read-only transfer audit in
+`results/krenn_quantum_graph/n8_d3_gallagher_transfer_audit` checks the
+Lean/SAT architecture of Gallagher's exact `n=6,d=3` certificate at revision
+`c04696e515e0c02be140353fb52ea60c62e827b1`. Its final
+support-assignment-to-LRAT implication is reusable, but the actual reduction
+does not transfer by changing a parameter. The 15-matching tables, support
+rules, eight-orbit cover, exact Laurent no-goods, CNFs, and LRAT files are
+all six-vertex-specific. Moreover, the Boolean encoding retains only
+zero/nonzero support: it gives necessary conditions for complex
+cancellation, not an equivalent finite model of it. A genuinely exhaustive
+eight-vertex rebuild would begin with all 31 seed orbits, not only H5 and
+H6, and would need newly proved algebraic cuts before SAT unsatisfiability
+could become a defined endpoint.
+
+The bounded follow-up in
+`results/krenn_quantum_graph/n10_d3_pairwise_hamiltonian_seed_orbits`
+shows that the two-type hard core does not persist. Fixing one ordered
+Hamiltonian pair reduces the `n=10` computation from `945^3` triples to 148
+common partners. Exact normalization gives 24 `S_10` orbits with colors
+ordered and ten `S_10 x S_3` orbits. An independent 945-vertex
+compatibility-graph replay is 384-regular with 181,440 edges and 8,951,040
+triangles, reconciling all 53,706,240 ordered pairwise-Hamiltonian triples.
+The ten cubic unions contain between 6 and 13 internal perfect matchings,
+and hence between 3 and 10 exact singleton mixed victims. This is an
+exhaustive classification only within the pairwise-Hamiltonian locus; all
+unrestricted repair branches remain open.
 
 ## Historical bounded finite-counterexample campaign
 

@@ -53,6 +53,51 @@ class KrennN8SeedOrbitTest(unittest.TestCase):
         self.assertEqual(len(adjacent_vertex_action_rows()), 7)
         self.assertTrue(all(self.payload["exact_checks"].values()))
 
+    def test_hamiltonian_predicate_selects_exactly_two_pilot_orbits(self):
+        selected = [
+            tuple(row["representative_matching_indices"])
+            for row in self.payload["orbits"]
+            if all(
+                profile == [8]
+                for profile in row["pair_union_component_sizes"]
+            )
+        ]
+        unselected = [
+            row
+            for row in self.payload["orbits"]
+            if not all(
+                profile == [8]
+                for profile in row["pair_union_component_sizes"]
+            )
+        ]
+        self.assertEqual(
+            set(selected),
+            {H5_REPRESENTATIVE, H6_REPRESENTATIVE},
+        )
+        self.assertEqual(len(selected), 2)
+        self.assertEqual(len(unselected), 29)
+
+    def test_h5_h6_labels_encode_internal_matching_counts(self):
+        expected_semantics = {
+            "prefix": "H",
+            "prefix_meaning": (
+                "all_three_pairwise_unions_are_Hamilton_cycles"
+            ),
+            "numeric_suffix_meaning": (
+                "internal_physical_perfect_matching_count"
+            ),
+            "ordinal_case_number": False,
+        }
+        for label in ("H5", "H6"):
+            profile = self.payload["hard_cases"][label]
+            self.assertEqual(
+                profile["label_semantics"], expected_semantics
+            )
+            self.assertEqual(
+                int(label[1:]),
+                profile["internal_matching_count"],
+            )
+
     def test_representatives_sizes_and_singletons_are_exact(self):
         observed = tuple(
             (
@@ -262,6 +307,7 @@ class KrennN8SeedOrbitTest(unittest.TestCase):
             "H5_has_no_relation_in_the_full_source_system",
             "H6_circuit_closes_unrestricted_spill_terms",
             "H6_odd_relation_alone_proves_contradiction",
+            "non_pairwise_hamiltonian_29_unrestricted_repair_branches_excluded",
             "classical_pfaffian_or_plucker_identity_claimed",
             "blocker_boundary_escape_proved",
             "n8_nonexistence_proved",

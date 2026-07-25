@@ -1,0 +1,82 @@
+{
+  "bundle_files": {
+    "README.md": {
+      "bytes": 6071,
+      "sha256": "adf2e9918f374c254dd1441e9d8c035761e04127be0278e6e7860c4eb184e433"
+    },
+    "receipts.json": {
+      "bytes": 281105,
+      "sha256": "fa9fb15ff8b51d906dbe18f5abfad01a9a2e260b00cc4afb7234a1e1a651e966"
+    },
+    "sweep.json": {
+      "bytes": 78928,
+      "sha256": "c6aa4be93d5c19fad293c54bde4096582355bd68854d1451ab69078ac54a31fc"
+    }
+  },
+  "claim_boundary": {
+    "all_labeled_blockers_checked": false,
+    "backend_groebner_basis_independently_verified": false,
+    "backend_quotient_dimension_is_independently_full_quotient": false,
+    "coefficient_injective_means_algebraically_good_prime": false,
+    "common_global_weight_specialization_checked": false,
+    "degree24_k5_covers_degree30_type": false,
+    "distinct_points_counted": false,
+    "eqsystem_constraints_imposed": false,
+    "flatness_or_good_reduction_proved": false,
+    "generic_fiber_dimension_proved": false,
+    "generic_prime_statement_proved": false,
+    "hilbert_polynomial_stability_proved": false,
+    "modular_lift_or_reconstruction_proved": false,
+    "modular_result_is_Q_or_C_proof": false,
+    "multiple_coefficient_specializations_checked": false,
+    "n8_boundary_escape_proved": false,
+    "n8_existence_proved": false,
+    "n8_nonexistence_proved": false,
+    "p31_is_proved_special_fiber": false,
+    "quotient_radical_or_reduced_proved": false,
+    "symbolic_108_parameter_quotient_built": false,
+    "symbolic_90_parameter_quotient_built": false,
+    "timeout_miss_or_backend_unit_report_is_proof": false,
+    "universal_parameter_quotient_built": false,
+    "verified_dimension_histogram_is_full_quotient_histogram": false
+  },
+  "schema": "krenn-n8-d3-square-blocker-prime-sweep-manifest-v2",
+  "source_files": {
+    "README.md": {
+      "bytes": 29321,
+      "sha256": "b2e2f48d4d84fb80d3cb972a75efb3c1cdb6d0228dde248e590d4f41ea0356e1"
+    },
+    "experiments/krenn_quantum_graph/blocker_quotient_prime_sweep.py": {
+      "bytes": 55077,
+      "sha256": "acdad12526d870ea3e322d6dd0297bec1593295f1640a2c4f070ac20b629d541"
+    },
+    "experiments/krenn_quantum_graph/blocker_quotient_reconnaissance.py": {
+      "bytes": 44250,
+      "sha256": "fb3b92dfe2cfb0bfcedf011c04db0d555c3024218d5bc4e9f8506a5245563515"
+    },
+    "experiments/krenn_quantum_graph/blocker_quotient_runner.py": {
+      "bytes": 25359,
+      "sha256": "f699165ef6ce7a0915e5f53b663a457e35a5db7cde16fd51d8b3a993a570f4c4"
+    },
+    "experiments/krenn_quantum_graph/n8_k5_singular.Dockerfile": {
+      "bytes": 266,
+      "sha256": "5728a7eade496a9e558c8f9cad43add29d5f5ced81937e16154781da0919f278"
+    },
+    "experiments/krenn_quantum_graph/perfect_matching_blocker_ideals.py": {
+      "bytes": 25229,
+      "sha256": "89807dfb76382f76a5ec5f38d05db5ac73a30e5bc83fb0024c481e7c2f9fc3ff"
+    },
+    "experiments/krenn_quantum_graph/witness.py": {
+      "bytes": 8389,
+      "sha256": "cb64d99e80eca4ff17ca66f0f69a4099ca08010ff85ffdbf53aa4a391b7ed7dd"
+    },
+    "tests/test_krenn_blocker_prime_sweep_artifact.py": {
+      "bytes": 19077,
+      "sha256": "1a834aa62c10bb85a7e7bb12e729433cfcb29250f239f84264c040996402ceda"
+    },
+    "tests/test_krenn_blocker_quotient_prime_sweep.py": {
+      "bytes": 23042,
+      "sha256": "6d845ac13315df99ebcd264cce600c3b13bdeaccf824ce62d3e7e46366250c3a"
+    }
+  }
+}

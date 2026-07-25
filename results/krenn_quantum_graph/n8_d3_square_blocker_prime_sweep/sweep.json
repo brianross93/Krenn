@@ -1,0 +1,2047 @@
+{
+  "baseline_provenance": {
+    "degree24_chart_sha256": "66a0e966a591ed1d28fd7cd98251f274940a746892a203603ff76e6e33595ab5",
+    "files": {
+      "manifest": {
+        "bytes": 2526,
+        "repository_path": "results/krenn_quantum_graph/n8_d3_degree24_quotient_reconnaissance/manifest.json",
+        "sha256": "2da6c11c8869b99ea3d5c7338896f4e9157b4cc181ac15cd7b8d3c4952e4c5e7"
+      },
+      "p31_receipt": {
+        "bytes": 3866,
+        "repository_path": "results/krenn_quantum_graph/n8_d3_degree24_quotient_reconnaissance/seed_80320260725_p31_slimgb.receipt.json",
+        "sha256": "0e414ea5358afbc56d7d50153b286911f3b104bb5a00cf62f3868297d99b0b76"
+      },
+      "q_receipt": {
+        "bytes": 3857,
+        "repository_path": "results/krenn_quantum_graph/n8_d3_degree24_quotient_reconnaissance/seed_80320260725_q_slimgb.receipt.json",
+        "sha256": "00885e3207460593ec7eef26867bb1e562864db058df045a15e810131f52c8ca"
+      },
+      "reconnaissance": {
+        "bytes": 4564,
+        "repository_path": "results/krenn_quantum_graph/n8_d3_degree24_quotient_reconnaissance/reconnaissance.json",
+        "sha256": "e706c5336506d3fe3f52ca1d80a2b3fd33573116f14ff4453f00600f0ea115f2"
+      }
+    },
+    "p31_control": {
+      "coefficient_injective": false,
+      "coefficient_residue_distinct_count": 30,
+      "verified_cyclic_module_dimension": 22
+    },
+    "q_fixed_specialization": {
+      "verified_cyclic_module_dimension": 24
+    }
+  },
+  "charts": [
+    {
+      "blocker_type": {
+        "barrier_size": 3,
+        "labeled_orbit_size": 56,
+        "odd_component_sizes": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "chart_key": "degree24_b3_11111",
+      "chart_sha256": "66a0e966a591ed1d28fd7cd98251f274940a746892a203603ff76e6e33595ab5",
+      "coefficient_slot_count": 90,
+      "completed_prime_count": 20,
+      "equation_count": 10,
+      "projective_chow_degree": 24,
+      "variable_count": 10,
+      "verified_dimension_histogram": {
+        "24": 20
+      }
+    },
+    {
+      "blocker_type": {
+        "barrier_size": 2,
+        "labeled_orbit_size": 560,
+        "odd_component_sizes": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      "chart_key": "degree30_b2_3111",
+      "chart_sha256": "cc020528fe57d893f874aef801e1f8d31adb235197266ef21ec85eb2dc666d99",
+      "coefficient_slot_count": 108,
+      "completed_prime_count": 20,
+      "equation_count": 12,
+      "projective_chow_degree": 30,
+      "variable_count": 12,
+      "verified_dimension_histogram": {
+        "30": 20
+      }
+    }
+  ],
+  "claim_boundary": {
+    "all_labeled_blockers_checked": false,
+    "backend_groebner_basis_independently_verified": false,
+    "backend_quotient_dimension_is_independently_full_quotient": false,
+    "coefficient_injective_means_algebraically_good_prime": false,
+    "common_global_weight_specialization_checked": false,
+    "degree24_k5_covers_degree30_type": false,
+    "distinct_points_counted": false,
+    "eqsystem_constraints_imposed": false,
+    "flatness_or_good_reduction_proved": false,
+    "generic_fiber_dimension_proved": false,
+    "generic_prime_statement_proved": false,
+    "hilbert_polynomial_stability_proved": false,
+    "modular_lift_or_reconstruction_proved": false,
+    "modular_result_is_Q_or_C_proof": false,
+    "multiple_coefficient_specializations_checked": false,
+    "n8_boundary_escape_proved": false,
+    "n8_existence_proved": false,
+    "n8_nonexistence_proved": false,
+    "p31_is_proved_special_fiber": false,
+    "quotient_radical_or_reduced_proved": false,
+    "symbolic_108_parameter_quotient_built": false,
+    "symbolic_90_parameter_quotient_built": false,
+    "timeout_miss_or_backend_unit_report_is_proof": false,
+    "universal_parameter_quotient_built": false,
+    "verified_dimension_histogram_is_full_quotient_histogram": false
+  },
+  "complete": true,
+  "engine": {
+    "algorithm": "slimgb",
+    "cpus": 2,
+    "dockerfile": {
+      "bytes": 266,
+      "repository_path": "experiments/krenn_quantum_graph/n8_k5_singular.Dockerfile",
+      "sha256": "5728a7eade496a9e558c8f9cad43add29d5f5ced81937e16154781da0919f278"
+    },
+    "image": "krenn-n8-singular:ubuntu24.04-v1",
+    "image_id": "sha256:f9d3378746fb922f73802e52117c8e67893c45af2497275e50b5a940b1a751df",
+    "maximum_workers": 1,
+    "memory_gib": 4,
+    "network": "none",
+    "per_probe_engine_budget_seconds": 600,
+    "singular_version": "4.3.2"
+  },
+  "interpretation": "Each row is an exact finite-field cyclic-module certificate for one fixed specialization. Histograms are measurements, not generic-fiber, flatness, lift, Q/C, EqSystem, or n=8 existence/nonexistence claims.",
+  "prime_policy": {
+    "count": 20,
+    "maximum": 373,
+    "minimum": 257,
+    "nonadaptive": true,
+    "ordered_primes": [
+      257,
+      263,
+      269,
+      271,
+      277,
+      281,
+      283,
+      293,
+      307,
+      311,
+      313,
+      317,
+      331,
+      337,
+      347,
+      349,
+      353,
+      359,
+      367,
+      373
+    ],
+    "selection_rule": "first 20 primes strictly greater than 2*coefficient_height=254"
+  },
+  "runs": [
+    {
+      "backend_reported_quotient_dimension": 24,
+      "characteristic": 257,
+      "chart_key": "degree24_b3_11111",
+      "coefficient_audit": {
+        "coefficient_count": 90,
+        "coefficient_injective": true,
+        "distinct_residue_count": 90,
+        "integer_vector_sha256": "2a50393225b887d18b7bbb58f7c75c0fd85dade6a753d8f78917fbe3e623373e",
+        "residue_vector_sha256": "2bd1734b714f94cb084c9baad5d24c9e73252c375122969192643387b5ce1fad",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.312502,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 24,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "groebner_basis_size": 58,
+      "input": {
+        "bytes": 2085,
+        "filename": "degree24_b3_11111_p0257_slimgb.sing",
+        "sha256": "3c1352bedf64d3b8287faf4c66141cea3e62c47d4ac66bb4372f5d333c6f422d"
+      },
+      "key": "degree24_b3_11111_p0257_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 77728,
+        "filename": "degree24_b3_11111_p0257_slimgb.representation.json",
+        "sha256": "633d63692ad3c841d7d652342d5cc3c908a41445bddbf336ecf60020b4f95efc"
+      },
+      "scratch_receipt": {
+        "bytes": 5775,
+        "filename": "degree24_b3_11111_p0257_slimgb.receipt.json",
+        "sha256": "6b53d91c9f92e2e46446e294eddf5222bd61d3b63b75ea66e7de41dae611aa7b"
+      },
+      "started_at_utc": "2026-07-25T20:01:37.771072+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 42533,
+        "filename": "degree24_b3_11111_p0257_slimgb.stdout.txt",
+        "sha256": "9536bdc346a8856b1fa681d57c9b4b6f813611a1d4c434cebf1543f19b9b75c9"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 24
+    },
+    {
+      "backend_reported_quotient_dimension": 24,
+      "characteristic": 263,
+      "chart_key": "degree24_b3_11111",
+      "coefficient_audit": {
+        "coefficient_count": 90,
+        "coefficient_injective": true,
+        "distinct_residue_count": 90,
+        "integer_vector_sha256": "2a50393225b887d18b7bbb58f7c75c0fd85dade6a753d8f78917fbe3e623373e",
+        "residue_vector_sha256": "3a1cf0b87a78f1f067f2092de34574c341a043813b1dbb9bb8827e44f3b62719",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.304157,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 24,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "groebner_basis_size": 58,
+      "input": {
+        "bytes": 2085,
+        "filename": "degree24_b3_11111_p0263_slimgb.sing",
+        "sha256": "75d5824e39fbd066e50a1c582538de9c4dee94babaf7188643f531b0328d06f8"
+      },
+      "key": "degree24_b3_11111_p0263_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 77804,
+        "filename": "degree24_b3_11111_p0263_slimgb.representation.json",
+        "sha256": "4a1d002c47b1f061c1ccac68acca206781ae148ec6218f19758fa1ce00e3dc28"
+      },
+      "scratch_receipt": {
+        "bytes": 5775,
+        "filename": "degree24_b3_11111_p0263_slimgb.receipt.json",
+        "sha256": "93d0b4e137bdd29af278667abb48be278f3f403e66a9776f1a65d209aef24309"
+      },
+      "started_at_utc": "2026-07-25T20:01:51.689371+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 42810,
+        "filename": "degree24_b3_11111_p0263_slimgb.stdout.txt",
+        "sha256": "dbae1415b95d10eba4cc7e204a5b049cea5ed7f90c665232aa1df8ab274e33ee"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 24
+    },
+    {
+      "backend_reported_quotient_dimension": 24,
+      "characteristic": 269,
+      "chart_key": "degree24_b3_11111",
+      "coefficient_audit": {
+        "coefficient_count": 90,
+        "coefficient_injective": true,
+        "distinct_residue_count": 90,
+        "integer_vector_sha256": "2a50393225b887d18b7bbb58f7c75c0fd85dade6a753d8f78917fbe3e623373e",
+        "residue_vector_sha256": "d6d9056472ac9e575cf02a82b9c75a8c84b325ba304a5322ee173d023a05c4f6",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.308697,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 24,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "groebner_basis_size": 58,
+      "input": {
+        "bytes": 2085,
+        "filename": "degree24_b3_11111_p0269_slimgb.sing",
+        "sha256": "c74017308138d598746c0feb392b994aec762d6446de6793c3591eff8b52476e"
+      },
+      "key": "degree24_b3_11111_p0269_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 77745,
+        "filename": "degree24_b3_11111_p0269_slimgb.representation.json",
+        "sha256": "9837e5ca5e539fb89910a6452446619063f7e52854691d617feaf675608b2345"
+      },
+      "scratch_receipt": {
+        "bytes": 5775,
+        "filename": "degree24_b3_11111_p0269_slimgb.receipt.json",
+        "sha256": "2f9b10821a81c19640f8097627ccc2f82c12deb151b2c9ae4e1a9ced3480b92c"
+      },
+      "started_at_utc": "2026-07-25T20:01:53.140366+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 42656,
+        "filename": "degree24_b3_11111_p0269_slimgb.stdout.txt",
+        "sha256": "459ccac3e897f1d0ea4c31bf854e66d754e761f4812e8cf14dd5f68af7e457ea"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 24
+    },
+    {
+      "backend_reported_quotient_dimension": 24,
+      "characteristic": 271,
+      "chart_key": "degree24_b3_11111",
+      "coefficient_audit": {
+        "coefficient_count": 90,
+        "coefficient_injective": true,
+        "distinct_residue_count": 90,
+        "integer_vector_sha256": "2a50393225b887d18b7bbb58f7c75c0fd85dade6a753d8f78917fbe3e623373e",
+        "residue_vector_sha256": "584a03c24ea6f1342ed63b05361d889bcebad9eb98fe10474fad427368681f09",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.31319,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 24,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "groebner_basis_size": 58,
+      "input": {
+        "bytes": 2085,
+        "filename": "degree24_b3_11111_p0271_slimgb.sing",
+        "sha256": "ddbf099a69acecc8768f8a974e6063059e2b0d91376f37619b79ff13ff042b11"
+      },
+      "key": "degree24_b3_11111_p0271_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 77742,
+        "filename": "degree24_b3_11111_p0271_slimgb.representation.json",
+        "sha256": "79a488949f9b6d7c0dffbb7df27fe3beb886e985a6acc06475751a17f37f5263"
+      },
+      "scratch_receipt": {
+        "bytes": 5774,
+        "filename": "degree24_b3_11111_p0271_slimgb.receipt.json",
+        "sha256": "401815426d4e5266409b214654da416927d6b89ba968b3aaca652d4bd8c1137a"
+      },
+      "started_at_utc": "2026-07-25T20:01:54.620054+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 42688,
+        "filename": "degree24_b3_11111_p0271_slimgb.stdout.txt",
+        "sha256": "77323f2664deca91d625bc917238e27eef5d6ed22e2cef8ddfcdbd83e80897bf"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 24
+    },
+    {
+      "backend_reported_quotient_dimension": 24,
+      "characteristic": 277,
+      "chart_key": "degree24_b3_11111",
+      "coefficient_audit": {
+        "coefficient_count": 90,
+        "coefficient_injective": true,
+        "distinct_residue_count": 90,
+        "integer_vector_sha256": "2a50393225b887d18b7bbb58f7c75c0fd85dade6a753d8f78917fbe3e623373e",
+        "residue_vector_sha256": "c2c4c0fd9dfed82f07b1dda6357e2b41d6d97d0682f741fe0eaa1c4f72d846dc",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.311892,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 24,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "groebner_basis_size": 58,
+      "input": {
+        "bytes": 2085,
+        "filename": "degree24_b3_11111_p0277_slimgb.sing",
+        "sha256": "d4cf804673349071a5af0194e9b52e1690cb5d769606005dceac4f06890d5d23"
+      },
+      "key": "degree24_b3_11111_p0277_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 77868,
+        "filename": "degree24_b3_11111_p0277_slimgb.representation.json",
+        "sha256": "1fff3609e0044b0989140fc5abf1fb6893cd5e910d00db816cddef1121d98b51"
+      },
+      "scratch_receipt": {
+        "bytes": 5775,
+        "filename": "degree24_b3_11111_p0277_slimgb.receipt.json",
+        "sha256": "2cb728b26b4935c72d9bfd3b2d9a3b987c15011ba77074bc8a4786ff2919bdd7"
+      },
+      "started_at_utc": "2026-07-25T20:01:56.201963+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 42818,
+        "filename": "degree24_b3_11111_p0277_slimgb.stdout.txt",
+        "sha256": "0887e621d94fedfc1db3c26db5100906de88e3303161f64912352084f050d7a1"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 24
+    },
+    {
+      "backend_reported_quotient_dimension": 24,
+      "characteristic": 281,
+      "chart_key": "degree24_b3_11111",
+      "coefficient_audit": {
+        "coefficient_count": 90,
+        "coefficient_injective": true,
+        "distinct_residue_count": 90,
+        "integer_vector_sha256": "2a50393225b887d18b7bbb58f7c75c0fd85dade6a753d8f78917fbe3e623373e",
+        "residue_vector_sha256": "1bd5cf0e21d55bcc59eb7d14c186fb052ade8f956e61e5a18c0f286b8d1aabd4",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.317503,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 24,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "groebner_basis_size": 58,
+      "input": {
+        "bytes": 2085,
+        "filename": "degree24_b3_11111_p0281_slimgb.sing",
+        "sha256": "e3187f2aa582f4d2f8e4cb3ba10b8bde10dcb84d656042e3b8d6f2855c4883cf"
+      },
+      "key": "degree24_b3_11111_p0281_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 77853,
+        "filename": "degree24_b3_11111_p0281_slimgb.representation.json",
+        "sha256": "1f208aacbc1b559d88b27e3e5ad48970941d6910342856d61986505007116234"
+      },
+      "scratch_receipt": {
+        "bytes": 5775,
+        "filename": "degree24_b3_11111_p0281_slimgb.receipt.json",
+        "sha256": "22bdef6ea6df1506bc3eb2e66977c1c565fb1aaa9f671c1b5fca84da6e7fbdc9"
+      },
+      "started_at_utc": "2026-07-25T20:01:57.708698+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 42920,
+        "filename": "degree24_b3_11111_p0281_slimgb.stdout.txt",
+        "sha256": "730d57d1807bacbb6866f5606ec651acda148ea535152f2ef567eecfa1ec15d4"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 24
+    },
+    {
+      "backend_reported_quotient_dimension": 24,
+      "characteristic": 283,
+      "chart_key": "degree24_b3_11111",
+      "coefficient_audit": {
+        "coefficient_count": 90,
+        "coefficient_injective": true,
+        "distinct_residue_count": 90,
+        "integer_vector_sha256": "2a50393225b887d18b7bbb58f7c75c0fd85dade6a753d8f78917fbe3e623373e",
+        "residue_vector_sha256": "255a9b11daef6d4f69fee1a96366ccc30c6e621833f3632cd491662e263eb5e8",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.291947,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 24,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "groebner_basis_size": 58,
+      "input": {
+        "bytes": 2085,
+        "filename": "degree24_b3_11111_p0283_slimgb.sing",
+        "sha256": "4847e0de833210e9f9f21655fe804c57a279a19f8c426bcb882c3536120f58c2"
+      },
+      "key": "degree24_b3_11111_p0283_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 77802,
+        "filename": "degree24_b3_11111_p0283_slimgb.representation.json",
+        "sha256": "20ca08f14f2bf149b092571990c66a26dd2100db2be9af01439e15c4180a1003"
+      },
+      "scratch_receipt": {
+        "bytes": 5775,
+        "filename": "degree24_b3_11111_p0283_slimgb.receipt.json",
+        "sha256": "c115e0435cd1b7cc00c48bfc3c49f89b266e914db4dd85cac55a6b7da0d8f960"
+      },
+      "started_at_utc": "2026-07-25T20:01:59.264051+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 42846,
+        "filename": "degree24_b3_11111_p0283_slimgb.stdout.txt",
+        "sha256": "95fc0ee0ae1a7e460b390776cd3ce800b1feec727a133d3cd64126320e466077"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 24
+    },
+    {
+      "backend_reported_quotient_dimension": 24,
+      "characteristic": 293,
+      "chart_key": "degree24_b3_11111",
+      "coefficient_audit": {
+        "coefficient_count": 90,
+        "coefficient_injective": true,
+        "distinct_residue_count": 90,
+        "integer_vector_sha256": "2a50393225b887d18b7bbb58f7c75c0fd85dade6a753d8f78917fbe3e623373e",
+        "residue_vector_sha256": "2185d666416e5bb34be47970e68b5200e62b4d5c86a92043fa35e06efc9dbb5f",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.308174,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 24,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "groebner_basis_size": 58,
+      "input": {
+        "bytes": 2085,
+        "filename": "degree24_b3_11111_p0293_slimgb.sing",
+        "sha256": "a3242f52bcecb4962d5a2a8782fd301188a0d5621a6fbe327c252db65aa32bcf"
+      },
+      "key": "degree24_b3_11111_p0293_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 77936,
+        "filename": "degree24_b3_11111_p0293_slimgb.representation.json",
+        "sha256": "f9192a942bff78fa4ddbad1ff1e34c043284100f832910af36321b807ddeaf2b"
+      },
+      "scratch_receipt": {
+        "bytes": 5775,
+        "filename": "degree24_b3_11111_p0293_slimgb.receipt.json",
+        "sha256": "582a2eb6b630264d1cc48084fa0046f2c3d4ca00550f9fabc4829448c095904c"
+      },
+      "started_at_utc": "2026-07-25T20:02:00.874236+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 42996,
+        "filename": "degree24_b3_11111_p0293_slimgb.stdout.txt",
+        "sha256": "be9ff0f5e0104805ef675db49a31d3fef665150d213244749f5812ccee8aad47"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 24
+    },
+    {
+      "backend_reported_quotient_dimension": 24,
+      "characteristic": 307,
+      "chart_key": "degree24_b3_11111",
+      "coefficient_audit": {
+        "coefficient_count": 90,
+        "coefficient_injective": true,
+        "distinct_residue_count": 90,
+        "integer_vector_sha256": "2a50393225b887d18b7bbb58f7c75c0fd85dade6a753d8f78917fbe3e623373e",
+        "residue_vector_sha256": "786fd2acdaf76c91d6da8b5145e7dbd26a4a997dcf82ced154cbf873b9a9d540",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.305241,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 24,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "groebner_basis_size": 58,
+      "input": {
+        "bytes": 2085,
+        "filename": "degree24_b3_11111_p0307_slimgb.sing",
+        "sha256": "0ae60845fd8d437482a72594a9aa34e73784582ec6a1275242e0206162ec4dfd"
+      },
+      "key": "degree24_b3_11111_p0307_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 78095,
+        "filename": "degree24_b3_11111_p0307_slimgb.representation.json",
+        "sha256": "4f8e7b73ca30e723d4b442653e97675786ead4d3ebc287ba60d16b00953da361"
+      },
+      "scratch_receipt": {
+        "bytes": 5775,
+        "filename": "degree24_b3_11111_p0307_slimgb.receipt.json",
+        "sha256": "7905a393dfabbf1c1921075967f74db2aa63edff625049968b1d884d26f3631d"
+      },
+      "started_at_utc": "2026-07-25T20:02:02.475428+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 43365,
+        "filename": "degree24_b3_11111_p0307_slimgb.stdout.txt",
+        "sha256": "d0aa3c43512f2d8c21b20e477e70870a8229aeb6438b8af2e93ca25909e86e8c"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 24
+    },
+    {
+      "backend_reported_quotient_dimension": 24,
+      "characteristic": 311,
+      "chart_key": "degree24_b3_11111",
+      "coefficient_audit": {
+        "coefficient_count": 90,
+        "coefficient_injective": true,
+        "distinct_residue_count": 90,
+        "integer_vector_sha256": "2a50393225b887d18b7bbb58f7c75c0fd85dade6a753d8f78917fbe3e623373e",
+        "residue_vector_sha256": "389b2d432e7d6098e103707fd225e40e6d26e5643b21cf6ed39f11f2dde65a95",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.302059,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 24,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "groebner_basis_size": 58,
+      "input": {
+        "bytes": 2085,
+        "filename": "degree24_b3_11111_p0311_slimgb.sing",
+        "sha256": "711101879d0ef0f7e60513ec2f1f31db71c9889b4fe5c828730323a83d4440e9"
+      },
+      "key": "degree24_b3_11111_p0311_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 78031,
+        "filename": "degree24_b3_11111_p0311_slimgb.representation.json",
+        "sha256": "101bdc2033bbff5d1daa90aba6902a262e96a0ba0c4aeb9d4cb64fc86113c9e1"
+      },
+      "scratch_receipt": {
+        "bytes": 5775,
+        "filename": "degree24_b3_11111_p0311_slimgb.receipt.json",
+        "sha256": "da28fe06d7233dad08a8da43ab012f67858c74ebeecc2c1163f7ec2b218c6d05"
+      },
+      "started_at_utc": "2026-07-25T20:02:04.020160+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 43334,
+        "filename": "degree24_b3_11111_p0311_slimgb.stdout.txt",
+        "sha256": "e8a46c15d1f384d5844541c3a7628abb554d67d151adcf98f2a8f7de063acc30"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 24
+    },
+    {
+      "backend_reported_quotient_dimension": 24,
+      "characteristic": 313,
+      "chart_key": "degree24_b3_11111",
+      "coefficient_audit": {
+        "coefficient_count": 90,
+        "coefficient_injective": true,
+        "distinct_residue_count": 90,
+        "integer_vector_sha256": "2a50393225b887d18b7bbb58f7c75c0fd85dade6a753d8f78917fbe3e623373e",
+        "residue_vector_sha256": "cd5be55e26b7632075514ebc1ab85b1e0c56ab465e2894ccc9c737cf3956da28",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.322718,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 24,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "groebner_basis_size": 58,
+      "input": {
+        "bytes": 2085,
+        "filename": "degree24_b3_11111_p0313_slimgb.sing",
+        "sha256": "db6f79d4c82da87e3f78b783708db2bb5f334bf1abd090f86a3f32ac7a08b252"
+      },
+      "key": "degree24_b3_11111_p0313_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 78043,
+        "filename": "degree24_b3_11111_p0313_slimgb.representation.json",
+        "sha256": "ccf1a478d431c4c95bec0741e7ba473da184f988fbc00cb5ab48ee4624f0f842"
+      },
+      "scratch_receipt": {
+        "bytes": 5775,
+        "filename": "degree24_b3_11111_p0313_slimgb.receipt.json",
+        "sha256": "4dc8dac28032b126e6f2ee49272db8530c2ea8b78e1bbd5dba669c39a337e075"
+      },
+      "started_at_utc": "2026-07-25T20:02:05.738239+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 43301,
+        "filename": "degree24_b3_11111_p0313_slimgb.stdout.txt",
+        "sha256": "d8e3d8c7f5832fb9d134387e0f0465f2acc423f55c2e4d4ea016cdfea4903f2a"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 24
+    },
+    {
+      "backend_reported_quotient_dimension": 24,
+      "characteristic": 317,
+      "chart_key": "degree24_b3_11111",
+      "coefficient_audit": {
+        "coefficient_count": 90,
+        "coefficient_injective": true,
+        "distinct_residue_count": 90,
+        "integer_vector_sha256": "2a50393225b887d18b7bbb58f7c75c0fd85dade6a753d8f78917fbe3e623373e",
+        "residue_vector_sha256": "e1dbf52900bb501eacb98b41113b9702e9e63412e240a20cce09d43c76f4fdbc",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.296791,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 24,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "groebner_basis_size": 58,
+      "input": {
+        "bytes": 2085,
+        "filename": "degree24_b3_11111_p0317_slimgb.sing",
+        "sha256": "cab1e13790864bebe95a9bde58434e7ed45d4c543be53bd856577fd23d847d7a"
+      },
+      "key": "degree24_b3_11111_p0317_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 78032,
+        "filename": "degree24_b3_11111_p0317_slimgb.representation.json",
+        "sha256": "9062395cb1105c10f908c6ea294d69baf28a842a06d39d4bed29b56fafd5883a"
+      },
+      "scratch_receipt": {
+        "bytes": 5775,
+        "filename": "degree24_b3_11111_p0317_slimgb.receipt.json",
+        "sha256": "55f31c85064fdba3bc1c42bd6675f5cbd428bb1018277a49db88cf3307f36862"
+      },
+      "started_at_utc": "2026-07-25T20:02:07.418614+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 43347,
+        "filename": "degree24_b3_11111_p0317_slimgb.stdout.txt",
+        "sha256": "29c3784873e4bca07ad90474d99208346b6ba42a1085482d6b3ab80fefa6f1db"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 24
+    },
+    {
+      "backend_reported_quotient_dimension": 24,
+      "characteristic": 331,
+      "chart_key": "degree24_b3_11111",
+      "coefficient_audit": {
+        "coefficient_count": 90,
+        "coefficient_injective": true,
+        "distinct_residue_count": 90,
+        "integer_vector_sha256": "2a50393225b887d18b7bbb58f7c75c0fd85dade6a753d8f78917fbe3e623373e",
+        "residue_vector_sha256": "709f12961a920ba763c9178648210d2f42593055c53e00e1ced97ca84a9ffb25",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.312636,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 24,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "groebner_basis_size": 58,
+      "input": {
+        "bytes": 2085,
+        "filename": "degree24_b3_11111_p0331_slimgb.sing",
+        "sha256": "2ddd2f73ddc50fbf68271a0f7baf0be3457deda1cfc968bbda2f911896b12b69"
+      },
+      "key": "degree24_b3_11111_p0331_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 78142,
+        "filename": "degree24_b3_11111_p0331_slimgb.representation.json",
+        "sha256": "2379f8018db8e7be820c53658a4c906ef77fd41ffcd89c02df5e1fcd364a6a75"
+      },
+      "scratch_receipt": {
+        "bytes": 5775,
+        "filename": "degree24_b3_11111_p0331_slimgb.receipt.json",
+        "sha256": "eeaf6f225c54f258812c2756a594553b68a4ff8ee5e2b93eeb79c9c34a9cad48"
+      },
+      "started_at_utc": "2026-07-25T20:02:08.996985+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 43463,
+        "filename": "degree24_b3_11111_p0331_slimgb.stdout.txt",
+        "sha256": "053d2c38c45bcaedd1a1b3e5afd61b1adc9d6752b62f48025d210234d1ebdc0b"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 24
+    },
+    {
+      "backend_reported_quotient_dimension": 24,
+      "characteristic": 337,
+      "chart_key": "degree24_b3_11111",
+      "coefficient_audit": {
+        "coefficient_count": 90,
+        "coefficient_injective": true,
+        "distinct_residue_count": 90,
+        "integer_vector_sha256": "2a50393225b887d18b7bbb58f7c75c0fd85dade6a753d8f78917fbe3e623373e",
+        "residue_vector_sha256": "856ec9c1cc9093bccb4ba34815bf159d0e880aff5b802dba4c3eaa09385bf719",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.295421,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 24,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "groebner_basis_size": 58,
+      "input": {
+        "bytes": 2085,
+        "filename": "degree24_b3_11111_p0337_slimgb.sing",
+        "sha256": "48183e9bfb619bd715d0c21552d7270d6574755db0287dc99d57d6e65a7cf879"
+      },
+      "key": "degree24_b3_11111_p0337_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 78203,
+        "filename": "degree24_b3_11111_p0337_slimgb.representation.json",
+        "sha256": "db41b32f188d4c68083cfd9cc9407302b6aff36fcade6cf02b0b1cefae8de4b1"
+      },
+      "scratch_receipt": {
+        "bytes": 5775,
+        "filename": "degree24_b3_11111_p0337_slimgb.receipt.json",
+        "sha256": "1935de38b24a7efddf4a42d1c949c251c933f92ea21be8aab86b604985b11eaa"
+      },
+      "started_at_utc": "2026-07-25T20:02:10.645774+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 43531,
+        "filename": "degree24_b3_11111_p0337_slimgb.stdout.txt",
+        "sha256": "387304db90210ba8d7ab9dd9e8b6aa0e8f7f72b3d34231bbf7773b324a000121"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 24
+    },
+    {
+      "backend_reported_quotient_dimension": 24,
+      "characteristic": 347,
+      "chart_key": "degree24_b3_11111",
+      "coefficient_audit": {
+        "coefficient_count": 90,
+        "coefficient_injective": true,
+        "distinct_residue_count": 90,
+        "integer_vector_sha256": "2a50393225b887d18b7bbb58f7c75c0fd85dade6a753d8f78917fbe3e623373e",
+        "residue_vector_sha256": "3f4359a4e9c3c112659231bc3500ee1534f3cec24ae99c697931ed628e108591",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.292792,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 24,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "groebner_basis_size": 58,
+      "input": {
+        "bytes": 2085,
+        "filename": "degree24_b3_11111_p0347_slimgb.sing",
+        "sha256": "479d3d8261efd15c96eef7f3d57fce2507cc8a327f85fae6891f46941c974bee"
+      },
+      "key": "degree24_b3_11111_p0347_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 78287,
+        "filename": "degree24_b3_11111_p0347_slimgb.representation.json",
+        "sha256": "73849fd14ce05711dcab4911d37e274aecf7d112eaafdc528aab5e275fe1a850"
+      },
+      "scratch_receipt": {
+        "bytes": 5775,
+        "filename": "degree24_b3_11111_p0347_slimgb.receipt.json",
+        "sha256": "540bf43fcd2a6c68b76bf6274c45c10aeafc2873ffb0fadef96535784d454eb1"
+      },
+      "started_at_utc": "2026-07-25T20:02:12.242134+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 43707,
+        "filename": "degree24_b3_11111_p0347_slimgb.stdout.txt",
+        "sha256": "ee9646425cb2cdb389d1c6dc68537b4d4d909f7ebd94db5ebf135e71e286fc9e"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 24
+    },
+    {
+      "backend_reported_quotient_dimension": 24,
+      "characteristic": 349,
+      "chart_key": "degree24_b3_11111",
+      "coefficient_audit": {
+        "coefficient_count": 90,
+        "coefficient_injective": true,
+        "distinct_residue_count": 90,
+        "integer_vector_sha256": "2a50393225b887d18b7bbb58f7c75c0fd85dade6a753d8f78917fbe3e623373e",
+        "residue_vector_sha256": "d74eb9d0be9c91e3ab8a04a1ceadce805b2f0d71e75b5c94fb7c89c6e331b09f",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.348093,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 24,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "groebner_basis_size": 58,
+      "input": {
+        "bytes": 2085,
+        "filename": "degree24_b3_11111_p0349_slimgb.sing",
+        "sha256": "38299accba2057caee9649be5867fb39276dfa35a3a2d50c0b92ca21b515b500"
+      },
+      "key": "degree24_b3_11111_p0349_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 78231,
+        "filename": "degree24_b3_11111_p0349_slimgb.representation.json",
+        "sha256": "21534eea73f56c31c61c272afd81d63cb943efc74e25ca63aa246f7b64670a27"
+      },
+      "scratch_receipt": {
+        "bytes": 5775,
+        "filename": "degree24_b3_11111_p0349_slimgb.receipt.json",
+        "sha256": "0d8ee888e41833b25593ad07347acd0fc4c69087ce331dd2b42f6f0e0b5b2520"
+      },
+      "started_at_utc": "2026-07-25T20:02:13.848239+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 43710,
+        "filename": "degree24_b3_11111_p0349_slimgb.stdout.txt",
+        "sha256": "65a820092a7a63e0f1b4cc26f2dd341ff55cff6c7b1b7fc385627fe113530645"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 24
+    },
+    {
+      "backend_reported_quotient_dimension": 24,
+      "characteristic": 353,
+      "chart_key": "degree24_b3_11111",
+      "coefficient_audit": {
+        "coefficient_count": 90,
+        "coefficient_injective": true,
+        "distinct_residue_count": 90,
+        "integer_vector_sha256": "2a50393225b887d18b7bbb58f7c75c0fd85dade6a753d8f78917fbe3e623373e",
+        "residue_vector_sha256": "c1ad5af15306e30edd8974f724f0ae96906bf46bd0809adba219b0c37f2ec8e7",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.318122,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 24,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "groebner_basis_size": 58,
+      "input": {
+        "bytes": 2085,
+        "filename": "degree24_b3_11111_p0353_slimgb.sing",
+        "sha256": "105bde5ea8ee45a5b38c5a1927d74ace8174f476e8969518514dc25e055f32fb"
+      },
+      "key": "degree24_b3_11111_p0353_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 78211,
+        "filename": "degree24_b3_11111_p0353_slimgb.representation.json",
+        "sha256": "81aff93b0b63d86a56835326381d6df64a963aa3ae7a6db603197185d2bd6ba1"
+      },
+      "scratch_receipt": {
+        "bytes": 5775,
+        "filename": "degree24_b3_11111_p0353_slimgb.receipt.json",
+        "sha256": "1ad065892b3bfe36756c897e078029a8c1f0c5aa01016a6cfb46137f56a00c17"
+      },
+      "started_at_utc": "2026-07-25T20:02:15.561338+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 43615,
+        "filename": "degree24_b3_11111_p0353_slimgb.stdout.txt",
+        "sha256": "5a86f4f07f7bb43a50730c1f2678b096361682374eb0bceff3d4201502e8dfa3"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 24
+    },
+    {
+      "backend_reported_quotient_dimension": 24,
+      "characteristic": 359,
+      "chart_key": "degree24_b3_11111",
+      "coefficient_audit": {
+        "coefficient_count": 90,
+        "coefficient_injective": true,
+        "distinct_residue_count": 90,
+        "integer_vector_sha256": "2a50393225b887d18b7bbb58f7c75c0fd85dade6a753d8f78917fbe3e623373e",
+        "residue_vector_sha256": "e70a38502688a73edcec79135b17814610749f4eb829847243bf544c7d4d43df",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.298122,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 24,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "groebner_basis_size": 58,
+      "input": {
+        "bytes": 2085,
+        "filename": "degree24_b3_11111_p0359_slimgb.sing",
+        "sha256": "b91119ab6e6ff694d928e3b3b96aa49032fc6913140349fdd740f477207db6f0"
+      },
+      "key": "degree24_b3_11111_p0359_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 78312,
+        "filename": "degree24_b3_11111_p0359_slimgb.representation.json",
+        "sha256": "8719fc3378f110103366e7a290ca7cf65cff01187d550d3c54e29ccebea335b6"
+      },
+      "scratch_receipt": {
+        "bytes": 5775,
+        "filename": "degree24_b3_11111_p0359_slimgb.receipt.json",
+        "sha256": "3ca583c4ed6c22ed506e415eead63df2653c22f65998175202c7d3b205e8e902"
+      },
+      "started_at_utc": "2026-07-25T20:02:17.204427+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 43783,
+        "filename": "degree24_b3_11111_p0359_slimgb.stdout.txt",
+        "sha256": "23e9b8e3fac9e0040bad12c1a9e3e49ebfbeef4be07a25485bb1b5e5bfb553af"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 24
+    },
+    {
+      "backend_reported_quotient_dimension": 24,
+      "characteristic": 367,
+      "chart_key": "degree24_b3_11111",
+      "coefficient_audit": {
+        "coefficient_count": 90,
+        "coefficient_injective": true,
+        "distinct_residue_count": 90,
+        "integer_vector_sha256": "2a50393225b887d18b7bbb58f7c75c0fd85dade6a753d8f78917fbe3e623373e",
+        "residue_vector_sha256": "56c6782e11013872e8b6d61107317ad07f8e2bb9390561a8d3c27103b0f00b74",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.30231,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 24,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "groebner_basis_size": 58,
+      "input": {
+        "bytes": 2085,
+        "filename": "degree24_b3_11111_p0367_slimgb.sing",
+        "sha256": "12855f3152e203f1382d380fc88171b51d2009d72d3f80be1b9ff175229d2b4d"
+      },
+      "key": "degree24_b3_11111_p0367_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 78271,
+        "filename": "degree24_b3_11111_p0367_slimgb.representation.json",
+        "sha256": "36d2ed953e7abba9d435772a3f31341faa3ddb91a6fa79ed4f777e609f5a856c"
+      },
+      "scratch_receipt": {
+        "bytes": 5774,
+        "filename": "degree24_b3_11111_p0367_slimgb.receipt.json",
+        "sha256": "8586b4a3db9e94eed78b0d4d49dda0d6eabe49421ebe25fcb6e6769612553690"
+      },
+      "started_at_utc": "2026-07-25T20:02:18.866040+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 43910,
+        "filename": "degree24_b3_11111_p0367_slimgb.stdout.txt",
+        "sha256": "9f6d026a8253f101bde06fa80374a12389343f7c9f537380deb7bcac06632bc0"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 24
+    },
+    {
+      "backend_reported_quotient_dimension": 24,
+      "characteristic": 373,
+      "chart_key": "degree24_b3_11111",
+      "coefficient_audit": {
+        "coefficient_count": 90,
+        "coefficient_injective": true,
+        "distinct_residue_count": 90,
+        "integer_vector_sha256": "2a50393225b887d18b7bbb58f7c75c0fd85dade6a753d8f78917fbe3e623373e",
+        "residue_vector_sha256": "38c84d1367dd41145cc4f8e92e5dd6f45d1caccb9ae9168495cc815e3d6ae373",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.314537,
+      "exact_matrix_replay": {
+        "commutator_checks": 45,
+        "cyclic_basis_checks": 24,
+        "equation_matrix_checks": 10,
+        "passed": true
+      },
+      "groebner_basis_size": 58,
+      "input": {
+        "bytes": 2085,
+        "filename": "degree24_b3_11111_p0373_slimgb.sing",
+        "sha256": "022a1aa2473427e4f21dd44a4af5684c7c94ebb572c7fa100d70fadc3109eaf8"
+      },
+      "key": "degree24_b3_11111_p0373_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 78343,
+        "filename": "degree24_b3_11111_p0373_slimgb.representation.json",
+        "sha256": "9d267a37b50ede1f8f33dcd09523bec80051ae39f27fa0d9275f9253e40df93e"
+      },
+      "scratch_receipt": {
+        "bytes": 5775,
+        "filename": "degree24_b3_11111_p0373_slimgb.receipt.json",
+        "sha256": "4e5514b7fb5b0d3dc5f84ac40499c2d9ab4c9bf20a2a5cfaf02618f6afbbcd07"
+      },
+      "started_at_utc": "2026-07-25T20:02:20.510085+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 43845,
+        "filename": "degree24_b3_11111_p0373_slimgb.stdout.txt",
+        "sha256": "c13fec8487577dc9f16c38b7417a8928375230989c26106a57735038ca8a7ec1"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 24
+    },
+    {
+      "backend_reported_quotient_dimension": 30,
+      "characteristic": 257,
+      "chart_key": "degree30_b2_3111",
+      "coefficient_audit": {
+        "coefficient_count": 108,
+        "coefficient_injective": true,
+        "distinct_residue_count": 108,
+        "integer_vector_sha256": "a3d8a3cc50ced72b7b3e1984a825dfa96a852a91909d205f99faede3f6e4c386",
+        "residue_vector_sha256": "9bcd08b1212b7fa9808e345b61d50ffb4a6ec009ed42dfe9b25bcc23c1ce1825",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.320802,
+      "exact_matrix_replay": {
+        "commutator_checks": 66,
+        "cyclic_basis_checks": 30,
+        "equation_matrix_checks": 12,
+        "passed": true
+      },
+      "groebner_basis_size": 83,
+      "input": {
+        "bytes": 2271,
+        "filename": "degree30_b2_3111_p0257_slimgb.sing",
+        "sha256": "714591e7c17181140bc616abdde7c5a045c0d4d8585aa86ce6672d239a5e6f62"
+      },
+      "key": "degree30_b2_3111_p0257_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 143260,
+        "filename": "degree30_b2_3111_p0257_slimgb.representation.json",
+        "sha256": "1c506c21a5b15d9993e8cf277ba31c43825a82ec6af895fe687c3de9e9cdd6ff"
+      },
+      "scratch_receipt": {
+        "bytes": 5748,
+        "filename": "degree30_b2_3111_p0257_slimgb.receipt.json",
+        "sha256": "f4148ade74025a51c69473bc8f649b1d08b89ff9a78172262959fc0fd8a30e36"
+      },
+      "started_at_utc": "2026-07-25T20:01:39.209147+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 85700,
+        "filename": "degree30_b2_3111_p0257_slimgb.stdout.txt",
+        "sha256": "e274c94c32a163af2ef8787deecc0108746c0064071262b4766d302bccc462fa"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 30
+    },
+    {
+      "backend_reported_quotient_dimension": 30,
+      "characteristic": 263,
+      "chart_key": "degree30_b2_3111",
+      "coefficient_audit": {
+        "coefficient_count": 108,
+        "coefficient_injective": true,
+        "distinct_residue_count": 108,
+        "integer_vector_sha256": "a3d8a3cc50ced72b7b3e1984a825dfa96a852a91909d205f99faede3f6e4c386",
+        "residue_vector_sha256": "36cfb0549a45b857242e5d919942c81a09e85c6247de8737090d7f54b012bc6f",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.326296,
+      "exact_matrix_replay": {
+        "commutator_checks": 66,
+        "cyclic_basis_checks": 30,
+        "equation_matrix_checks": 12,
+        "passed": true
+      },
+      "groebner_basis_size": 83,
+      "input": {
+        "bytes": 2271,
+        "filename": "degree30_b2_3111_p0263_slimgb.sing",
+        "sha256": "47e04e321b34f41c63d36f98235508d79e952f0c4bd99c1cb9a2e8c4ddfcd88e"
+      },
+      "key": "degree30_b2_3111_p0263_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 143282,
+        "filename": "degree30_b2_3111_p0263_slimgb.representation.json",
+        "sha256": "eef75d52fa953bf9536df6764c1898eb0b914cfd191fc0be950e74bab57afb81"
+      },
+      "scratch_receipt": {
+        "bytes": 5748,
+        "filename": "degree30_b2_3111_p0263_slimgb.receipt.json",
+        "sha256": "54b373595aafb1d03d81be28cced8dae49298383d706584102a346ddb351cb6d"
+      },
+      "started_at_utc": "2026-07-25T20:02:23.508586+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 85621,
+        "filename": "degree30_b2_3111_p0263_slimgb.stdout.txt",
+        "sha256": "f3fd343477ebaec44cdc1c12b8d58912ba6ec6f08fbd6a3457eec6cfa96cd413"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 30
+    },
+    {
+      "backend_reported_quotient_dimension": 30,
+      "characteristic": 269,
+      "chart_key": "degree30_b2_3111",
+      "coefficient_audit": {
+        "coefficient_count": 108,
+        "coefficient_injective": true,
+        "distinct_residue_count": 108,
+        "integer_vector_sha256": "a3d8a3cc50ced72b7b3e1984a825dfa96a852a91909d205f99faede3f6e4c386",
+        "residue_vector_sha256": "af631e98e8736bbfa2bfc81975a59f017c6f02a2c8699fe6a256ce2ae65c893b",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.363167,
+      "exact_matrix_replay": {
+        "commutator_checks": 66,
+        "cyclic_basis_checks": 30,
+        "equation_matrix_checks": 12,
+        "passed": true
+      },
+      "groebner_basis_size": 83,
+      "input": {
+        "bytes": 2271,
+        "filename": "degree30_b2_3111_p0269_slimgb.sing",
+        "sha256": "bdc78ec9a5cba03f93b0f6631d358ec5e1f6a292676afd728ba5355c478aefd1"
+      },
+      "key": "degree30_b2_3111_p0269_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 143401,
+        "filename": "degree30_b2_3111_p0269_slimgb.representation.json",
+        "sha256": "7f8ed1f999da6bf5d98c4b7e25b20275cd4c4ead5f5b09d3c670c5ba92547cf3"
+      },
+      "scratch_receipt": {
+        "bytes": 5748,
+        "filename": "degree30_b2_3111_p0269_slimgb.receipt.json",
+        "sha256": "c6b2ac9dc6a4aece3275acc8631de647757952b812158b3cb675b9455738910a"
+      },
+      "started_at_utc": "2026-07-25T20:02:26.653801+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 85758,
+        "filename": "degree30_b2_3111_p0269_slimgb.stdout.txt",
+        "sha256": "4ec82f92a613935b5c1f80080d0a9daa583c525154a672b88115a8a00351ba71"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 30
+    },
+    {
+      "backend_reported_quotient_dimension": 30,
+      "characteristic": 271,
+      "chart_key": "degree30_b2_3111",
+      "coefficient_audit": {
+        "coefficient_count": 108,
+        "coefficient_injective": true,
+        "distinct_residue_count": 108,
+        "integer_vector_sha256": "a3d8a3cc50ced72b7b3e1984a825dfa96a852a91909d205f99faede3f6e4c386",
+        "residue_vector_sha256": "6284e4fb14ace131e8855f77525a6866a292f148e2026d2dcfa73403da49a2f1",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.31348,
+      "exact_matrix_replay": {
+        "commutator_checks": 66,
+        "cyclic_basis_checks": 30,
+        "equation_matrix_checks": 12,
+        "passed": true
+      },
+      "groebner_basis_size": 83,
+      "input": {
+        "bytes": 2271,
+        "filename": "degree30_b2_3111_p0271_slimgb.sing",
+        "sha256": "17c9f44ed8e885b723e61663f93becbde9998ae776f4863050ddf3ea49830c66"
+      },
+      "key": "degree30_b2_3111_p0271_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 143377,
+        "filename": "degree30_b2_3111_p0271_slimgb.representation.json",
+        "sha256": "d0d7190fefdd7652d56610fe8d89b2a31b97479da27e206dc8b0e992a4bc325f"
+      },
+      "scratch_receipt": {
+        "bytes": 5747,
+        "filename": "degree30_b2_3111_p0271_slimgb.receipt.json",
+        "sha256": "846055e95208cf520305128a6eafb9486dffe4d8bfc5622bf3c236283993c47d"
+      },
+      "started_at_utc": "2026-07-25T20:02:29.893729+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 86086,
+        "filename": "degree30_b2_3111_p0271_slimgb.stdout.txt",
+        "sha256": "eaacd013bcfa8baa0991b18aaf3da782e5a62b4aea89a715e4a5858d20d75279"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 30
+    },
+    {
+      "backend_reported_quotient_dimension": 30,
+      "characteristic": 277,
+      "chart_key": "degree30_b2_3111",
+      "coefficient_audit": {
+        "coefficient_count": 108,
+        "coefficient_injective": true,
+        "distinct_residue_count": 108,
+        "integer_vector_sha256": "a3d8a3cc50ced72b7b3e1984a825dfa96a852a91909d205f99faede3f6e4c386",
+        "residue_vector_sha256": "76df04a4852c28954dc7633638134e3d627b8ef89695782ba80bf8bb1c7a09a2",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.338804,
+      "exact_matrix_replay": {
+        "commutator_checks": 66,
+        "cyclic_basis_checks": 30,
+        "equation_matrix_checks": 12,
+        "passed": true
+      },
+      "groebner_basis_size": 83,
+      "input": {
+        "bytes": 2271,
+        "filename": "degree30_b2_3111_p0277_slimgb.sing",
+        "sha256": "e7609c56eafba0ae4ca1c23e6e8ee8e5ed2705c2a29a096032c87a88fdbd4010"
+      },
+      "key": "degree30_b2_3111_p0277_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 143527,
+        "filename": "degree30_b2_3111_p0277_slimgb.representation.json",
+        "sha256": "69d2a788dd505246a7b20fce722788baa850ce80101b2d42f95f2daa602dd0c4"
+      },
+      "scratch_receipt": {
+        "bytes": 5748,
+        "filename": "degree30_b2_3111_p0277_slimgb.receipt.json",
+        "sha256": "74de876208efb07e94db6323dd594ad4ef56ac1b1870395963680f28d5643558"
+      },
+      "started_at_utc": "2026-07-25T20:02:33.107400+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 86228,
+        "filename": "degree30_b2_3111_p0277_slimgb.stdout.txt",
+        "sha256": "a2b6e845d0d05c4fa732899fc1da4bd417a4c9debdb90d1785502a54a4d9374e"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 30
+    },
+    {
+      "backend_reported_quotient_dimension": 30,
+      "characteristic": 281,
+      "chart_key": "degree30_b2_3111",
+      "coefficient_audit": {
+        "coefficient_count": 108,
+        "coefficient_injective": true,
+        "distinct_residue_count": 108,
+        "integer_vector_sha256": "a3d8a3cc50ced72b7b3e1984a825dfa96a852a91909d205f99faede3f6e4c386",
+        "residue_vector_sha256": "5ec1bda94e698fe378fe820b9ab8a81173a5ba0e829f8e2a0c167a6d1490a284",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.32149,
+      "exact_matrix_replay": {
+        "commutator_checks": 66,
+        "cyclic_basis_checks": 30,
+        "equation_matrix_checks": 12,
+        "passed": true
+      },
+      "groebner_basis_size": 83,
+      "input": {
+        "bytes": 2271,
+        "filename": "degree30_b2_3111_p0281_slimgb.sing",
+        "sha256": "c1d888058601611264a1dde6f291c59708ab4e380771d0a97aacf42c166bd32e"
+      },
+      "key": "degree30_b2_3111_p0281_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 143517,
+        "filename": "degree30_b2_3111_p0281_slimgb.representation.json",
+        "sha256": "33dd5b9612ac322c5a3e71e231b6b3f5ba07a16c4ea1c8d02ae7a60cfee10330"
+      },
+      "scratch_receipt": {
+        "bytes": 5747,
+        "filename": "degree30_b2_3111_p0281_slimgb.receipt.json",
+        "sha256": "3316cf3df709864d3865328905d3047d4ac32add524947c1e26433d7e83967a4"
+      },
+      "started_at_utc": "2026-07-25T20:02:36.441695+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 86223,
+        "filename": "degree30_b2_3111_p0281_slimgb.stdout.txt",
+        "sha256": "71e11ef6f08c9ef7e3257d43a2d83e6c5825fd29c01894e21c93c0d42a9dbb62"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 30
+    },
+    {
+      "backend_reported_quotient_dimension": 30,
+      "characteristic": 283,
+      "chart_key": "degree30_b2_3111",
+      "coefficient_audit": {
+        "coefficient_count": 108,
+        "coefficient_injective": true,
+        "distinct_residue_count": 108,
+        "integer_vector_sha256": "a3d8a3cc50ced72b7b3e1984a825dfa96a852a91909d205f99faede3f6e4c386",
+        "residue_vector_sha256": "c4bff494007ee854b8fa8c2f3d27c4e716a464105f988d5e5c4288e92a2eb7c0",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.3389,
+      "exact_matrix_replay": {
+        "commutator_checks": 66,
+        "cyclic_basis_checks": 30,
+        "equation_matrix_checks": 12,
+        "passed": true
+      },
+      "groebner_basis_size": 83,
+      "input": {
+        "bytes": 2271,
+        "filename": "degree30_b2_3111_p0283_slimgb.sing",
+        "sha256": "47d9a5462190567aeb809f7ac4f940fbb5f56a2ab7a76da747f5245fd43dc37b"
+      },
+      "key": "degree30_b2_3111_p0283_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 143593,
+        "filename": "degree30_b2_3111_p0283_slimgb.representation.json",
+        "sha256": "b82d6e4c0dfa4711cc860300142508c1d646b19ce1a8a5bc5ed9310980df78d4"
+      },
+      "scratch_receipt": {
+        "bytes": 5746,
+        "filename": "degree30_b2_3111_p0283_slimgb.receipt.json",
+        "sha256": "fdb8d13a2864280db1d7fcdcf43f75b21feb05b3a7467d93fc927b9829ab669d"
+      },
+      "started_at_utc": "2026-07-25T20:02:39.668047+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 86485,
+        "filename": "degree30_b2_3111_p0283_slimgb.stdout.txt",
+        "sha256": "89be706175a5200ae5dd549cfe587caaac03f9e4ac9efd093ff6fdb74898dfdd"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 30
+    },
+    {
+      "backend_reported_quotient_dimension": 30,
+      "characteristic": 293,
+      "chart_key": "degree30_b2_3111",
+      "coefficient_audit": {
+        "coefficient_count": 108,
+        "coefficient_injective": true,
+        "distinct_residue_count": 108,
+        "integer_vector_sha256": "a3d8a3cc50ced72b7b3e1984a825dfa96a852a91909d205f99faede3f6e4c386",
+        "residue_vector_sha256": "383aec0fd20e89129b416540573a66b3f5605974005e432a95ef5d5cbbac49d3",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.32597,
+      "exact_matrix_replay": {
+        "commutator_checks": 66,
+        "cyclic_basis_checks": 30,
+        "equation_matrix_checks": 12,
+        "passed": true
+      },
+      "groebner_basis_size": 83,
+      "input": {
+        "bytes": 2271,
+        "filename": "degree30_b2_3111_p0293_slimgb.sing",
+        "sha256": "3928b81dc5bfef7c761d33db9e47c1935fd408f0c6d328ecc5126cfaa5ef861b"
+      },
+      "key": "degree30_b2_3111_p0293_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 143681,
+        "filename": "degree30_b2_3111_p0293_slimgb.representation.json",
+        "sha256": "995e37e3b8801063b275190943b32b7132efd0520dfcd7c062260a0ffac87d2f"
+      },
+      "scratch_receipt": {
+        "bytes": 5747,
+        "filename": "degree30_b2_3111_p0293_slimgb.receipt.json",
+        "sha256": "b73f07076cc5d8edfd021574de1d77212a664b8f72d0a4b7b2413153ce12a46a"
+      },
+      "started_at_utc": "2026-07-25T20:02:42.869411+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 86730,
+        "filename": "degree30_b2_3111_p0293_slimgb.stdout.txt",
+        "sha256": "904bf87b244c76bf10fe961adc78af6bfc49161c8ea9378587a8d525ebad221d"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 30
+    },
+    {
+      "backend_reported_quotient_dimension": 30,
+      "characteristic": 307,
+      "chart_key": "degree30_b2_3111",
+      "coefficient_audit": {
+        "coefficient_count": 108,
+        "coefficient_injective": true,
+        "distinct_residue_count": 108,
+        "integer_vector_sha256": "a3d8a3cc50ced72b7b3e1984a825dfa96a852a91909d205f99faede3f6e4c386",
+        "residue_vector_sha256": "1709ce04b442c9aa32892394a5bb45af962dd182e8d022913598d420329cf1db",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.347458,
+      "exact_matrix_replay": {
+        "commutator_checks": 66,
+        "cyclic_basis_checks": 30,
+        "equation_matrix_checks": 12,
+        "passed": true
+      },
+      "groebner_basis_size": 83,
+      "input": {
+        "bytes": 2271,
+        "filename": "degree30_b2_3111_p0307_slimgb.sing",
+        "sha256": "3b7e188b1fe19b35db30c1514161a61b35a4a719cf84e191e67a472b6894e553"
+      },
+      "key": "degree30_b2_3111_p0307_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 143851,
+        "filename": "degree30_b2_3111_p0307_slimgb.representation.json",
+        "sha256": "58409e9c425a6127caa044e5262e50ca1a110750b1e5cdeb879e71f25a24f34c"
+      },
+      "scratch_receipt": {
+        "bytes": 5748,
+        "filename": "degree30_b2_3111_p0307_slimgb.receipt.json",
+        "sha256": "a792dd58927fa0b09c6419c7df5ee44d8ad01095288bf354bd5ab30817ec0014"
+      },
+      "started_at_utc": "2026-07-25T20:02:46.083360+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 86832,
+        "filename": "degree30_b2_3111_p0307_slimgb.stdout.txt",
+        "sha256": "7b80bc536e5b290c4e9fcbaa1a4ddfce18fd1d8f4fc0b420dabfe7f0b554ad20"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 30
+    },
+    {
+      "backend_reported_quotient_dimension": 30,
+      "characteristic": 311,
+      "chart_key": "degree30_b2_3111",
+      "coefficient_audit": {
+        "coefficient_count": 108,
+        "coefficient_injective": true,
+        "distinct_residue_count": 108,
+        "integer_vector_sha256": "a3d8a3cc50ced72b7b3e1984a825dfa96a852a91909d205f99faede3f6e4c386",
+        "residue_vector_sha256": "b155a261c1c878b3a72344c03300b156745ad6d9e306188c71f5844c01436c2b",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.329134,
+      "exact_matrix_replay": {
+        "commutator_checks": 66,
+        "cyclic_basis_checks": 30,
+        "equation_matrix_checks": 12,
+        "passed": true
+      },
+      "groebner_basis_size": 83,
+      "input": {
+        "bytes": 2271,
+        "filename": "degree30_b2_3111_p0311_slimgb.sing",
+        "sha256": "04593996bf9abfa1856991128031a8a81741d78427c8b9da54b027c9ddeeab0b"
+      },
+      "key": "degree30_b2_3111_p0311_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 143834,
+        "filename": "degree30_b2_3111_p0311_slimgb.representation.json",
+        "sha256": "66cb0ee9db2f4831a7eb00a7f9493308a9e8df68390a7540de9a7a71dbe2e97b"
+      },
+      "scratch_receipt": {
+        "bytes": 5748,
+        "filename": "degree30_b2_3111_p0311_slimgb.receipt.json",
+        "sha256": "152e4d7d8bafd0f1164e72760e409916781db2d3a1e14ce5a2d46562082f8b60"
+      },
+      "started_at_utc": "2026-07-25T20:02:49.438011+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 86969,
+        "filename": "degree30_b2_3111_p0311_slimgb.stdout.txt",
+        "sha256": "25935771c5108de68bffc76d673ae67a33e203805fcee9bd78ff22ee59f4a072"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 30
+    },
+    {
+      "backend_reported_quotient_dimension": 30,
+      "characteristic": 313,
+      "chart_key": "degree30_b2_3111",
+      "coefficient_audit": {
+        "coefficient_count": 108,
+        "coefficient_injective": true,
+        "distinct_residue_count": 108,
+        "integer_vector_sha256": "a3d8a3cc50ced72b7b3e1984a825dfa96a852a91909d205f99faede3f6e4c386",
+        "residue_vector_sha256": "4d4bee5f5f6e96bb5005dc66b2bd93efc0993ef3fd09ed6bc041d834658f88d8",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.337434,
+      "exact_matrix_replay": {
+        "commutator_checks": 66,
+        "cyclic_basis_checks": 30,
+        "equation_matrix_checks": 12,
+        "passed": true
+      },
+      "groebner_basis_size": 83,
+      "input": {
+        "bytes": 2271,
+        "filename": "degree30_b2_3111_p0313_slimgb.sing",
+        "sha256": "a440bd11beee5675c94af71aef17353c9e021bc298a6665e07b9cd6e0ae616cb"
+      },
+      "key": "degree30_b2_3111_p0313_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 143856,
+        "filename": "degree30_b2_3111_p0313_slimgb.representation.json",
+        "sha256": "6f06d0ad19bb72548003c010c8f68474a3afa878643482a8b85585c71dd8c69f"
+      },
+      "scratch_receipt": {
+        "bytes": 5748,
+        "filename": "degree30_b2_3111_p0313_slimgb.receipt.json",
+        "sha256": "8256aa80023f719b4c0400ad502cbd8e6a821113b2e33db6d43fc8237d629cd5"
+      },
+      "started_at_utc": "2026-07-25T20:02:52.937658+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 86965,
+        "filename": "degree30_b2_3111_p0313_slimgb.stdout.txt",
+        "sha256": "3881b1a33ca1fafebccf8e6682820507e2c968455e7ad4cc84460305183a1117"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 30
+    },
+    {
+      "backend_reported_quotient_dimension": 30,
+      "characteristic": 317,
+      "chart_key": "degree30_b2_3111",
+      "coefficient_audit": {
+        "coefficient_count": 108,
+        "coefficient_injective": true,
+        "distinct_residue_count": 108,
+        "integer_vector_sha256": "a3d8a3cc50ced72b7b3e1984a825dfa96a852a91909d205f99faede3f6e4c386",
+        "residue_vector_sha256": "8ffdd7c85b58211260760e626d5ab7d0132bbafb22f0aebf06772810a9aa5221",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.351916,
+      "exact_matrix_replay": {
+        "commutator_checks": 66,
+        "cyclic_basis_checks": 30,
+        "equation_matrix_checks": 12,
+        "passed": true
+      },
+      "groebner_basis_size": 83,
+      "input": {
+        "bytes": 2271,
+        "filename": "degree30_b2_3111_p0317_slimgb.sing",
+        "sha256": "b86016d0f6591cdb7bf64fce5c35683754683e3b1e704083656905587db14308"
+      },
+      "key": "degree30_b2_3111_p0317_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 143922,
+        "filename": "degree30_b2_3111_p0317_slimgb.representation.json",
+        "sha256": "7f417143eaa4e9a41b6fa222bfdb385613fd28c4b5573cc50f199515ae9fbc13"
+      },
+      "scratch_receipt": {
+        "bytes": 5748,
+        "filename": "degree30_b2_3111_p0317_slimgb.receipt.json",
+        "sha256": "6e5e3b979807c0aa2f0dd99c49545c74ab374c0ca4131e8804de1fae36c25de1"
+      },
+      "started_at_utc": "2026-07-25T20:02:56.246751+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 87074,
+        "filename": "degree30_b2_3111_p0317_slimgb.stdout.txt",
+        "sha256": "a414b2593d000a7d86148567b97aebc68cf4af8cdf0bdf444b9a6a802973b63d"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 30
+    },
+    {
+      "backend_reported_quotient_dimension": 30,
+      "characteristic": 331,
+      "chart_key": "degree30_b2_3111",
+      "coefficient_audit": {
+        "coefficient_count": 108,
+        "coefficient_injective": true,
+        "distinct_residue_count": 108,
+        "integer_vector_sha256": "a3d8a3cc50ced72b7b3e1984a825dfa96a852a91909d205f99faede3f6e4c386",
+        "residue_vector_sha256": "daec4996c3d0d5391ec2cd6b5eb64805a102fdbaf5dbc6deb199648c54d6396b",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.330551,
+      "exact_matrix_replay": {
+        "commutator_checks": 66,
+        "cyclic_basis_checks": 30,
+        "equation_matrix_checks": 12,
+        "passed": true
+      },
+      "groebner_basis_size": 83,
+      "input": {
+        "bytes": 2271,
+        "filename": "degree30_b2_3111_p0331_slimgb.sing",
+        "sha256": "580ffcb9f5529054919deaa2e555150a45bedff73d1a1e0dedb05ae719376a92"
+      },
+      "key": "degree30_b2_3111_p0331_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 143952,
+        "filename": "degree30_b2_3111_p0331_slimgb.representation.json",
+        "sha256": "856c3fe2ccb70c16c968ef3168d810b77bca4c0ddd03da1029eaef7fce058f1b"
+      },
+      "scratch_receipt": {
+        "bytes": 5748,
+        "filename": "degree30_b2_3111_p0331_slimgb.receipt.json",
+        "sha256": "8ed80846e234d438426b4acf3d6f52ba8b5fbdbb53155ffa871c5a0763908859"
+      },
+      "started_at_utc": "2026-07-25T20:02:59.653274+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 87421,
+        "filename": "degree30_b2_3111_p0331_slimgb.stdout.txt",
+        "sha256": "e53edab9b3bc26df52ff84bc074a768fcf81fd6b4aef49be3f24f10f172b6ab6"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 30
+    },
+    {
+      "backend_reported_quotient_dimension": 30,
+      "characteristic": 337,
+      "chart_key": "degree30_b2_3111",
+      "coefficient_audit": {
+        "coefficient_count": 108,
+        "coefficient_injective": true,
+        "distinct_residue_count": 108,
+        "integer_vector_sha256": "a3d8a3cc50ced72b7b3e1984a825dfa96a852a91909d205f99faede3f6e4c386",
+        "residue_vector_sha256": "8eb884016577b809f17cfc7f789ba05ec0d95fffc9d19854403b657f54e17bbb",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.321597,
+      "exact_matrix_replay": {
+        "commutator_checks": 66,
+        "cyclic_basis_checks": 30,
+        "equation_matrix_checks": 12,
+        "passed": true
+      },
+      "groebner_basis_size": 83,
+      "input": {
+        "bytes": 2271,
+        "filename": "degree30_b2_3111_p0337_slimgb.sing",
+        "sha256": "9508384a2e0ae99dcc887a5c0ee07e2e84ae0bb8bad1e1ca97ad1587c521f40e"
+      },
+      "key": "degree30_b2_3111_p0337_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 144092,
+        "filename": "degree30_b2_3111_p0337_slimgb.representation.json",
+        "sha256": "969fa1676f9d880f6d22282cbf906121b393a1fbd58a08e7c116fefe676ddfb3"
+      },
+      "scratch_receipt": {
+        "bytes": 5748,
+        "filename": "degree30_b2_3111_p0337_slimgb.receipt.json",
+        "sha256": "13072282ce08a5dd1f39c5e660d6753fa41e1ce09a4d0416556437d2cc1837f0"
+      },
+      "started_at_utc": "2026-07-25T20:03:02.854912+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 87418,
+        "filename": "degree30_b2_3111_p0337_slimgb.stdout.txt",
+        "sha256": "5724d4523c033c4284430b8d8a8c63430d4891767da464186c6180973e058812"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 30
+    },
+    {
+      "backend_reported_quotient_dimension": 30,
+      "characteristic": 347,
+      "chart_key": "degree30_b2_3111",
+      "coefficient_audit": {
+        "coefficient_count": 108,
+        "coefficient_injective": true,
+        "distinct_residue_count": 108,
+        "integer_vector_sha256": "a3d8a3cc50ced72b7b3e1984a825dfa96a852a91909d205f99faede3f6e4c386",
+        "residue_vector_sha256": "358b579378858ddbc942a6fa5e52519b3f1101d28fcd5d16ff769ca2c92a865e",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.336742,
+      "exact_matrix_replay": {
+        "commutator_checks": 66,
+        "cyclic_basis_checks": 30,
+        "equation_matrix_checks": 12,
+        "passed": true
+      },
+      "groebner_basis_size": 83,
+      "input": {
+        "bytes": 2271,
+        "filename": "degree30_b2_3111_p0347_slimgb.sing",
+        "sha256": "9056b1256131cf80f784de1a8716cf66ab99512c9a1bfa44e7703ce3b77404f7"
+      },
+      "key": "degree30_b2_3111_p0347_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 144158,
+        "filename": "degree30_b2_3111_p0347_slimgb.representation.json",
+        "sha256": "bcff360ef14196d6b7f1def351217df30c1019bfcdfa1800758697e6cfb85913"
+      },
+      "scratch_receipt": {
+        "bytes": 5748,
+        "filename": "degree30_b2_3111_p0347_slimgb.receipt.json",
+        "sha256": "76420744c27107fae5aa26a7046b0d3cab75970623e5cca55d3630848d1af910"
+      },
+      "started_at_utc": "2026-07-25T20:03:06.107066+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 87606,
+        "filename": "degree30_b2_3111_p0347_slimgb.stdout.txt",
+        "sha256": "3389d61243009c7594549331e164bb393977d1209249a2d9e3e0ab182fdf7205"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 30
+    },
+    {
+      "backend_reported_quotient_dimension": 30,
+      "characteristic": 349,
+      "chart_key": "degree30_b2_3111",
+      "coefficient_audit": {
+        "coefficient_count": 108,
+        "coefficient_injective": true,
+        "distinct_residue_count": 108,
+        "integer_vector_sha256": "a3d8a3cc50ced72b7b3e1984a825dfa96a852a91909d205f99faede3f6e4c386",
+        "residue_vector_sha256": "e87fbf90695c3622a896fb2e619d0074e700fbcfa1c31dc6cc386a0c27f96468",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.326587,
+      "exact_matrix_replay": {
+        "commutator_checks": 66,
+        "cyclic_basis_checks": 30,
+        "equation_matrix_checks": 12,
+        "passed": true
+      },
+      "groebner_basis_size": 83,
+      "input": {
+        "bytes": 2271,
+        "filename": "degree30_b2_3111_p0349_slimgb.sing",
+        "sha256": "06abdaaaea8d6c6cc49cd6cb49080812faeb98186193b03784364641c7b04daa"
+      },
+      "key": "degree30_b2_3111_p0349_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 144290,
+        "filename": "degree30_b2_3111_p0349_slimgb.representation.json",
+        "sha256": "d6bff46178790ae13e72227bedeb8b4874ec4638e0802c14c93ed66c25ea70bb"
+      },
+      "scratch_receipt": {
+        "bytes": 5748,
+        "filename": "degree30_b2_3111_p0349_slimgb.receipt.json",
+        "sha256": "5098d53203db667d529807aafb17bd33f1b83e24bd515fa59466dedfd874e5f0"
+      },
+      "started_at_utc": "2026-07-25T20:03:09.498767+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 87705,
+        "filename": "degree30_b2_3111_p0349_slimgb.stdout.txt",
+        "sha256": "33832aadbc4a288b8b35bd70885b2d940adf6fadc605930922f2816f040b00f9"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 30
+    },
+    {
+      "backend_reported_quotient_dimension": 30,
+      "characteristic": 353,
+      "chart_key": "degree30_b2_3111",
+      "coefficient_audit": {
+        "coefficient_count": 108,
+        "coefficient_injective": true,
+        "distinct_residue_count": 108,
+        "integer_vector_sha256": "a3d8a3cc50ced72b7b3e1984a825dfa96a852a91909d205f99faede3f6e4c386",
+        "residue_vector_sha256": "78df3b9a768bbd6ccdf63fd361e7cd41d7f5e5a7b05d144e8d1f3092da05da23",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.327324,
+      "exact_matrix_replay": {
+        "commutator_checks": 66,
+        "cyclic_basis_checks": 30,
+        "equation_matrix_checks": 12,
+        "passed": true
+      },
+      "groebner_basis_size": 83,
+      "input": {
+        "bytes": 2271,
+        "filename": "degree30_b2_3111_p0353_slimgb.sing",
+        "sha256": "6ca20bf9b841ee1a7f3d257f6756fea886b235698af4a920650ac6c15182aaef"
+      },
+      "key": "degree30_b2_3111_p0353_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 144195,
+        "filename": "degree30_b2_3111_p0353_slimgb.representation.json",
+        "sha256": "32b508dd4790250aa70e5aa9146bd87f838b56cafe8074c7542a22bf766c5d96"
+      },
+      "scratch_receipt": {
+        "bytes": 5748,
+        "filename": "degree30_b2_3111_p0353_slimgb.receipt.json",
+        "sha256": "48d959a308f2dc657e2015db99b68f5ada965e2dfaf2f1f05d2b35f1f1a9a807"
+      },
+      "started_at_utc": "2026-07-25T20:03:12.753777+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 87919,
+        "filename": "degree30_b2_3111_p0353_slimgb.stdout.txt",
+        "sha256": "a41604aed30aa6763ce7a86ab21981ab24c5afb7531ddf3e77249dc34c78b7f4"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 30
+    },
+    {
+      "backend_reported_quotient_dimension": 30,
+      "characteristic": 359,
+      "chart_key": "degree30_b2_3111",
+      "coefficient_audit": {
+        "coefficient_count": 108,
+        "coefficient_injective": true,
+        "distinct_residue_count": 108,
+        "integer_vector_sha256": "a3d8a3cc50ced72b7b3e1984a825dfa96a852a91909d205f99faede3f6e4c386",
+        "residue_vector_sha256": "51febf5579aa1b5d8dedda60c17faff1d66832be549303c6df5c45ddcba69283",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.346395,
+      "exact_matrix_replay": {
+        "commutator_checks": 66,
+        "cyclic_basis_checks": 30,
+        "equation_matrix_checks": 12,
+        "passed": true
+      },
+      "groebner_basis_size": 83,
+      "input": {
+        "bytes": 2271,
+        "filename": "degree30_b2_3111_p0359_slimgb.sing",
+        "sha256": "595008174546389df41dcbb0c6bb891651d55c77c830463c9ac0ee9f833604f2"
+      },
+      "key": "degree30_b2_3111_p0359_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 144301,
+        "filename": "degree30_b2_3111_p0359_slimgb.representation.json",
+        "sha256": "253b00f147afd83b46bd35fd78f230a83c1f7844464a086da05c76e65bceebc0"
+      },
+      "scratch_receipt": {
+        "bytes": 5748,
+        "filename": "degree30_b2_3111_p0359_slimgb.receipt.json",
+        "sha256": "f8f4026291733c5be264c9953ef4d151ed5d6bb895f5bf4ffb7aeb1d4ffdabad"
+      },
+      "started_at_utc": "2026-07-25T20:03:15.969908+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 87991,
+        "filename": "degree30_b2_3111_p0359_slimgb.stdout.txt",
+        "sha256": "e687ca52f5e0e0637d9101edf1ad69e12a6f3b9b14661258d54888bf40a6afd9"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 30
+    },
+    {
+      "backend_reported_quotient_dimension": 30,
+      "characteristic": 367,
+      "chart_key": "degree30_b2_3111",
+      "coefficient_audit": {
+        "coefficient_count": 108,
+        "coefficient_injective": true,
+        "distinct_residue_count": 108,
+        "integer_vector_sha256": "a3d8a3cc50ced72b7b3e1984a825dfa96a852a91909d205f99faede3f6e4c386",
+        "residue_vector_sha256": "29ed881762865479aaa49d010bda256abed64351eeb30becf484f2f2f9182140",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.337241,
+      "exact_matrix_replay": {
+        "commutator_checks": 66,
+        "cyclic_basis_checks": 30,
+        "equation_matrix_checks": 12,
+        "passed": true
+      },
+      "groebner_basis_size": 83,
+      "input": {
+        "bytes": 2271,
+        "filename": "degree30_b2_3111_p0367_slimgb.sing",
+        "sha256": "e86cb4810067317136e12ac16bd448a6d77edc4d850b804d49129519dc772f9b"
+      },
+      "key": "degree30_b2_3111_p0367_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 144317,
+        "filename": "degree30_b2_3111_p0367_slimgb.representation.json",
+        "sha256": "ac468fd6eb97b5ed78418798a4ac3d3f7d0d810c5c4a1e9e0757608c9b62cebe"
+      },
+      "scratch_receipt": {
+        "bytes": 5748,
+        "filename": "degree30_b2_3111_p0367_slimgb.receipt.json",
+        "sha256": "7637acfa1c226e07d1f878194c3d5553cb48ae43a57494611fa33890d158dc7a"
+      },
+      "started_at_utc": "2026-07-25T20:03:19.304706+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 88007,
+        "filename": "degree30_b2_3111_p0367_slimgb.stdout.txt",
+        "sha256": "398f2bd99f1057dac4213bd550766a26a1e60e2681a319fcec14b09085be5076"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 30
+    },
+    {
+      "backend_reported_quotient_dimension": 30,
+      "characteristic": 373,
+      "chart_key": "degree30_b2_3111",
+      "coefficient_audit": {
+        "coefficient_count": 108,
+        "coefficient_injective": true,
+        "distinct_residue_count": 108,
+        "integer_vector_sha256": "a3d8a3cc50ced72b7b3e1984a825dfa96a852a91909d205f99faede3f6e4c386",
+        "residue_vector_sha256": "b4ba23f9fdb70bc1f049faad185ba006c4c691ede4129b61d9307323621f0ba1",
+        "zero_residue_count": 0
+      },
+      "engine_subprocess_wall_seconds": 0.341474,
+      "exact_matrix_replay": {
+        "commutator_checks": 66,
+        "cyclic_basis_checks": 30,
+        "equation_matrix_checks": 12,
+        "passed": true
+      },
+      "groebner_basis_size": 83,
+      "input": {
+        "bytes": 2271,
+        "filename": "degree30_b2_3111_p0373_slimgb.sing",
+        "sha256": "b450f0180bc0851b13e384621cd469465d7672c113deff1db2c63a8f014fa795"
+      },
+      "key": "degree30_b2_3111_p0373_slimgb",
+      "krull_dimension": 0,
+      "representation": {
+        "bytes": 144385,
+        "filename": "degree30_b2_3111_p0373_slimgb.representation.json",
+        "sha256": "4c8b11c2c8ab5c71c0c671e092ad8775bf7835e510cbca9b26808bb10e6f1ec3"
+      },
+      "scratch_receipt": {
+        "bytes": 5748,
+        "filename": "degree30_b2_3111_p0373_slimgb.receipt.json",
+        "sha256": "0f918be563aece9855b0a826d5b0e1e951ed4a26beb10e86aa6e794d6902efa1"
+      },
+      "started_at_utc": "2026-07-25T20:03:22.598429+00:00",
+      "status": "completed-finite-quotient",
+      "stdout": {
+        "bytes": 87963,
+        "filename": "degree30_b2_3111_p0373_slimgb.stdout.txt",
+        "sha256": "12c1e64459b98a4f155d0a0e8bb2ef05f08ed8bfddc8e803793a240030c44e2f"
+      },
+      "timer_ticks": 0,
+      "verified_cyclic_module_dimension": 30
+    }
+  ],
+  "schema": "krenn-n8-square-blocker-prime-sweep-v2",
+  "specialization": {
+    "coefficient_height": 127,
+    "coefficient_slots_only": true,
+    "degree24_and_degree30_use_separate_fixed_specializations": true,
+    "seed": 80320260725,
+    "within_each_chart_coefficients_pairwise_distinct_over_Z": true
+  },
+  "status": "complete-exact-modular-replay"
+}
