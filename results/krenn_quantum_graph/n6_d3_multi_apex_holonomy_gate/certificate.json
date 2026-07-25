@@ -1,0 +1,860 @@
+{
+  "abstract_n6_flat_marginal_counterexample": {
+    "matrices": [
+      [
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "1/2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0"
+        ],
+        [
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1/2",
+          "0",
+          "1/2",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "1",
+          "0",
+          "-1",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "0",
+          "-1",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "1",
+          "0",
+          "-1"
+        ],
+        [
+          "-1",
+          "0",
+          "1",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "-1",
+          "0",
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "-1",
+          "0",
+          "1",
+          "0"
+        ]
+      ]
+    ],
+    "meaning": "the tested abstract axioms (symmetric, zero diagonal, row stochastic, flat ordered product) have exact n=6 solutions; shared Krenn-weight realizability is not claimed",
+    "ordered_product_is_identity": true,
+    "row_stochastic": true,
+    "symmetric": true,
+    "zero_diagonal": true
+  },
+  "chart_free_transition": {
+    "k4": {
+      "identically_zero_transitions": 12,
+      "ordered_off_diagonal_transitions": 12
+    },
+    "n6_laurent": {
+      "identically_zero_transitions": 30,
+      "ordered_off_diagonal_transitions": 30
+    }
+  },
+  "claim_boundary": {
+    "affine_GHZ_membership_decided_by_this_gate": false,
+    "counterexample_found": false,
+    "cross_apex_zero_is_global_identity": false,
+    "deterministic_minor_product_is_chart_independent_invariant": false,
+    "full_GHZ_stabilizer_invariant_detects_known_path_divergence": false,
+    "marginal_holonomy_alone_excludes_n6": false,
+    "proposed_degree9_matrix_identity_in_J_mix": false,
+    "proposed_degree9_matrix_identity_in_radical_J_mix_decided": false,
+    "strict_border_membership_reproved_here": false,
+    "trace_obstruction_is_characteristic_zero_exact": true
+  },
+  "conclusion": {
+    "classification": "exact-negative-holonomy-preflight",
+    "next_required_data": "a continuation in this framework would need mixed-color cofactors or vanishing-order ratios beyond the tested monochromatic BY=I candidates",
+    "stop_tested_holonomy_candidates": true
+  },
+  "degree9_mixed_ideal_gate": {
+    "F_times_ones_zero_checks": 20250,
+    "S6_x_S3_invariance_checks": 23625,
+    "coefficient_histogram": {
+      "-2": 90,
+      "-4": 1440,
+      "-6": 1845
+    },
+    "dual_annihilates_full_compressed_source_map": true,
+    "dual_integer_lambda": [
+      1,
+      -1
+    ],
+    "dual_pairing": 2160,
+    "dual_row_keys": [
+      [
+        0,
+        4,
+        17,
+        62,
+        90,
+        94,
+        117,
+        121,
+        134
+      ],
+      [
+        0,
+        4,
+        17,
+        62,
+        90,
+        103,
+        112,
+        117,
+        134
+      ]
+    ],
+    "dual_row_orbit_sizes": [
+      360,
+      1080
+    ],
+    "entry_corollary": "S6 is transitive on diagonal and ordered off-diagonal entries; F*1=0, so membership of any entry would force membership of trace(F), contradicting the exact dual",
+    "every_matrix_entry_in_J_mix_over_Q": false,
+    "fine_degree": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "ordinary_degree": 9,
+    "polynomial": "trace(C0*C1*C2)-6*A0*A1*A2",
+    "radical_membership_decided": false,
+    "raw_source_map_annihilation_follows_by_reynolds_lift": true,
+    "reynolds_group_order": 4320,
+    "reynolds_invariant_search_lossless_over_Q": true,
+    "trace_coefficients_on_dual_rows": [
+      -6,
+      -4
+    ],
+    "trace_polynomial_in_J_mix_over_Q": false,
+    "trace_rhs_on_dual_rows": [
+      -2160,
+      -4320
+    ]
+  },
+  "deterministic_apex_minors": {
+    "k4": [
+      {
+        "determinant": "-1",
+        "root": 0,
+        "row_indices": [
+          0,
+          9,
+          10,
+          13,
+          16,
+          18,
+          24,
+          25,
+          26
+        ],
+        "valuation": 0
+      },
+      {
+        "determinant": "1",
+        "root": 1,
+        "row_indices": [
+          0,
+          9,
+          12,
+          13,
+          14,
+          18,
+          20,
+          23,
+          26
+        ],
+        "valuation": 0
+      },
+      {
+        "determinant": "-1",
+        "root": 2,
+        "row_indices": [
+          0,
+          1,
+          2,
+          4,
+          13,
+          20,
+          22,
+          23,
+          26
+        ],
+        "valuation": 0
+      },
+      {
+        "determinant": "1",
+        "root": 3,
+        "row_indices": [
+          0,
+          1,
+          2,
+          8,
+          10,
+          13,
+          16,
+          17,
+          26
+        ],
+        "valuation": 0
+      }
+    ],
+    "k4_product": "1",
+    "n6_laurent": [
+      {
+        "determinant": "t^-9",
+        "root": 0,
+        "row_indices": [
+          0,
+          81,
+          84,
+          85,
+          86,
+          94,
+          121,
+          148,
+          162,
+          164,
+          167,
+          170,
+          224,
+          233,
+          242
+        ],
+        "valuation": -9
+      },
+      {
+        "determinant": "-t^-3",
+        "root": 1,
+        "row_indices": [
+          0,
+          81,
+          108,
+          117,
+          118,
+          121,
+          124,
+          126,
+          162,
+          180,
+          207,
+          234,
+          240,
+          241,
+          242
+        ],
+        "valuation": -3
+      },
+      {
+        "determinant": "-t^6",
+        "root": 2,
+        "row_indices": [
+          0,
+          9,
+          10,
+          13,
+          16,
+          18,
+          40,
+          121,
+          180,
+          202,
+          207,
+          210,
+          211,
+          212,
+          234
+        ],
+        "valuation": 6
+      },
+      {
+        "determinant": "-t^6",
+        "root": 3,
+        "row_indices": [
+          0,
+          9,
+          18,
+          24,
+          25,
+          26,
+          80,
+          90,
+          117,
+          144,
+          146,
+          149,
+          152,
+          161,
+          242
+        ],
+        "valuation": 6
+      },
+      {
+        "determinant": "-1",
+        "root": 4,
+        "row_indices": [
+          0,
+          1,
+          2,
+          4,
+          13,
+          22,
+          56,
+          94,
+          121,
+          137,
+          146,
+          148,
+          149,
+          152,
+          218
+        ],
+        "valuation": 0
+      },
+      {
+        "determinant": "1",
+        "root": 5,
+        "row_indices": [
+          0,
+          1,
+          2,
+          20,
+          23,
+          26,
+          28,
+          109,
+          188,
+          190,
+          196,
+          205,
+          214,
+          215,
+          242
+        ],
+        "valuation": 0
+      }
+    ],
+    "n6_product": "1",
+    "n6_valuation_sum": 0,
+    "selection": "lexicographically first independent rows at t=1; this is a deterministic diagnostic, not a chart-free invariant"
+  },
+  "monochromatic_marginal_holonomy": {
+    "k4": {
+      "cycles": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "determinant": "1",
+      "holonomy_matrix": [
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "trace": "4"
+    },
+    "n6_laurent": {
+      "cycles": [
+        [
+          0,
+          2,
+          1,
+          4
+        ],
+        [
+          3
+        ],
+        [
+          5
+        ]
+      ],
+      "determinant": "-1",
+      "holonomy_matrix": [
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "permutation": [
+        2,
+        4,
+        1,
+        3,
+        0,
+        5
+      ],
+      "trace": "2"
+    }
+  },
+  "monochromatic_plucker_pairing": {
+    "k4": [
+      {
+        "cofactor_product": "1",
+        "cofactor_product_valuation": 0,
+        "invariant_pairing": "1",
+        "pivot_neighbors_by_color": [
+          1,
+          2,
+          3
+        ],
+        "root": 0,
+        "star_determinant": "1",
+        "star_determinant_valuation": 0
+      },
+      {
+        "cofactor_product": "1",
+        "cofactor_product_valuation": 0,
+        "invariant_pairing": "1",
+        "pivot_neighbors_by_color": [
+          0,
+          3,
+          2
+        ],
+        "root": 1,
+        "star_determinant": "1",
+        "star_determinant_valuation": 0
+      },
+      {
+        "cofactor_product": "1",
+        "cofactor_product_valuation": 0,
+        "invariant_pairing": "1",
+        "pivot_neighbors_by_color": [
+          3,
+          0,
+          1
+        ],
+        "root": 2,
+        "star_determinant": "1",
+        "star_determinant_valuation": 0
+      },
+      {
+        "cofactor_product": "1",
+        "cofactor_product_valuation": 0,
+        "invariant_pairing": "1",
+        "pivot_neighbors_by_color": [
+          2,
+          1,
+          0
+        ],
+        "root": 3,
+        "star_determinant": "1",
+        "star_determinant_valuation": 0
+      }
+    ],
+    "n6_laurent": [
+      {
+        "cofactor_product": "t^-1",
+        "cofactor_product_valuation": -1,
+        "invariant_pairing": "1",
+        "pivot_neighbors_by_color": [
+          1,
+          2,
+          3
+        ],
+        "root": 0,
+        "star_determinant": "t",
+        "star_determinant_valuation": 1
+      },
+      {
+        "cofactor_product": "t^-1",
+        "cofactor_product_valuation": -1,
+        "invariant_pairing": "1",
+        "pivot_neighbors_by_color": [
+          0,
+          4,
+          5
+        ],
+        "root": 1,
+        "star_determinant": "t",
+        "star_determinant_valuation": 1
+      },
+      {
+        "cofactor_product": "t",
+        "cofactor_product_valuation": 1,
+        "invariant_pairing": "1",
+        "pivot_neighbors_by_color": [
+          3,
+          0,
+          4
+        ],
+        "root": 2,
+        "star_determinant": "t^-1",
+        "star_determinant_valuation": -1
+      },
+      {
+        "cofactor_product": "t",
+        "cofactor_product_valuation": 1,
+        "invariant_pairing": "1",
+        "pivot_neighbors_by_color": [
+          2,
+          5,
+          0
+        ],
+        "root": 3,
+        "star_determinant": "t^-1",
+        "star_determinant_valuation": -1
+      },
+      {
+        "cofactor_product": "1",
+        "cofactor_product_valuation": 0,
+        "invariant_pairing": "1",
+        "pivot_neighbors_by_color": [
+          5,
+          1,
+          2
+        ],
+        "root": 4,
+        "star_determinant": "1",
+        "star_determinant_valuation": 0
+      },
+      {
+        "cofactor_product": "1",
+        "cofactor_product_valuation": 0,
+        "invariant_pairing": "1",
+        "pivot_neighbors_by_color": [
+          4,
+          3,
+          1
+        ],
+        "root": 5,
+        "star_determinant": "1",
+        "star_determinant_valuation": 0
+      }
+    ]
+  },
+  "schema": "krenn-multi-apex-holonomy-gate-v1",
+  "scope": {
+    "benchmarks": [
+      "n4_d3_exact_fixture",
+      "n6_d3_known_Laurent_path"
+    ],
+    "bounded_census": {
+      "S6_x_S3_generator_checks": 23625,
+      "apex_minors": 10,
+      "cross_apex_transitions": 42,
+      "matching_triples": 3375,
+      "maximum_determinant_size": 15
+    },
+    "cpu_workers": 1,
+    "floating_point_used": false,
+    "matching_enumerators": [
+      "primary",
+      "independent"
+    ],
+    "random_seeds": []
+  },
+  "stabilizer_orbit": {
+    "active_weight_index_character_valuation": [
+      [
+        0,
+        1,
+        1,
+        "t"
+      ],
+      [
+        13,
+        0,
+        0,
+        "1"
+      ],
+      [
+        26,
+        0,
+        0,
+        "1"
+      ],
+      [
+        67,
+        0,
+        0,
+        "1"
+      ],
+      [
+        80,
+        0,
+        0,
+        "1"
+      ],
+      [
+        81,
+        -1,
+        -1,
+        "t^-1"
+      ],
+      [
+        98,
+        0,
+        0,
+        "1"
+      ],
+      [
+        121,
+        0,
+        0,
+        "1"
+      ],
+      [
+        126,
+        0,
+        0,
+        "1"
+      ]
+    ],
+    "cocharacter_by_vertex_color": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "color_sums": [
+      0,
+      0,
+      0
+    ],
+    "constant_GHZ_characters": [
+      0,
+      0,
+      0
+    ],
+    "known_path_is_exact_full_GHZ_stabilizer_orbit": true,
+    "parameter_domain": "G_m (t != 0)",
+    "regular_or_rational_full_stabilizer_invariants_are_constant_where_defined_on_t_nonzero": true,
+    "victim_character": 1,
+    "victim_coloring": [
+      0,
+      0,
+      2,
+      1,
+      2,
+      1
+    ],
+    "victim_equation": 70
+  }
+}
