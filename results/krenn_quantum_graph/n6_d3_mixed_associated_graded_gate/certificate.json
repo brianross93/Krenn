@@ -1,0 +1,2462 @@
+{
+  "all_derivative_orders_on_known_orbit": {
+    "0": {
+      "character_formula": "rho(output coloring)-sum kappa(input coordinates)",
+      "every_coefficient_equals_base_times_character_monomial": true,
+      "primary_independent_exact_agreement": true,
+      "unique_nonzero_unordered_coordinate_coefficients": 4,
+      "valuation_histogram": {
+        "0": 3,
+        "1": 1
+      }
+    },
+    "1": {
+      "character_formula": "rho(output coloring)-sum kappa(input coordinates)",
+      "every_coefficient_equals_base_times_character_monomial": true,
+      "primary_independent_exact_agreement": true,
+      "unique_nonzero_unordered_coordinate_coefficients": 162,
+      "valuation_histogram": {
+        "-1": 27,
+        "0": 108,
+        "1": 27
+      }
+    },
+    "2": {
+      "character_formula": "rho(output coloring)-sum kappa(input coordinates)",
+      "every_coefficient_equals_base_times_character_monomial": true,
+      "primary_independent_exact_agreement": true,
+      "unique_nonzero_unordered_coordinate_coefficients": 2187,
+      "valuation_histogram": {
+        "-1": 243,
+        "0": 1701,
+        "1": 243
+      }
+    },
+    "3": {
+      "character_formula": "rho(output coloring)-sum kappa(input coordinates)",
+      "every_coefficient_equals_base_times_character_monomial": true,
+      "primary_independent_exact_agreement": true,
+      "unique_nonzero_unordered_coordinate_coefficients": 10935,
+      "valuation_histogram": {
+        "0": 10935
+      }
+    }
+  },
+  "claim_boundary": {
+    "affine_GHZ_membership_decided": false,
+    "all_possible_Laurent_or_formal_branches_classified": false,
+    "bounded_numerical_miss_is_proof": false,
+    "finite_exact_GHZ_witness_found": false,
+    "global_GHZ_nonmembership_proved": false,
+    "minimal_size11_projective_branches_are_exact_witnesses": false,
+    "rotor_sector_gives_global_exclusion_by_itself": false,
+    "strict_border_membership_reproved_here": false,
+    "tested_known_Laurent_orbit_raw_associated_graded_holonomy_closed_negatively": true
+  },
+  "conclusion": {
+    "classification": "exact-negative-raw-associated-graded-preflight",
+    "next_finite_search": "two symmetry-orbit representatives of the six minimal cost-two single-matching victim departures, retaining rotor coordinates and cross-multiplied K3,3 parity identities",
+    "next_search_success_is_only_initial_form_candidate": true,
+    "raw_star_Jacobian_Hessian_cubic_path_stopped": true,
+    "smallest_faithful_fixed_coloring_state": "(q=E*m, h=P_rot*m)"
+  },
+  "matching_amplitude_rotor": {
+    "S6_equivariance": {
+      "adjacent_transposition_checks": 5,
+      "exact": true
+    },
+    "canonical_rotor_projector": {
+      "formula": "P=I-(E^T E)/4+J/12",
+      "idempotent": true,
+      "image_equals_kernel_E": true,
+      "matrix": [
+        [
+          "1/3",
+          "-1/6",
+          "-1/6",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "-1/6"
+        ],
+        [
+          "-1/6",
+          "1/3",
+          "-1/6",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "1/12"
+        ],
+        [
+          "-1/6",
+          "-1/6",
+          "1/3",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "1/12"
+        ],
+        [
+          "-1/6",
+          "1/12",
+          "1/12",
+          "1/3",
+          "-1/6",
+          "-1/6",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "1/12"
+        ],
+        [
+          "1/12",
+          "-1/6",
+          "1/12",
+          "-1/6",
+          "1/3",
+          "-1/6",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "-1/6"
+        ],
+        [
+          "1/12",
+          "1/12",
+          "-1/6",
+          "-1/6",
+          "-1/6",
+          "1/3",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "-1/6",
+          "1/12",
+          "1/12"
+        ],
+        [
+          "-1/6",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "1/3",
+          "-1/6",
+          "-1/6",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "1/12"
+        ],
+        [
+          "1/12",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "-1/6",
+          "1/3",
+          "-1/6",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "1/12",
+          "-1/6"
+        ],
+        [
+          "1/12",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "-1/6",
+          "-1/6",
+          "1/3",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "-1/6",
+          "1/12"
+        ],
+        [
+          "1/12",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "1/3",
+          "-1/6",
+          "-1/6",
+          "-1/6",
+          "1/12",
+          "1/12"
+        ],
+        [
+          "1/12",
+          "1/12",
+          "-1/6",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "-1/6",
+          "1/3",
+          "-1/6",
+          "1/12",
+          "-1/6",
+          "1/12"
+        ],
+        [
+          "-1/6",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "-1/6",
+          "-1/6",
+          "1/3",
+          "1/12",
+          "1/12",
+          "-1/6"
+        ],
+        [
+          "1/12",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "1/3",
+          "-1/6",
+          "-1/6"
+        ],
+        [
+          "1/12",
+          "-1/6",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "-1/6",
+          "1/3",
+          "-1/6"
+        ],
+        [
+          "-1/6",
+          "1/12",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "1/12",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "-1/6",
+          "-1/6",
+          "1/3"
+        ]
+      ],
+      "mixed_equation_simplification": "if sum(m)=0 then sum(q)=0 and m=P*m+(E^T*q)/4",
+      "rank_over_Q": 5,
+      "reconstruction_formula": "m=P*m+(E^T*q)/4-(sum(q))*1/36, q=E*m",
+      "reconstruction_operator_is_identity": true
+    },
+    "edge_order": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "incidence_matrix": [
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "kernel_dimension_over_Q": 5,
+    "matching_order": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    ],
+    "parity_corollary": {
+      "characteristic_zero_consequence": "alpha=0",
+      "kernel": "m=alpha*C_parity",
+      "nonzero_star_invisible_K3_3_rotor_realizable": false,
+      "restricted_incidence_rank_over_Q": 5,
+      "support": "the six matchings of one K3,3",
+      "toric_identity_after_substitution": "alpha^3=(-alpha)^3"
+    },
+    "primitive_K3_3_circuit_basis": {
+      "basis_minor_determinant": "-1",
+      "free_matching_coordinates": [
+        8,
+        10,
+        11,
+        13,
+        14
+      ],
+      "integral_kernel_basis_certified": true,
+      "integral_kernel_is_saturated": true,
+      "partitions": [
+        {
+          "left": [
+            0,
+            1,
+            2
+          ],
+          "right": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "left": [
+            0,
+            1,
+            3
+          ],
+          "right": [
+            2,
+            4,
+            5
+          ]
+        },
+        {
+          "left": [
+            0,
+            1,
+            4
+          ],
+          "right": [
+            2,
+            3,
+            5
+          ]
+        },
+        {
+          "left": [
+            0,
+            2,
+            3
+          ],
+          "right": [
+            1,
+            4,
+            5
+          ]
+        },
+        {
+          "left": [
+            0,
+            2,
+            4
+          ],
+          "right": [
+            1,
+            3,
+            5
+          ]
+        }
+      ],
+      "vectors": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          -1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          1,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1,
+          -1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          -1,
+          0
+        ],
+        [
+          0,
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          1,
+          0,
+          1,
+          -1,
+          0
+        ],
+        [
+          1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          -1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1
+        ]
+      ]
+    },
+    "rank_over_Q": 10,
+    "representation_interpretation": {
+      "dimension": 5,
+      "edge_permutation_module": "[6]+[5,1]+[4,2]",
+      "kernel_label": "[2,2,2]",
+      "kernel_name": "rotor sector",
+      "matching_permutation_module": "[6]+[4,2]+[2,2,2]"
+    },
+    "shape": [
+      15,
+      15
+    ],
+    "toric_holonomy": {
+      "chart_independent": true,
+      "cross_multiplied_identity": "product_even(m_M)=product_odd(m_M) for every primitive K3,3 parity circuit",
+      "division_on_zero_strata_used": false,
+      "full_color_diagonal_gauge_invariant": true
+    },
+    "unimodular_rank_minor": {
+      "determinant": "-1",
+      "edge_rows": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "matching_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        12
+      ]
+    }
+  },
+  "mixed_cofactor_gate": {
+    "k4_exact_witness": {
+      "coordinates_checked_per_enumerator": 54,
+      "mixed_count": 0,
+      "monochromatic_count": 6,
+      "nonzero_count": 6,
+      "primary_independent_exact_agreement": true
+    },
+    "n6_laurent": {
+      "coordinates_checked_per_enumerator": 1215,
+      "mixed_count": 9,
+      "mixed_valuation_histogram": {
+        "-1": 2,
+        "0": 5,
+        "1": 2
+      },
+      "monochromatic_count": 9,
+      "nonzero_count": 18,
+      "nonzero_records": [
+        {
+          "deleted_pair": [
+            0,
+            1
+          ],
+          "mixed": false,
+          "remaining_vertices": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "residual_colors": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": -1,
+          "value": "t^-1"
+        },
+        {
+          "deleted_pair": [
+            0,
+            1
+          ],
+          "mixed": true,
+          "remaining_vertices": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "residual_colors": [
+            2,
+            1,
+            2,
+            1
+          ],
+          "valuation": 0,
+          "value": "1"
+        },
+        {
+          "deleted_pair": [
+            0,
+            2
+          ],
+          "mixed": false,
+          "remaining_vertices": [
+            1,
+            3,
+            4,
+            5
+          ],
+          "residual_colors": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "valuation": 0,
+          "value": "1"
+        },
+        {
+          "deleted_pair": [
+            0,
+            3
+          ],
+          "mixed": false,
+          "remaining_vertices": [
+            1,
+            2,
+            4,
+            5
+          ],
+          "residual_colors": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "valuation": 0,
+          "value": "1"
+        },
+        {
+          "deleted_pair": [
+            0,
+            4
+          ],
+          "mixed": true,
+          "remaining_vertices": [
+            1,
+            2,
+            3,
+            5
+          ],
+          "residual_colors": [
+            2,
+            0,
+            0,
+            2
+          ],
+          "valuation": -1,
+          "value": "t^-1"
+        },
+        {
+          "deleted_pair": [
+            0,
+            5
+          ],
+          "mixed": true,
+          "remaining_vertices": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "residual_colors": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "valuation": -1,
+          "value": "t^-1"
+        },
+        {
+          "deleted_pair": [
+            1,
+            2
+          ],
+          "mixed": true,
+          "remaining_vertices": [
+            0,
+            3,
+            4,
+            5
+          ],
+          "residual_colors": [
+            2,
+            2,
+            0,
+            0
+          ],
+          "valuation": 0,
+          "value": "1"
+        },
+        {
+          "deleted_pair": [
+            1,
+            3
+          ],
+          "mixed": true,
+          "remaining_vertices": [
+            0,
+            2,
+            4,
+            5
+          ],
+          "residual_colors": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 0,
+          "value": "1"
+        },
+        {
+          "deleted_pair": [
+            1,
+            4
+          ],
+          "mixed": false,
+          "remaining_vertices": [
+            0,
+            2,
+            3,
+            5
+          ],
+          "residual_colors": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "valuation": 0,
+          "value": "1"
+        },
+        {
+          "deleted_pair": [
+            1,
+            5
+          ],
+          "mixed": false,
+          "remaining_vertices": [
+            0,
+            2,
+            3,
+            4
+          ],
+          "residual_colors": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "valuation": 0,
+          "value": "1"
+        },
+        {
+          "deleted_pair": [
+            2,
+            3
+          ],
+          "mixed": false,
+          "remaining_vertices": [
+            0,
+            1,
+            4,
+            5
+          ],
+          "residual_colors": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1,
+          "value": "t"
+        },
+        {
+          "deleted_pair": [
+            2,
+            4
+          ],
+          "mixed": true,
+          "remaining_vertices": [
+            0,
+            1,
+            3,
+            5
+          ],
+          "residual_colors": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "valuation": 1,
+          "value": "t"
+        },
+        {
+          "deleted_pair": [
+            2,
+            4
+          ],
+          "mixed": false,
+          "remaining_vertices": [
+            0,
+            1,
+            3,
+            5
+          ],
+          "residual_colors": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "valuation": 0,
+          "value": "1"
+        },
+        {
+          "deleted_pair": [
+            2,
+            5
+          ],
+          "mixed": true,
+          "remaining_vertices": [
+            0,
+            1,
+            3,
+            4
+          ],
+          "residual_colors": [
+            2,
+            1,
+            2,
+            1
+          ],
+          "valuation": 0,
+          "value": "1"
+        },
+        {
+          "deleted_pair": [
+            3,
+            4
+          ],
+          "mixed": true,
+          "remaining_vertices": [
+            0,
+            1,
+            2,
+            5
+          ],
+          "residual_colors": [
+            1,
+            2,
+            1,
+            2
+          ],
+          "valuation": 0,
+          "value": "1"
+        },
+        {
+          "deleted_pair": [
+            3,
+            5
+          ],
+          "mixed": true,
+          "remaining_vertices": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "residual_colors": [
+            0,
+            0,
+            2,
+            2
+          ],
+          "valuation": 1,
+          "value": "t"
+        },
+        {
+          "deleted_pair": [
+            3,
+            5
+          ],
+          "mixed": false,
+          "remaining_vertices": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "residual_colors": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "valuation": 0,
+          "value": "1"
+        },
+        {
+          "deleted_pair": [
+            4,
+            5
+          ],
+          "mixed": false,
+          "remaining_vertices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "residual_colors": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 0,
+          "value": "1"
+        }
+      ],
+      "primary_independent_exact_agreement": true,
+      "valuation_histogram": {
+        "-1": 3,
+        "0": 12,
+        "1": 3
+      }
+    },
+    "star_diagonal_factorization": {
+      "entries_checked": 21870,
+      "formula": "A_r(t)=diag(t^R(row))*A_r(1)*diag(t^(-x_(v,b)))",
+      "nonzero_entries": 108,
+      "primary_independent_exact_agreement": true,
+      "roots": [
+        {
+          "entries_checked": 3645,
+          "nonzero_entries": 18,
+          "root": 0
+        },
+        {
+          "entries_checked": 3645,
+          "nonzero_entries": 18,
+          "root": 1
+        },
+        {
+          "entries_checked": 3645,
+          "nonzero_entries": 18,
+          "root": 2
+        },
+        {
+          "entries_checked": 3645,
+          "nonzero_entries": 18,
+          "root": 3
+        },
+        {
+          "entries_checked": 3645,
+          "nonzero_entries": 18,
+          "root": 4
+        },
+        {
+          "entries_checked": 3645,
+          "nonzero_entries": 18,
+          "root": 5
+        }
+      ]
+    }
+  },
+  "natural_jacobian_support_forest": {
+    "active_columns": 135,
+    "active_rows": 154,
+    "column_degree_histogram": {
+      "1": 108,
+      "2": 27
+    },
+    "component_count": 127,
+    "component_types": [
+      {
+        "columns": 1,
+        "count": 102,
+        "edges": 1,
+        "rows": 1
+      },
+      {
+        "columns": 1,
+        "count": 24,
+        "edges": 2,
+        "rows": 2
+      },
+      {
+        "columns": 9,
+        "count": 1,
+        "edges": 12,
+        "rows": 4
+      }
+    ],
+    "cycle_rank": 0,
+    "first_order_holonomy_cycle_exists": false,
+    "kernel_equals_vertex_scalar_gauge_over_Q": true,
+    "nonzero_entries": 162,
+    "nullity_over_Q": 5,
+    "rank_over_Q": 130,
+    "row_degree_histogram": {
+      "1": 150,
+      "3": 4
+    },
+    "shape": [
+      729,
+      135
+    ],
+    "vertex_scalar_gauge_rank_over_Q": 5
+  },
+  "schema": "krenn-n6-d3-mixed-associated-graded-gate-v1",
+  "scope": {
+    "benchmarks": [
+      "K4_d3_exact_witness",
+      "n6_d3_natural_Laurent_orbit"
+    ],
+    "cpu_workers": 1,
+    "floating_point_used": false,
+    "matching_enumerators": [
+      "primary",
+      "independent"
+    ],
+    "parameters": {
+      "d": 3,
+      "n": 6
+    },
+    "random_seeds": []
+  },
+  "victim_projective_departure": {
+    "branch_records": [
+      {
+        "active_monomial_count_histogram": {
+          "0": 723,
+          "1": 5,
+          "2": 1
+        },
+        "cross_multiplied_relation": "m_N+m_Mstar=0",
+        "double_equation": 70,
+        "initial_relation": "r_N=-1",
+        "matching": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "matching_index": 0,
+        "new_coordinate_indices": [
+          88,
+          133
+        ],
+        "new_coordinates": [
+          [
+            2,
+            3,
+            2,
+            1
+          ],
+          [
+            4,
+            5,
+            2,
+            1
+          ]
+        ],
+        "non_target_singleton_spill_colorings": [
+          [
+            0,
+            0,
+            0,
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            2,
+            1,
+            0,
+            0
+          ]
+        ],
+        "non_target_singleton_spills": [
+          7,
+          63
+        ],
+        "ratio": "product(numerator)/product(denominator)",
+        "ratio_denominator_indices": [
+          98,
+          121
+        ],
+        "ratio_numerator_indices": [
+          88,
+          133
+        ],
+        "size11_branch_is_exact_GHZ_witness": false,
+        "support": [
+          0,
+          13,
+          26,
+          67,
+          80,
+          81,
+          88,
+          98,
+          121,
+          126,
+          133
+        ],
+        "support_orbit_size": 1080,
+        "support_size": 11,
+        "target_singleton_equations": [
+          0,
+          364,
+          728
+        ]
+      },
+      {
+        "active_monomial_count_histogram": {
+          "0": 723,
+          "1": 5,
+          "2": 1
+        },
+        "cross_multiplied_relation": "m_N+m_Mstar=0",
+        "double_equation": 70,
+        "initial_relation": "r_N=-1",
+        "matching": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "matching_index": 2,
+        "new_coordinate_indices": [
+          106,
+          113
+        ],
+        "new_coordinates": [
+          [
+            2,
+            5,
+            2,
+            1
+          ],
+          [
+            3,
+            4,
+            1,
+            2
+          ]
+        ],
+        "non_target_singleton_spill_colorings": [
+          [
+            1,
+            2,
+            1,
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            1,
+            2,
+            2,
+            1,
+            1
+          ]
+        ],
+        "non_target_singleton_spills": [
+          449,
+          643
+        ],
+        "ratio": "product(numerator)/product(denominator)",
+        "ratio_denominator_indices": [
+          98,
+          121
+        ],
+        "ratio_numerator_indices": [
+          106,
+          113
+        ],
+        "size11_branch_is_exact_GHZ_witness": false,
+        "support": [
+          0,
+          13,
+          26,
+          67,
+          80,
+          81,
+          98,
+          106,
+          113,
+          121,
+          126
+        ],
+        "support_orbit_size": 1080,
+        "support_size": 11,
+        "target_singleton_equations": [
+          0,
+          364,
+          728
+        ]
+      },
+      {
+        "active_monomial_count_histogram": {
+          "0": 723,
+          "1": 5,
+          "2": 1
+        },
+        "cross_multiplied_relation": "m_N+m_Mstar=0",
+        "double_equation": 70,
+        "initial_relation": "r_N=-1",
+        "matching": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "matching_index": 4,
+        "new_coordinate_indices": [
+          11,
+          65
+        ],
+        "new_coordinates": [
+          [
+            0,
+            2,
+            0,
+            2
+          ],
+          [
+            1,
+            4,
+            0,
+            2
+          ]
+        ],
+        "non_target_singleton_spill_colorings": [
+          [
+            0,
+            1,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1,
+            1,
+            2,
+            1
+          ]
+        ],
+        "non_target_singleton_spills": [
+          148,
+          286
+        ],
+        "ratio": "product(numerator)/product(denominator)",
+        "ratio_denominator_indices": [
+          0,
+          98
+        ],
+        "ratio_numerator_indices": [
+          11,
+          65
+        ],
+        "size11_branch_is_exact_GHZ_witness": false,
+        "support": [
+          0,
+          11,
+          13,
+          26,
+          65,
+          67,
+          80,
+          81,
+          98,
+          121,
+          126
+        ],
+        "support_orbit_size": 1080,
+        "support_size": 11,
+        "target_singleton_equations": [
+          0,
+          364,
+          728
+        ]
+      },
+      {
+        "active_monomial_count_histogram": {
+          "0": 723,
+          "1": 5,
+          "2": 1
+        },
+        "cross_multiplied_relation": "m_N+m_Mstar=0",
+        "double_equation": 70,
+        "initial_relation": "r_N=-1",
+        "matching": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "matching_index": 8,
+        "new_coordinate_indices": [
+          19,
+          73
+        ],
+        "new_coordinates": [
+          [
+            0,
+            3,
+            0,
+            1
+          ],
+          [
+            1,
+            5,
+            0,
+            1
+          ]
+        ],
+        "non_target_singleton_spill_colorings": [
+          [
+            0,
+            2,
+            2,
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            0,
+            2,
+            2,
+            2,
+            1
+          ]
+        ],
+        "non_target_singleton_spills": [
+          233,
+          565
+        ],
+        "ratio": "product(numerator)/product(denominator)",
+        "ratio_denominator_indices": [
+          0,
+          121
+        ],
+        "ratio_numerator_indices": [
+          19,
+          73
+        ],
+        "size11_branch_is_exact_GHZ_witness": false,
+        "support": [
+          0,
+          13,
+          19,
+          26,
+          67,
+          73,
+          80,
+          81,
+          98,
+          121,
+          126
+        ],
+        "support_orbit_size": 1080,
+        "support_size": 11,
+        "target_singleton_equations": [
+          0,
+          364,
+          728
+        ]
+      },
+      {
+        "active_monomial_count_histogram": {
+          "0": 723,
+          "1": 5,
+          "2": 1
+        },
+        "cross_multiplied_relation": "m_N+m_Mstar=0",
+        "double_equation": 70,
+        "initial_relation": "r_N=-1",
+        "matching": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "matching_index": 9,
+        "new_coordinate_indices": [
+          29,
+          47
+        ],
+        "new_coordinates": [
+          [
+            0,
+            4,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            0,
+            2
+          ]
+        ],
+        "non_target_singleton_spill_colorings": [
+          [
+            0,
+            2,
+            0,
+            0,
+            2,
+            2
+          ],
+          [
+            2,
+            0,
+            2,
+            2,
+            0,
+            0
+          ]
+        ],
+        "non_target_singleton_spills": [
+          170,
+          558
+        ],
+        "ratio": "product(numerator)/product(denominator)",
+        "ratio_denominator_indices": [
+          0,
+          98
+        ],
+        "ratio_numerator_indices": [
+          29,
+          47
+        ],
+        "size11_branch_is_exact_GHZ_witness": false,
+        "support": [
+          0,
+          13,
+          26,
+          29,
+          47,
+          67,
+          80,
+          81,
+          98,
+          121,
+          126
+        ],
+        "support_orbit_size": 1080,
+        "support_size": 11,
+        "target_singleton_equations": [
+          0,
+          364,
+          728
+        ]
+      },
+      {
+        "active_monomial_count_histogram": {
+          "0": 723,
+          "1": 5,
+          "2": 1
+        },
+        "cross_multiplied_relation": "m_N+m_Mstar=0",
+        "double_equation": 70,
+        "initial_relation": "r_N=-1",
+        "matching": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "matching_index": 13,
+        "new_coordinate_indices": [
+          37,
+          55
+        ],
+        "new_coordinates": [
+          [
+            0,
+            5,
+            0,
+            1
+          ],
+          [
+            1,
+            3,
+            0,
+            1
+          ]
+        ],
+        "non_target_singleton_spill_colorings": [
+          [
+            0,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1,
+            1,
+            0,
+            0
+          ]
+        ],
+        "non_target_singleton_spills": [
+          85,
+          279
+        ],
+        "ratio": "product(numerator)/product(denominator)",
+        "ratio_denominator_indices": [
+          0,
+          121
+        ],
+        "ratio_numerator_indices": [
+          37,
+          55
+        ],
+        "size11_branch_is_exact_GHZ_witness": false,
+        "support": [
+          0,
+          13,
+          26,
+          37,
+          55,
+          67,
+          80,
+          81,
+          98,
+          121,
+          126
+        ],
+        "support_orbit_size": 1080,
+        "support_size": 11,
+        "target_singleton_equations": [
+          0,
+          364,
+          728
+        ]
+      }
+    ],
+    "consequence": "within the Mstar chart a repairing arc must have at least one transverse ratio of nonpositive valuation; each of the six minimal cost-two single-matching equality branches creates two forced singleton spills and needs further repair",
+    "known_path": {
+      "all_transverse_ratios_positive_order_can_repair": false,
+      "amplitude": "t",
+      "exact_mixed_hyperplane": "sum_M m_M=0",
+      "known_projective_point_lies_on_hyperplane": false,
+      "matching": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "only_nonzero_matching_index": 1,
+      "projective_class_after_inverse_1PS": "e_Mstar",
+      "reason": "in the Mstar chart the equation is 1+sum_(N!=Mstar) r_N=0"
+    },
+    "minimal_branch_support_orbits": [
+      [
+        0,
+        4,
+        8
+      ],
+      [
+        2,
+        9,
+        13
+      ]
+    ],
+    "minimal_cost_two_matching_indices": [
+      0,
+      2,
+      4,
+      8,
+      9,
+      13
+    ],
+    "native_matching_order": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    ],
+    "repair_cost_histogram": {
+      "0": 1,
+      "1": 0,
+      "2": 6,
+      "3": 8
+    },
+    "victim_coloring": [
+      0,
+      0,
+      2,
+      1,
+      2,
+      1
+    ],
+    "victim_equation": 70
+  }
+}
