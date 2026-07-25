@@ -1,0 +1,258 @@
+{
+  "claim_boundary": {
+    "full_chart_cover_decided": false,
+    "natural_chart_decided": false,
+    "saturation_stages_completed": 0
+  },
+  "decision_rule": {
+    "exact_Q_proper": "proves an algebraic-complex finite point in that chart",
+    "exact_Q_unit": "excludes that localized chart",
+    "finite_field_or_timeout": "reconnaissance only"
+  },
+  "derivative_systems": [
+    {
+      "generators": 727,
+      "key": [
+        11
+      ],
+      "kind": "derivative",
+      "maximum_degree": 3,
+      "saturation_factors": [
+        {
+          "degree": 3,
+          "label": "A0",
+          "terms": 15
+        },
+        {
+          "degree": 3,
+          "label": "A1",
+          "terms": 15
+        },
+        {
+          "degree": 3,
+          "label": "A2",
+          "terms": 15
+        }
+      ],
+      "saturation_order": [
+        "A0",
+        "A1",
+        "A2"
+      ],
+      "schema": "krenn-n6-d3-leaf-free-chart-system-v1",
+      "sha256": "38685be322a80156a0492af4bba9a19a3b0af7bdf2bc67897e4327c9142eae76",
+      "terms": 10894,
+      "variables": 126
+    },
+    {
+      "generators": 727,
+      "key": [
+        29
+      ],
+      "kind": "derivative",
+      "maximum_degree": 3,
+      "saturation_factors": [
+        {
+          "degree": 3,
+          "label": "A0",
+          "terms": 15
+        },
+        {
+          "degree": 3,
+          "label": "A1",
+          "terms": 15
+        },
+        {
+          "degree": 3,
+          "label": "A2",
+          "terms": 15
+        }
+      ],
+      "saturation_order": [
+        "A0",
+        "A1",
+        "A2"
+      ],
+      "schema": "krenn-n6-d3-leaf-free-chart-system-v1",
+      "sha256": "c4b7154926507a0ded3980962c3ed640bcd471569a616ea65109e1f85ea8b58f",
+      "terms": 10894,
+      "variables": 126
+    }
+  ],
+  "exact_equivalence": {
+    "all_dropped_localizers_replayed_exactly": true,
+    "one_shot_product_formed": false,
+    "repair_localizers_are_u_times_y_minus_one": true,
+    "sequential_saturation": "((I:f^infinity):g^infinity) = I:(f*g)^infinity",
+    "single_leaf": "k[w,u]/(I,u*A-1) is the localization (k[w]/I)_A"
+  },
+  "repair_systems": [
+    {
+      "generators": 726,
+      "key": [
+        11,
+        65
+      ],
+      "kind": "quadratic-repair",
+      "maximum_degree": 3,
+      "saturation_factors": [
+        {
+          "degree": 1,
+          "label": "y",
+          "terms": 1
+        },
+        {
+          "degree": 3,
+          "label": "A0",
+          "terms": 15
+        },
+        {
+          "degree": 3,
+          "label": "A1",
+          "terms": 15
+        },
+        {
+          "degree": 3,
+          "label": "A2",
+          "terms": 15
+        }
+      ],
+      "saturation_order": [
+        "y",
+        "A0",
+        "A1",
+        "A2"
+      ],
+      "schema": "krenn-n6-d3-leaf-free-chart-system-v1",
+      "sha256": "4465e149521d5468896716ff5ea5a74a3c78316f8f02dc83b94a5317efdcfdeb",
+      "terms": 10890,
+      "variables": 125
+    },
+    {
+      "generators": 726,
+      "key": [
+        29,
+        47
+      ],
+      "kind": "quadratic-repair",
+      "maximum_degree": 3,
+      "saturation_factors": [
+        {
+          "degree": 1,
+          "label": "y",
+          "terms": 1
+        },
+        {
+          "degree": 3,
+          "label": "A0",
+          "terms": 15
+        },
+        {
+          "degree": 3,
+          "label": "A1",
+          "terms": 15
+        },
+        {
+          "degree": 3,
+          "label": "A2",
+          "terms": 15
+        }
+      ],
+      "saturation_order": [
+        "y",
+        "A0",
+        "A1",
+        "A2"
+      ],
+      "schema": "krenn-n6-d3-leaf-free-chart-system-v1",
+      "sha256": "0cfcf44978d8e4b69230ddc2bd35fe9ca722432b46962bf2e25f1d3dd86b762c",
+      "terms": 10890,
+      "variables": 125
+    },
+    {
+      "generators": 726,
+      "key": [
+        11,
+        55,
+        133
+      ],
+      "kind": "cubic-repair",
+      "maximum_degree": 3,
+      "saturation_factors": [
+        {
+          "degree": 1,
+          "label": "y",
+          "terms": 1
+        },
+        {
+          "degree": 3,
+          "label": "A0",
+          "terms": 15
+        },
+        {
+          "degree": 3,
+          "label": "A1",
+          "terms": 15
+        },
+        {
+          "degree": 3,
+          "label": "A2",
+          "terms": 15
+        }
+      ],
+      "saturation_order": [
+        "y",
+        "A0",
+        "A1",
+        "A2"
+      ],
+      "schema": "krenn-n6-d3-leaf-free-chart-system-v1",
+      "sha256": "ba3a15909e121fc5993194559625aa0b2a9dec3bd5994be0b442bb32f8c43c91",
+      "terms": 10890,
+      "variables": 124
+    },
+    {
+      "generators": 726,
+      "key": [
+        29,
+        55,
+        106
+      ],
+      "kind": "cubic-repair",
+      "maximum_degree": 3,
+      "saturation_factors": [
+        {
+          "degree": 1,
+          "label": "y",
+          "terms": 1
+        },
+        {
+          "degree": 3,
+          "label": "A0",
+          "terms": 15
+        },
+        {
+          "degree": 3,
+          "label": "A1",
+          "terms": 15
+        },
+        {
+          "degree": 3,
+          "label": "A2",
+          "terms": 15
+        }
+      ],
+      "saturation_order": [
+        "y",
+        "A0",
+        "A1",
+        "A2"
+      ],
+      "schema": "krenn-n6-d3-leaf-free-chart-system-v1",
+      "sha256": "74eb9ebcc1e3c636b3597a65a80a4d7bc23608aa31539a01b47a3dbaaad09d09",
+      "terms": 10890,
+      "variables": 124
+    }
+  ],
+  "schema": "krenn-n6-d3-leaf-free-saturation-atlas-v1"
+}

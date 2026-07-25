@@ -1,0 +1,159 @@
+{
+  "apex_factorizations": [
+    {
+      "all_729_equations_reconstructed": true,
+      "apex": 0,
+      "apex_color_blocks": 3,
+      "coefficient_degree": 2,
+      "coefficient_terms": 3645,
+      "columns_per_apex_color": 15,
+      "independent_sha256": "e5b453cf2b85a3f5f2d726058cf3420accbfff7e0113c624b72516a745e12372",
+      "nonstar_variables": 90,
+      "nonzero_matrix_entries": 1215,
+      "primary_sha256": "e5b453cf2b85a3f5f2d726058cf3420accbfff7e0113c624b72516a745e12372",
+      "rows_per_apex_color": 243,
+      "shared_matrix_for_all_three_targets": true,
+      "star_variables": 45,
+      "target_rows": [
+        0,
+        121,
+        242
+      ]
+    },
+    {
+      "all_729_equations_reconstructed": true,
+      "apex": 1,
+      "apex_color_blocks": 3,
+      "coefficient_degree": 2,
+      "coefficient_terms": 3645,
+      "columns_per_apex_color": 15,
+      "independent_sha256": "c355c4e25096542dfadb7b69df4e6d1172aabea9f5bd3cf0b8394e3468aa1d93",
+      "nonstar_variables": 90,
+      "nonzero_matrix_entries": 1215,
+      "primary_sha256": "c355c4e25096542dfadb7b69df4e6d1172aabea9f5bd3cf0b8394e3468aa1d93",
+      "rows_per_apex_color": 243,
+      "shared_matrix_for_all_three_targets": true,
+      "star_variables": 45,
+      "target_rows": [
+        0,
+        121,
+        242
+      ]
+    },
+    {
+      "all_729_equations_reconstructed": true,
+      "apex": 2,
+      "apex_color_blocks": 3,
+      "coefficient_degree": 2,
+      "coefficient_terms": 3645,
+      "columns_per_apex_color": 15,
+      "independent_sha256": "b618e9fa943c03502ed1fc5b318158ac5aee0f8abe64e79692a3d578f57abbee",
+      "nonstar_variables": 90,
+      "nonzero_matrix_entries": 1215,
+      "primary_sha256": "b618e9fa943c03502ed1fc5b318158ac5aee0f8abe64e79692a3d578f57abbee",
+      "rows_per_apex_color": 243,
+      "shared_matrix_for_all_three_targets": true,
+      "star_variables": 45,
+      "target_rows": [
+        0,
+        121,
+        242
+      ]
+    },
+    {
+      "all_729_equations_reconstructed": true,
+      "apex": 3,
+      "apex_color_blocks": 3,
+      "coefficient_degree": 2,
+      "coefficient_terms": 3645,
+      "columns_per_apex_color": 15,
+      "independent_sha256": "227d67c3d82240f81334fa68578c529b5cdf938a1509936b9ec1f21059af4ea9",
+      "nonstar_variables": 90,
+      "nonzero_matrix_entries": 1215,
+      "primary_sha256": "227d67c3d82240f81334fa68578c529b5cdf938a1509936b9ec1f21059af4ea9",
+      "rows_per_apex_color": 243,
+      "shared_matrix_for_all_three_targets": true,
+      "star_variables": 45,
+      "target_rows": [
+        0,
+        121,
+        242
+      ]
+    },
+    {
+      "all_729_equations_reconstructed": true,
+      "apex": 4,
+      "apex_color_blocks": 3,
+      "coefficient_degree": 2,
+      "coefficient_terms": 3645,
+      "columns_per_apex_color": 15,
+      "independent_sha256": "7fc5202b80e373adbd46e4196569400ee9330ac3f72ba73f0fc678a732d6ab18",
+      "nonstar_variables": 90,
+      "nonzero_matrix_entries": 1215,
+      "primary_sha256": "7fc5202b80e373adbd46e4196569400ee9330ac3f72ba73f0fc678a732d6ab18",
+      "rows_per_apex_color": 243,
+      "shared_matrix_for_all_three_targets": true,
+      "star_variables": 45,
+      "target_rows": [
+        0,
+        121,
+        242
+      ]
+    },
+    {
+      "all_729_equations_reconstructed": true,
+      "apex": 5,
+      "apex_color_blocks": 3,
+      "coefficient_degree": 2,
+      "coefficient_terms": 3645,
+      "columns_per_apex_color": 15,
+      "independent_sha256": "d656dd87c264fb82811fc13841c884e23317aeadb4ac0f057787810bb1f0b9ac",
+      "nonstar_variables": 90,
+      "nonzero_matrix_entries": 1215,
+      "primary_sha256": "d656dd87c264fb82811fc13841c884e23317aeadb4ac0f057787810bb1f0b9ac",
+      "rows_per_apex_color": 243,
+      "shared_matrix_for_all_three_targets": true,
+      "star_variables": 45,
+      "target_rows": [
+        0,
+        121,
+        242
+      ]
+    }
+  ],
+  "claim_boundary": {
+    "column_space_condition_solved": false,
+    "finite_counterexample_found": false,
+    "global_affine_membership_decided": false,
+    "natural_chart_decided": false
+  },
+  "differencing_review": {
+    "all_constant_branch_is_forced": false,
+    "all_constant_branch_used_downstream": false,
+    "constant_color_case_tree_derived_from_the_lemma_is_void": true,
+    "proposed_single_column_differencing_lemma_valid": false,
+    "reason": "changing c_v also changes P_u for every u != v because the residual K4 defining P_u contains v",
+    "signed_cross_monomials_from_other_four_columns": 24,
+    "signed_monomials_from_varied_partner_column": 6,
+    "signed_monomials_in_full_row_difference": 30
+  },
+  "exact_equivalence": {
+    "all_weights_remain_independent": true,
+    "formula": "F(a,c)=sum_v y_(v,a,c_v) P_v(c_without_v)",
+    "one_apex_factorization_is_equivalent_to_all_729_equations": true,
+    "six_apex_factorizations_are_independent_constraints": false,
+    "six_apex_factorizations_are_simultaneous_cross_checks": true,
+    "target_condition": "one shared 243x15 matrix must contain e_00000, e_11111, and e_22222 in its column space"
+  },
+  "parameters": {
+    "d": 3,
+    "n": 6
+  },
+  "recommended_next_use": {
+    "bounded_alternating_star_solves": true,
+    "degree_seven_macaulay_run": false,
+    "exact_star_rank_consequences": true,
+    "raw_global_grobner_retry": false
+  },
+  "schema": "krenn-n6-d3-six-apex-star-linearization-audit-v1"
+}

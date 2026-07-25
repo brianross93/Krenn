@@ -1,0 +1,897 @@
+{
+  "claim_boundary": {
+    "Cox_homogeneous_presentation_constructed_exactly": true,
+    "Cox_irrelevant_saturation_computed": false,
+    "border_membership_changed": false,
+    "compactification_constructed_exactly": false,
+    "finite_counterexample_found": false,
+    "global_nonexistence_proved": false,
+    "large_CAS_launched": false,
+    "saturation_computed": false,
+    "scheme_theoretic_projective_closure_computed": false
+  },
+  "decisive_exact_test": {
+    "boundary_point_alone_is_a_decision": false,
+    "colon_chain_or_primary_decomposition_must_be_exact": true,
+    "counterexample": "J_fin is proper for at least one representative; extract and exactly verify a closed point",
+    "finite_ideal": "J_fin = J : H^infinity",
+    "finite_open_H_nonzero_avoids_all_Cox_irrelevant_blocks": true,
+    "four_factor_Cox_ring": "Q[U,Y0,Y1,Y2,h_U,h_0,h_1,h_2]",
+    "global_nonexistence": "J_fin is unit for all three pivot orbit representatives",
+    "homogenizer_product": "H=h_U*h_0*h_1*h_2",
+    "modular_or_timeout_result_is_a_decision": false,
+    "proper_J_fin": "a finite direct-GHZ point exists over the algebraic closure in this pivot orbit",
+    "unit_J_fin": "no finite point in this pivot orbit"
+  },
+  "exact_cover": {
+    "S5_x_S3_orbits": 3,
+    "includes_zero_coordinate_and_support_strata": true,
+    "nonzero_target_minor_choices": 125,
+    "requires_individual_weight_nonzero": false,
+    "three_quadratic_pivot_sums_normalized_to_one": true
+  },
+  "grading_and_symmetry": {
+    "affine_U_projective_star_combined_grading_rank": 15,
+    "direct_GHZ_color_gauge_character_rank": 15,
+    "finite_color_symmetry": "the three Y blocks are permuted; the all-same and all-distinct pivot types retain S3, while the exactly-two-same representative retains S2",
+    "four_factor_combined_grading_rank": 16,
+    "primitive_pivot_characters_quotiented": 3,
+    "rank_9_route_variables_generators_terms_max_degree": [
+      130,
+      729,
+      10938,
+      4
+    ],
+    "rank_9_seed_chart_grading_is_the_same_grading": false,
+    "rank_9_seed_chart_route_requires_eight_seed_orbits": true,
+    "residual_character_rank": 12,
+    "single_h_combined_grading_rank": 13
+  },
+  "orbit_preflights": [
+    {
+      "affine_U_projective_star_probe": {
+        "Cox_coordinates": 138,
+        "advantage": "P=1 remains valid at the boundary, so rank(A)>=3 and the enormous h_U=0, P=0 base locus is absent",
+        "ambient": "A^90_U x (P^15)^3",
+        "boundary_divisor_subsets": 7,
+        "boundary_orbits_under_representative_stabilizer": [
+          {
+            "individual_U_or_Y_coordinates_may_still_be_zero": true,
+            "orbit_size": 3,
+            "pivot_rank_floor": 3,
+            "rank_condition": "rank(A(U)) <= 14 because each zero h_a forces a nonzero Y^a in ker(A(U))",
+            "zero_star_homogenizer_colors": [
+              0
+            ]
+          },
+          {
+            "individual_U_or_Y_coordinates_may_still_be_zero": true,
+            "orbit_size": 3,
+            "pivot_rank_floor": 3,
+            "rank_condition": "rank(A(U)) <= 14 because each zero h_a forces a nonzero Y^a in ker(A(U))",
+            "zero_star_homogenizer_colors": [
+              0,
+              1
+            ]
+          },
+          {
+            "individual_U_or_Y_coordinates_may_still_be_zero": true,
+            "orbit_size": 1,
+            "pivot_rank_floor": 3,
+            "rank_condition": "rank(A(U)) <= 14 because each zero h_a forces a nonzero Y^a in ker(A(U))",
+            "zero_star_homogenizer_colors": [
+              0,
+              1,
+              2
+            ]
+          }
+        ],
+        "finite_open": "h_0*h_1*h_2 != 0",
+        "formula_output": "sum_(v,b) Y^a_(v,b)*P_(v,b)(U) - delta_(r,a^5)*h_a",
+        "formula_pivot": "P_(v_a,a)(U)-1",
+        "generators": 732,
+        "geometric_dimension": 135,
+        "limitation": "U remains affine; this is a decisive saturation formulation, not a proper compactification of U",
+        "maximum_UY_ordinary_degree": 3,
+        "terms": 10950
+      },
+      "orbit": {
+        "equality_pattern": "all-same",
+        "index": 0,
+        "orbit_size": 5,
+        "partner_triple_by_color": [
+          1,
+          1,
+          1
+        ],
+        "stabilizer_order": 144
+      },
+      "ordinary_single_h_eliminated": {
+        "boundary": "h = 0",
+        "boundary_leading_terms": 25929,
+        "degree_histogram": {
+          "2": 3,
+          "5": 720
+        },
+        "finite_open": "h != 0",
+        "generators": 723,
+        "homogeneous_coordinates": 127,
+        "maximum_degree": 5,
+        "polynomial_elimination_boundary_may_have_extraneous_components": true,
+        "projective_ambient": "P^126",
+        "terms": 35292
+      },
+      "ordinary_single_h_retained": {
+        "boundary": "h = 0",
+        "boundary_generators": "all 729 homogeneous output cubics and the three selected homogeneous pivot quadrics",
+        "boundary_terms": 10944,
+        "degree_histogram": {
+          "2": 3,
+          "3": 729
+        },
+        "finite_open": "h != 0",
+        "formula_output": "sum_matching W_i*W_j*W_k - delta_target*h^3",
+        "formula_pivot": "P_v(a^4)-h^2",
+        "generators": 732,
+        "homogeneous_coordinates": 136,
+        "maximum_degree": 3,
+        "projective_ambient": "P^135",
+        "terms": 10950,
+        "whole_U_zero_boundary_piece_present": true
+      },
+      "star_block_multi_projective": {
+        "Cox_coordinates": 139,
+        "Cox_scaling_rank": 4,
+        "boundary_divisor_subsets": 15,
+        "boundary_orbits_under_representative_stabilizer": [
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": false,
+            "orbit_size": 3,
+            "pivot_RHS_survives": true,
+            "specialized_nonzero_term_count": 10949,
+            "surviving_target_RHS_colors": [
+              1,
+              2
+            ],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "Y0"
+            ],
+            "zero_star_homogenizer_colors": [
+              0
+            ]
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": false,
+            "orbit_size": 3,
+            "pivot_RHS_survives": true,
+            "specialized_nonzero_term_count": 10948,
+            "surviving_target_RHS_colors": [
+              2
+            ],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "Y0",
+              "Y1"
+            ],
+            "zero_star_homogenizer_colors": [
+              0,
+              1
+            ]
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": false,
+            "orbit_size": 1,
+            "pivot_RHS_survives": true,
+            "specialized_nonzero_term_count": 10947,
+            "surviving_target_RHS_colors": [],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "Y0",
+              "Y1",
+              "Y2"
+            ],
+            "zero_star_homogenizer_colors": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": true,
+            "orbit_size": 1,
+            "pivot_RHS_survives": false,
+            "specialized_nonzero_term_count": 10944,
+            "surviving_target_RHS_colors": [],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "U"
+            ],
+            "zero_star_homogenizer_colors": []
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": true,
+            "orbit_size": 3,
+            "pivot_RHS_survives": false,
+            "specialized_nonzero_term_count": 10944,
+            "surviving_target_RHS_colors": [],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "U",
+              "Y0"
+            ],
+            "zero_star_homogenizer_colors": [
+              0
+            ]
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": true,
+            "orbit_size": 3,
+            "pivot_RHS_survives": false,
+            "specialized_nonzero_term_count": 10944,
+            "surviving_target_RHS_colors": [],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "U",
+              "Y0",
+              "Y1"
+            ],
+            "zero_star_homogenizer_colors": [
+              0,
+              1
+            ]
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": true,
+            "orbit_size": 1,
+            "pivot_RHS_survives": false,
+            "specialized_nonzero_term_count": 10944,
+            "surviving_target_RHS_colors": [],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "U",
+              "Y0",
+              "Y1",
+              "Y2"
+            ],
+            "zero_star_homogenizer_colors": [
+              0,
+              1,
+              2
+            ]
+          }
+        ],
+        "color_stabilizer_order": 6,
+        "finite_open": "h_U*h_0*h_1*h_2 != 0",
+        "formula_output": "sum_(v,b) Y^a_(v,b)*P_(v,b)(U) - delta_(r,a^5)*h_U^2*h_a",
+        "formula_pivot": "P_(v_a,a)(U)-h_U^2",
+        "generators": 732,
+        "maximum_ordinary_degree": 3,
+        "multi_projective_dimension": 135,
+        "multidegree_histogram": {
+          "2,0,0,0": 3,
+          "2,0,0,1": 243,
+          "2,0,1,0": 243,
+          "2,1,0,0": 243
+        },
+        "presentation_sha256": "219f070180ab5cb1db805aee6ac213a866e352aa4d6feadf0e2c006e3aaa82ba",
+        "projective_factors": [
+          "P^90_[U:h_U]",
+          "P^15_[Y0:h_0]",
+          "P^15_[Y1:h_1]",
+          "P^15_[Y2:h_2]"
+        ],
+        "terms": 10950,
+        "weight_block_sizes": [
+          90,
+          15,
+          15,
+          15
+        ]
+      }
+    },
+    {
+      "affine_U_projective_star_probe": {
+        "Cox_coordinates": 138,
+        "advantage": "P=1 remains valid at the boundary, so rank(A)>=3 and the enormous h_U=0, P=0 base locus is absent",
+        "ambient": "A^90_U x (P^15)^3",
+        "boundary_divisor_subsets": 7,
+        "boundary_orbits_under_representative_stabilizer": [
+          {
+            "individual_U_or_Y_coordinates_may_still_be_zero": true,
+            "orbit_size": 2,
+            "pivot_rank_floor": 3,
+            "rank_condition": "rank(A(U)) <= 14 because each zero h_a forces a nonzero Y^a in ker(A(U))",
+            "zero_star_homogenizer_colors": [
+              0
+            ]
+          },
+          {
+            "individual_U_or_Y_coordinates_may_still_be_zero": true,
+            "orbit_size": 1,
+            "pivot_rank_floor": 3,
+            "rank_condition": "rank(A(U)) <= 14 because each zero h_a forces a nonzero Y^a in ker(A(U))",
+            "zero_star_homogenizer_colors": [
+              0,
+              1
+            ]
+          },
+          {
+            "individual_U_or_Y_coordinates_may_still_be_zero": true,
+            "orbit_size": 1,
+            "pivot_rank_floor": 3,
+            "rank_condition": "rank(A(U)) <= 14 because each zero h_a forces a nonzero Y^a in ker(A(U))",
+            "zero_star_homogenizer_colors": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "individual_U_or_Y_coordinates_may_still_be_zero": true,
+            "orbit_size": 2,
+            "pivot_rank_floor": 3,
+            "rank_condition": "rank(A(U)) <= 14 because each zero h_a forces a nonzero Y^a in ker(A(U))",
+            "zero_star_homogenizer_colors": [
+              0,
+              2
+            ]
+          },
+          {
+            "individual_U_or_Y_coordinates_may_still_be_zero": true,
+            "orbit_size": 1,
+            "pivot_rank_floor": 3,
+            "rank_condition": "rank(A(U)) <= 14 because each zero h_a forces a nonzero Y^a in ker(A(U))",
+            "zero_star_homogenizer_colors": [
+              2
+            ]
+          }
+        ],
+        "finite_open": "h_0*h_1*h_2 != 0",
+        "formula_output": "sum_(v,b) Y^a_(v,b)*P_(v,b)(U) - delta_(r,a^5)*h_a",
+        "formula_pivot": "P_(v_a,a)(U)-1",
+        "generators": 732,
+        "geometric_dimension": 135,
+        "limitation": "U remains affine; this is a decisive saturation formulation, not a proper compactification of U",
+        "maximum_UY_ordinary_degree": 3,
+        "terms": 10950
+      },
+      "orbit": {
+        "equality_pattern": "exactly-two-same",
+        "index": 1,
+        "orbit_size": 60,
+        "partner_triple_by_color": [
+          1,
+          1,
+          2
+        ],
+        "stabilizer_order": 12
+      },
+      "ordinary_single_h_eliminated": {
+        "boundary": "h = 0",
+        "boundary_leading_terms": 28359,
+        "degree_histogram": {
+          "2": 3,
+          "3": 162,
+          "5": 558
+        },
+        "finite_open": "h != 0",
+        "generators": 723,
+        "homogeneous_coordinates": 127,
+        "maximum_degree": 5,
+        "polynomial_elimination_boundary_may_have_extraneous_components": true,
+        "projective_ambient": "P^126",
+        "terms": 35292
+      },
+      "ordinary_single_h_retained": {
+        "boundary": "h = 0",
+        "boundary_generators": "all 729 homogeneous output cubics and the three selected homogeneous pivot quadrics",
+        "boundary_terms": 10944,
+        "degree_histogram": {
+          "2": 3,
+          "3": 729
+        },
+        "finite_open": "h != 0",
+        "formula_output": "sum_matching W_i*W_j*W_k - delta_target*h^3",
+        "formula_pivot": "P_v(a^4)-h^2",
+        "generators": 732,
+        "homogeneous_coordinates": 136,
+        "maximum_degree": 3,
+        "projective_ambient": "P^135",
+        "terms": 10950,
+        "whole_U_zero_boundary_piece_present": true
+      },
+      "star_block_multi_projective": {
+        "Cox_coordinates": 139,
+        "Cox_scaling_rank": 4,
+        "boundary_divisor_subsets": 15,
+        "boundary_orbits_under_representative_stabilizer": [
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": false,
+            "orbit_size": 2,
+            "pivot_RHS_survives": true,
+            "specialized_nonzero_term_count": 10949,
+            "surviving_target_RHS_colors": [
+              1,
+              2
+            ],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "Y0"
+            ],
+            "zero_star_homogenizer_colors": [
+              0
+            ]
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": false,
+            "orbit_size": 1,
+            "pivot_RHS_survives": true,
+            "specialized_nonzero_term_count": 10948,
+            "surviving_target_RHS_colors": [
+              2
+            ],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "Y0",
+              "Y1"
+            ],
+            "zero_star_homogenizer_colors": [
+              0,
+              1
+            ]
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": false,
+            "orbit_size": 1,
+            "pivot_RHS_survives": true,
+            "specialized_nonzero_term_count": 10947,
+            "surviving_target_RHS_colors": [],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "Y0",
+              "Y1",
+              "Y2"
+            ],
+            "zero_star_homogenizer_colors": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": false,
+            "orbit_size": 2,
+            "pivot_RHS_survives": true,
+            "specialized_nonzero_term_count": 10948,
+            "surviving_target_RHS_colors": [
+              1
+            ],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "Y0",
+              "Y2"
+            ],
+            "zero_star_homogenizer_colors": [
+              0,
+              2
+            ]
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": false,
+            "orbit_size": 1,
+            "pivot_RHS_survives": true,
+            "specialized_nonzero_term_count": 10949,
+            "surviving_target_RHS_colors": [
+              0,
+              1
+            ],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "Y2"
+            ],
+            "zero_star_homogenizer_colors": [
+              2
+            ]
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": true,
+            "orbit_size": 1,
+            "pivot_RHS_survives": false,
+            "specialized_nonzero_term_count": 10944,
+            "surviving_target_RHS_colors": [],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "U"
+            ],
+            "zero_star_homogenizer_colors": []
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": true,
+            "orbit_size": 2,
+            "pivot_RHS_survives": false,
+            "specialized_nonzero_term_count": 10944,
+            "surviving_target_RHS_colors": [],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "U",
+              "Y0"
+            ],
+            "zero_star_homogenizer_colors": [
+              0
+            ]
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": true,
+            "orbit_size": 1,
+            "pivot_RHS_survives": false,
+            "specialized_nonzero_term_count": 10944,
+            "surviving_target_RHS_colors": [],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "U",
+              "Y0",
+              "Y1"
+            ],
+            "zero_star_homogenizer_colors": [
+              0,
+              1
+            ]
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": true,
+            "orbit_size": 1,
+            "pivot_RHS_survives": false,
+            "specialized_nonzero_term_count": 10944,
+            "surviving_target_RHS_colors": [],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "U",
+              "Y0",
+              "Y1",
+              "Y2"
+            ],
+            "zero_star_homogenizer_colors": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": true,
+            "orbit_size": 2,
+            "pivot_RHS_survives": false,
+            "specialized_nonzero_term_count": 10944,
+            "surviving_target_RHS_colors": [],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "U",
+              "Y0",
+              "Y2"
+            ],
+            "zero_star_homogenizer_colors": [
+              0,
+              2
+            ]
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": true,
+            "orbit_size": 1,
+            "pivot_RHS_survives": false,
+            "specialized_nonzero_term_count": 10944,
+            "surviving_target_RHS_colors": [],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "U",
+              "Y2"
+            ],
+            "zero_star_homogenizer_colors": [
+              2
+            ]
+          }
+        ],
+        "color_stabilizer_order": 2,
+        "finite_open": "h_U*h_0*h_1*h_2 != 0",
+        "formula_output": "sum_(v,b) Y^a_(v,b)*P_(v,b)(U) - delta_(r,a^5)*h_U^2*h_a",
+        "formula_pivot": "P_(v_a,a)(U)-h_U^2",
+        "generators": 732,
+        "maximum_ordinary_degree": 3,
+        "multi_projective_dimension": 135,
+        "multidegree_histogram": {
+          "2,0,0,0": 3,
+          "2,0,0,1": 243,
+          "2,0,1,0": 243,
+          "2,1,0,0": 243
+        },
+        "presentation_sha256": "1092f015239bd57cd07a0dc1d23c0c6b9efe3e0a2a6d513a1a54a71f47be1460",
+        "projective_factors": [
+          "P^90_[U:h_U]",
+          "P^15_[Y0:h_0]",
+          "P^15_[Y1:h_1]",
+          "P^15_[Y2:h_2]"
+        ],
+        "terms": 10950,
+        "weight_block_sizes": [
+          90,
+          15,
+          15,
+          15
+        ]
+      }
+    },
+    {
+      "affine_U_projective_star_probe": {
+        "Cox_coordinates": 138,
+        "advantage": "P=1 remains valid at the boundary, so rank(A)>=3 and the enormous h_U=0, P=0 base locus is absent",
+        "ambient": "A^90_U x (P^15)^3",
+        "boundary_divisor_subsets": 7,
+        "boundary_orbits_under_representative_stabilizer": [
+          {
+            "individual_U_or_Y_coordinates_may_still_be_zero": true,
+            "orbit_size": 3,
+            "pivot_rank_floor": 3,
+            "rank_condition": "rank(A(U)) <= 14 because each zero h_a forces a nonzero Y^a in ker(A(U))",
+            "zero_star_homogenizer_colors": [
+              0
+            ]
+          },
+          {
+            "individual_U_or_Y_coordinates_may_still_be_zero": true,
+            "orbit_size": 3,
+            "pivot_rank_floor": 3,
+            "rank_condition": "rank(A(U)) <= 14 because each zero h_a forces a nonzero Y^a in ker(A(U))",
+            "zero_star_homogenizer_colors": [
+              0,
+              1
+            ]
+          },
+          {
+            "individual_U_or_Y_coordinates_may_still_be_zero": true,
+            "orbit_size": 1,
+            "pivot_rank_floor": 3,
+            "rank_condition": "rank(A(U)) <= 14 because each zero h_a forces a nonzero Y^a in ker(A(U))",
+            "zero_star_homogenizer_colors": [
+              0,
+              1,
+              2
+            ]
+          }
+        ],
+        "finite_open": "h_0*h_1*h_2 != 0",
+        "formula_output": "sum_(v,b) Y^a_(v,b)*P_(v,b)(U) - delta_(r,a^5)*h_a",
+        "formula_pivot": "P_(v_a,a)(U)-1",
+        "generators": 732,
+        "geometric_dimension": 135,
+        "limitation": "U remains affine; this is a decisive saturation formulation, not a proper compactification of U",
+        "maximum_UY_ordinary_degree": 3,
+        "terms": 10950
+      },
+      "orbit": {
+        "equality_pattern": "all-distinct",
+        "index": 2,
+        "orbit_size": 60,
+        "partner_triple_by_color": [
+          1,
+          2,
+          3
+        ],
+        "stabilizer_order": 12
+      },
+      "ordinary_single_h_eliminated": {
+        "boundary": "h = 0",
+        "boundary_leading_terms": 29169,
+        "degree_histogram": {
+          "2": 3,
+          "3": 216,
+          "5": 504
+        },
+        "finite_open": "h != 0",
+        "generators": 723,
+        "homogeneous_coordinates": 127,
+        "maximum_degree": 5,
+        "polynomial_elimination_boundary_may_have_extraneous_components": true,
+        "projective_ambient": "P^126",
+        "terms": 35292
+      },
+      "ordinary_single_h_retained": {
+        "boundary": "h = 0",
+        "boundary_generators": "all 729 homogeneous output cubics and the three selected homogeneous pivot quadrics",
+        "boundary_terms": 10944,
+        "degree_histogram": {
+          "2": 3,
+          "3": 729
+        },
+        "finite_open": "h != 0",
+        "formula_output": "sum_matching W_i*W_j*W_k - delta_target*h^3",
+        "formula_pivot": "P_v(a^4)-h^2",
+        "generators": 732,
+        "homogeneous_coordinates": 136,
+        "maximum_degree": 3,
+        "projective_ambient": "P^135",
+        "terms": 10950,
+        "whole_U_zero_boundary_piece_present": true
+      },
+      "star_block_multi_projective": {
+        "Cox_coordinates": 139,
+        "Cox_scaling_rank": 4,
+        "boundary_divisor_subsets": 15,
+        "boundary_orbits_under_representative_stabilizer": [
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": false,
+            "orbit_size": 3,
+            "pivot_RHS_survives": true,
+            "specialized_nonzero_term_count": 10949,
+            "surviving_target_RHS_colors": [
+              1,
+              2
+            ],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "Y0"
+            ],
+            "zero_star_homogenizer_colors": [
+              0
+            ]
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": false,
+            "orbit_size": 3,
+            "pivot_RHS_survives": true,
+            "specialized_nonzero_term_count": 10948,
+            "surviving_target_RHS_colors": [
+              2
+            ],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "Y0",
+              "Y1"
+            ],
+            "zero_star_homogenizer_colors": [
+              0,
+              1
+            ]
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": false,
+            "orbit_size": 1,
+            "pivot_RHS_survives": true,
+            "specialized_nonzero_term_count": 10947,
+            "surviving_target_RHS_colors": [],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "Y0",
+              "Y1",
+              "Y2"
+            ],
+            "zero_star_homogenizer_colors": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": true,
+            "orbit_size": 1,
+            "pivot_RHS_survives": false,
+            "specialized_nonzero_term_count": 10944,
+            "surviving_target_RHS_colors": [],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "U"
+            ],
+            "zero_star_homogenizer_colors": []
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": true,
+            "orbit_size": 3,
+            "pivot_RHS_survives": false,
+            "specialized_nonzero_term_count": 10944,
+            "surviving_target_RHS_colors": [],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "U",
+              "Y0"
+            ],
+            "zero_star_homogenizer_colors": [
+              0
+            ]
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": true,
+            "orbit_size": 3,
+            "pivot_RHS_survives": false,
+            "specialized_nonzero_term_count": 10944,
+            "surviving_target_RHS_colors": [],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "U",
+              "Y0",
+              "Y1"
+            ],
+            "zero_star_homogenizer_colors": [
+              0,
+              1
+            ]
+          },
+          {
+            "all_729_U2Y_terms_survive": true,
+            "h_U_zero": true,
+            "orbit_size": 1,
+            "pivot_RHS_survives": false,
+            "specialized_nonzero_term_count": 10944,
+            "surviving_target_RHS_colors": [],
+            "whole_weight_block_forced_nonzero_by_Cox_irrelevant_ideal": [
+              "U",
+              "Y0",
+              "Y1",
+              "Y2"
+            ],
+            "zero_star_homogenizer_colors": [
+              0,
+              1,
+              2
+            ]
+          }
+        ],
+        "color_stabilizer_order": 6,
+        "finite_open": "h_U*h_0*h_1*h_2 != 0",
+        "formula_output": "sum_(v,b) Y^a_(v,b)*P_(v,b)(U) - delta_(r,a^5)*h_U^2*h_a",
+        "formula_pivot": "P_(v_a,a)(U)-h_U^2",
+        "generators": 732,
+        "maximum_ordinary_degree": 3,
+        "multi_projective_dimension": 135,
+        "multidegree_histogram": {
+          "2,0,0,0": 3,
+          "2,0,0,1": 243,
+          "2,0,1,0": 243,
+          "2,1,0,0": 243
+        },
+        "presentation_sha256": "1e4536e3ffdbf5038af9bc7f7dc8f547a5e528b6c4ac9cae1f945edd47169bba",
+        "projective_factors": [
+          "P^90_[U:h_U]",
+          "P^15_[Y0:h_0]",
+          "P^15_[Y1:h_1]",
+          "P^15_[Y2:h_2]"
+        ],
+        "terms": 10950,
+        "weight_block_sizes": [
+          90,
+          15,
+          15,
+          15
+        ]
+      }
+    }
+  ],
+  "parameters": {
+    "affine_weight_variables": 135,
+    "apex": 0,
+    "d": 3,
+    "n": 6,
+    "pivot_orbit_representatives": 3
+  },
+  "recommended_first_exact_probe": {
+    "boundary_Cox_irrelevant_block": "B_Y0=<all 15 coordinates of Y0>",
+    "boundary_Cox_irrelevant_saturation_required": true,
+    "boundary_preflight_before_full_colon": "let B_Y0=<all 15 coordinates of Y0> and compute B0=Sat_B_Y0((J_star+(h_0)):(h_1*h_2)^infinity) (equivalently, cover the 15 charts Y0_j != 0); only after this Cox-irrelevant saturation is the elimination the exact incidence rank(A)<=14 with e_11111,e_22222 in im(A)",
+    "conclusion_if_K3_is_proper": "a finite witness exists over the algebraic closure in the all-distinct pivot orbit",
+    "conclusion_if_K3_is_unit": "the all-distinct pivot orbit contains no finite witness",
+    "existing_timing_warning": "the affine retained p31 slimgb probes all timed out after 600 seconds, so there is no basis for claiming this is one hour from a decision",
+    "formulation": "affine-U/projective-star retained slice",
+    "grading": "use the residual Z^12 character blocks together with the three Cox degrees; do not impose weight anchors",
+    "ideal": "J_star=<A(U)Y^a-delta*h_a, P_(v_a,a)(U)-1>",
+    "pivot_orbit": "all-distinct (1,2,3)",
+    "raw_boundary_colon_without_irrelevant_saturation_is_decisive": false,
+    "required_exactness": "characteristic zero colon/primary computation, including the indicated Cox-irrelevant saturation on a boundary; modular runs are reconnaissance only",
+    "ring": "Q[U_0..U_89,Y^0,Y^1,Y^2,h_0,h_1,h_2]",
+    "sequential_exact_test": [
+      "K0=J_star",
+      "K1=K0:h_0^infinity",
+      "K2=K1:h_1^infinity",
+      "K3=K2:h_2^infinity"
+    ],
+    "stage_gate": "do not launch all three global saturations unless the Cox-irrelevant-saturated one-divisor boundary/first-colon computation shows bounded block growth",
+    "why_this_orbit": "it has the full S3 consistency check and is the pivot type containing the natural nine-slot configuration"
+  },
+  "schema": "krenn-n6-d3-star-pivot-compactification-v1"
+}

@@ -1,0 +1,238 @@
+{
+  "claim_boundary": {
+    "bounded_miss_is_global_proof": false,
+    "degree_six_nonmembership_over_Q_certified": false,
+    "finite_affine_GHZ_membership_decided": false,
+    "full_slice_unit_or_proper_status_decided": false,
+    "natural_chart_decided": false
+  },
+  "degree_six_status": {
+    "field": "F_1009",
+    "rank_gaps": {
+      "11": 123,
+      "29": 117
+    },
+    "status": "reconnaissance-only",
+    "target_outside_modular_source_span": true
+  },
+  "exact_conclusion": {
+    "certificate_character": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "field": "Q",
+    "no_nullstellensatz_identity_through_total_degree": 5,
+    "reason": "exact averaged Koszul relations give the Q source-rank upper bound, and modular source/augmented minors attain that bound and raise it by one",
+    "stabilizer_averaging_order": 2,
+    "symmetry_related_weights_equated": false
+  },
+  "schema": "krenn-n6-d3-sparse-derivative-graded-macaulay-audit-v1",
+  "systems": [
+    {
+      "bounded_rows": [
+        {
+          "augmented_rank_mod_p": 188,
+          "bounded_nonmembership_over_q_certified": true,
+          "claim_boundary": {
+            "bounded_miss_is_global_proof": false,
+            "finite_affine_GHZ_membership_decided": false,
+            "finite_field_unit_is_Q_unit_certificate": false,
+            "full_slice_unit_or_proper_status_decided": false,
+            "natural_chart_decided": false
+          },
+          "derivative_ambient_weight": 11,
+          "derivative_stabilizer_order": 2,
+          "exact_koszul_relations": 0,
+          "exact_reason_if_certified": "exact averaged Koszul relations have an independent minor modulo p, hence give a Q source-rank upper bound; source and augmented modular minors attain that bound and raise it for the constant",
+          "independent_relation_rank_mod_p": 0,
+          "invariant_columns": 187,
+          "invariant_rows": 1638,
+          "nonzero_entries": 2054,
+          "prime": 1009,
+          "raw_character_pairs": 339,
+          "residual_character_rank": 8,
+          "schema": "krenn-n6-d3-sparse-derivative-graded-macaulay-v1",
+          "source_rank_mod_p": 187,
+          "source_rank_upper_bound_over_q": 187,
+          "target_in_span_mod_p": false,
+          "total_degree_bound": 4
+        },
+        {
+          "augmented_rank_mod_p": 3792,
+          "bounded_nonmembership_over_q_certified": true,
+          "claim_boundary": {
+            "bounded_miss_is_global_proof": false,
+            "finite_affine_GHZ_membership_decided": false,
+            "finite_field_unit_is_Q_unit_certificate": false,
+            "full_slice_unit_or_proper_status_decided": false,
+            "natural_chart_decided": false
+          },
+          "derivative_ambient_weight": 11,
+          "derivative_stabilizer_order": 2,
+          "exact_koszul_relations": 3,
+          "exact_reason_if_certified": "exact averaged Koszul relations have an independent minor modulo p, hence give a Q source-rank upper bound; source and augmented modular minors attain that bound and raise it for the constant",
+          "independent_relation_rank_mod_p": 3,
+          "invariant_columns": 3794,
+          "invariant_rows": 33222,
+          "nonzero_entries": 49278,
+          "prime": 1009,
+          "raw_character_pairs": 7400,
+          "residual_character_rank": 8,
+          "schema": "krenn-n6-d3-sparse-derivative-graded-macaulay-v1",
+          "source_rank_mod_p": 3791,
+          "source_rank_upper_bound_over_q": 3791,
+          "target_in_span_mod_p": false,
+          "total_degree_bound": 5
+        },
+        {
+          "augmented_rank_mod_p": 70830,
+          "bounded_nonmembership_over_q_certified": false,
+          "claim_boundary": {
+            "bounded_miss_is_global_proof": false,
+            "finite_affine_GHZ_membership_decided": false,
+            "finite_field_unit_is_Q_unit_certificate": false,
+            "full_slice_unit_or_proper_status_decided": false,
+            "natural_chart_decided": false
+          },
+          "derivative_ambient_weight": 11,
+          "derivative_stabilizer_order": 2,
+          "exact_koszul_relations": 126,
+          "exact_reason_if_certified": null,
+          "independent_relation_rank_mod_p": 126,
+          "invariant_columns": 71078,
+          "invariant_rows": 532675,
+          "nonzero_entries": 981006,
+          "prime": 1009,
+          "raw_character_pairs": 141317,
+          "residual_character_rank": 8,
+          "schema": "krenn-n6-d3-sparse-derivative-graded-macaulay-v1",
+          "source_rank_mod_p": 70829,
+          "source_rank_upper_bound_over_q": 70952,
+          "target_in_span_mod_p": false,
+          "total_degree_bound": 6
+        }
+      ],
+      "degree_six_unclosed_rank_gap": 123,
+      "derivative_ambient_weight": 11,
+      "quotient_grading": {
+        "ambient_rank": 9,
+        "generator_blocks": 558,
+        "killed_rank": 1,
+        "residual_rank": 8,
+        "smith_diagonal": [
+          1
+        ],
+        "split_over_Z": true,
+        "variable_blocks": 105,
+        "zero_character_generators": 7,
+        "zero_character_variables": 5
+      }
+    },
+    {
+      "bounded_rows": [
+        {
+          "augmented_rank_mod_p": 181,
+          "bounded_nonmembership_over_q_certified": true,
+          "claim_boundary": {
+            "bounded_miss_is_global_proof": false,
+            "finite_affine_GHZ_membership_decided": false,
+            "finite_field_unit_is_Q_unit_certificate": false,
+            "full_slice_unit_or_proper_status_decided": false,
+            "natural_chart_decided": false
+          },
+          "derivative_ambient_weight": 29,
+          "derivative_stabilizer_order": 2,
+          "exact_koszul_relations": 0,
+          "exact_reason_if_certified": "exact averaged Koszul relations have an independent minor modulo p, hence give a Q source-rank upper bound; source and augmented modular minors attain that bound and raise it for the constant",
+          "independent_relation_rank_mod_p": 0,
+          "invariant_columns": 180,
+          "invariant_rows": 1579,
+          "nonzero_entries": 1964,
+          "prime": 1009,
+          "raw_character_pairs": 313,
+          "residual_character_rank": 8,
+          "schema": "krenn-n6-d3-sparse-derivative-graded-macaulay-v1",
+          "source_rank_mod_p": 180,
+          "source_rank_upper_bound_over_q": 180,
+          "target_in_span_mod_p": false,
+          "total_degree_bound": 4
+        },
+        {
+          "augmented_rank_mod_p": 3674,
+          "bounded_nonmembership_over_q_certified": true,
+          "claim_boundary": {
+            "bounded_miss_is_global_proof": false,
+            "finite_affine_GHZ_membership_decided": false,
+            "finite_field_unit_is_Q_unit_certificate": false,
+            "full_slice_unit_or_proper_status_decided": false,
+            "natural_chart_decided": false
+          },
+          "derivative_ambient_weight": 29,
+          "derivative_stabilizer_order": 2,
+          "exact_koszul_relations": 3,
+          "exact_reason_if_certified": "exact averaged Koszul relations have an independent minor modulo p, hence give a Q source-rank upper bound; source and augmented modular minors attain that bound and raise it for the constant",
+          "independent_relation_rank_mod_p": 3,
+          "invariant_columns": 3676,
+          "invariant_rows": 32053,
+          "nonzero_entries": 47380,
+          "prime": 1009,
+          "raw_character_pairs": 7052,
+          "residual_character_rank": 8,
+          "schema": "krenn-n6-d3-sparse-derivative-graded-macaulay-v1",
+          "source_rank_mod_p": 3673,
+          "source_rank_upper_bound_over_q": 3673,
+          "target_in_span_mod_p": false,
+          "total_degree_bound": 5
+        },
+        {
+          "augmented_rank_mod_p": 68493,
+          "bounded_nonmembership_over_q_certified": false,
+          "claim_boundary": {
+            "bounded_miss_is_global_proof": false,
+            "finite_affine_GHZ_membership_decided": false,
+            "finite_field_unit_is_Q_unit_certificate": false,
+            "full_slice_unit_or_proper_status_decided": false,
+            "natural_chart_decided": false
+          },
+          "derivative_ambient_weight": 29,
+          "derivative_stabilizer_order": 2,
+          "exact_koszul_relations": 122,
+          "exact_reason_if_certified": null,
+          "independent_relation_rank_mod_p": 122,
+          "invariant_columns": 68731,
+          "invariant_rows": 517236,
+          "nonzero_entries": 944817,
+          "prime": 1009,
+          "raw_character_pairs": 135891,
+          "residual_character_rank": 8,
+          "schema": "krenn-n6-d3-sparse-derivative-graded-macaulay-v1",
+          "source_rank_mod_p": 68492,
+          "source_rank_upper_bound_over_q": 68609,
+          "target_in_span_mod_p": false,
+          "total_degree_bound": 6
+        }
+      ],
+      "degree_six_unclosed_rank_gap": 117,
+      "derivative_ambient_weight": 29,
+      "quotient_grading": {
+        "ambient_rank": 9,
+        "generator_blocks": 642,
+        "killed_rank": 1,
+        "residual_rank": 8,
+        "smith_diagonal": [
+          1
+        ],
+        "split_over_Z": true,
+        "variable_blocks": 105,
+        "zero_character_generators": 7,
+        "zero_character_variables": 5
+      }
+    }
+  ]
+}

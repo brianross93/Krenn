@@ -1,0 +1,203 @@
+{
+  "claim_boundary": {
+    "full_eight_chart_cover_decided": false,
+    "natural_chart_decided": false
+  },
+  "decision_rule": {
+    "both_exact_Q_unit": "excludes the full natural chart",
+    "either_exact_Q_proper": "proves a finite point over the algebraic closure of Q",
+    "finite_field_or_timeout": "reconnaissance only"
+  },
+  "natural_seed": [
+    0,
+    4,
+    8
+  ],
+  "schema": "krenn-n6-d3-sparse-derivative-quotient-grading-v1",
+  "systems": [
+    {
+      "claim_boundary": {
+        "finite_counterexample_found": false,
+        "global_nonexistence_proved": false,
+        "grading_alone_is_a_grobner_basis": false,
+        "grading_alone_is_a_tropical_decomposition": false,
+        "unit_or_proper_status_decided": false
+      },
+      "derivative_ambient_weight": 11,
+      "derivative_character": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "generators": {
+        "all_terms_quotient_homogeneous": true,
+        "block_multiplicity_histogram": [
+          {
+            "blocks": 415,
+            "multiplicity": 1
+          },
+          {
+            "blocks": 126,
+            "multiplicity": 2
+          },
+          {
+            "blocks": 8,
+            "multiplicity": 3
+          },
+          {
+            "blocks": 8,
+            "multiplicity": 4
+          },
+          {
+            "blocks": 1,
+            "multiplicity": 7
+          }
+        ],
+        "character_blocks": 558,
+        "count": 730,
+        "maximum_degree": 4,
+        "terms": 10940,
+        "variable_and_generator_character_sha256": "e57728a7fdb8ab9a55a3aee92072b3fa3587e4a920cc620b3b700fa6d8e28897",
+        "zero_character_generators": 7
+      },
+      "quotient": {
+        "ambient_rank": 9,
+        "killed_rank": 1,
+        "projection_formula": "(a1,...,a7,a8+chi8*a0), where chi8 is the last derivative-character coordinate",
+        "residual_rank": 8,
+        "smith_diagonal": [
+          1
+        ],
+        "split_over_Z": true
+      },
+      "strict_derivative_stabilizer": {
+        "order": 2,
+        "symmetry_related_weights_equated": false
+      },
+      "triangular_rewrite": {
+        "derivative_linear_pivot": 62,
+        "ideal_preserved_exactly": true,
+        "identity": "x+h = f-x*(d-1)",
+        "selected_local_variable": 10,
+        "system_sha256": "adbff4500d4a18715a820669431e6e27c36b60290aad0981fe28587d3c65758c",
+        "two_monic_pivots": true,
+        "unit_linear_pivot": true
+      },
+      "variables": {
+        "block_multiplicity_histogram": [
+          {
+            "blocks": 84,
+            "multiplicity": 1
+          },
+          {
+            "blocks": 20,
+            "multiplicity": 2
+          },
+          {
+            "blocks": 1,
+            "multiplicity": 5
+          }
+        ],
+        "character_blocks": 105,
+        "count": 129,
+        "zero_character_variables": 5
+      }
+    },
+    {
+      "claim_boundary": {
+        "finite_counterexample_found": false,
+        "global_nonexistence_proved": false,
+        "grading_alone_is_a_grobner_basis": false,
+        "grading_alone_is_a_tropical_decomposition": false,
+        "unit_or_proper_status_decided": false
+      },
+      "derivative_ambient_weight": 29,
+      "derivative_character": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "generators": {
+        "all_terms_quotient_homogeneous": true,
+        "block_multiplicity_histogram": [
+          {
+            "blocks": 567,
+            "multiplicity": 1
+          },
+          {
+            "blocks": 66,
+            "multiplicity": 2
+          },
+          {
+            "blocks": 8,
+            "multiplicity": 3
+          },
+          {
+            "blocks": 1,
+            "multiplicity": 7
+          }
+        ],
+        "character_blocks": 642,
+        "count": 730,
+        "maximum_degree": 4,
+        "terms": 10940,
+        "variable_and_generator_character_sha256": "2d0c1ed2136094ed1c802345bf5a42704078a2e3d79a5614a08cd5d73fb193b9",
+        "zero_character_generators": 7
+      },
+      "quotient": {
+        "ambient_rank": 9,
+        "killed_rank": 1,
+        "projection_formula": "(a1,...,a7,a8+chi8*a0), where chi8 is the last derivative-character coordinate",
+        "residual_rank": 8,
+        "smith_diagonal": [
+          1
+        ],
+        "split_over_Z": true
+      },
+      "strict_derivative_stabilizer": {
+        "order": 2,
+        "symmetry_related_weights_equated": false
+      },
+      "triangular_rewrite": {
+        "derivative_linear_pivot": 44,
+        "ideal_preserved_exactly": true,
+        "identity": "x+h = f-x*(d-1)",
+        "selected_local_variable": 26,
+        "system_sha256": "9429f376bfc1874146202866c902a9011e47614c4178486d75ded14dd8c43f0d",
+        "two_monic_pivots": true,
+        "unit_linear_pivot": true
+      },
+      "variables": {
+        "block_multiplicity_histogram": [
+          {
+            "blocks": 84,
+            "multiplicity": 1
+          },
+          {
+            "blocks": 20,
+            "multiplicity": 2
+          },
+          {
+            "blocks": 1,
+            "multiplicity": 5
+          }
+        ],
+        "character_blocks": 105,
+        "count": 129,
+        "zero_character_variables": 5
+      }
+    }
+  ]
+}

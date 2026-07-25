@@ -1,0 +1,748 @@
+{
+  "aggregate": {
+    "all_elapsed_at_least_600_seconds": true,
+    "characteristic_zero_slice_decisions": 0,
+    "finite_exact_counterexamples_verified": 0,
+    "outcome_counts": {
+      "timeout-after-parse": 3
+    },
+    "parse_success_count": 3,
+    "standard_basis_completion_count": 0,
+    "timeout_return_code_124_count": 3
+  },
+  "campaign": {
+    "algorithm": "slimgb",
+    "characteristic": 31,
+    "docker_image": "hodgepodge-singular:ubuntu24.04",
+    "docker_image_id": "sha256:6613ac51738965fafd2ebb2839a02452811ac4e3e5416cfbbda0485ed1995e75",
+    "engine_budget_seconds_per_probe": 600,
+    "latest_invocation_workers": 2,
+    "maximum_concurrent_probes_observed": 2,
+    "original_run_directory": "D:\\KrennScratch\\counterexample_search\\star_pivot_affine_cas\\ten_minute_runs",
+    "original_scratch_root": "D:\\KrennScratch\\counterexample_search\\star_pivot_affine_cas",
+    "presentation_kind": "retained",
+    "random_seeds": [],
+    "resources": {
+      "cpus_per_probe": 2,
+      "maximum_concurrent_cpus": 4,
+      "maximum_concurrent_memory_gib": 16,
+      "memory_gib_per_probe": 8,
+      "network": "none"
+    },
+    "run_count": 3
+  },
+  "claim_boundary": {
+    "bounded_miss_is_a_nonexistence_proof": false,
+    "finite_affine_membership_status": "undecided",
+    "finite_counterexample_found": false,
+    "global_affine_membership_decided": false,
+    "parse_success_is_standard_basis_completion": false,
+    "positive_characteristic_result_is_exact_Q_or_C_proof": false,
+    "scope": "three retained star-pivot affine orbit representatives",
+    "timeout_is_a_slice_decision": false
+  },
+  "deterministic_inputs": [
+    {
+      "bytes": 139490,
+      "equality_pattern": "all-same",
+      "orbit_index": 0,
+      "presentation_sha256": "41c7aebc6263ed0d29c036566e357cd9caa2c6e3ac79f29ba6b7617c93ff9f18",
+      "script_name": "star_pivot_orbit_0_retained_p31_slimgb.sing",
+      "sha256": "90b4c5b8a86b90003269880131c2b3ef6d9ea875cea23deb78dee8911ed6d8f3"
+    },
+    {
+      "bytes": 139497,
+      "equality_pattern": "exactly-two-same",
+      "orbit_index": 1,
+      "presentation_sha256": "c50942b52b9fdac74aee50769545f51f3bf346599505f7791aa451c71cc9301f",
+      "script_name": "star_pivot_orbit_1_retained_p31_slimgb.sing",
+      "sha256": "4f8961c2b0f13fe6ce67645b1e0d06934ac98f50625425dcd14d866f6a2ed22f"
+    },
+    {
+      "bytes": 139491,
+      "equality_pattern": "all-distinct",
+      "orbit_index": 2,
+      "presentation_sha256": "6b795fa5cdf087999d2fc6a8fc1fae12c5ab4a8dfe2a42126e046f1266c8eb3f",
+      "script_name": "star_pivot_orbit_2_retained_p31_slimgb.sing",
+      "sha256": "7c6f8889ca69075a7061958d94b1e1c7cc4b45cab529eee199dfdd3ea6f0c36a"
+    }
+  ],
+  "portable_evidence": {
+    "completed_checkpoint": {
+      "payload": {
+        "algorithm": "slimgb",
+        "characteristic": 31,
+        "claim_boundary": {
+          "any_affine_slice_solved_over_Q_or_C": false,
+          "bounded_miss_is_a_nonexistence_proof": false,
+          "finite_counterexample_found": false,
+          "global_affine_membership_decided": false,
+          "positive_characteristic_result_is_exact_Q_proof": false,
+          "raw_groebner_output_is_promoted_to_a_global_claim": false,
+          "timeout_is_a_slice_decision": false
+        },
+        "completed_receipts": [
+          {
+            "bytes": 2468,
+            "elapsed_seconds": 600.62027,
+            "key": "star_pivot_orbit_0_retained_p31_slimgb",
+            "outcome": {
+              "claim_boundary": {
+                "positive_characteristic_result_is_exact_Q_proof": false,
+                "timeout_is_a_chart_decision": false
+              },
+              "completion_marker_observed": false,
+              "parse_marker_observed": true,
+              "return_code": 124,
+              "selected_singular_output": {},
+              "status": "timeout-after-parse"
+            },
+            "path": "star_pivot_orbit_0_retained_p31_slimgb.receipt.json",
+            "sha256": "cc0fe32173cbbabea8f50c288c7b60a20bcc655b6a285927b17f5009f77dff51"
+          },
+          {
+            "bytes": 2476,
+            "elapsed_seconds": 600.61943,
+            "key": "star_pivot_orbit_1_retained_p31_slimgb",
+            "outcome": {
+              "claim_boundary": {
+                "positive_characteristic_result_is_exact_Q_proof": false,
+                "timeout_is_a_chart_decision": false
+              },
+              "completion_marker_observed": false,
+              "parse_marker_observed": true,
+              "return_code": 124,
+              "selected_singular_output": {},
+              "status": "timeout-after-parse"
+            },
+            "path": "star_pivot_orbit_1_retained_p31_slimgb.receipt.json",
+            "sha256": "1a0cc511fcffae18c4a34ce0096a913f0a6db8747d3f13c2059f572381052594"
+          },
+          {
+            "bytes": 2473,
+            "elapsed_seconds": 600.488981,
+            "key": "star_pivot_orbit_2_retained_p31_slimgb",
+            "outcome": {
+              "claim_boundary": {
+                "positive_characteristic_result_is_exact_Q_proof": false,
+                "timeout_is_a_chart_decision": false
+              },
+              "completion_marker_observed": false,
+              "parse_marker_observed": true,
+              "return_code": 124,
+              "selected_singular_output": {},
+              "status": "timeout-after-parse"
+            },
+            "path": "star_pivot_orbit_2_retained_p31_slimgb.receipt.json",
+            "sha256": "368003010067a3e90d156f5561607258cc3fe2634affead4d9a0f6a28b41f54c"
+          }
+        ],
+        "cpus_per_probe": 2,
+        "docker_image": "hodgepodge-singular:ubuntu24.04",
+        "docker_image_id": "sha256:6613ac51738965fafd2ebb2839a02452811ac4e3e5416cfbbda0485ed1995e75",
+        "engine_budget_seconds_per_probe": 600,
+        "generator_source": {
+          "bytes": 39840,
+          "path": "C:\\Users\\brssn\\Projects\\Krenn-localized-chart-ideals\\experiments\\krenn_quantum_graph\\star_pivot_affine_slices.py",
+          "sha256": "74fdba0219ca8dc7d7424cc28153fc3bc2d7fb75ecd918af093efe141d5ae2e0"
+        },
+        "inputs": [
+          {
+            "bytes": 139490,
+            "path": "D:\\KrennScratch\\counterexample_search\\star_pivot_affine_cas\\retained_p31_inputs\\star_pivot_orbit_0_retained_p31_slimgb.sing",
+            "sha256": "90b4c5b8a86b90003269880131c2b3ef6d9ea875cea23deb78dee8911ed6d8f3"
+          },
+          {
+            "bytes": 139497,
+            "path": "D:\\KrennScratch\\counterexample_search\\star_pivot_affine_cas\\retained_p31_inputs\\star_pivot_orbit_1_retained_p31_slimgb.sing",
+            "sha256": "4f8961c2b0f13fe6ce67645b1e0d06934ac98f50625425dcd14d866f6a2ed22f"
+          },
+          {
+            "bytes": 139491,
+            "path": "D:\\KrennScratch\\counterexample_search\\star_pivot_affine_cas\\retained_p31_inputs\\star_pivot_orbit_2_retained_p31_slimgb.sing",
+            "sha256": "7c6f8889ca69075a7061958d94b1e1c7cc4b45cab529eee199dfdd3ea6f0c36a"
+          }
+        ],
+        "memory_gib_per_probe": 8,
+        "presentation_kind": "retained",
+        "presentation_sha256": {
+          "0": "41c7aebc6263ed0d29c036566e357cd9caa2c6e3ac79f29ba6b7617c93ff9f18",
+          "1": "c50942b52b9fdac74aee50769545f51f3bf346599505f7791aa451c71cc9301f",
+          "2": "6b795fa5cdf087999d2fc6a8fc1fae12c5ab4a8dfe2a42126e046f1266c8eb3f"
+        },
+        "probes": [
+          {
+            "algorithm": "slimgb",
+            "budget_seconds": 600,
+            "characteristic": 31,
+            "completion_marker": "KRENN_STAR_AFFINE_GROEBNER_DONE",
+            "cpus": 2,
+            "ideal": "gauge-normalized star-pivot affine slice, all-same orbit, retained cubic form",
+            "input_bytes": 139490,
+            "input_sha256": "90b4c5b8a86b90003269880131c2b3ef6d9ea875cea23deb78dee8911ed6d8f3",
+            "input_subdirectory": "retained_p31_inputs",
+            "key": "star_pivot_orbit_0_retained_p31_slimgb",
+            "memory_gib": 8,
+            "parse_marker": "KRENN_STAR_AFFINE_PARSE_OK",
+            "script_name": "star_pivot_orbit_0_retained_p31_slimgb.sing"
+          },
+          {
+            "algorithm": "slimgb",
+            "budget_seconds": 600,
+            "characteristic": 31,
+            "completion_marker": "KRENN_STAR_AFFINE_GROEBNER_DONE",
+            "cpus": 2,
+            "ideal": "gauge-normalized star-pivot affine slice, exactly-two-same orbit, retained cubic form",
+            "input_bytes": 139497,
+            "input_sha256": "4f8961c2b0f13fe6ce67645b1e0d06934ac98f50625425dcd14d866f6a2ed22f",
+            "input_subdirectory": "retained_p31_inputs",
+            "key": "star_pivot_orbit_1_retained_p31_slimgb",
+            "memory_gib": 8,
+            "parse_marker": "KRENN_STAR_AFFINE_PARSE_OK",
+            "script_name": "star_pivot_orbit_1_retained_p31_slimgb.sing"
+          },
+          {
+            "algorithm": "slimgb",
+            "budget_seconds": 600,
+            "characteristic": 31,
+            "completion_marker": "KRENN_STAR_AFFINE_GROEBNER_DONE",
+            "cpus": 2,
+            "ideal": "gauge-normalized star-pivot affine slice, all-distinct orbit, retained cubic form",
+            "input_bytes": 139491,
+            "input_sha256": "7c6f8889ca69075a7061958d94b1e1c7cc4b45cab529eee199dfdd3ea6f0c36a",
+            "input_subdirectory": "retained_p31_inputs",
+            "key": "star_pivot_orbit_2_retained_p31_slimgb",
+            "memory_gib": 8,
+            "parse_marker": "KRENN_STAR_AFFINE_PARSE_OK",
+            "script_name": "star_pivot_orbit_2_retained_p31_slimgb.sing"
+          }
+        ],
+        "random_seeds": [],
+        "runner_source": {
+          "bytes": 19684,
+          "path": "C:\\Users\\brssn\\Projects\\Krenn-localized-chart-ideals\\experiments\\krenn_quantum_graph\\star_pivot_affine_cas_runner.py",
+          "sha256": "b96df687bad3c96e9001aa7f4d9780143f920aec9eb236db5ad6aa4b03f5ee89"
+        },
+        "schema": "krenn-n6-d3-star-pivot-affine-cas-checkpoint-v1",
+        "scratch_root": "D:\\KrennScratch\\counterexample_search\\star_pivot_affine_cas"
+      },
+      "record": {
+        "bytes": 6426,
+        "path": "retained_p31_checkpoint.json",
+        "sha256": "3882470796c1f74d652a97d1c20eb2fc38f17999ecb11f7cb2092ca19da30907"
+      }
+    },
+    "original_manifest": {
+      "payload": {
+        "algorithm": "slimgb",
+        "characteristic": 31,
+        "checkpoint": {
+          "bytes": 6426,
+          "completed_probe_count": 3,
+          "path": "retained_p31_checkpoint.json",
+          "sha256": "3882470796c1f74d652a97d1c20eb2fc38f17999ecb11f7cb2092ca19da30907"
+        },
+        "claim_boundary": {
+          "any_affine_slice_solved_over_Q_or_C": false,
+          "bounded_miss_is_a_nonexistence_proof": false,
+          "finite_counterexample_found": false,
+          "global_affine_membership_decided": false,
+          "positive_characteristic_result_is_exact_Q_proof": false,
+          "raw_groebner_output_is_promoted_to_a_global_claim": false,
+          "timeout_is_a_slice_decision": false
+        },
+        "cpus_per_probe": 2,
+        "docker_image": "hodgepodge-singular:ubuntu24.04",
+        "docker_image_id": "sha256:6613ac51738965fafd2ebb2839a02452811ac4e3e5416cfbbda0485ed1995e75",
+        "eliminated_presentation_attempted": false,
+        "engine_budget_seconds_per_probe": 600,
+        "generator_source": {
+          "bytes": 39840,
+          "path": "C:\\Users\\brssn\\Projects\\Krenn-localized-chart-ideals\\experiments\\krenn_quantum_graph\\star_pivot_affine_slices.py",
+          "sha256": "74fdba0219ca8dc7d7424cc28153fc3bc2d7fb75ecd918af093efe141d5ae2e0"
+        },
+        "inputs": [
+          {
+            "bytes": 139490,
+            "path": "D:\\KrennScratch\\counterexample_search\\star_pivot_affine_cas\\retained_p31_inputs\\star_pivot_orbit_0_retained_p31_slimgb.sing",
+            "sha256": "90b4c5b8a86b90003269880131c2b3ef6d9ea875cea23deb78dee8911ed6d8f3"
+          },
+          {
+            "bytes": 139497,
+            "path": "D:\\KrennScratch\\counterexample_search\\star_pivot_affine_cas\\retained_p31_inputs\\star_pivot_orbit_1_retained_p31_slimgb.sing",
+            "sha256": "4f8961c2b0f13fe6ce67645b1e0d06934ac98f50625425dcd14d866f6a2ed22f"
+          },
+          {
+            "bytes": 139491,
+            "path": "D:\\KrennScratch\\counterexample_search\\star_pivot_affine_cas\\retained_p31_inputs\\star_pivot_orbit_2_retained_p31_slimgb.sing",
+            "sha256": "7c6f8889ca69075a7061958d94b1e1c7cc4b45cab529eee199dfdd3ea6f0c36a"
+          }
+        ],
+        "latest_invocation_workers": 2,
+        "maximum_concurrent_cpus": 4,
+        "maximum_concurrent_memory_gib": 16,
+        "maximum_concurrent_probes_observed": 2,
+        "memory_gib_per_probe": 8,
+        "presentation_kind": "retained",
+        "presentation_sha256": {
+          "0": "41c7aebc6263ed0d29c036566e357cd9caa2c6e3ac79f29ba6b7617c93ff9f18",
+          "1": "c50942b52b9fdac74aee50769545f51f3bf346599505f7791aa451c71cc9301f",
+          "2": "6b795fa5cdf087999d2fc6a8fc1fae12c5ab4a8dfe2a42126e046f1266c8eb3f"
+        },
+        "random_seeds": [],
+        "receipts": [
+          {
+            "bytes": 2468,
+            "elapsed_seconds": 600.62027,
+            "key": "star_pivot_orbit_0_retained_p31_slimgb",
+            "outcome": {
+              "claim_boundary": {
+                "positive_characteristic_result_is_exact_Q_proof": false,
+                "timeout_is_a_chart_decision": false
+              },
+              "completion_marker_observed": false,
+              "parse_marker_observed": true,
+              "return_code": 124,
+              "selected_singular_output": {},
+              "status": "timeout-after-parse"
+            },
+            "path": "star_pivot_orbit_0_retained_p31_slimgb.receipt.json",
+            "sha256": "cc0fe32173cbbabea8f50c288c7b60a20bcc655b6a285927b17f5009f77dff51"
+          },
+          {
+            "bytes": 2476,
+            "elapsed_seconds": 600.61943,
+            "key": "star_pivot_orbit_1_retained_p31_slimgb",
+            "outcome": {
+              "claim_boundary": {
+                "positive_characteristic_result_is_exact_Q_proof": false,
+                "timeout_is_a_chart_decision": false
+              },
+              "completion_marker_observed": false,
+              "parse_marker_observed": true,
+              "return_code": 124,
+              "selected_singular_output": {},
+              "status": "timeout-after-parse"
+            },
+            "path": "star_pivot_orbit_1_retained_p31_slimgb.receipt.json",
+            "sha256": "1a0cc511fcffae18c4a34ce0096a913f0a6db8747d3f13c2059f572381052594"
+          },
+          {
+            "bytes": 2473,
+            "elapsed_seconds": 600.488981,
+            "key": "star_pivot_orbit_2_retained_p31_slimgb",
+            "outcome": {
+              "claim_boundary": {
+                "positive_characteristic_result_is_exact_Q_proof": false,
+                "timeout_is_a_chart_decision": false
+              },
+              "completion_marker_observed": false,
+              "parse_marker_observed": true,
+              "return_code": 124,
+              "selected_singular_output": {},
+              "status": "timeout-after-parse"
+            },
+            "path": "star_pivot_orbit_2_retained_p31_slimgb.receipt.json",
+            "sha256": "368003010067a3e90d156f5561607258cc3fe2634affead4d9a0f6a28b41f54c"
+          }
+        ],
+        "runner_source": {
+          "bytes": 19684,
+          "path": "C:\\Users\\brssn\\Projects\\Krenn-localized-chart-ideals\\experiments\\krenn_quantum_graph\\star_pivot_affine_cas_runner.py",
+          "sha256": "b96df687bad3c96e9001aa7f4d9780143f920aec9eb236db5ad6aa4b03f5ee89"
+        },
+        "schema": "krenn-n6-d3-star-pivot-affine-cas-suite-v1",
+        "scratch_root": "D:\\KrennScratch\\counterexample_search\\star_pivot_affine_cas"
+      },
+      "record": {
+        "bytes": 4851,
+        "path": "retained_p31_run_manifest.json",
+        "sha256": "52a7d6154acdc24c62e61af6aa5bcc464f9177e97e264ed9872defb423bbd019"
+      }
+    },
+    "runs": [
+      {
+        "elapsed_seconds": 600.62027,
+        "key": "star_pivot_orbit_0_retained_p31_slimgb",
+        "outcome": {
+          "claim_boundary": {
+            "positive_characteristic_result_is_exact_Q_proof": false,
+            "timeout_is_a_chart_decision": false
+          },
+          "completion_marker_observed": false,
+          "parse_marker_observed": true,
+          "return_code": 124,
+          "selected_singular_output": {},
+          "status": "timeout-after-parse"
+        },
+        "receipt_payload": {
+          "docker": {
+            "argv": [
+              "docker",
+              "run",
+              "--rm",
+              "--pull",
+              "never",
+              "--network",
+              "none",
+              "--cpus",
+              "2",
+              "--memory",
+              "8g",
+              "--entrypoint",
+              "timeout",
+              "-v",
+              "D:\\KrennScratch\\counterexample_search\\star_pivot_affine_cas\\retained_p31_inputs:/work:ro",
+              "sha256:6613ac51738965fafd2ebb2839a02452811ac4e3e5416cfbbda0485ed1995e75",
+              "--signal=TERM",
+              "--kill-after=15s",
+              "600s",
+              "Singular",
+              "/work/star_pivot_orbit_0_retained_p31_slimgb.sing"
+            ],
+            "image": "hodgepodge-singular:ubuntu24.04",
+            "image_id": "sha256:6613ac51738965fafd2ebb2839a02452811ac4e3e5416cfbbda0485ed1995e75",
+            "network": "none"
+          },
+          "elapsed_seconds": 600.62027,
+          "input_script": {
+            "bytes": 139490,
+            "path": "D:\\KrennScratch\\counterexample_search\\star_pivot_affine_cas\\retained_p31_inputs\\star_pivot_orbit_0_retained_p31_slimgb.sing",
+            "sha256": "90b4c5b8a86b90003269880131c2b3ef6d9ea875cea23deb78dee8911ed6d8f3"
+          },
+          "outcome": {
+            "claim_boundary": {
+              "positive_characteristic_result_is_exact_Q_proof": false,
+              "timeout_is_a_chart_decision": false
+            },
+            "completion_marker_observed": false,
+            "parse_marker_observed": true,
+            "return_code": 124,
+            "selected_singular_output": {},
+            "status": "timeout-after-parse"
+          },
+          "probe": {
+            "algorithm": "slimgb",
+            "budget_seconds": 600,
+            "characteristic": 31,
+            "completion_marker": "KRENN_STAR_AFFINE_GROEBNER_DONE",
+            "cpus": 2,
+            "ideal": "gauge-normalized star-pivot affine slice, all-same orbit, retained cubic form",
+            "input_bytes": 139490,
+            "input_sha256": "90b4c5b8a86b90003269880131c2b3ef6d9ea875cea23deb78dee8911ed6d8f3",
+            "input_subdirectory": "retained_p31_inputs",
+            "key": "star_pivot_orbit_0_retained_p31_slimgb",
+            "memory_gib": 8,
+            "parse_marker": "KRENN_STAR_AFFINE_PARSE_OK",
+            "script_name": "star_pivot_orbit_0_retained_p31_slimgb.sing"
+          },
+          "schema": "krenn-n6-d3-localized-chart-cas-run-v1",
+          "started_at_utc": "2026-07-25T06:09:40.521926+00:00",
+          "stderr": {
+            "bytes": 0,
+            "path": "star_pivot_orbit_0_retained_p31_slimgb.stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 544,
+            "path": "star_pivot_orbit_0_retained_p31_slimgb.stdout.txt",
+            "sha256": "06bd22ac1a1dbae1c8e8ea1487aee3634dc46d96bda14c6f5427345b3f6604a0"
+          }
+        },
+        "receipt_record": {
+          "bytes": 2468,
+          "path": "star_pivot_orbit_0_retained_p31_slimgb.receipt.json",
+          "sha256": "cc0fe32173cbbabea8f50c288c7b60a20bcc655b6a285927b17f5009f77dff51"
+        },
+        "stderr_record": {
+          "bytes": 0,
+          "path": "star_pivot_orbit_0_retained_p31_slimgb.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr_utf8": "",
+        "stdout_record": {
+          "bytes": 544,
+          "path": "star_pivot_orbit_0_retained_p31_slimgb.stdout.txt",
+          "sha256": "06bd22ac1a1dbae1c8e8ea1487aee3634dc46d96bda14c6f5427345b3f6604a0"
+        },
+        "stdout_utf8": "                     SINGULAR                                 /  Development\n A Computer Algebra System for Polynomial Computations       /   version 4.3.2\n                                                           0<\n by: W. Decker, G.-M. Greuel, G. Pfister, H. Schoenemann     \\   Feb 2023\nFB Mathematik der Universitaet, D-67653 Kaiserslautern        \\  Debian 1:4.3.2-p10+ds-1.1build1\nKRENN_STAR_AFFINE_PARSE_OK\nschema=krenn-n6-d3-star-pivot-affine-singular-v1\norbit_index=0\npresentation=retained\ncharacteristic=31\nalgorithm=slimgb\n\nhalt 1\n"
+      },
+      {
+        "elapsed_seconds": 600.61943,
+        "key": "star_pivot_orbit_1_retained_p31_slimgb",
+        "outcome": {
+          "claim_boundary": {
+            "positive_characteristic_result_is_exact_Q_proof": false,
+            "timeout_is_a_chart_decision": false
+          },
+          "completion_marker_observed": false,
+          "parse_marker_observed": true,
+          "return_code": 124,
+          "selected_singular_output": {},
+          "status": "timeout-after-parse"
+        },
+        "receipt_payload": {
+          "docker": {
+            "argv": [
+              "docker",
+              "run",
+              "--rm",
+              "--pull",
+              "never",
+              "--network",
+              "none",
+              "--cpus",
+              "2",
+              "--memory",
+              "8g",
+              "--entrypoint",
+              "timeout",
+              "-v",
+              "D:\\KrennScratch\\counterexample_search\\star_pivot_affine_cas\\retained_p31_inputs:/work:ro",
+              "sha256:6613ac51738965fafd2ebb2839a02452811ac4e3e5416cfbbda0485ed1995e75",
+              "--signal=TERM",
+              "--kill-after=15s",
+              "600s",
+              "Singular",
+              "/work/star_pivot_orbit_1_retained_p31_slimgb.sing"
+            ],
+            "image": "hodgepodge-singular:ubuntu24.04",
+            "image_id": "sha256:6613ac51738965fafd2ebb2839a02452811ac4e3e5416cfbbda0485ed1995e75",
+            "network": "none"
+          },
+          "elapsed_seconds": 600.61943,
+          "input_script": {
+            "bytes": 139497,
+            "path": "D:\\KrennScratch\\counterexample_search\\star_pivot_affine_cas\\retained_p31_inputs\\star_pivot_orbit_1_retained_p31_slimgb.sing",
+            "sha256": "4f8961c2b0f13fe6ce67645b1e0d06934ac98f50625425dcd14d866f6a2ed22f"
+          },
+          "outcome": {
+            "claim_boundary": {
+              "positive_characteristic_result_is_exact_Q_proof": false,
+              "timeout_is_a_chart_decision": false
+            },
+            "completion_marker_observed": false,
+            "parse_marker_observed": true,
+            "return_code": 124,
+            "selected_singular_output": {},
+            "status": "timeout-after-parse"
+          },
+          "probe": {
+            "algorithm": "slimgb",
+            "budget_seconds": 600,
+            "characteristic": 31,
+            "completion_marker": "KRENN_STAR_AFFINE_GROEBNER_DONE",
+            "cpus": 2,
+            "ideal": "gauge-normalized star-pivot affine slice, exactly-two-same orbit, retained cubic form",
+            "input_bytes": 139497,
+            "input_sha256": "4f8961c2b0f13fe6ce67645b1e0d06934ac98f50625425dcd14d866f6a2ed22f",
+            "input_subdirectory": "retained_p31_inputs",
+            "key": "star_pivot_orbit_1_retained_p31_slimgb",
+            "memory_gib": 8,
+            "parse_marker": "KRENN_STAR_AFFINE_PARSE_OK",
+            "script_name": "star_pivot_orbit_1_retained_p31_slimgb.sing"
+          },
+          "schema": "krenn-n6-d3-localized-chart-cas-run-v1",
+          "started_at_utc": "2026-07-25T06:09:40.523400+00:00",
+          "stderr": {
+            "bytes": 0,
+            "path": "star_pivot_orbit_1_retained_p31_slimgb.stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 544,
+            "path": "star_pivot_orbit_1_retained_p31_slimgb.stdout.txt",
+            "sha256": "ff6cd8ba47bbefae0c1a58d4da7b4ffc6aa17bc23ffa190ed1ed8221198e6afc"
+          }
+        },
+        "receipt_record": {
+          "bytes": 2476,
+          "path": "star_pivot_orbit_1_retained_p31_slimgb.receipt.json",
+          "sha256": "1a0cc511fcffae18c4a34ce0096a913f0a6db8747d3f13c2059f572381052594"
+        },
+        "stderr_record": {
+          "bytes": 0,
+          "path": "star_pivot_orbit_1_retained_p31_slimgb.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr_utf8": "",
+        "stdout_record": {
+          "bytes": 544,
+          "path": "star_pivot_orbit_1_retained_p31_slimgb.stdout.txt",
+          "sha256": "ff6cd8ba47bbefae0c1a58d4da7b4ffc6aa17bc23ffa190ed1ed8221198e6afc"
+        },
+        "stdout_utf8": "                     SINGULAR                                 /  Development\n A Computer Algebra System for Polynomial Computations       /   version 4.3.2\n                                                           0<\n by: W. Decker, G.-M. Greuel, G. Pfister, H. Schoenemann     \\   Feb 2023\nFB Mathematik der Universitaet, D-67653 Kaiserslautern        \\  Debian 1:4.3.2-p10+ds-1.1build1\nKRENN_STAR_AFFINE_PARSE_OK\nschema=krenn-n6-d3-star-pivot-affine-singular-v1\norbit_index=1\npresentation=retained\ncharacteristic=31\nalgorithm=slimgb\n\nhalt 1\n"
+      },
+      {
+        "elapsed_seconds": 600.488981,
+        "key": "star_pivot_orbit_2_retained_p31_slimgb",
+        "outcome": {
+          "claim_boundary": {
+            "positive_characteristic_result_is_exact_Q_proof": false,
+            "timeout_is_a_chart_decision": false
+          },
+          "completion_marker_observed": false,
+          "parse_marker_observed": true,
+          "return_code": 124,
+          "selected_singular_output": {},
+          "status": "timeout-after-parse"
+        },
+        "receipt_payload": {
+          "docker": {
+            "argv": [
+              "docker",
+              "run",
+              "--rm",
+              "--pull",
+              "never",
+              "--network",
+              "none",
+              "--cpus",
+              "2",
+              "--memory",
+              "8g",
+              "--entrypoint",
+              "timeout",
+              "-v",
+              "D:\\KrennScratch\\counterexample_search\\star_pivot_affine_cas\\retained_p31_inputs:/work:ro",
+              "sha256:6613ac51738965fafd2ebb2839a02452811ac4e3e5416cfbbda0485ed1995e75",
+              "--signal=TERM",
+              "--kill-after=15s",
+              "600s",
+              "Singular",
+              "/work/star_pivot_orbit_2_retained_p31_slimgb.sing"
+            ],
+            "image": "hodgepodge-singular:ubuntu24.04",
+            "image_id": "sha256:6613ac51738965fafd2ebb2839a02452811ac4e3e5416cfbbda0485ed1995e75",
+            "network": "none"
+          },
+          "elapsed_seconds": 600.488981,
+          "input_script": {
+            "bytes": 139491,
+            "path": "D:\\KrennScratch\\counterexample_search\\star_pivot_affine_cas\\retained_p31_inputs\\star_pivot_orbit_2_retained_p31_slimgb.sing",
+            "sha256": "7c6f8889ca69075a7061958d94b1e1c7cc4b45cab529eee199dfdd3ea6f0c36a"
+          },
+          "outcome": {
+            "claim_boundary": {
+              "positive_characteristic_result_is_exact_Q_proof": false,
+              "timeout_is_a_chart_decision": false
+            },
+            "completion_marker_observed": false,
+            "parse_marker_observed": true,
+            "return_code": 124,
+            "selected_singular_output": {},
+            "status": "timeout-after-parse"
+          },
+          "probe": {
+            "algorithm": "slimgb",
+            "budget_seconds": 600,
+            "characteristic": 31,
+            "completion_marker": "KRENN_STAR_AFFINE_GROEBNER_DONE",
+            "cpus": 2,
+            "ideal": "gauge-normalized star-pivot affine slice, all-distinct orbit, retained cubic form",
+            "input_bytes": 139491,
+            "input_sha256": "7c6f8889ca69075a7061958d94b1e1c7cc4b45cab529eee199dfdd3ea6f0c36a",
+            "input_subdirectory": "retained_p31_inputs",
+            "key": "star_pivot_orbit_2_retained_p31_slimgb",
+            "memory_gib": 8,
+            "parse_marker": "KRENN_STAR_AFFINE_PARSE_OK",
+            "script_name": "star_pivot_orbit_2_retained_p31_slimgb.sing"
+          },
+          "schema": "krenn-n6-d3-localized-chart-cas-run-v1",
+          "started_at_utc": "2026-07-25T06:19:41.204570+00:00",
+          "stderr": {
+            "bytes": 0,
+            "path": "star_pivot_orbit_2_retained_p31_slimgb.stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 544,
+            "path": "star_pivot_orbit_2_retained_p31_slimgb.stdout.txt",
+            "sha256": "7d4490ee22bcde7bcdeb98dd0e71ec07a71d023ba850725295b773b435ee36e0"
+          }
+        },
+        "receipt_record": {
+          "bytes": 2473,
+          "path": "star_pivot_orbit_2_retained_p31_slimgb.receipt.json",
+          "sha256": "368003010067a3e90d156f5561607258cc3fe2634affead4d9a0f6a28b41f54c"
+        },
+        "stderr_record": {
+          "bytes": 0,
+          "path": "star_pivot_orbit_2_retained_p31_slimgb.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr_utf8": "",
+        "stdout_record": {
+          "bytes": 544,
+          "path": "star_pivot_orbit_2_retained_p31_slimgb.stdout.txt",
+          "sha256": "7d4490ee22bcde7bcdeb98dd0e71ec07a71d023ba850725295b773b435ee36e0"
+        },
+        "stdout_utf8": "                     SINGULAR                                 /  Development\n A Computer Algebra System for Polynomial Computations       /   version 4.3.2\n                                                           0<\n by: W. Decker, G.-M. Greuel, G. Pfister, H. Schoenemann     \\   Feb 2023\nFB Mathematik der Universitaet, D-67653 Kaiserslautern        \\  Debian 1:4.3.2-p10+ds-1.1build1\nKRENN_STAR_AFFINE_PARSE_OK\nschema=krenn-n6-d3-star-pivot-affine-singular-v1\norbit_index=2\npresentation=retained\ncharacteristic=31\nalgorithm=slimgb\n\nhalt 1\n"
+      }
+    ],
+    "self_contained_after_generation": true,
+    "verification_requires_original_scratch_directory": false
+  },
+  "problem": {
+    "d": 3,
+    "n": 6,
+    "slice_family": "star-pivot affine normal forms",
+    "target": "GHZ_6,3"
+  },
+  "results": [
+    {
+      "budget_seconds": 600,
+      "completion_marker_observed": false,
+      "elapsed_seconds": 600.62027,
+      "equality_pattern": "all-same",
+      "key": "star_pivot_orbit_0_retained_p31_slimgb",
+      "orbit_index": 0,
+      "parse_marker_observed": true,
+      "return_code": 124,
+      "status": "timeout-after-parse"
+    },
+    {
+      "budget_seconds": 600,
+      "completion_marker_observed": false,
+      "elapsed_seconds": 600.61943,
+      "equality_pattern": "exactly-two-same",
+      "key": "star_pivot_orbit_1_retained_p31_slimgb",
+      "orbit_index": 1,
+      "parse_marker_observed": true,
+      "return_code": 124,
+      "status": "timeout-after-parse"
+    },
+    {
+      "budget_seconds": 600,
+      "completion_marker_observed": false,
+      "elapsed_seconds": 600.488981,
+      "equality_pattern": "all-distinct",
+      "key": "star_pivot_orbit_2_retained_p31_slimgb",
+      "orbit_index": 2,
+      "parse_marker_observed": true,
+      "return_code": 124,
+      "status": "timeout-after-parse"
+    }
+  ],
+  "schema": "krenn-n6-d3-star-pivot-affine-cas-summary-v1",
+  "source_evidence": {
+    "generator": {
+      "bytes": 39840,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/star_pivot_affine_slices.py",
+      "sha256": "74fdba0219ca8dc7d7424cc28153fc3bc2d7fb75ecd918af093efe141d5ae2e0"
+    },
+    "runner": {
+      "bytes": 19684,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/star_pivot_affine_cas_runner.py",
+      "sha256": "b96df687bad3c96e9001aa7f4d9780143f920aec9eb236db5ad6aa4b03f5ee89"
+    },
+    "shared_runner": {
+      "bytes": 25508,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/localized_chart_cas_runner.py",
+      "sha256": "088553f6affea6e7f9edd743578dd9c5cd60290790f6667116dd4b7da5f8b071"
+    }
+  }
+}

@@ -10,12 +10,24 @@
       "sha256": "1c270c57175aaa84b69005768c291392724d0b34e919c12e423b883fc1153cd7"
     },
     {
+      "path": "certificate_routing.json",
+      "sha256": "5b684c2ed6c8fab27af34e572280ead28ae10d5edda73b6584f2a76b8fb007e3"
+    },
+    {
       "path": "chart_cover.json",
       "sha256": "2f792f693aabe75803ccb4df0a4f090b4a97abc66a245814c31e772cc3202132"
     },
     {
       "path": "germ_separation.json",
       "sha256": "89d4261fa2901157dd38d84317cc858d1befceee4a706e9b753adec3109e22fd"
+    },
+    {
+      "path": "graded_derivative_macaulay.json",
+      "sha256": "74614acb2f197c42f54101e6ab94ae45a94bf7d2bd38b24d289fcaae499cae29"
+    },
+    {
+      "path": "leaf_free_saturation.json",
+      "sha256": "0b27bc9321dd688833d2e355c663e650518f0751e755a696c804e08df66be61c"
     },
     {
       "path": "natural_derivative_atlas.json",
@@ -27,23 +39,60 @@
     },
     {
       "path": "preflight_ledger.json",
-      "sha256": "d8313c2e41cc2262461b7814a0002f73b9d35a2620f8b7e3ff55d8fe036ab924"
+      "sha256": "2565246efa0e6d49225fe57142990a1174033ccdbe9c90c5ab711241fa456dbc"
     },
     {
       "path": "residual_grading.json",
       "sha256": "f927107eaa0b7a8143ca5ed397fe45300d46f077aadc681842daf983d42e5eea"
+    },
+    {
+      "path": "sparse_elimination.json",
+      "sha256": "307f8a00aa30ea58ab52495e36e847b78dd1ccdccf71d6a8a260478e974256f2"
+    },
+    {
+      "path": "star_linearization.json",
+      "sha256": "e14d2145e9922a351be40926b5e3a997a04b6b16eafa1c12a394d949872e95a3"
+    },
+    {
+      "path": "star_pivot_charts.json",
+      "sha256": "ca4f78eba089227bcbc46f4986f23c98258c8f92e66362a7abfbc0b6c9a4e7f4"
+    },
+    {
+      "path": "star_pivot_affine_slices.json",
+      "sha256": "42ece99494825dd8fe6ee3a32ad647bf93e4c7bec590143ddf81bf6b8c2ef0e5"
+    },
+    {
+      "path": "star_pivot_gauge.json",
+      "sha256": "38057e39a35d198cd9ac7c87150e708d804f0e26a2a73e801216b49aac03e45a"
     }
   ],
   "headline": {
     "exact_bounded_certificate_degree_excluded": 6,
+    "exact_star_factorizations": 6,
     "finite_affine_GHZ_membership_status": "undecided",
+    "leaf_free_initial_A0_p31_timeouts": 2,
+    "leaf_free_saturation_stages_completed": 0,
     "ordered_seed_charts": 3375,
+    "proposed_q_routed_certificate_pair_valid": false,
+    "proposed_single_column_differencing_lemma_valid": false,
     "repair_residual_character_ranks": [
       8,
       8,
       7,
       7
     ],
+    "sparse_derivative_exact_Q_degree_excluded": 5,
+    "sparse_derivative_residual_character_rank": 8,
+    "sparse_two_pivot_p1009_timeouts": 2,
+    "star_columns_per_apex_color": 15,
+    "star_pivot_affine_slice_generators": 732,
+    "star_pivot_affine_slice_orbit_types": 3,
+    "star_pivot_affine_slice_variables": 135,
+    "star_pivot_factors_gauge_normalizable_to_one": true,
+    "star_rows_per_apex_color": 243,
+    "star_target_row_nonzero_pivot_charts": 125,
+    "star_target_row_pivot_orbit_types": 3,
+    "star_weights_monic_after_pivot_normalization": 9,
     "symmetry_representatives": 8
   },
   "parameters": {
@@ -61,8 +110,12 @@
       "sha256": "553ee953b3cf78ae95be8f046e7e420a22970abc158ab26f0213995aa83e9d13"
     },
     {
+      "path": "experiments/krenn_quantum_graph/certificate_routing.py",
+      "sha256": "3bd952afc62cd57e33a37c98ef9e8e926384d42cd30d64cd82ded74399ff3b9d"
+    },
+    {
       "path": "experiments/krenn_quantum_graph/localized_chart_artifact.py",
-      "sha256": "b746244ae3a22dceadaf3ccace4699a9603aa0de6ce2cc2cf5b75c85c8fd1e30"
+      "sha256": "9d21b5d6229f838db491ada6d7111a1bb9b6b227599e5f3ab1e87481bb0d2695"
     },
     {
       "path": "experiments/krenn_quantum_graph/localized_chart_cas_runner.py",
@@ -73,12 +126,24 @@
       "sha256": "615314882e7a3f5603e8b70ac8cf744b223fd94ff57bf61c56fb8a1a5085ecb9"
     },
     {
+      "path": "experiments/krenn_quantum_graph/localized_chart_graded_macaulay.py",
+      "sha256": "f6f964e50c1a75570b2e86f66665718864a66d7ac91eb6b51de86bbd8c0154d7"
+    },
+    {
       "path": "experiments/krenn_quantum_graph/localized_chart_ideals.py",
       "sha256": "13b6665cce406c10369442fbe9fc335ee5a29006c47da87757c47352074d02ce"
     },
     {
       "path": "experiments/krenn_quantum_graph/localized_chart_independent.py",
       "sha256": "07a6bd82fb2e1f019ace796af0e8482fae19cf2756d8f6fa9d69e4fce4c8cb60"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/localized_chart_leaf_free.py",
+      "sha256": "8ac06043181d87e8a0ac3b60d82692f134e55e3dc01452d45ceb51670456877d"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/localized_chart_leaf_free_cas_runner.py",
+      "sha256": "c73bb31212838c381fcd7430c60517c25496d7b51dcde4a492ecb74abf7f68b3"
     },
     {
       "path": "experiments/krenn_quantum_graph/localized_chart_macaulay.py",
@@ -91,6 +156,38 @@
     {
       "path": "experiments/krenn_quantum_graph/localized_chart_residual_grading.py",
       "sha256": "78c53e34894d1005341843a696594b06bb8193478d624da5d23e11b1b39a0a71"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/localized_chart_sparse_cas_runner.py",
+      "sha256": "ef609117224bfa4365eea337ff22a325f31857c409f69689d2bdb455ead61134"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/localized_chart_sparse_elimination.py",
+      "sha256": "fb39b4ff6c6e35dd234a35b26d6bdb3ccac74c70127bb9bee5811cee036b2059"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/star_linearization.py",
+      "sha256": "c7c9afff7ebc88a7390db44d25c65f850aed0e66560d45e7de8b6f55c0e5e1c6"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/star_linearization_independent.py",
+      "sha256": "90790dc2bc52a3f74a93970189b497efd0189dadd17607a2f0c95c86c11d96b9"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/star_pivot_charts.py",
+      "sha256": "aa31fd8f06ceac9c6b36889a62f47de86f13030b20daba0a97e94bfcc66d0c52"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/star_pivot_affine_slices.py",
+      "sha256": "74fdba0219ca8dc7d7424cc28153fc3bc2d7fb75ecd918af093efe141d5ae2e0"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/star_pivot_affine_cas_runner.py",
+      "sha256": "b96df687bad3c96e9001aa7f4d9780143f920aec9eb236db5ad6aa4b03f5ee89"
+    },
+    {
+      "path": "experiments/krenn_quantum_graph/star_pivot_gauge.py",
+      "sha256": "77141ba8679a1ef2eebf3448fd48962ca5c7f6928b8f7520aa472f5e66da4ced"
     },
     {
       "path": "experiments/krenn_quantum_graph/system.py",

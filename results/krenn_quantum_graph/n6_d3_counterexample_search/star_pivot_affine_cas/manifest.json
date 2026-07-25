@@ -1,0 +1,45 @@
+{
+  "artifact": {
+    "bytes": 32861,
+    "path": "summary.json",
+    "sha256": "dc2e3d61af67aaa5430474ff7d2887a38b11ad7e70b7f0287ec1d3ffde93ec11"
+  },
+  "claim_boundary": {
+    "bounded_miss_is_a_nonexistence_proof": false,
+    "finite_affine_membership_status": "undecided",
+    "finite_counterexample_found": false,
+    "global_affine_membership_decided": false,
+    "parse_success_is_standard_basis_completion": false,
+    "positive_characteristic_result_is_exact_Q_or_C_proof": false,
+    "scope": "three retained star-pivot affine orbit representatives",
+    "timeout_is_a_slice_decision": false
+  },
+  "portable_without_scratch": true,
+  "producer": {
+    "bytes": 41982,
+    "hash_mode": "raw-bytes-v1",
+    "path": "experiments/krenn_quantum_graph/star_pivot_affine_cas_artifact.py",
+    "sha256": "41e06ed485d2595beee48be5d34c18b4573126d65130d0448ff53f3239d34193"
+  },
+  "schema": "krenn-n6-d3-star-pivot-affine-cas-summary-manifest-v1",
+  "source_inputs": [
+    {
+      "bytes": 25508,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/localized_chart_cas_runner.py",
+      "sha256": "088553f6affea6e7f9edd743578dd9c5cd60290790f6667116dd4b7da5f8b071"
+    },
+    {
+      "bytes": 19684,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/star_pivot_affine_cas_runner.py",
+      "sha256": "b96df687bad3c96e9001aa7f4d9780143f920aec9eb236db5ad6aa4b03f5ee89"
+    },
+    {
+      "bytes": 39840,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/star_pivot_affine_slices.py",
+      "sha256": "74fdba0219ca8dc7d7424cc28153fc3bc2d7fb75ecd918af093efe141d5ae2e0"
+    }
+  ]
+}

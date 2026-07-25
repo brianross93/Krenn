@@ -1,0 +1,90 @@
+{
+  "artifact": {
+    "bytes": 316918,
+    "path": "summary.json",
+    "sha256": "a1520fe11d641e2e213919adfeabd01ca12aaa30ba67715d7644d719593e1917"
+  },
+  "claim_boundary": {
+    "bounded_miss_is_nonexistence_proof": false,
+    "bounded_y_is_full_color_gauge_invariant": false,
+    "cross_run_nonzero_objective_comparison_is_gauge_invariant": false,
+    "finite_affine_membership_status": "undecided",
+    "fixed_global_residual_gauge_slice_used": false,
+    "full_135_norm_bounded_search_completed": false,
+    "hard_coordinate_anchors_used": false,
+    "horizontal_projection_rules_out_accumulated_gauge_drift": false,
+    "known_divergent_pole_excluded_by_search_domain": false,
+    "legacy_eight_seed_charts_used": false,
+    "numerical_two_cycle_is_exact_proof": false,
+    "numerical_zero_is_exact_counterexample": false,
+    "pole_quantity_Q_is_full_color_gauge_invariant": false,
+    "radius_trend_is_border_proof": false,
+    "raw_u_norm_used_as_mathematical_cap": false,
+    "raw_u_overflow_cutoffs_are_mathematical_bounds": false,
+    "raw_u_overflow_cutoffs_depend_on_y_radius": true,
+    "raw_u_overflow_cutoffs_enforced": true,
+    "search_scope": "three exact pivot-orbit P=1 slices with bounded recovered Y",
+    "three_pivot_orbits_form_exhaustive_open_cover": true
+  },
+  "portable_without_scratch": true,
+  "producer": {
+    "bytes": 60340,
+    "hash_mode": "raw-bytes-v1",
+    "path": "experiments/krenn_quantum_graph/star_variable_projection_artifact.py",
+    "sha256": "6d9936712d30c1b7ef202dad0f3c728a4a72781d5aa5782b40094537787d5390"
+  },
+  "schema": "krenn-n6-d3-star-variable-projection-summary-manifest-v1",
+  "scratch_input_file_count": 49,
+  "scratch_input_ledger_sha256": "34fce66753b09653cb18422756f31cfde24f56b1be8b740a72be4e2dad8d38a2",
+  "source_inputs": [
+    {
+      "bytes": 51104,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/formal_lift.py",
+      "sha256": "eef2ae82b940a239b1259f6c721268fe3fe5b2f1b3af7afda699c0c88034d5e7"
+    },
+    {
+      "bytes": 16138,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/star_linearization.py",
+      "sha256": "c7c9afff7ebc88a7390db44d25c65f850aed0e66560d45e7de8b6f55c0e5e1c6"
+    },
+    {
+      "bytes": 17877,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/star_pivot_charts.py",
+      "sha256": "aa31fd8f06ceac9c6b36889a62f47de86f13030b20daba0a97e94bfcc66d0c52"
+    },
+    {
+      "bytes": 25357,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/star_pivot_gauge.py",
+      "sha256": "77141ba8679a1ef2eebf3448fd48962ca5c7f6928b8f7520aa472f5e66da4ced"
+    },
+    {
+      "bytes": 79284,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/star_variable_projection.py",
+      "sha256": "8aedd5464621eba5f1991ecbb489fd4b70417f9318ba42f244415e720f2b8da9"
+    },
+    {
+      "bytes": 107057,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/star_variable_projection_campaign.py",
+      "sha256": "a5ac57da3c67bcb56b0694f844986b2e8d0f7331b965844f634c4f5d2dcb309e"
+    },
+    {
+      "bytes": 11452,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/system.py",
+      "sha256": "3f64e42efc68b5391b3ec9798e801d1efa1f7c4a9c68c56a4b3b2e78540214a9"
+    },
+    {
+      "bytes": 60609,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/vertical_component.py",
+      "sha256": "1736a37e6a1143dc5ce6a14cbda49f22cfa99d0d3f6f2b043a9785bb623ddcaa"
+    }
+  ],
+  "verification_scope": "selected candidates replay projection and both 729-equation enumerators; nonselected rows retain generation-time replay"
+}

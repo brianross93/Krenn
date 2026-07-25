@@ -1,0 +1,388 @@
+{
+  "CAS_guidance": {
+    "Singular_exports_generated_by_this_audit": false,
+    "positive_characteristic_result_is_proof": false,
+    "reason": "maximum degree three and 10950 terms, versus degree five and 35292 terms after eliminating nine weights",
+    "recommended_first_presentation": "retained",
+    "timeout_or_bounded_miss_is_proof": false
+  },
+  "claim_boundary": {
+    "any_affine_slice_solved": false,
+    "finite_counterexample_found": false,
+    "global_affine_membership_decided": false,
+    "nonexistence_certificate_found": false,
+    "strict_border_membership_decided": false
+  },
+  "cover": {
+    "S5_times_S3_orbit_count": 3,
+    "every_solution_is_in_at_least_one_open": true,
+    "one_fixed_apex_already_covers_every_solution": true,
+    "open_triples_before_symmetry": 125,
+    "orbit_sizes": [
+      5,
+      60,
+      60
+    ],
+    "reason": "each of the three disjoint five-column target-row blocks must contain a nonzero P_v(bbbb)",
+    "target_restriction": "B*Y=I_3"
+  },
+  "exact_reconstruction": {
+    "every_solution_of_an_eliminated_slice_reconstructs_a_135_weight_solution": true,
+    "monic_restricted_equations": 9,
+    "selected_target_minor_becomes_identity": true,
+    "star_weights_reconstructed": 9,
+    "target_identity": "E_(a,b) after reconstruction equals y_reconstructed_(a,b)*(P_(v_b)(b^4)-1)"
+  },
+  "gauge_normalization": {
+    "apex_parameter_absorbs_product_constraint": true,
+    "claimed_isomorphic_to_the_original_principal_open": false,
+    "factor_character": "P_v(bbbb) -> (product_(u != apex,v) lambda_(u,b))*P_v(bbbb)",
+    "gauge": "direct-GHZ color-diagonal torus",
+    "independent_parameters_after_apex_elimination": 15,
+    "is_a_gauge_normalized_affine_slice": true,
+    "normalizations_used": 3,
+    "requires_Rabinowitsch_variable": false,
+    "requires_colon_or_saturation": false,
+    "requires_root_choice": false,
+    "residual_gauge_dimension": 12,
+    "residual_vertex_parameters_that_change_one_factor": 4
+  },
+  "independent_replay": [
+    {
+      "checks": {
+        "all_nine_target_equation_identities_replayed": true,
+        "eliminated_generators_match_subset_filter_replay": true,
+        "nine_reconstruction_formulas_match_independently": true,
+        "remaining_126_variables_are_not_identified": true,
+        "retained_generators_match_subset_filter_replay": true
+      },
+      "independent_matching_method": "filter edge subsets for exact vertex coverage",
+      "orbit_index": 0
+    },
+    {
+      "checks": {
+        "all_nine_target_equation_identities_replayed": true,
+        "eliminated_generators_match_subset_filter_replay": true,
+        "nine_reconstruction_formulas_match_independently": true,
+        "remaining_126_variables_are_not_identified": true,
+        "retained_generators_match_subset_filter_replay": true
+      },
+      "independent_matching_method": "filter edge subsets for exact vertex coverage",
+      "orbit_index": 1
+    },
+    {
+      "checks": {
+        "all_nine_target_equation_identities_replayed": true,
+        "eliminated_generators_match_subset_filter_replay": true,
+        "nine_reconstruction_formulas_match_independently": true,
+        "remaining_126_variables_are_not_identified": true,
+        "retained_generators_match_subset_filter_replay": true
+      },
+      "independent_matching_method": "filter edge subsets for exact vertex coverage",
+      "orbit_index": 2
+    }
+  ],
+  "parameters": {
+    "ambient_weight_variables": 135,
+    "d": 3,
+    "fixed_apex": 0,
+    "n": 6
+  },
+  "presentations": [
+    {
+      "eliminated": {
+        "ambient_weight_variables": 135,
+        "collected_term_count": 35292,
+        "degree_set_histogram": {
+          "0,2": 3,
+          "2,3,5": 240,
+          "3,5": 480
+        },
+        "degree_term_census": {
+          "0": 3,
+          "2": 729,
+          "3": 8640,
+          "5": 25920
+        },
+        "eliminated_star_variable_count": 9,
+        "eliminated_star_variable_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "equality_pattern": "all-same",
+        "generator_count": 723,
+        "generator_term_count_histogram": {
+          "4": 3,
+          "48": 480,
+          "51": 240
+        },
+        "kind": "eliminated",
+        "maximum_degree": 5,
+        "maximum_degree_histogram": {
+          "2": 3,
+          "5": 720
+        },
+        "orbit_index": 0,
+        "remaining_variables_are_independent_coordinates": true,
+        "ring_variable_count": 126,
+        "schema": "krenn-n6-d3-star-pivot-affine-presentation-v1",
+        "sha256": "67de119eaba3c9d6f73e9f52a13b38fde61febf1d47ca7f54a3a994abc54ad5a",
+        "symmetry_related_weights_identified": false
+      },
+      "orbit": {
+        "equality_pattern": "all-same",
+        "index": 0,
+        "orbit_size": 5,
+        "partner_triple_by_color": [
+          1,
+          1,
+          1
+        ],
+        "stabilizer_order": 144
+      },
+      "retained": {
+        "ambient_weight_variables": 135,
+        "collected_term_count": 10950,
+        "degree_set_histogram": {
+          "0,2": 3,
+          "0,3": 3,
+          "3": 726
+        },
+        "degree_term_census": {
+          "0": 6,
+          "2": 9,
+          "3": 10935
+        },
+        "eliminated_star_variable_count": 0,
+        "eliminated_star_variable_indices": [],
+        "equality_pattern": "all-same",
+        "generator_count": 732,
+        "generator_term_count_histogram": {
+          "15": 726,
+          "16": 3,
+          "4": 3
+        },
+        "kind": "retained",
+        "maximum_degree": 3,
+        "maximum_degree_histogram": {
+          "2": 3,
+          "3": 729
+        },
+        "orbit_index": 0,
+        "remaining_variables_are_independent_coordinates": true,
+        "ring_variable_count": 135,
+        "schema": "krenn-n6-d3-star-pivot-affine-presentation-v1",
+        "sha256": "41c7aebc6263ed0d29c036566e357cd9caa2c6e3ac79f29ba6b7617c93ff9f18",
+        "symmetry_related_weights_identified": false
+      }
+    },
+    {
+      "eliminated": {
+        "ambient_weight_variables": 135,
+        "collected_term_count": 35292,
+        "degree_set_histogram": {
+          "0,2": 3,
+          "2,3,5": 240,
+          "3": 162,
+          "3,5": 318
+        },
+        "degree_term_census": {
+          "0": 3,
+          "2": 729,
+          "3": 8640,
+          "5": 25920
+        },
+        "eliminated_star_variable_count": 9,
+        "eliminated_star_variable_indices": [
+          0,
+          1,
+          3,
+          4,
+          6,
+          7,
+          11,
+          14,
+          17
+        ],
+        "equality_pattern": "exactly-two-same",
+        "generator_count": 723,
+        "generator_term_count_histogram": {
+          "15": 162,
+          "4": 3,
+          "48": 264,
+          "51": 132,
+          "81": 54,
+          "84": 108
+        },
+        "kind": "eliminated",
+        "maximum_degree": 5,
+        "maximum_degree_histogram": {
+          "2": 3,
+          "3": 162,
+          "5": 558
+        },
+        "orbit_index": 1,
+        "remaining_variables_are_independent_coordinates": true,
+        "ring_variable_count": 126,
+        "schema": "krenn-n6-d3-star-pivot-affine-presentation-v1",
+        "sha256": "ade0f9391ec983bd33d3c4ab125e94e650a59d8644385ecc4b65dbec41db493f",
+        "symmetry_related_weights_identified": false
+      },
+      "orbit": {
+        "equality_pattern": "exactly-two-same",
+        "index": 1,
+        "orbit_size": 60,
+        "partner_triple_by_color": [
+          1,
+          1,
+          2
+        ],
+        "stabilizer_order": 12
+      },
+      "retained": {
+        "ambient_weight_variables": 135,
+        "collected_term_count": 10950,
+        "degree_set_histogram": {
+          "0,2": 3,
+          "0,3": 3,
+          "3": 726
+        },
+        "degree_term_census": {
+          "0": 6,
+          "2": 9,
+          "3": 10935
+        },
+        "eliminated_star_variable_count": 0,
+        "eliminated_star_variable_indices": [],
+        "equality_pattern": "exactly-two-same",
+        "generator_count": 732,
+        "generator_term_count_histogram": {
+          "15": 726,
+          "16": 3,
+          "4": 3
+        },
+        "kind": "retained",
+        "maximum_degree": 3,
+        "maximum_degree_histogram": {
+          "2": 3,
+          "3": 729
+        },
+        "orbit_index": 1,
+        "remaining_variables_are_independent_coordinates": true,
+        "ring_variable_count": 135,
+        "schema": "krenn-n6-d3-star-pivot-affine-presentation-v1",
+        "sha256": "c50942b52b9fdac74aee50769545f51f3bf346599505f7791aa451c71cc9301f",
+        "symmetry_related_weights_identified": false
+      }
+    },
+    {
+      "eliminated": {
+        "ambient_weight_variables": 135,
+        "collected_term_count": 35292,
+        "degree_set_histogram": {
+          "0,2": 3,
+          "2,3,5": 240,
+          "3": 216,
+          "3,5": 264
+        },
+        "degree_term_census": {
+          "0": 3,
+          "2": 729,
+          "3": 8640,
+          "5": 25920
+        },
+        "eliminated_star_variable_count": 9,
+        "eliminated_star_variable_indices": [
+          0,
+          3,
+          6,
+          10,
+          13,
+          16,
+          20,
+          23,
+          26
+        ],
+        "equality_pattern": "all-distinct",
+        "generator_count": 723,
+        "generator_term_count_histogram": {
+          "117": 27,
+          "15": 216,
+          "4": 3,
+          "48": 210,
+          "51": 105,
+          "81": 54,
+          "84": 108
+        },
+        "kind": "eliminated",
+        "maximum_degree": 5,
+        "maximum_degree_histogram": {
+          "2": 3,
+          "3": 216,
+          "5": 504
+        },
+        "orbit_index": 2,
+        "remaining_variables_are_independent_coordinates": true,
+        "ring_variable_count": 126,
+        "schema": "krenn-n6-d3-star-pivot-affine-presentation-v1",
+        "sha256": "255aef6e3adb51c24143b3094e688f79cc810d509bb4095841c3e3fc3ce936cf",
+        "symmetry_related_weights_identified": false
+      },
+      "orbit": {
+        "equality_pattern": "all-distinct",
+        "index": 2,
+        "orbit_size": 60,
+        "partner_triple_by_color": [
+          1,
+          2,
+          3
+        ],
+        "stabilizer_order": 12
+      },
+      "retained": {
+        "ambient_weight_variables": 135,
+        "collected_term_count": 10950,
+        "degree_set_histogram": {
+          "0,2": 3,
+          "0,3": 3,
+          "3": 726
+        },
+        "degree_term_census": {
+          "0": 6,
+          "2": 9,
+          "3": 10935
+        },
+        "eliminated_star_variable_count": 0,
+        "eliminated_star_variable_indices": [],
+        "equality_pattern": "all-distinct",
+        "generator_count": 732,
+        "generator_term_count_histogram": {
+          "15": 726,
+          "16": 3,
+          "4": 3
+        },
+        "kind": "retained",
+        "maximum_degree": 3,
+        "maximum_degree_histogram": {
+          "2": 3,
+          "3": 729
+        },
+        "orbit_index": 2,
+        "remaining_variables_are_independent_coordinates": true,
+        "ring_variable_count": 135,
+        "schema": "krenn-n6-d3-star-pivot-affine-presentation-v1",
+        "sha256": "6b795fa5cdf087999d2fc6a8fc1fae12c5ab4a8dfe2a42126e046f1266c8eb3f",
+        "symmetry_related_weights_identified": false
+      }
+    }
+  ],
+  "schema": "krenn-n6-d3-star-pivot-affine-audit-v1",
+  "sha256": "9e21df0acf374e499e4732649621e67b363071afbbef7d65d8eb72437b112c8a"
+}

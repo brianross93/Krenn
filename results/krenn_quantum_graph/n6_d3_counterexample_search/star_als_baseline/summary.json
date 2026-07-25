@@ -1,0 +1,869 @@
+{
+  "aggregate": {
+    "all_recorded_weights_finite_and_bounded": true,
+    "best_bounded_candidate": {
+      "best_bounds": {
+        "all_15_anchors_exactly_one": true,
+        "finite": true,
+        "l2": 49.58105092723955,
+        "l2_fraction_of_cap": 0.774703920738118,
+        "linf_fraction_of_cap": 0.7003770138839184,
+        "maximum_abs": 22.412064444285388,
+        "within_both_global_caps": true
+      },
+      "best_growth": {
+        "defined_edge_color_cross_ratios": 135,
+        "known_vertex_scalar_pole_product_abs": 5.174596265897974e-10,
+        "maximum_absolute_log_cross_ratio": 6.407756655845034
+      },
+      "best_residual_l2": 1.0309050035801723,
+      "best_residual_maximum": 0.9963263798812976,
+      "elapsed_seconds": 600.6691900999285,
+      "exact_verification": {
+        "attempted": false,
+        "status": "not-applicable-to-floating-point-trajectory"
+      },
+      "global_l2_cap": 64.0,
+      "global_linf_cap": 32.0,
+      "initialization": "natural-perturbed",
+      "numerical_tolerance_reached": false,
+      "seed": 2026072502,
+      "termination": "time-budget"
+    },
+    "exact_verification": {
+      "attempted_runs": 0,
+      "finite_exact_witnesses_verified": 0,
+      "status_counts": {
+        "not-applicable-to-floating-point-trajectory": 24
+      }
+    },
+    "growth_diagnostics": {
+      "maximum_best_absolute_log_cross_ratio": 10.641618691779666,
+      "maximum_best_known_pole_product_abs": 0.0004474981583154359,
+      "maximum_final_absolute_log_cross_ratio": 10.641618691779666,
+      "maximum_final_known_pole_product_abs": 0.0004474981583154359
+    },
+    "maximum_final_l2_fraction_of_cap": 1.0,
+    "maximum_final_linf_fraction_of_cap": 1.0,
+    "numerical_tolerance_runs": 0,
+    "termination_counts": {
+      "time-budget": 24
+    }
+  },
+  "campaign": {
+    "cap_pairs": [
+      {
+        "global_l2_cap": 8.0,
+        "global_linf_cap": 4.0
+      },
+      {
+        "global_l2_cap": 16.0,
+        "global_linf_cap": 8.0
+      },
+      {
+        "global_l2_cap": 32.0,
+        "global_linf_cap": 16.0
+      },
+      {
+        "global_l2_cap": 64.0,
+        "global_linf_cap": 32.0
+      }
+    ],
+    "commands": {
+      "by_group": [
+        {
+          "command": "C:\\Users\\brssn\\AppData\\Local\\Temp\\Krenn-counterexample-venv\\Scripts\\python.exe -B -m experiments.krenn_quantum_graph.star_alternating_search --output-directory D:\\KrennScratch\\counterexample_search\\star_als_v2_retained_20260725_r2\\natural_perturbed_linf4_l28 --radii 4 --global-l2-caps 8 --seeds 2026072501,2026072502,2026072503 --maximum-sweeps 5000 --maximum-seconds-per-run 600 --patience-apex-updates 30000 --minimum-relative-improvement 1e-14 --initialization natural-perturbed --resume",
+          "manifest_path": "natural_perturbed_linf4_l28/manifest.json"
+        },
+        {
+          "command": "C:\\Users\\brssn\\AppData\\Local\\Temp\\Krenn-counterexample-venv\\Scripts\\python.exe -B -m experiments.krenn_quantum_graph.star_alternating_search --output-directory D:\\KrennScratch\\counterexample_search\\star_als_v2_retained_20260725_r2\\natural_perturbed_linf8_l216 --radii 8 --global-l2-caps 16 --seeds 2026072501,2026072502,2026072503 --maximum-sweeps 5000 --maximum-seconds-per-run 600 --patience-apex-updates 30000 --minimum-relative-improvement 1e-14 --initialization natural-perturbed --resume",
+          "manifest_path": "natural_perturbed_linf8_l216/manifest.json"
+        },
+        {
+          "command": "C:\\Users\\brssn\\AppData\\Local\\Temp\\Krenn-counterexample-venv\\Scripts\\python.exe -B -m experiments.krenn_quantum_graph.star_alternating_search --output-directory D:\\KrennScratch\\counterexample_search\\star_als_v2_retained_20260725_r2\\natural_perturbed_linf16_l232 --radii 16 --global-l2-caps 32 --seeds 2026072501,2026072502,2026072503 --maximum-sweeps 5000 --maximum-seconds-per-run 600 --patience-apex-updates 30000 --minimum-relative-improvement 1e-14 --initialization natural-perturbed --resume",
+          "manifest_path": "natural_perturbed_linf16_l232/manifest.json"
+        },
+        {
+          "command": "C:\\Users\\brssn\\AppData\\Local\\Temp\\Krenn-counterexample-venv\\Scripts\\python.exe -B -m experiments.krenn_quantum_graph.star_alternating_search --output-directory D:\\KrennScratch\\counterexample_search\\star_als_v2_retained_20260725_r2\\natural_perturbed_linf32_l264 --radii 32 --global-l2-caps 64 --seeds 2026072501,2026072502,2026072503 --maximum-sweeps 5000 --maximum-seconds-per-run 600 --patience-apex-updates 30000 --minimum-relative-improvement 1e-14 --initialization natural-perturbed --resume",
+          "manifest_path": "natural_perturbed_linf32_l264/manifest.json"
+        },
+        {
+          "command": "C:\\Users\\brssn\\AppData\\Local\\Temp\\Krenn-counterexample-venv\\Scripts\\python.exe -B -m experiments.krenn_quantum_graph.star_alternating_search --output-directory D:\\KrennScratch\\counterexample_search\\star_als_v2_retained_20260725_r2\\random_linf4_l28 --radii 4 --global-l2-caps 8 --seeds 2026072501,2026072502,2026072503 --maximum-sweeps 5000 --maximum-seconds-per-run 600 --patience-apex-updates 30000 --minimum-relative-improvement 1e-14 --initialization random --resume",
+          "manifest_path": "random_linf4_l28/manifest.json"
+        },
+        {
+          "command": "C:\\Users\\brssn\\AppData\\Local\\Temp\\Krenn-counterexample-venv\\Scripts\\python.exe -B -m experiments.krenn_quantum_graph.star_alternating_search --output-directory D:\\KrennScratch\\counterexample_search\\star_als_v2_retained_20260725_r2\\random_linf8_l216 --radii 8 --global-l2-caps 16 --seeds 2026072501,2026072502,2026072503 --maximum-sweeps 5000 --maximum-seconds-per-run 600 --patience-apex-updates 30000 --minimum-relative-improvement 1e-14 --initialization random --resume",
+          "manifest_path": "random_linf8_l216/manifest.json"
+        },
+        {
+          "command": "C:\\Users\\brssn\\AppData\\Local\\Temp\\Krenn-counterexample-venv\\Scripts\\python.exe -B -m experiments.krenn_quantum_graph.star_alternating_search --output-directory D:\\KrennScratch\\counterexample_search\\star_als_v2_retained_20260725_r2\\random_linf16_l232 --radii 16 --global-l2-caps 32 --seeds 2026072501,2026072502,2026072503 --maximum-sweeps 5000 --maximum-seconds-per-run 600 --patience-apex-updates 30000 --minimum-relative-improvement 1e-14 --initialization random --resume",
+          "manifest_path": "random_linf16_l232/manifest.json"
+        },
+        {
+          "command": "C:\\Users\\brssn\\AppData\\Local\\Temp\\Krenn-counterexample-venv\\Scripts\\python.exe -B -m experiments.krenn_quantum_graph.star_alternating_search --output-directory D:\\KrennScratch\\counterexample_search\\star_als_v2_retained_20260725_r2\\random_linf32_l264 --radii 32 --global-l2-caps 64 --seeds 2026072501,2026072502,2026072503 --maximum-sweeps 5000 --maximum-seconds-per-run 600 --patience-apex-updates 30000 --minimum-relative-improvement 1e-14 --initialization random --resume",
+          "manifest_path": "random_linf32_l264/manifest.json"
+        }
+      ],
+      "interpreter": "C:\\Users\\brssn\\AppData\\Local\\Temp\\Krenn-counterexample-venv\\Scripts\\python.exe",
+      "status": "canonical source-controlled replay commands; group manifests do not attest original shell invocations"
+    },
+    "common_budget": {
+      "maximum_seconds_per_run": 600.0,
+      "maximum_sweeps_per_run": 5000,
+      "minimum_relative_improvement": 1e-14,
+      "patience_apex_updates": 30000
+    },
+    "fixed_seeds": [
+      2026072501,
+      2026072502,
+      2026072503
+    ],
+    "groups": 8,
+    "initializations": [
+      "natural-perturbed",
+      "random"
+    ],
+    "resources": {
+      "declared_worker_limit": 16,
+      "parallel_group_workers_declared": 8,
+      "parallel_worker_count_is_caller_declared_not_machine_audited": true,
+      "workers_per_group_manifest": 1
+    },
+    "runs": 24,
+    "scratch_root_at_generation": "D:\\KrennScratch\\counterexample_search\\star_als_v2_retained_20260725_r2"
+  },
+  "claim_boundary": {
+    "all_affine_solutions_covered": false,
+    "bounded_miss_is_nonexistence_proof": false,
+    "finite_affine_membership_status": "undecided",
+    "increasing_cap_trend_is_border_proof": false,
+    "known_pole_product_is_full_color_gauge_invariant": false,
+    "legacy_eight_charts_searched": false,
+    "numerical_zero_is_exact_counterexample": false,
+    "raw_weight_caps_are_full_color_gauge_invariant": false,
+    "search_scope": "one fixed 15-anchor open gauge chart only",
+    "three_pivot_orbit_cover_searched": false
+  },
+  "gauge_chart": {
+    "anchor_indices": [
+      1,
+      46,
+      48,
+      53,
+      72,
+      79,
+      81,
+      85,
+      89,
+      108,
+      112,
+      116,
+      126,
+      130,
+      134
+    ],
+    "anchor_minor_determinant": -2,
+    "exact_rank_over_Q": 15,
+    "schema": "krenn-n6-d3-direct-ghz-color-gauge-chart-v1",
+    "scope": "one fixed 15-anchor open chart"
+  },
+  "groups": [
+    {
+      "best_bounded_candidate": {
+        "best_bounds": {
+          "all_15_anchors_exactly_one": true,
+          "finite": true,
+          "l2": 8.0,
+          "l2_fraction_of_cap": 1.0,
+          "linf_fraction_of_cap": 0.8418440000938082,
+          "maximum_abs": 3.367376000375233,
+          "within_both_global_caps": true
+        },
+        "best_growth": {
+          "defined_edge_color_cross_ratios": 135,
+          "known_vertex_scalar_pole_product_abs": 3.0069132431900143e-06,
+          "maximum_absolute_log_cross_ratio": 5.574459873252693
+        },
+        "best_residual_l2": 1.4533033082958495,
+        "best_residual_maximum": 0.9046862768285558,
+        "elapsed_seconds": 600.4765273999656,
+        "exact_verification": {
+          "attempted": false,
+          "status": "not-applicable-to-floating-point-trajectory"
+        },
+        "numerical_tolerance_reached": false,
+        "seed": 2026072503,
+        "termination": "time-budget"
+      },
+      "budget": {
+        "maximum_seconds_per_run": 600.0,
+        "maximum_sweeps_per_run": 5000,
+        "minimum_relative_improvement": 1e-14,
+        "patience_apex_updates": 30000
+      },
+      "canonical_replay_command": "C:\\Users\\brssn\\AppData\\Local\\Temp\\Krenn-counterexample-venv\\Scripts\\python.exe -B -m experiments.krenn_quantum_graph.star_alternating_search --output-directory D:\\KrennScratch\\counterexample_search\\star_als_v2_retained_20260725_r2\\natural_perturbed_linf4_l28 --radii 4 --global-l2-caps 8 --seeds 2026072501,2026072502,2026072503 --maximum-sweeps 5000 --maximum-seconds-per-run 600 --patience-apex-updates 30000 --minimum-relative-improvement 1e-14 --initialization natural-perturbed --resume",
+      "global_l2_cap": 8.0,
+      "global_linf_cap": 4.0,
+      "initialization": "natural-perturbed",
+      "manifest_path": "natural_perturbed_linf4_l28/manifest.json",
+      "run_count": 3,
+      "seeds": [
+        2026072501,
+        2026072502,
+        2026072503
+      ],
+      "workers_recorded_by_group": 1
+    },
+    {
+      "best_bounded_candidate": {
+        "best_bounds": {
+          "all_15_anchors_exactly_one": true,
+          "finite": true,
+          "l2": 16.0,
+          "l2_fraction_of_cap": 1.0,
+          "linf_fraction_of_cap": 0.8949246855368003,
+          "maximum_abs": 7.159397484294402,
+          "within_both_global_caps": true
+        },
+        "best_growth": {
+          "defined_edge_color_cross_ratios": 135,
+          "known_vertex_scalar_pole_product_abs": 2.3988346282787887e-06,
+          "maximum_absolute_log_cross_ratio": 7.730894141651478
+        },
+        "best_residual_l2": 1.210736084484207,
+        "best_residual_maximum": 0.9637403156997284,
+        "elapsed_seconds": 600.3618114000419,
+        "exact_verification": {
+          "attempted": false,
+          "status": "not-applicable-to-floating-point-trajectory"
+        },
+        "numerical_tolerance_reached": false,
+        "seed": 2026072503,
+        "termination": "time-budget"
+      },
+      "budget": {
+        "maximum_seconds_per_run": 600.0,
+        "maximum_sweeps_per_run": 5000,
+        "minimum_relative_improvement": 1e-14,
+        "patience_apex_updates": 30000
+      },
+      "canonical_replay_command": "C:\\Users\\brssn\\AppData\\Local\\Temp\\Krenn-counterexample-venv\\Scripts\\python.exe -B -m experiments.krenn_quantum_graph.star_alternating_search --output-directory D:\\KrennScratch\\counterexample_search\\star_als_v2_retained_20260725_r2\\natural_perturbed_linf8_l216 --radii 8 --global-l2-caps 16 --seeds 2026072501,2026072502,2026072503 --maximum-sweeps 5000 --maximum-seconds-per-run 600 --patience-apex-updates 30000 --minimum-relative-improvement 1e-14 --initialization natural-perturbed --resume",
+      "global_l2_cap": 16.0,
+      "global_linf_cap": 8.0,
+      "initialization": "natural-perturbed",
+      "manifest_path": "natural_perturbed_linf8_l216/manifest.json",
+      "run_count": 3,
+      "seeds": [
+        2026072501,
+        2026072502,
+        2026072503
+      ],
+      "workers_recorded_by_group": 1
+    },
+    {
+      "best_bounded_candidate": {
+        "best_bounds": {
+          "all_15_anchors_exactly_one": true,
+          "finite": true,
+          "l2": 31.625246786976067,
+          "l2_fraction_of_cap": 0.9882889620930021,
+          "linf_fraction_of_cap": 1.0,
+          "maximum_abs": 16.0,
+          "within_both_global_caps": true
+        },
+        "best_growth": {
+          "defined_edge_color_cross_ratios": 135,
+          "known_vertex_scalar_pole_product_abs": 4.365372194932337e-09,
+          "maximum_absolute_log_cross_ratio": 5.01530794468847
+        },
+        "best_residual_l2": 1.0462766221326754,
+        "best_residual_maximum": 0.9904120343746451,
+        "elapsed_seconds": 600.3821327999467,
+        "exact_verification": {
+          "attempted": false,
+          "status": "not-applicable-to-floating-point-trajectory"
+        },
+        "numerical_tolerance_reached": false,
+        "seed": 2026072502,
+        "termination": "time-budget"
+      },
+      "budget": {
+        "maximum_seconds_per_run": 600.0,
+        "maximum_sweeps_per_run": 5000,
+        "minimum_relative_improvement": 1e-14,
+        "patience_apex_updates": 30000
+      },
+      "canonical_replay_command": "C:\\Users\\brssn\\AppData\\Local\\Temp\\Krenn-counterexample-venv\\Scripts\\python.exe -B -m experiments.krenn_quantum_graph.star_alternating_search --output-directory D:\\KrennScratch\\counterexample_search\\star_als_v2_retained_20260725_r2\\natural_perturbed_linf16_l232 --radii 16 --global-l2-caps 32 --seeds 2026072501,2026072502,2026072503 --maximum-sweeps 5000 --maximum-seconds-per-run 600 --patience-apex-updates 30000 --minimum-relative-improvement 1e-14 --initialization natural-perturbed --resume",
+      "global_l2_cap": 32.0,
+      "global_linf_cap": 16.0,
+      "initialization": "natural-perturbed",
+      "manifest_path": "natural_perturbed_linf16_l232/manifest.json",
+      "run_count": 3,
+      "seeds": [
+        2026072501,
+        2026072502,
+        2026072503
+      ],
+      "workers_recorded_by_group": 1
+    },
+    {
+      "best_bounded_candidate": {
+        "best_bounds": {
+          "all_15_anchors_exactly_one": true,
+          "finite": true,
+          "l2": 49.58105092723955,
+          "l2_fraction_of_cap": 0.774703920738118,
+          "linf_fraction_of_cap": 0.7003770138839184,
+          "maximum_abs": 22.412064444285388,
+          "within_both_global_caps": true
+        },
+        "best_growth": {
+          "defined_edge_color_cross_ratios": 135,
+          "known_vertex_scalar_pole_product_abs": 5.174596265897974e-10,
+          "maximum_absolute_log_cross_ratio": 6.407756655845034
+        },
+        "best_residual_l2": 1.0309050035801723,
+        "best_residual_maximum": 0.9963263798812976,
+        "elapsed_seconds": 600.6691900999285,
+        "exact_verification": {
+          "attempted": false,
+          "status": "not-applicable-to-floating-point-trajectory"
+        },
+        "numerical_tolerance_reached": false,
+        "seed": 2026072502,
+        "termination": "time-budget"
+      },
+      "budget": {
+        "maximum_seconds_per_run": 600.0,
+        "maximum_sweeps_per_run": 5000,
+        "minimum_relative_improvement": 1e-14,
+        "patience_apex_updates": 30000
+      },
+      "canonical_replay_command": "C:\\Users\\brssn\\AppData\\Local\\Temp\\Krenn-counterexample-venv\\Scripts\\python.exe -B -m experiments.krenn_quantum_graph.star_alternating_search --output-directory D:\\KrennScratch\\counterexample_search\\star_als_v2_retained_20260725_r2\\natural_perturbed_linf32_l264 --radii 32 --global-l2-caps 64 --seeds 2026072501,2026072502,2026072503 --maximum-sweeps 5000 --maximum-seconds-per-run 600 --patience-apex-updates 30000 --minimum-relative-improvement 1e-14 --initialization natural-perturbed --resume",
+      "global_l2_cap": 64.0,
+      "global_linf_cap": 32.0,
+      "initialization": "natural-perturbed",
+      "manifest_path": "natural_perturbed_linf32_l264/manifest.json",
+      "run_count": 3,
+      "seeds": [
+        2026072501,
+        2026072502,
+        2026072503
+      ],
+      "workers_recorded_by_group": 1
+    },
+    {
+      "best_bounded_candidate": {
+        "best_bounds": {
+          "all_15_anchors_exactly_one": true,
+          "finite": true,
+          "l2": 8.0,
+          "l2_fraction_of_cap": 1.0,
+          "linf_fraction_of_cap": 0.7526783677459791,
+          "maximum_abs": 3.0107134709839163,
+          "within_both_global_caps": true
+        },
+        "best_growth": {
+          "defined_edge_color_cross_ratios": 135,
+          "known_vertex_scalar_pole_product_abs": 1.0614308626066173e-05,
+          "maximum_absolute_log_cross_ratio": 5.572546608220526
+        },
+        "best_residual_l2": 1.3247740985866565,
+        "best_residual_maximum": 0.9149533696089841,
+        "elapsed_seconds": 600.5028564999811,
+        "exact_verification": {
+          "attempted": false,
+          "status": "not-applicable-to-floating-point-trajectory"
+        },
+        "numerical_tolerance_reached": false,
+        "seed": 2026072503,
+        "termination": "time-budget"
+      },
+      "budget": {
+        "maximum_seconds_per_run": 600.0,
+        "maximum_sweeps_per_run": 5000,
+        "minimum_relative_improvement": 1e-14,
+        "patience_apex_updates": 30000
+      },
+      "canonical_replay_command": "C:\\Users\\brssn\\AppData\\Local\\Temp\\Krenn-counterexample-venv\\Scripts\\python.exe -B -m experiments.krenn_quantum_graph.star_alternating_search --output-directory D:\\KrennScratch\\counterexample_search\\star_als_v2_retained_20260725_r2\\random_linf4_l28 --radii 4 --global-l2-caps 8 --seeds 2026072501,2026072502,2026072503 --maximum-sweeps 5000 --maximum-seconds-per-run 600 --patience-apex-updates 30000 --minimum-relative-improvement 1e-14 --initialization random --resume",
+      "global_l2_cap": 8.0,
+      "global_linf_cap": 4.0,
+      "initialization": "random",
+      "manifest_path": "random_linf4_l28/manifest.json",
+      "run_count": 3,
+      "seeds": [
+        2026072501,
+        2026072502,
+        2026072503
+      ],
+      "workers_recorded_by_group": 1
+    },
+    {
+      "best_bounded_candidate": {
+        "best_bounds": {
+          "all_15_anchors_exactly_one": true,
+          "finite": true,
+          "l2": 15.310605831072161,
+          "l2_fraction_of_cap": 0.9569128644420101,
+          "linf_fraction_of_cap": 1.0,
+          "maximum_abs": 8.0,
+          "within_both_global_caps": true
+        },
+        "best_growth": {
+          "defined_edge_color_cross_ratios": 135,
+          "known_vertex_scalar_pole_product_abs": 1.9365775522148403e-06,
+          "maximum_absolute_log_cross_ratio": 7.172046582725737
+        },
+        "best_residual_l2": 1.1911182433623502,
+        "best_residual_maximum": 0.792710509202661,
+        "elapsed_seconds": 600.4774925000966,
+        "exact_verification": {
+          "attempted": false,
+          "status": "not-applicable-to-floating-point-trajectory"
+        },
+        "numerical_tolerance_reached": false,
+        "seed": 2026072503,
+        "termination": "time-budget"
+      },
+      "budget": {
+        "maximum_seconds_per_run": 600.0,
+        "maximum_sweeps_per_run": 5000,
+        "minimum_relative_improvement": 1e-14,
+        "patience_apex_updates": 30000
+      },
+      "canonical_replay_command": "C:\\Users\\brssn\\AppData\\Local\\Temp\\Krenn-counterexample-venv\\Scripts\\python.exe -B -m experiments.krenn_quantum_graph.star_alternating_search --output-directory D:\\KrennScratch\\counterexample_search\\star_als_v2_retained_20260725_r2\\random_linf8_l216 --radii 8 --global-l2-caps 16 --seeds 2026072501,2026072502,2026072503 --maximum-sweeps 5000 --maximum-seconds-per-run 600 --patience-apex-updates 30000 --minimum-relative-improvement 1e-14 --initialization random --resume",
+      "global_l2_cap": 16.0,
+      "global_linf_cap": 8.0,
+      "initialization": "random",
+      "manifest_path": "random_linf8_l216/manifest.json",
+      "run_count": 3,
+      "seeds": [
+        2026072501,
+        2026072502,
+        2026072503
+      ],
+      "workers_recorded_by_group": 1
+    },
+    {
+      "best_bounded_candidate": {
+        "best_bounds": {
+          "all_15_anchors_exactly_one": true,
+          "finite": true,
+          "l2": 26.420706465553447,
+          "l2_fraction_of_cap": 0.8256470770485452,
+          "linf_fraction_of_cap": 1.0,
+          "maximum_abs": 16.0,
+          "within_both_global_caps": true
+        },
+        "best_growth": {
+          "defined_edge_color_cross_ratios": 135,
+          "known_vertex_scalar_pole_product_abs": 1.1756977061880638e-07,
+          "maximum_absolute_log_cross_ratio": 9.752711364770496
+        },
+        "best_residual_l2": 1.1090802301348597,
+        "best_residual_maximum": 0.6356726007210378,
+        "elapsed_seconds": 600.3249466000125,
+        "exact_verification": {
+          "attempted": false,
+          "status": "not-applicable-to-floating-point-trajectory"
+        },
+        "numerical_tolerance_reached": false,
+        "seed": 2026072503,
+        "termination": "time-budget"
+      },
+      "budget": {
+        "maximum_seconds_per_run": 600.0,
+        "maximum_sweeps_per_run": 5000,
+        "minimum_relative_improvement": 1e-14,
+        "patience_apex_updates": 30000
+      },
+      "canonical_replay_command": "C:\\Users\\brssn\\AppData\\Local\\Temp\\Krenn-counterexample-venv\\Scripts\\python.exe -B -m experiments.krenn_quantum_graph.star_alternating_search --output-directory D:\\KrennScratch\\counterexample_search\\star_als_v2_retained_20260725_r2\\random_linf16_l232 --radii 16 --global-l2-caps 32 --seeds 2026072501,2026072502,2026072503 --maximum-sweeps 5000 --maximum-seconds-per-run 600 --patience-apex-updates 30000 --minimum-relative-improvement 1e-14 --initialization random --resume",
+      "global_l2_cap": 32.0,
+      "global_linf_cap": 16.0,
+      "initialization": "random",
+      "manifest_path": "random_linf16_l232/manifest.json",
+      "run_count": 3,
+      "seeds": [
+        2026072501,
+        2026072502,
+        2026072503
+      ],
+      "workers_recorded_by_group": 1
+    },
+    {
+      "best_bounded_candidate": {
+        "best_bounds": {
+          "all_15_anchors_exactly_one": true,
+          "finite": true,
+          "l2": 42.72437039556563,
+          "l2_fraction_of_cap": 0.667568287430713,
+          "linf_fraction_of_cap": 1.0,
+          "maximum_abs": 32.0,
+          "within_both_global_caps": true
+        },
+        "best_growth": {
+          "defined_edge_color_cross_ratios": 135,
+          "known_vertex_scalar_pole_product_abs": 6.460091475790959e-07,
+          "maximum_absolute_log_cross_ratio": 7.042552621315526
+        },
+        "best_residual_l2": 1.0677790388003832,
+        "best_residual_maximum": 0.9990339919502074,
+        "elapsed_seconds": 600.5992944999598,
+        "exact_verification": {
+          "attempted": false,
+          "status": "not-applicable-to-floating-point-trajectory"
+        },
+        "numerical_tolerance_reached": false,
+        "seed": 2026072502,
+        "termination": "time-budget"
+      },
+      "budget": {
+        "maximum_seconds_per_run": 600.0,
+        "maximum_sweeps_per_run": 5000,
+        "minimum_relative_improvement": 1e-14,
+        "patience_apex_updates": 30000
+      },
+      "canonical_replay_command": "C:\\Users\\brssn\\AppData\\Local\\Temp\\Krenn-counterexample-venv\\Scripts\\python.exe -B -m experiments.krenn_quantum_graph.star_alternating_search --output-directory D:\\KrennScratch\\counterexample_search\\star_als_v2_retained_20260725_r2\\random_linf32_l264 --radii 32 --global-l2-caps 64 --seeds 2026072501,2026072502,2026072503 --maximum-sweeps 5000 --maximum-seconds-per-run 600 --patience-apex-updates 30000 --minimum-relative-improvement 1e-14 --initialization random --resume",
+      "global_l2_cap": 64.0,
+      "global_linf_cap": 32.0,
+      "initialization": "random",
+      "manifest_path": "random_linf32_l264/manifest.json",
+      "run_count": 3,
+      "seeds": [
+        2026072501,
+        2026072502,
+        2026072503
+      ],
+      "workers_recorded_by_group": 1
+    }
+  ],
+  "input_file_ledger": [
+    {
+      "bytes": 15096731,
+      "path": "natural_perturbed_linf16_l232/linf_16_l2_32_seed_2026072501.checkpoint.json",
+      "sha256": "7455f1cd33d096af589121da7875e1bb73a9fc968fb4324c14ca088f5d7283b1"
+    },
+    {
+      "bytes": 14089419,
+      "path": "natural_perturbed_linf16_l232/linf_16_l2_32_seed_2026072501.result.json",
+      "sha256": "bb29753d16646a9f0cea705f3fff593f61e8616814fa4100025774486c9fee30"
+    },
+    {
+      "bytes": 14393424,
+      "path": "natural_perturbed_linf16_l232/linf_16_l2_32_seed_2026072502.checkpoint.json",
+      "sha256": "40be96237a5699f98400fa87283f0ea4baceba927f63529ee2dd934c3d7af337"
+    },
+    {
+      "bytes": 13440334,
+      "path": "natural_perturbed_linf16_l232/linf_16_l2_32_seed_2026072502.result.json",
+      "sha256": "ec5a0b469973146e46d4ffd73609fd7594619c4e158d7d43911cd81072e26fa1"
+    },
+    {
+      "bytes": 14541133,
+      "path": "natural_perturbed_linf16_l232/linf_16_l2_32_seed_2026072503.checkpoint.json",
+      "sha256": "4d457b774e1dabc55ec282af8d878401fee7660c144521d2505aa3ba3bf6fb95"
+    },
+    {
+      "bytes": 13574837,
+      "path": "natural_perturbed_linf16_l232/linf_16_l2_32_seed_2026072503.result.json",
+      "sha256": "b513fc9185266a40afaea142875bc6df00e2b893686b7eae5a4a440eb730ac07"
+    },
+    {
+      "bytes": 6225,
+      "path": "natural_perturbed_linf16_l232/manifest.json",
+      "sha256": "27c1e8ce1ba11f1d77302790c43fbce226420578f772c9e532c31acb872ba799"
+    },
+    {
+      "bytes": 14844471,
+      "path": "natural_perturbed_linf32_l264/linf_32_l2_64_seed_2026072501.checkpoint.json",
+      "sha256": "d40b14d66acc7886707631cd7c36bf23bd27b664c2ad4d78bbd09cfd5c6aaf93"
+    },
+    {
+      "bytes": 13862032,
+      "path": "natural_perturbed_linf32_l264/linf_32_l2_64_seed_2026072501.result.json",
+      "sha256": "5c31e09ed8e80a73acc382864b215f5563ec84a7da921f7c957fbead925bbb54"
+    },
+    {
+      "bytes": 14420580,
+      "path": "natural_perturbed_linf32_l264/linf_32_l2_64_seed_2026072502.checkpoint.json",
+      "sha256": "81a8124c7072cb3f53fa0653c7a6875a3f6fa5b451ae28e3a1e293b86d9137c1"
+    },
+    {
+      "bytes": 13471213,
+      "path": "natural_perturbed_linf32_l264/linf_32_l2_64_seed_2026072502.result.json",
+      "sha256": "075f04f8c7f9e929f3742afb5158aadb9c36844c91bdfb399438f03519fb1ef5"
+    },
+    {
+      "bytes": 14494738,
+      "path": "natural_perturbed_linf32_l264/linf_32_l2_64_seed_2026072503.checkpoint.json",
+      "sha256": "b80884858807b28db08d710641915eb04f4b64af453b9e2fe1a81548179b8924"
+    },
+    {
+      "bytes": 13535903,
+      "path": "natural_perturbed_linf32_l264/linf_32_l2_64_seed_2026072503.result.json",
+      "sha256": "afa9a4cd303bd90febd3db952e8d13ed99438c013001c117cb77042ecb187bf4"
+    },
+    {
+      "bytes": 6262,
+      "path": "natural_perturbed_linf32_l264/manifest.json",
+      "sha256": "f5bfe3533eff8b1bde531d4894809f896826f1d2d7a5d40ba30a62b4b0c4b552"
+    },
+    {
+      "bytes": 15161728,
+      "path": "natural_perturbed_linf4_l28/linf_4_l2_8_seed_2026072501.checkpoint.json",
+      "sha256": "8077f9c38c1eae3fead4ad1a436c69f1ad6174bd91f19d2037cc7558a92c89a2"
+    },
+    {
+      "bytes": 14145779,
+      "path": "natural_perturbed_linf4_l28/linf_4_l2_8_seed_2026072501.result.json",
+      "sha256": "2821c2079227e60b2a2bddfe350f4a31b0195203c25f4e4eed57ef4465c8d3c1"
+    },
+    {
+      "bytes": 14817806,
+      "path": "natural_perturbed_linf4_l28/linf_4_l2_8_seed_2026072502.checkpoint.json",
+      "sha256": "f9655c6c4d53b5b565390298feb14069c4a8d81b83f507872850b3f0892d042f"
+    },
+    {
+      "bytes": 13825489,
+      "path": "natural_perturbed_linf4_l28/linf_4_l2_8_seed_2026072502.result.json",
+      "sha256": "616453696636e0401f736566ac059db2c273e54dd173be5829c33cef71e3ff68"
+    },
+    {
+      "bytes": 14539933,
+      "path": "natural_perturbed_linf4_l28/linf_4_l2_8_seed_2026072503.checkpoint.json",
+      "sha256": "89d99afef2e4b575825e818c3482cb2c2c83361bfd06e83cde45de666a64d175"
+    },
+    {
+      "bytes": 13568078,
+      "path": "natural_perturbed_linf4_l28/linf_4_l2_8_seed_2026072503.result.json",
+      "sha256": "ca6b535d66eea7cb7097bc23263d583dba18b154afe8216505adc1a91f6b66eb"
+    },
+    {
+      "bytes": 6208,
+      "path": "natural_perturbed_linf4_l28/manifest.json",
+      "sha256": "bbbcd979c28af71af2927e27ae4d3d3636f53d332edfecfd0d6c54a0fe88cf8b"
+    },
+    {
+      "bytes": 14989511,
+      "path": "natural_perturbed_linf8_l216/linf_8_l2_16_seed_2026072501.checkpoint.json",
+      "sha256": "ec42009d9fae0bcfe3231565791e3afdbd0d33ee8fa1a2748e9c6275e33afa21"
+    },
+    {
+      "bytes": 13984759,
+      "path": "natural_perturbed_linf8_l216/linf_8_l2_16_seed_2026072501.result.json",
+      "sha256": "060466847d193b582597326a7cd0375428bbee6b285c131c5f654bc672b6f698"
+    },
+    {
+      "bytes": 14689681,
+      "path": "natural_perturbed_linf8_l216/linf_8_l2_16_seed_2026072502.checkpoint.json",
+      "sha256": "dd1fd5ce649853a45077ed31e53f5fac7a1e4f638cf09cf002ca069e90cb1da5"
+    },
+    {
+      "bytes": 13703961,
+      "path": "natural_perturbed_linf8_l216/linf_8_l2_16_seed_2026072502.result.json",
+      "sha256": "f4142a8b05b1f91d5f74f45450c98ae46f84ede8163e9a034bd226cfe69c2edc"
+    },
+    {
+      "bytes": 14697360,
+      "path": "natural_perturbed_linf8_l216/linf_8_l2_16_seed_2026072503.checkpoint.json",
+      "sha256": "788dc2d072a6e2ce9a98e9467320d0050068f5d98607a8da659a1a3634b6d1d4"
+    },
+    {
+      "bytes": 13714610,
+      "path": "natural_perturbed_linf8_l216/linf_8_l2_16_seed_2026072503.result.json",
+      "sha256": "9c823ca694cb8fe6794b1878a3c07f3e890f7586acf487753ce10ff8c4bea70d"
+    },
+    {
+      "bytes": 6190,
+      "path": "natural_perturbed_linf8_l216/manifest.json",
+      "sha256": "54c1a0ecdf36b5a39600ef9bc7129210174e07fc00669df16372fd3a70a0c85e"
+    },
+    {
+      "bytes": 14874690,
+      "path": "random_linf16_l232/linf_16_l2_32_seed_2026072501.checkpoint.json",
+      "sha256": "954d9139a8c22d84147dbd250239e36691f1b5cb2d950a79d0ac469b979c6f03"
+    },
+    {
+      "bytes": 13888302,
+      "path": "random_linf16_l232/linf_16_l2_32_seed_2026072501.result.json",
+      "sha256": "8d6a3986f5db830bd11c066dcbefb0c4a0a66ab7d21835b975a25a3089432f2b"
+    },
+    {
+      "bytes": 14593446,
+      "path": "random_linf16_l232/linf_16_l2_32_seed_2026072502.checkpoint.json",
+      "sha256": "3b8487b12b1d1dcbb4dc2ca6727c85836542cc2587c31a245183e934377886df"
+    },
+    {
+      "bytes": 13622093,
+      "path": "random_linf16_l232/linf_16_l2_32_seed_2026072502.result.json",
+      "sha256": "c79d228617ad5aa31d835af05979b268b8374cf8723ea2e7c3d6c6048dbbbc9e"
+    },
+    {
+      "bytes": 14529802,
+      "path": "random_linf16_l232/linf_16_l2_32_seed_2026072503.checkpoint.json",
+      "sha256": "6fa4cbd9476c5ad4a77c5398635e18985ec6471b47dd1c9f8fda717533090583"
+    },
+    {
+      "bytes": 13567170,
+      "path": "random_linf16_l232/linf_16_l2_32_seed_2026072503.result.json",
+      "sha256": "d20d379b559c7ef2b7c511c282f86bf8ddca790f10db0ad064f0e9a94dcf87d8"
+    },
+    {
+      "bytes": 6216,
+      "path": "random_linf16_l232/manifest.json",
+      "sha256": "64372b7b7f1f2865c6f7d6010f9c241b2d308466a5dd80dd6a102f7003a15e6d"
+    },
+    {
+      "bytes": 14926396,
+      "path": "random_linf32_l264/linf_32_l2_64_seed_2026072501.checkpoint.json",
+      "sha256": "c9dba912173d44ebe1775b6d8e9a36658c3ce45fffe7a0191ec7afa44766710d"
+    },
+    {
+      "bytes": 13937452,
+      "path": "random_linf32_l264/linf_32_l2_64_seed_2026072501.result.json",
+      "sha256": "53056049b4ced87b7e2cdba9e2303d3ddcb43e90dbc0eba17a27225062429d08"
+    },
+    {
+      "bytes": 14447865,
+      "path": "random_linf32_l264/linf_32_l2_64_seed_2026072502.checkpoint.json",
+      "sha256": "68e66a1bf02c7850aa0857dc4955f4dd9426179ca1732b7316acc173a070b381"
+    },
+    {
+      "bytes": 13490679,
+      "path": "random_linf32_l264/linf_32_l2_64_seed_2026072502.result.json",
+      "sha256": "366bbc610f8ffa2cac69b716205401861f539788faed8cd37950908b1ed31457"
+    },
+    {
+      "bytes": 14476892,
+      "path": "random_linf32_l264/linf_32_l2_64_seed_2026072503.checkpoint.json",
+      "sha256": "4bb53ebd1c3eaeecdc144742ee8773f77b87ca235c4d7a7ca212e45091e33bbe"
+    },
+    {
+      "bytes": 13517522,
+      "path": "random_linf32_l264/linf_32_l2_64_seed_2026072503.result.json",
+      "sha256": "3334445e8f9350b3be116b1b474c16ff4fa9a5fd088bab3b1086e18e5f288b96"
+    },
+    {
+      "bytes": 6215,
+      "path": "random_linf32_l264/manifest.json",
+      "sha256": "a8dfd0eaaa3dc4f2c1066ac4dd5b0a54a01632aaf8698d9833223fbd3c3a9124"
+    },
+    {
+      "bytes": 15218794,
+      "path": "random_linf4_l28/linf_4_l2_8_seed_2026072501.checkpoint.json",
+      "sha256": "d666b46aedbe4fcb39265832fde69c16be8114a9adeac8a233b54107d8650b56"
+    },
+    {
+      "bytes": 14198849,
+      "path": "random_linf4_l28/linf_4_l2_8_seed_2026072501.result.json",
+      "sha256": "bc9676e66949c9fd473daddd01109dec0917f55c72e4a672766ae164afd76b7e"
+    },
+    {
+      "bytes": 14785391,
+      "path": "random_linf4_l28/linf_4_l2_8_seed_2026072502.checkpoint.json",
+      "sha256": "783ce30d967ab9ff564521d74137ead5f3e16ed4b516d6093c8e8c8ec80bc937"
+    },
+    {
+      "bytes": 13798514,
+      "path": "random_linf4_l28/linf_4_l2_8_seed_2026072502.result.json",
+      "sha256": "c8f784fbcef29cbad28ba0ef70700a147da0faa03c42cacf8126ef3dabf366b0"
+    },
+    {
+      "bytes": 14748032,
+      "path": "random_linf4_l28/linf_4_l2_8_seed_2026072503.checkpoint.json",
+      "sha256": "c34da5d14b8eb43b3f99aae561aec5e765a3a995145b126673b9351483927420"
+    },
+    {
+      "bytes": 13761700,
+      "path": "random_linf4_l28/linf_4_l2_8_seed_2026072503.result.json",
+      "sha256": "01ad0f406e84328b48a8fa35a8dfdf4e9e10adf4879097ce908fa20ac2cb67e4"
+    },
+    {
+      "bytes": 6203,
+      "path": "random_linf4_l28/manifest.json",
+      "sha256": "1d9cc0d884ec063664d648a4e0eaecc717d6b1644544fb2fe4eb052c05b2ad54"
+    },
+    {
+      "bytes": 14917301,
+      "path": "random_linf8_l216/linf_8_l2_16_seed_2026072501.checkpoint.json",
+      "sha256": "5dd13ad4e6b1efecbac21a4109b012278b921c4f1ba8ebbf0b82ee75d5d65161"
+    },
+    {
+      "bytes": 13922461,
+      "path": "random_linf8_l216/linf_8_l2_16_seed_2026072501.result.json",
+      "sha256": "04b6b375cbac9988a3f367c8fd65e14b89ddcec9481908a470a079a9952e282b"
+    },
+    {
+      "bytes": 14722178,
+      "path": "random_linf8_l216/linf_8_l2_16_seed_2026072502.checkpoint.json",
+      "sha256": "1770fbe8c5ecbcf72d9a517ffa23db7a9a4dd9a317033f3d91f5cfbbeb9bec16"
+    },
+    {
+      "bytes": 13738094,
+      "path": "random_linf8_l216/linf_8_l2_16_seed_2026072502.result.json",
+      "sha256": "c30c4b076e9c6700669ed169ad8104a5852734ca4077f06c0e0818a132a0474e"
+    },
+    {
+      "bytes": 14444569,
+      "path": "random_linf8_l216/linf_8_l2_16_seed_2026072503.checkpoint.json",
+      "sha256": "c95e24748645b1ec64ee8ca64a1f5e1ee10af8a1e6f3346b265c6c9e8f2f6972"
+    },
+    {
+      "bytes": 13486909,
+      "path": "random_linf8_l216/linf_8_l2_16_seed_2026072503.result.json",
+      "sha256": "055c3f7068b4ec2f0aa0b4f6524ad987d5011f2814037ce6dd74a1dc0dfec1d4"
+    },
+    {
+      "bytes": 6198,
+      "path": "random_linf8_l216/manifest.json",
+      "sha256": "ffd1aaf420ec2620fa94e9c69f65eff6d391f524af455cfd630e05d35d5340bc"
+    }
+  ],
+  "problem": {
+    "d": 3,
+    "equations_replayed_per_vector": 729,
+    "n": 6,
+    "target": "GHZ_6,3",
+    "variables": 135
+  },
+  "schema": "krenn-n6-d3-star-als-summary-v1",
+  "source_ledger": [
+    {
+      "bytes": 71669,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/star_alternating_search.py",
+      "sha256": "544c8dbf3eb06bd178d5a16d31f192b6be7bc33a9cb22321d6593158922c4358"
+    },
+    {
+      "bytes": 16138,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/star_linearization.py",
+      "sha256": "c7c9afff7ebc88a7390db44d25c65f850aed0e66560d45e7de8b6f55c0e5e1c6"
+    },
+    {
+      "bytes": 7089,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/star_linearization_independent.py",
+      "sha256": "90790dc2bc52a3f74a93970189b497efd0189dadd17607a2f0c95c86c11d96b9"
+    },
+    {
+      "bytes": 11452,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/system.py",
+      "sha256": "3f64e42efc68b5391b3ec9798e801d1efa1f7c4a9c68c56a4b3b2e78540214a9"
+    },
+    {
+      "bytes": 60609,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/vertical_component.py",
+      "sha256": "1736a37e6a1143dc5ce6a14cbda49f22cfa99d0d3f6f2b043a9785bb623ddcaa"
+    }
+  ],
+  "verification": {
+    "checkpoint_initial_vectors_replayed": 24,
+    "equations_per_vector": 729,
+    "primary_and_independent_enumerators_used": true,
+    "result_vectors_replayed": 48,
+    "terminal_result_checkpoint_pairs_cross_checked": 24
+  }
+}

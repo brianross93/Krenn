@@ -29,6 +29,7 @@
   "singular_engine": {
     "coefficient_fields": [
       "F_31",
+      "F_1009",
       "Q"
     ],
     "docker_image": "hodgepodge-singular:ubuntu24.04",
@@ -85,6 +86,329 @@
           "status": "timeout-after-parse"
         }
       ]
+    },
+    "ten_minute_F1009_sparse_two_pivot_reconnaissance": {
+      "aggregate_scratch_manifest": {
+        "bytes": 2499,
+        "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\sparse_two_pivot_run_manifest.json",
+        "sha256": "4938cc2d40b2236596db33bb77ddac86f7e63cb21365b7cd82b7271e0a13d2b2"
+      },
+      "algorithm": "std",
+      "budget_seconds_per_probe": 600,
+      "claim_boundary": {
+        "F1009_result_is_an_exact_Q_proof": false,
+        "timeout_is_a_chart_decision": false
+      },
+      "maximum_cpus": 4,
+      "maximum_memory_gib": 16,
+      "order": "two-pivot-elimination",
+      "outcome": "both probes parsed and timed out after the full 600-second engine budget without a completion marker",
+      "probe_count": 2,
+      "runner_schema": "krenn-n6-d3-sparse-two-pivot-cas-suite-v1",
+      "runs": [
+        {
+          "algorithm": "std",
+          "budget_seconds": 600,
+          "characteristic": 1009,
+          "claim_boundary": {
+            "F1009_result_is_an_exact_Q_proof": false,
+            "timeout_is_a_chart_decision": false
+          },
+          "command_argv": [
+            "docker",
+            "run",
+            "--rm",
+            "--pull",
+            "never",
+            "--network",
+            "none",
+            "--cpus",
+            "2",
+            "--memory",
+            "8g",
+            "--entrypoint",
+            "timeout",
+            "-v",
+            "D:\\KrennScratch\\localized_chart_ideals\\sparse_two_pivot_inputs:/work:ro",
+            "sha256:6613ac51738965fafd2ebb2839a02452811ac4e3e5416cfbbda0485ed1995e75",
+            "--signal=TERM",
+            "--kill-after=15s",
+            "600s",
+            "Singular",
+            "/work/sparse_two_pivot_11_p1009_std.sing"
+          ],
+          "command_profile": "pinned-image-forced-kill",
+          "cpus": 2,
+          "elapsed_seconds": 600.555479,
+          "ideal": "sparse derivative 11=1, triangular two-pivot form",
+          "input_script": {
+            "bytes": 128711,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\sparse_two_pivot_inputs\\sparse_two_pivot_11_p1009_std.sing",
+            "sha256": "a0fe9990c2690eef36333dd25242b4f44b56335f32dd047f920c4bee257729c8"
+          },
+          "key": "sparse_two_pivot_11_p1009_std",
+          "marker_receipt": {
+            "completion_marker": "KRENN_SPARSE_TRIANGULAR_TWO_PIVOT_ELIMINATION_GROEBNER_DONE",
+            "completion_marker_observed": false,
+            "parse_marker": "KRENN_SPARSE_TRIANGULAR_TWO_PIVOT_ELIMINATION_PARSE_OK",
+            "parse_marker_observed": true
+          },
+          "memory_gib": 8,
+          "receipt": {
+            "bytes": 2410,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\sparse_two_pivot_11_p1009_std.receipt.json",
+            "sha256": "70f79a1ff3f9dd3b7d1cb21c4551f529fa6771b701211542f00b3c369b5ef613"
+          },
+          "return_code": 124,
+          "runner_schema": "krenn-n6-d3-localized-chart-cas-run-v1",
+          "started_at_utc": "2026-07-25T04:27:04.726306+00:00",
+          "status": "timeout-after-parse",
+          "stderr": {
+            "bytes": 0,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\sparse_two_pivot_11_p1009_std.stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 578,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\sparse_two_pivot_11_p1009_std.stdout.txt",
+            "sha256": "8786d40c64e038fccf56ad6e4f1b8076228cdedcf4ec828ab0a4691bd0f7bc2e"
+          }
+        },
+        {
+          "algorithm": "std",
+          "budget_seconds": 600,
+          "characteristic": 1009,
+          "claim_boundary": {
+            "F1009_result_is_an_exact_Q_proof": false,
+            "timeout_is_a_chart_decision": false
+          },
+          "command_argv": [
+            "docker",
+            "run",
+            "--rm",
+            "--pull",
+            "never",
+            "--network",
+            "none",
+            "--cpus",
+            "2",
+            "--memory",
+            "8g",
+            "--entrypoint",
+            "timeout",
+            "-v",
+            "D:\\KrennScratch\\localized_chart_ideals\\sparse_two_pivot_inputs:/work:ro",
+            "sha256:6613ac51738965fafd2ebb2839a02452811ac4e3e5416cfbbda0485ed1995e75",
+            "--signal=TERM",
+            "--kill-after=15s",
+            "600s",
+            "Singular",
+            "/work/sparse_two_pivot_29_p1009_std.sing"
+          ],
+          "command_profile": "pinned-image-forced-kill",
+          "cpus": 2,
+          "elapsed_seconds": 600.555902,
+          "ideal": "sparse derivative 29=1, triangular two-pivot form",
+          "input_script": {
+            "bytes": 128711,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\sparse_two_pivot_inputs\\sparse_two_pivot_29_p1009_std.sing",
+            "sha256": "3a2d5234e360fd06a1df6cc1e4a40add07166e81a956c99e9215102a28632751"
+          },
+          "key": "sparse_two_pivot_29_p1009_std",
+          "marker_receipt": {
+            "completion_marker": "KRENN_SPARSE_TRIANGULAR_TWO_PIVOT_ELIMINATION_GROEBNER_DONE",
+            "completion_marker_observed": false,
+            "parse_marker": "KRENN_SPARSE_TRIANGULAR_TWO_PIVOT_ELIMINATION_PARSE_OK",
+            "parse_marker_observed": true
+          },
+          "memory_gib": 8,
+          "receipt": {
+            "bytes": 2410,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\sparse_two_pivot_29_p1009_std.receipt.json",
+            "sha256": "feaa7ce4eca6a5fe6b87e3c4ee33f00b80327622d89941d61db238247823691f"
+          },
+          "return_code": 124,
+          "runner_schema": "krenn-n6-d3-localized-chart-cas-run-v1",
+          "started_at_utc": "2026-07-25T04:27:04.725728+00:00",
+          "status": "timeout-after-parse",
+          "stderr": {
+            "bytes": 0,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\sparse_two_pivot_29_p1009_std.stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 578,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\sparse_two_pivot_29_p1009_std.stdout.txt",
+            "sha256": "c4161ec01d65313df0631dc341848642c72a811f4b55f84b98f699f9b0bba448"
+          }
+        }
+      ],
+      "worker_limit": 2
+    },
+    "ten_minute_F31_leaf_free_A0_reconnaissance": {
+      "aggregate_scratch_manifest": {
+        "bytes": 2739,
+        "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\leaf_free_initial_stage_run_manifest.json",
+        "sha256": "2f7e5d4c8311504688a90130a87f146b1361835c30606c451584c11044369e51"
+      },
+      "algorithm": "sat-A0",
+      "budget_seconds_per_probe": 600,
+      "claim_boundary": {
+        "F31_result_is_an_exact_Q_proof": false,
+        "later_saturation_stages_completed": false,
+        "timeout_is_a_chart_decision": false
+      },
+      "maximum_cpus": 4,
+      "maximum_memory_gib": 16,
+      "outcome": "both A0 saturation probes parsed and timed out after the full 600-second engine budget; no saturation stage completed",
+      "probe_count": 2,
+      "runner_schema": "krenn-n6-d3-leaf-free-initial-saturation-cas-suite-v1",
+      "runs": [
+        {
+          "algorithm": "sat-A0",
+          "budget_seconds": 600,
+          "characteristic": 31,
+          "claim_boundary": {
+            "F31_result_is_an_exact_Q_proof": false,
+            "later_saturation_stages_completed": false,
+            "timeout_is_a_chart_decision": false
+          },
+          "command_argv": [
+            "docker",
+            "run",
+            "--rm",
+            "--pull",
+            "never",
+            "--network",
+            "none",
+            "--cpus",
+            "2",
+            "--memory",
+            "8g",
+            "--entrypoint",
+            "timeout",
+            "-v",
+            "D:\\KrennScratch\\localized_chart_ideals\\leaf_free_initial_stage_inputs:/work:ro",
+            "sha256:6613ac51738965fafd2ebb2839a02452811ac4e3e5416cfbbda0485ed1995e75",
+            "--signal=TERM",
+            "--kill-after=15s",
+            "600s",
+            "Singular",
+            "/work/leaf_free_derivative_11_a0_p31.sing"
+          ],
+          "command_profile": "pinned-image-forced-kill",
+          "cpus": 2,
+          "elapsed_seconds": 600.926601,
+          "ideal": "leaf-free derivative 11=1, initial A0 saturation",
+          "input_script": {
+            "bytes": 128196,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\leaf_free_initial_stage_inputs\\leaf_free_derivative_11_a0_p31.sing",
+            "sha256": "f63441d0c572ba2e56fd9a67d3128c419542c1dda3968fab412bb4dc8634a3d7"
+          },
+          "key": "leaf_free_derivative_11_a0_p31_sat",
+          "marker_receipt": {
+            "completion_marker": "KRENN_LEAF_FREE_11_SATURATION_DONE",
+            "completion_marker_observed": false,
+            "parse_marker": "KRENN_LEAF_FREE_11_PARSE_OK",
+            "parse_marker_observed": true
+          },
+          "memory_gib": 8,
+          "receipt": {
+            "bytes": 2398,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\leaf_free_derivative_11_a0_p31_sat.receipt.json",
+            "sha256": "c10e14fe3a3add48ead97bff95e77f1fa86d45716f5739aa4b340a159261e11c"
+          },
+          "return_code": 124,
+          "runner_schema": "krenn-n6-d3-localized-chart-cas-run-v1",
+          "saturation_factor": "A0",
+          "saturation_stages_completed": 0,
+          "started_at_utc": "2026-07-25T04:45:10.080168+00:00",
+          "status": "timeout-after-parse",
+          "stderr": {
+            "bytes": 0,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\leaf_free_derivative_11_a0_p31_sat.stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 1286,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\leaf_free_derivative_11_a0_p31_sat.stdout.txt",
+            "sha256": "f408028a16f0cbd8cff7318445faa8c74aa2c66b0034acc48ba58b1861a09671"
+          }
+        },
+        {
+          "algorithm": "sat-A0",
+          "budget_seconds": 600,
+          "characteristic": 31,
+          "claim_boundary": {
+            "F31_result_is_an_exact_Q_proof": false,
+            "later_saturation_stages_completed": false,
+            "timeout_is_a_chart_decision": false
+          },
+          "command_argv": [
+            "docker",
+            "run",
+            "--rm",
+            "--pull",
+            "never",
+            "--network",
+            "none",
+            "--cpus",
+            "2",
+            "--memory",
+            "8g",
+            "--entrypoint",
+            "timeout",
+            "-v",
+            "D:\\KrennScratch\\localized_chart_ideals\\leaf_free_initial_stage_inputs:/work:ro",
+            "sha256:6613ac51738965fafd2ebb2839a02452811ac4e3e5416cfbbda0485ed1995e75",
+            "--signal=TERM",
+            "--kill-after=15s",
+            "600s",
+            "Singular",
+            "/work/leaf_free_derivative_29_a0_p31.sing"
+          ],
+          "command_profile": "pinned-image-forced-kill",
+          "cpus": 2,
+          "elapsed_seconds": 600.912834,
+          "ideal": "leaf-free derivative 29=1, initial A0 saturation",
+          "input_script": {
+            "bytes": 128194,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\leaf_free_initial_stage_inputs\\leaf_free_derivative_29_a0_p31.sing",
+            "sha256": "b85fe753234df88546b5605fb6b08beffbe042df8dc792a24d385e9257933cf5"
+          },
+          "key": "leaf_free_derivative_29_a0_p31_sat",
+          "marker_receipt": {
+            "completion_marker": "KRENN_LEAF_FREE_29_SATURATION_DONE",
+            "completion_marker_observed": false,
+            "parse_marker": "KRENN_LEAF_FREE_29_PARSE_OK",
+            "parse_marker_observed": true
+          },
+          "memory_gib": 8,
+          "receipt": {
+            "bytes": 2398,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\leaf_free_derivative_29_a0_p31_sat.receipt.json",
+            "sha256": "6f95e2feb1a60e9d5fae34a3234459fb164fe967139f31d3cc7c83e821ff797a"
+          },
+          "return_code": 124,
+          "runner_schema": "krenn-n6-d3-localized-chart-cas-run-v1",
+          "saturation_factor": "A0",
+          "saturation_stages_completed": 0,
+          "started_at_utc": "2026-07-25T04:45:10.080231+00:00",
+          "status": "timeout-after-parse",
+          "stderr": {
+            "bytes": 0,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\leaf_free_derivative_29_a0_p31_sat.stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 1286,
+            "path": "D:\\KrennScratch\\localized_chart_ideals\\ten_minute_runs\\leaf_free_derivative_29_a0_p31_sat.stdout.txt",
+            "sha256": "b0e9fe0e31c7cb304656872866d3e8aa379cc2db2c77279578881a606548ccc0"
+          }
+        }
+      ],
+      "saturation_factor": "A0",
+      "worker_limit": 2
     },
     "ten_minute_F31_reconnaissance": {
       "aggregate_scratch_manifest": {

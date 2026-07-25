@@ -1,0 +1,1093 @@
+{
+  "claim_boundary": {
+    "all_higher_support_node_bridges_excluded": false,
+    "all_u_zero_vertical_components_excluded": false,
+    "all_zero_residual_sequences_proved_boundary": false,
+    "finite_affine_GHZ_membership_status": "undecided",
+    "first_defect_hypersurface_ties_covered_by_four_orbits": true,
+    "full_tropical_prevariety_computed": false,
+    "full_tropical_variety_computed": false,
+    "higher_support_tropical_cones_enumerated": false,
+    "known_Laurent_valuation_is_transverse_after_gauge_quotient": false,
+    "known_exact_support_tropical_cone_classified": true,
+    "minimal_pairwise_natural_node_bridges_excluded": true,
+    "pairwise_natural_node_bridges_through_support_21_excluded": true,
+    "residual_Z9_separates_the_four_repair_orbits": false
+  },
+  "concrete_next_certificate_target": {
+    "certificate_per_cone": "an exact Laurent initial-ideal unit/monomial certificate, or an exact Puiseux leading solution retained for lifting",
+    "first_input": "the one victim-stabilizer orbit of pairwise natural-node unions, adjoining alternative matching monomials for its four singleton equations; quotient log-slopes from retained numerical runs select which resulting cones to try first",
+    "name": "higher-support initial-ideal atlas",
+    "scope": "primitive integer valuation cones that activate repair coordinates, modulo residual lineality and S6 x S3",
+    "why_this_is_next": "the known nine-coordinate cone has no transverse direction after gauge quotient, while all first repair choices lie in the residual-character-zero sector"
+  },
+  "constant_fiber_residual_defect_star": {
+    "defect_equation": 70,
+    "exact_checks": {
+      "all_fifteen_terms_have_residual_character_zero": true,
+      "defect_equation_is_70": true,
+      "defect_has_constant_plus_fourteen_repairs": true,
+      "four_repair_orbit_charts_cover_first_defect_ties": true,
+      "four_strict_stabilizer_orbits_cover_all_repairs": true,
+      "natural_chart_is_seed_0_4_8": true,
+      "nonnegative_tropical_tie_forces_zero_repair_value": true,
+      "orbit_representatives_match_exact_atlas": true,
+      "repair_degree_census_is_six_quadratic_eight_cubic": true,
+      "zero_repair_value_forces_every_factor_value_zero": true
+    },
+    "interpretation": "the residual Z^9 grading is lineality and assigns the entire decisive defect balance to degree zero",
+    "nonnegative_valuation_lemma": "the constant has value 0 and every repair value is a sum of nonnegative factor values; a tropical tie therefore forces one repair value, and every factor in it, to have value 0",
+    "repair_orbit_representatives": [
+      [
+        11,
+        65
+      ],
+      [
+        29,
+        47
+      ],
+      [
+        11,
+        55,
+        133
+      ],
+      [
+        29,
+        55,
+        106
+      ]
+    ],
+    "repair_orbit_sizes": [
+      3,
+      3,
+      6,
+      2
+    ],
+    "repair_term_count": 14,
+    "residual_character_lattice": "Z^9",
+    "terms": [
+      {
+        "ambient_monomial": [],
+        "coefficient": "1",
+        "degree": 0,
+        "residual_character": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "ambient_monomial": [
+          11,
+          65
+        ],
+        "coefficient": "1",
+        "degree": 2,
+        "residual_character": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "ambient_monomial": [
+          19,
+          73
+        ],
+        "coefficient": "1",
+        "degree": 2,
+        "residual_character": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "ambient_monomial": [
+          29,
+          47
+        ],
+        "coefficient": "1",
+        "degree": 2,
+        "residual_character": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "ambient_monomial": [
+          37,
+          55
+        ],
+        "coefficient": "1",
+        "degree": 2,
+        "residual_character": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "ambient_monomial": [
+          88,
+          133
+        ],
+        "coefficient": "1",
+        "degree": 2,
+        "residual_character": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "ambient_monomial": [
+          106,
+          113
+        ],
+        "coefficient": "1",
+        "degree": 2,
+        "residual_character": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "ambient_monomial": [
+          11,
+          55,
+          133
+        ],
+        "coefficient": "1",
+        "degree": 3,
+        "residual_character": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "ambient_monomial": [
+          11,
+          73,
+          113
+        ],
+        "coefficient": "1",
+        "degree": 3,
+        "residual_character": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "ambient_monomial": [
+          19,
+          47,
+          133
+        ],
+        "coefficient": "1",
+        "degree": 3,
+        "residual_character": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "ambient_monomial": [
+          19,
+          65,
+          106
+        ],
+        "coefficient": "1",
+        "degree": 3,
+        "residual_character": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "ambient_monomial": [
+          29,
+          55,
+          106
+        ],
+        "coefficient": "1",
+        "degree": 3,
+        "residual_character": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "ambient_monomial": [
+          29,
+          73,
+          88
+        ],
+        "coefficient": "1",
+        "degree": 3,
+        "residual_character": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "ambient_monomial": [
+          37,
+          47,
+          113
+        ],
+        "coefficient": "1",
+        "degree": 3,
+        "residual_character": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "ambient_monomial": [
+          37,
+          65,
+          88
+        ],
+        "coefficient": "1",
+        "degree": 3,
+        "residual_character": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "known_exact_support_moving_cone": {
+    "color_gauge_rank": 6,
+    "exact_checks": {
+      "direct_GHZ_gauge_rank_on_weights_and_u_is_six": true,
+      "fixed_victim_seed_orbits_104": true,
+      "four_unique_active_incidence_monomials": true,
+      "gauge_is_annihilated_by_all_incidence_relations": true,
+      "incidence_exponent_relation_rank_is_four": true,
+      "incidence_tropical_kernel_dimension_is_six": true,
+      "incidence_tropical_kernel_equals_gauge_image": true,
+      "known_Laurent_valuation_is_gamma_image": true,
+      "known_Laurent_valuation_satisfies_all_four_relations": true,
+      "natural_support_has_nine_weights": true,
+      "other_103_nine_coordinate_orbits_have_a_singleton": true,
+      "sole_nine_coordinate_survivor_is_natural_orbit": true
+    },
+    "exponent_relations": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        -1
+      ]
+    ],
+    "fixed_victim_nine_coordinate_seed_orbits": 104,
+    "fixed_victim_nine_coordinate_singleton_orbits": 103,
+    "fixed_victim_surviving_orbit_size": 4,
+    "interpretation": "on the natural exact-support torus the full moving-incidence tropical cone is exactly direct-GHZ color-gauge lineality",
+    "known_Laurent_cocharacter": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "known_Laurent_valuation": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "moving_incidence_coordinates": 10,
+    "relation_rank_over_Q": 4,
+    "support": [
+      0,
+      13,
+      26,
+      67,
+      80,
+      81,
+      98,
+      121,
+      126
+    ],
+    "tropical_kernel_dimension": 6
+  },
+  "natural_node_cross_comparison": {
+    "canonical_pair_completion": {
+      "alternative_missing_size_histograms": [
+        {
+          "2": 6,
+          "3": 8
+        },
+        {
+          "2": 6,
+          "3": 8
+        },
+        {
+          "2": 6,
+          "3": 8
+        },
+        {
+          "2": 6,
+          "3": 8
+        }
+      ],
+      "minimum_added_coordinate_count": 4,
+      "minimum_added_coordinates": [
+        [
+          5,
+          7,
+          86,
+          131
+        ]
+      ],
+      "minimum_branch_closure_through_support_24": {
+        "bounded_search_complete_through_support": true,
+        "cutoff_frontier_nodes": 1924,
+        "frontier_exhausted": false,
+        "maximum_total_support": 24,
+        "nodes": 1975,
+        "pruned_child_transitions": 25540,
+        "singleton_free_terminals": 0,
+        "size_census": {
+          "17": 1,
+          "19": 6,
+          "20": 8,
+          "21": 36,
+          "22": 115,
+          "23": 396,
+          "24": 1413
+        }
+      },
+      "minimum_completed_support": [
+        0,
+        5,
+        7,
+        13,
+        26,
+        31,
+        44,
+        49,
+        62,
+        67,
+        80,
+        81,
+        86,
+        98,
+        121,
+        126,
+        131
+      ],
+      "new_singleton_equations": [
+        5,
+        45,
+        50,
+        405,
+        475,
+        567,
+        637
+      ],
+      "seed_indices": [
+        0,
+        1
+      ],
+      "simultaneous_completion_choices": 38416,
+      "singleton_equations": [
+        410,
+        450,
+        572,
+        612
+      ],
+      "support": [
+        0,
+        13,
+        26,
+        31,
+        44,
+        49,
+        62,
+        67,
+        80,
+        81,
+        98,
+        121,
+        126
+      ]
+    },
+    "exact_checks": {
+      "all_38416_simultaneous_completion_choices_enumerated": true,
+      "all_pairwise_unions_have_support_thirteen": true,
+      "both_pure_cancellation_receipts_replay_exactly": true,
+      "canonical_pair_has_four_singletons_410_450_572_612": true,
+      "each_singleton_has_six_two_and_eight_three_coordinate_repairs": true,
+      "every_minimal_pairwise_union_torus_is_empty": true,
+      "every_pairwise_union_has_four_nonvictim_singletons": true,
+      "four_natural_fixed_victim_nodes": true,
+      "full_canonical_pair_closure_exhausted_through_21": true,
+      "full_pair_closure_has_one_support_21_terminal": true,
+      "minimum_completion_branch_has_no_terminal_through_24": true,
+      "minimum_completion_creates_seven_new_singletons": true,
+      "minimum_completion_support_is_seventeen": true,
+      "no_pairwise_natural_node_bridge_through_support_21": true,
+      "no_pairwise_union_has_another_active_nonvictim_equation": true,
+      "six_distinct_pairwise_node_unions": true,
+      "six_pairwise_unions_form_one_victim_stabilizer_orbit": true,
+      "support_21_terminal_has_fourteen_mixed_binomials": true,
+      "support_21_terminal_pure_counts_are_one_two_two": true,
+      "unique_minimum_completion_adds_four_coordinates": true
+    },
+    "full_canonical_pair_closure_through_support_21": {
+      "bounded_search_complete_through_support": true,
+      "cutoff_frontier_nodes": 7365,
+      "frontier_exhausted": false,
+      "maximum_total_support": 21,
+      "nodes": 7564,
+      "pruned_child_transitions": 97720,
+      "pure_cancellation_receipts": [
+        {
+          "coefficient_sum": 1,
+          "consequence": "the two active pure monomials have ratio -1, so their sum is zero rather than one",
+          "integer_exponent_identity_exact": true,
+          "pure_equation": 364,
+          "relation": [
+            {
+              "coefficient": -1,
+              "mixed_equation": 329
+            },
+            {
+              "coefficient": 1,
+              "mixed_equation": 369
+            },
+            {
+              "coefficient": 1,
+              "mixed_equation": 404
+            }
+          ]
+        },
+        {
+          "coefficient_sum": 1,
+          "consequence": "the two active pure monomials have ratio -1, so their sum is zero rather than one",
+          "integer_exponent_identity_exact": true,
+          "pure_equation": 728,
+          "relation": [
+            {
+              "coefficient": -1,
+              "mixed_equation": 404
+            },
+            {
+              "coefficient": 1,
+              "mixed_equation": 485
+            },
+            {
+              "coefficient": 1,
+              "mixed_equation": 647
+            }
+          ]
+        }
+      ],
+      "singleton_free_terminals": [
+        [
+          0,
+          13,
+          16,
+          23,
+          26,
+          31,
+          34,
+          41,
+          44,
+          49,
+          52,
+          59,
+          62,
+          67,
+          70,
+          77,
+          80,
+          81,
+          98,
+          121,
+          126
+        ]
+      ],
+      "size_census": {
+        "13": 1,
+        "15": 6,
+        "16": 11,
+        "17": 44,
+        "18": 136,
+        "19": 451,
+        "20": 1527,
+        "21": 5388
+      },
+      "terminal_active_mixed_binomials": [
+        329,
+        369,
+        404,
+        410,
+        445,
+        450,
+        485,
+        572,
+        607,
+        612,
+        647,
+        653,
+        688,
+        693
+      ],
+      "terminal_pure_active_monomial_counts": {
+        "0": 1,
+        "364": 2,
+        "728": 2
+      }
+    },
+    "interpretation": "turning on the weights of a second natural node does not bridge the two moving components: four new singleton mixed outputs must first be repaired by additional matching coordinates; the complete canonical closure through support 21 has one terminal, killed exactly by odd pure-cancellation receipts",
+    "nodes": [
+      [
+        0,
+        4,
+        8
+      ],
+      [
+        0,
+        9,
+        13
+      ],
+      [
+        2,
+        4,
+        13
+      ],
+      [
+        2,
+        9,
+        8
+      ]
+    ],
+    "pairwise_union_orbits_under_victim_stabilizer": 1,
+    "pairwise_unions": [
+      {
+        "nonvictim_singleton_colorings": [
+          [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            1,
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            1,
+            2,
+            0,
+            0
+          ]
+        ],
+        "nonvictim_singleton_equations": [
+          410,
+          450,
+          572,
+          612
+        ],
+        "other_active_nonvictim_equation_counts": [],
+        "seed_indices": [
+          0,
+          1
+        ],
+        "seeds": [
+          [
+            0,
+            4,
+            8
+          ],
+          [
+            0,
+            9,
+            13
+          ]
+        ],
+        "union_support_size": 13
+      },
+      {
+        "nonvictim_singleton_colorings": [
+          [
+            1,
+            2,
+            1,
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            1,
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            0,
+            2,
+            1,
+            0
+          ]
+        ],
+        "nonvictim_singleton_equations": [
+          434,
+          450,
+          572,
+          588
+        ],
+        "other_active_nonvictim_equation_counts": [],
+        "seed_indices": [
+          0,
+          2
+        ],
+        "seeds": [
+          [
+            0,
+            4,
+            8
+          ],
+          [
+            2,
+            4,
+            13
+          ]
+        ],
+        "union_support_size": 13
+      },
+      {
+        "nonvictim_singleton_colorings": [
+          [
+            1,
+            2,
+            0,
+            2,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            1,
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            1,
+            0,
+            0,
+            2
+          ]
+        ],
+        "nonvictim_singleton_equations": [
+          426,
+          450,
+          572,
+          596
+        ],
+        "other_active_nonvictim_equation_counts": [],
+        "seed_indices": [
+          1,
+          2
+        ],
+        "seeds": [
+          [
+            0,
+            9,
+            13
+          ],
+          [
+            2,
+            4,
+            13
+          ]
+        ],
+        "union_support_size": 13
+      },
+      {
+        "nonvictim_singleton_colorings": [
+          [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            1,
+            0,
+            0,
+            2
+          ],
+          [
+            2,
+            1,
+            0,
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            1,
+            2,
+            0,
+            0
+          ]
+        ],
+        "nonvictim_singleton_equations": [
+          410,
+          434,
+          588,
+          612
+        ],
+        "other_active_nonvictim_equation_counts": [],
+        "seed_indices": [
+          0,
+          3
+        ],
+        "seeds": [
+          [
+            0,
+            4,
+            8
+          ],
+          [
+            2,
+            9,
+            8
+          ]
+        ],
+        "union_support_size": 13
+      },
+      {
+        "nonvictim_singleton_colorings": [
+          [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            0,
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            1,
+            0,
+            0,
+            2
+          ],
+          [
+            2,
+            1,
+            1,
+            2,
+            0,
+            0
+          ]
+        ],
+        "nonvictim_singleton_equations": [
+          410,
+          426,
+          596,
+          612
+        ],
+        "other_active_nonvictim_equation_counts": [],
+        "seed_indices": [
+          1,
+          3
+        ],
+        "seeds": [
+          [
+            0,
+            9,
+            13
+          ],
+          [
+            2,
+            9,
+            8
+          ]
+        ],
+        "union_support_size": 13
+      },
+      {
+        "nonvictim_singleton_colorings": [
+          [
+            1,
+            2,
+            0,
+            2,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            1,
+            0,
+            0,
+            2
+          ],
+          [
+            2,
+            1,
+            0,
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            1,
+            0,
+            0,
+            2
+          ]
+        ],
+        "nonvictim_singleton_equations": [
+          426,
+          434,
+          588,
+          596
+        ],
+        "other_active_nonvictim_equation_counts": [],
+        "seed_indices": [
+          2,
+          3
+        ],
+        "seeds": [
+          [
+            2,
+            4,
+            13
+          ],
+          [
+            2,
+            9,
+            8
+          ]
+        ],
+        "union_support_size": 13
+      }
+    ]
+  },
+  "schema": "krenn-n6-d3-tropical-series-structure-v1"
+}

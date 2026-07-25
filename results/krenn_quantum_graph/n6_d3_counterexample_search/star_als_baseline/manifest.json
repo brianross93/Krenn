@@ -1,0 +1,59 @@
+{
+  "artifact": {
+    "bytes": 37969,
+    "path": "summary.json",
+    "sha256": "4c6cd9fe9f7da46f8c72ce65283e355bac15a11d2227be0365d52bbd2b18cd09"
+  },
+  "campaign_input_file_count": 56,
+  "claim_boundary": {
+    "all_affine_solutions_covered": false,
+    "bounded_miss_is_nonexistence_proof": false,
+    "finite_affine_membership_status": "undecided",
+    "increasing_cap_trend_is_border_proof": false,
+    "known_pole_product_is_full_color_gauge_invariant": false,
+    "legacy_eight_charts_searched": false,
+    "numerical_zero_is_exact_counterexample": false,
+    "raw_weight_caps_are_full_color_gauge_invariant": false,
+    "search_scope": "one fixed 15-anchor open gauge chart only",
+    "three_pivot_orbit_cover_searched": false
+  },
+  "numerical_sources": [
+    {
+      "bytes": 71669,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/star_alternating_search.py",
+      "sha256": "544c8dbf3eb06bd178d5a16d31f192b6be7bc33a9cb22321d6593158922c4358"
+    },
+    {
+      "bytes": 16138,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/star_linearization.py",
+      "sha256": "c7c9afff7ebc88a7390db44d25c65f850aed0e66560d45e7de8b6f55c0e5e1c6"
+    },
+    {
+      "bytes": 7089,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/star_linearization_independent.py",
+      "sha256": "90790dc2bc52a3f74a93970189b497efd0189dadd17607a2f0c95c86c11d96b9"
+    },
+    {
+      "bytes": 11452,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/system.py",
+      "sha256": "3f64e42efc68b5391b3ec9798e801d1efa1f7c4a9c68c56a4b3b2e78540214a9"
+    },
+    {
+      "bytes": 60609,
+      "hash_mode": "raw-bytes-v1",
+      "path": "experiments/krenn_quantum_graph/vertical_component.py",
+      "sha256": "1736a37e6a1143dc5ce6a14cbda49f22cfa99d0d3f6f2b043a9785bb623ddcaa"
+    }
+  ],
+  "producer": {
+    "bytes": 46293,
+    "hash_mode": "raw-bytes-v1",
+    "path": "experiments/krenn_quantum_graph/star_als_artifact.py",
+    "sha256": "ca47c7fc470a5e4b62b63c32582f54fc082278e08904e5b22e6667e4b12a1417"
+  },
+  "schema": "krenn-n6-d3-star-als-summary-manifest-v1"
+}

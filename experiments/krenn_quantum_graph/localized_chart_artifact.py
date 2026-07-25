@@ -8,6 +8,11 @@ import json
 from pathlib import Path
 from typing import Mapping
 
+from experiments.krenn_quantum_graph.certificate_routing import (
+    KrennCertificateRoutingError,
+    certificate_routing_audit,
+    verify_certificate_routing_audit,
+)
 from experiments.krenn_quantum_graph.localized_chart_cas_runner import (
     DEFAULT_SCRATCH_ROOT,
     DOCKER_IMAGE,
@@ -23,12 +28,27 @@ from experiments.krenn_quantum_graph.localized_chart_cas_runner import (
 from experiments.krenn_quantum_graph.localized_chart_derivative import (
     natural_derivative_atlas_audit,
 )
+from experiments.krenn_quantum_graph.localized_chart_graded_macaulay import (
+    KrennGradedMacaulayError,
+    graded_derivative_macaulay_audit,
+    verify_graded_derivative_macaulay_audit,
+)
 from experiments.krenn_quantum_graph.localized_chart_ideals import (
     localized_chart_cover_audit,
     localized_chart_germ_audit,
     normalized_seed_chart,
     strict_json_equal,
     verify_localized_chart_cover_audit,
+)
+from experiments.krenn_quantum_graph.localized_chart_leaf_free import (
+    KrennLeafFreeError,
+    leaf_free_saturation_audit,
+    verify_leaf_free_saturation_audit,
+)
+from experiments.krenn_quantum_graph.localized_chart_leaf_free_cas_runner import (
+    LEAF_FREE_PROBES,
+    LEAF_FREE_RUNNER_SCHEMA,
+    MANIFEST_NAME as LEAF_FREE_MANIFEST_NAME,
 )
 from experiments.krenn_quantum_graph.localized_chart_macaulay import (
     BoundedMacaulayResult,
@@ -43,6 +63,36 @@ from experiments.krenn_quantum_graph.localized_chart_residual_grading import (
     residual_grading_audit,
     verify_residual_grading_audit,
 )
+from experiments.krenn_quantum_graph.localized_chart_sparse_cas_runner import (
+    MANIFEST_NAME as SPARSE_MANIFEST_NAME,
+    SPARSE_PROBES,
+    SPARSE_RUNNER_SCHEMA,
+)
+from experiments.krenn_quantum_graph.localized_chart_sparse_elimination import (
+    KrennSparseEliminationError,
+    sparse_elimination_audit,
+    verify_sparse_elimination_audit,
+)
+from experiments.krenn_quantum_graph.star_linearization import (
+    KrennStarLinearizationError,
+    star_linearization_audit,
+    verify_star_linearization_audit,
+)
+from experiments.krenn_quantum_graph.star_pivot_charts import (
+    KrennStarPivotChartError,
+    star_pivot_chart_audit,
+    verify_star_pivot_chart_audit,
+)
+from experiments.krenn_quantum_graph.star_pivot_gauge import (
+    KrennStarPivotGaugeError,
+    star_pivot_gauge_audit,
+    verify_star_pivot_gauge_audit,
+)
+from experiments.krenn_quantum_graph.star_pivot_affine_slices import (
+    KrennStarPivotAffineSliceError,
+    star_pivot_affine_slice_audit,
+    verify_star_pivot_affine_slice_audit,
+)
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -56,24 +106,44 @@ DEFAULT_RESULT_DIRECTORY = (
 )
 DATA_FILES = (
     "bounded_degree_six.json",
+    "certificate_routing.json",
     "chart_cover.json",
     "germ_separation.json",
+    "graded_derivative_macaulay.json",
+    "leaf_free_saturation.json",
     "natural_derivative_atlas.json",
     "natural_repair_monomial_atlas.json",
     "preflight_ledger.json",
     "residual_grading.json",
+    "sparse_elimination.json",
+    "star_linearization.json",
+    "star_pivot_charts.json",
+    "star_pivot_affine_slices.json",
+    "star_pivot_gauge.json",
 )
 SOURCE_FILES = (
     "experiments/__init__.py",
     "experiments/krenn_quantum_graph/__init__.py",
+    "experiments/krenn_quantum_graph/certificate_routing.py",
     "experiments/krenn_quantum_graph/localized_chart_artifact.py",
     "experiments/krenn_quantum_graph/localized_chart_cas_runner.py",
     "experiments/krenn_quantum_graph/localized_chart_derivative.py",
+    "experiments/krenn_quantum_graph/localized_chart_graded_macaulay.py",
     "experiments/krenn_quantum_graph/localized_chart_ideals.py",
     "experiments/krenn_quantum_graph/localized_chart_independent.py",
+    "experiments/krenn_quantum_graph/localized_chart_leaf_free.py",
+    "experiments/krenn_quantum_graph/localized_chart_leaf_free_cas_runner.py",
     "experiments/krenn_quantum_graph/localized_chart_macaulay.py",
     "experiments/krenn_quantum_graph/localized_chart_monomial_atlas.py",
     "experiments/krenn_quantum_graph/localized_chart_residual_grading.py",
+    "experiments/krenn_quantum_graph/localized_chart_sparse_cas_runner.py",
+    "experiments/krenn_quantum_graph/localized_chart_sparse_elimination.py",
+    "experiments/krenn_quantum_graph/star_linearization.py",
+    "experiments/krenn_quantum_graph/star_linearization_independent.py",
+    "experiments/krenn_quantum_graph/star_pivot_charts.py",
+    "experiments/krenn_quantum_graph/star_pivot_affine_slices.py",
+    "experiments/krenn_quantum_graph/star_pivot_affine_cas_runner.py",
+    "experiments/krenn_quantum_graph/star_pivot_gauge.py",
     "experiments/krenn_quantum_graph/system.py",
     "experiments/krenn_quantum_graph/targets.py",
     "experiments/krenn_quantum_graph/ternary_seed_orbits.py",
@@ -216,6 +286,80 @@ RETAINED_TEN_MINUTE_RESULTS = {
         ),
         "hardened_command": False,
     },
+}
+RETAINED_SPARSE_TWO_PIVOT_RESULTS = {
+    "sparse_two_pivot_11_p1009_std": {
+        "started_at_utc": "2026-07-25T04:27:04.726306+00:00",
+        "elapsed_seconds": 600.555479,
+        "stdout_bytes": 578,
+        "stdout_sha256": (
+            "8786d40c64e038fccf56ad6e4f1b8076228cdedcf4ec828"
+            "ab0a4691bd0f7bc2e"
+        ),
+        "receipt_bytes": 2_410,
+        "receipt_sha256": (
+            "70f79a1ff3f9dd3b7d1cb21c4551f529fa6771b70121154"
+            "2f00b3c369b5ef613"
+        ),
+    },
+    "sparse_two_pivot_29_p1009_std": {
+        "started_at_utc": "2026-07-25T04:27:04.725728+00:00",
+        "elapsed_seconds": 600.555902,
+        "stdout_bytes": 578,
+        "stdout_sha256": (
+            "c4161ec01d65313df0631dc341848642c72a811f4b55f84"
+            "b98f699f9b0bba448"
+        ),
+        "receipt_bytes": 2_410,
+        "receipt_sha256": (
+            "feaa7ce4eca6a5fe6b87e3c4ee33f00b80327622d89941d"
+            "61db238247823691f"
+        ),
+    },
+}
+RETAINED_SPARSE_TWO_PIVOT_MANIFEST = {
+    "bytes": 2_499,
+    "sha256": (
+        "4938cc2d40b2236596db33bb77ddac86f7e63cb21365b7cd"
+        "82b7271e0a13d2b2"
+    ),
+}
+RETAINED_LEAF_FREE_INITIAL_RESULTS = {
+    "leaf_free_derivative_11_a0_p31_sat": {
+        "started_at_utc": "2026-07-25T04:45:10.080168+00:00",
+        "elapsed_seconds": 600.926601,
+        "stdout_bytes": 1_286,
+        "stdout_sha256": (
+            "f408028a16f0cbd8cff7318445faa8c74aa2c66b0034acc4"
+            "8ba58b1861a09671"
+        ),
+        "receipt_bytes": 2_398,
+        "receipt_sha256": (
+            "c10e14fe3a3add48ead97bff95e77f1fa86d45716f5739aa"
+            "4b340a159261e11c"
+        ),
+    },
+    "leaf_free_derivative_29_a0_p31_sat": {
+        "started_at_utc": "2026-07-25T04:45:10.080231+00:00",
+        "elapsed_seconds": 600.912834,
+        "stdout_bytes": 1_286,
+        "stdout_sha256": (
+            "b0e9fe0e31c7cb304656872866d3e8aa379cc2db2c772795"
+            "78881a606548ccc0"
+        ),
+        "receipt_bytes": 2_398,
+        "receipt_sha256": (
+            "6f95e2feb1a60e9d5fae34a3234459fb164fe967139f31d3"
+            "cc7c83e821ff797a"
+        ),
+    },
+}
+RETAINED_LEAF_FREE_INITIAL_MANIFEST = {
+    "bytes": 2_739,
+    "sha256": (
+        "2f7e5d4c8311504688a90130a87f146b1361835c30606c45"
+        "1584c11044369e51"
+    ),
 }
 
 
@@ -739,6 +883,147 @@ def _retained_ten_minute_runs() -> list[dict]:
     return rows
 
 
+def _retained_sparse_two_pivot_runs() -> list[dict]:
+    if set(RETAINED_SPARSE_TWO_PIVOT_RESULTS) != {
+        probe.key for probe in SPARSE_PROBES
+    }:
+        raise KrennLocalizedArtifactError(
+            "the retained sparse two-pivot CAS keys changed"
+        )
+    rows = []
+    output_root = DEFAULT_SCRATCH_ROOT / OUTPUT_SUBDIRECTORY
+    for probe in SPARSE_PROBES:
+        retained = RETAINED_SPARSE_TWO_PIVOT_RESULTS[probe.key]
+        elapsed = retained["elapsed_seconds"]
+        if elapsed < ENGINE_BUDGET_SECONDS or elapsed >= 610:
+            raise KrennLocalizedArtifactError(
+                "a retained sparse two-pivot elapsed time changed"
+            )
+        rows.append({
+            "runner_schema": RUNNER_SCHEMA,
+            "key": probe.key,
+            "ideal": probe.ideal,
+            "algorithm": probe.algorithm,
+            "characteristic": probe.characteristic,
+            "budget_seconds": ENGINE_BUDGET_SECONDS,
+            "cpus": 2,
+            "memory_gib": 8,
+            "command_profile": "pinned-image-forced-kill",
+            "command_argv": list(docker_argv(
+                probe, DEFAULT_SCRATCH_ROOT, hardened=True
+            )),
+            "input_script": {
+                "path": str(probe_input_path(
+                    probe, DEFAULT_SCRATCH_ROOT
+                )),
+                "bytes": probe.input_bytes,
+                "sha256": probe.input_sha256,
+            },
+            "started_at_utc": retained["started_at_utc"],
+            "elapsed_seconds": elapsed,
+            "return_code": 124,
+            "stdout": {
+                "path": str(output_root / f"{probe.key}.stdout.txt"),
+                "bytes": retained["stdout_bytes"],
+                "sha256": retained["stdout_sha256"],
+            },
+            "stderr": {
+                "path": str(output_root / f"{probe.key}.stderr.txt"),
+                "bytes": 0,
+                "sha256": EMPTY_SHA256,
+            },
+            "receipt": {
+                "path": str(output_root / f"{probe.key}.receipt.json"),
+                "bytes": retained["receipt_bytes"],
+                "sha256": retained["receipt_sha256"],
+            },
+            "marker_receipt": {
+                "parse_marker": probe.parse_marker,
+                "parse_marker_observed": True,
+                "completion_marker": probe.completion_marker,
+                "completion_marker_observed": False,
+            },
+            "status": "timeout-after-parse",
+            "claim_boundary": {
+                "timeout_is_a_chart_decision": False,
+                "F1009_result_is_an_exact_Q_proof": False,
+            },
+        })
+    return rows
+
+
+def _retained_leaf_free_initial_runs() -> list[dict]:
+    if set(RETAINED_LEAF_FREE_INITIAL_RESULTS) != {
+        probe.key for probe in LEAF_FREE_PROBES
+    }:
+        raise KrennLocalizedArtifactError(
+            "the retained leaf-free CAS keys changed"
+        )
+    rows = []
+    output_root = DEFAULT_SCRATCH_ROOT / OUTPUT_SUBDIRECTORY
+    for probe in LEAF_FREE_PROBES:
+        retained = RETAINED_LEAF_FREE_INITIAL_RESULTS[probe.key]
+        elapsed = retained["elapsed_seconds"]
+        if elapsed < ENGINE_BUDGET_SECONDS or elapsed >= 610:
+            raise KrennLocalizedArtifactError(
+                "a retained leaf-free elapsed time changed"
+            )
+        rows.append({
+            "runner_schema": RUNNER_SCHEMA,
+            "key": probe.key,
+            "ideal": probe.ideal,
+            "algorithm": probe.algorithm,
+            "characteristic": probe.characteristic,
+            "saturation_factor": "A0",
+            "saturation_stages_completed": 0,
+            "budget_seconds": ENGINE_BUDGET_SECONDS,
+            "cpus": 2,
+            "memory_gib": 8,
+            "command_profile": "pinned-image-forced-kill",
+            "command_argv": list(docker_argv(
+                probe, DEFAULT_SCRATCH_ROOT, hardened=True
+            )),
+            "input_script": {
+                "path": str(probe_input_path(
+                    probe, DEFAULT_SCRATCH_ROOT
+                )),
+                "bytes": probe.input_bytes,
+                "sha256": probe.input_sha256,
+            },
+            "started_at_utc": retained["started_at_utc"],
+            "elapsed_seconds": elapsed,
+            "return_code": 124,
+            "stdout": {
+                "path": str(output_root / f"{probe.key}.stdout.txt"),
+                "bytes": retained["stdout_bytes"],
+                "sha256": retained["stdout_sha256"],
+            },
+            "stderr": {
+                "path": str(output_root / f"{probe.key}.stderr.txt"),
+                "bytes": 0,
+                "sha256": EMPTY_SHA256,
+            },
+            "receipt": {
+                "path": str(output_root / f"{probe.key}.receipt.json"),
+                "bytes": retained["receipt_bytes"],
+                "sha256": retained["receipt_sha256"],
+            },
+            "marker_receipt": {
+                "parse_marker": probe.parse_marker,
+                "parse_marker_observed": True,
+                "completion_marker": probe.completion_marker,
+                "completion_marker_observed": False,
+            },
+            "status": "timeout-after-parse",
+            "claim_boundary": {
+                "timeout_is_a_chart_decision": False,
+                "F31_result_is_an_exact_Q_proof": False,
+                "later_saturation_stages_completed": False,
+            },
+        })
+    return rows
+
+
 def preflight_ledger() -> dict:
     """Record the completed exact and ten-minute bounded computations."""
 
@@ -760,7 +1045,7 @@ def preflight_ledger() -> dict:
             "docker_image": DOCKER_IMAGE,
             "image_id": DOCKER_IMAGE_ID,
             "version": "4.3.2",
-            "coefficient_fields": ["F_31", "Q"],
+            "coefficient_fields": ["F_31", "F_1009", "Q"],
             "ten_minute_F31_reconnaissance": {
                 "runner_schema": RUNNER_SCHEMA,
                 "suite_schema": SUITE_SCHEMA,
@@ -806,6 +1091,62 @@ def preflight_ledger() -> dict:
                     "all seven probes parsed and timed out after the full "
                     "600-second engine budget without a completion marker"
                 ),
+            },
+            "ten_minute_F1009_sparse_two_pivot_reconnaissance": {
+                "runner_schema": SPARSE_RUNNER_SCHEMA,
+                "probe_count": len(SPARSE_PROBES),
+                "budget_seconds_per_probe": ENGINE_BUDGET_SECONDS,
+                "algorithm": "std",
+                "order": "two-pivot-elimination",
+                "aggregate_scratch_manifest": {
+                    "path": str(
+                        DEFAULT_SCRATCH_ROOT
+                        / OUTPUT_SUBDIRECTORY
+                        / SPARSE_MANIFEST_NAME
+                    ),
+                    **RETAINED_SPARSE_TWO_PIVOT_MANIFEST,
+                },
+                "worker_limit": 2,
+                "maximum_cpus": 4,
+                "maximum_memory_gib": 16,
+                "runs": _retained_sparse_two_pivot_runs(),
+                "outcome": (
+                    "both probes parsed and timed out after the full "
+                    "600-second engine budget without a completion marker"
+                ),
+                "claim_boundary": {
+                    "timeout_is_a_chart_decision": False,
+                    "F1009_result_is_an_exact_Q_proof": False,
+                },
+            },
+            "ten_minute_F31_leaf_free_A0_reconnaissance": {
+                "runner_schema": LEAF_FREE_RUNNER_SCHEMA,
+                "probe_count": len(LEAF_FREE_PROBES),
+                "budget_seconds_per_probe": ENGINE_BUDGET_SECONDS,
+                "algorithm": "sat-A0",
+                "saturation_factor": "A0",
+                "aggregate_scratch_manifest": {
+                    "path": str(
+                        DEFAULT_SCRATCH_ROOT
+                        / OUTPUT_SUBDIRECTORY
+                        / LEAF_FREE_MANIFEST_NAME
+                    ),
+                    **RETAINED_LEAF_FREE_INITIAL_MANIFEST,
+                },
+                "worker_limit": 2,
+                "maximum_cpus": 4,
+                "maximum_memory_gib": 16,
+                "runs": _retained_leaf_free_initial_runs(),
+                "outcome": (
+                    "both A0 saturation probes parsed and timed out after "
+                    "the full 600-second engine budget; no saturation "
+                    "stage completed"
+                ),
+                "claim_boundary": {
+                    "timeout_is_a_chart_decision": False,
+                    "F31_result_is_an_exact_Q_proof": False,
+                    "later_saturation_stages_completed": False,
+                },
             },
             "superseded_smoke_preflights": {
                 "purpose": "tractability smoke tests only",
@@ -863,6 +1204,23 @@ def _expected_manifest(output_directory: Path) -> dict:
             "symmetry_representatives": 8,
             "exact_bounded_certificate_degree_excluded": 6,
             "repair_residual_character_ranks": [8, 8, 7, 7],
+            "sparse_derivative_residual_character_rank": 8,
+            "sparse_derivative_exact_Q_degree_excluded": 5,
+            "sparse_two_pivot_p1009_timeouts": 2,
+            "leaf_free_saturation_stages_completed": 0,
+            "leaf_free_initial_A0_p31_timeouts": 2,
+            "exact_star_factorizations": 6,
+            "star_rows_per_apex_color": 243,
+            "star_columns_per_apex_color": 15,
+            "proposed_single_column_differencing_lemma_valid": False,
+            "proposed_q_routed_certificate_pair_valid": False,
+            "star_target_row_nonzero_pivot_charts": 125,
+            "star_target_row_pivot_orbit_types": 3,
+            "star_pivot_factors_gauge_normalizable_to_one": True,
+            "star_weights_monic_after_pivot_normalization": 9,
+            "star_pivot_affine_slice_variables": 135,
+            "star_pivot_affine_slice_generators": 732,
+            "star_pivot_affine_slice_orbit_types": 3,
             "finite_affine_GHZ_membership_status": "undecided",
         },
         "claim_boundary": {
@@ -897,14 +1255,24 @@ def write_localized_chart_bundle(
         )
     payloads = {
         "bounded_degree_six.json": bounded_degree_six_audit(),
+        "certificate_routing.json": certificate_routing_audit(),
         "chart_cover.json": localized_chart_cover_audit(),
         "germ_separation.json": localized_chart_germ_audit(),
+        "graded_derivative_macaulay.json":
+            graded_derivative_macaulay_audit(),
+        "leaf_free_saturation.json": leaf_free_saturation_audit(),
         "natural_derivative_atlas.json":
             natural_derivative_atlas_audit(),
         "natural_repair_monomial_atlas.json":
             natural_repair_monomial_atlas_audit(),
         "preflight_ledger.json": preflight_ledger(),
         "residual_grading.json": residual_grading_audit(),
+        "sparse_elimination.json": sparse_elimination_audit(),
+        "star_linearization.json": star_linearization_audit(),
+        "star_pivot_charts.json": star_pivot_chart_audit(),
+        "star_pivot_affine_slices.json":
+            star_pivot_affine_slice_audit(),
+        "star_pivot_gauge.json": star_pivot_gauge_audit(),
     }
     for name, payload in payloads.items():
         _write_json(output_directory / name, payload)
@@ -939,6 +1307,16 @@ def verify_localized_chart_bundle(
         )
     cover = _load_strict_json(output_directory / "chart_cover.json")
     verify_localized_chart_cover_audit(cover)
+    try:
+        verify_certificate_routing_audit(
+            _load_strict_json(
+                output_directory / "certificate_routing.json"
+            )
+        )
+    except KrennCertificateRoutingError as error:
+        raise KrennLocalizedArtifactError(
+            "the certificate-routing correction failed exact replay"
+        ) from error
     if not strict_json_equal(
         _load_strict_json(output_directory / "germ_separation.json"),
         localized_chart_germ_audit(),
@@ -946,6 +1324,25 @@ def verify_localized_chart_bundle(
         raise KrennLocalizedArtifactError(
             "germ separation audit failed exact replay"
         )
+    try:
+        verify_graded_derivative_macaulay_audit(
+            _load_strict_json(
+                output_directory / "graded_derivative_macaulay.json"
+            ),
+            full_degree_six_replay=full_degree_six_replay,
+        )
+        verify_leaf_free_saturation_audit(
+            _load_strict_json(
+                output_directory / "leaf_free_saturation.json"
+            )
+        )
+    except (
+        KrennGradedMacaulayError,
+        KrennLeafFreeError,
+    ) as error:
+        raise KrennLocalizedArtifactError(
+            "a derived exact chart audit failed replay"
+        ) from error
     if not strict_json_equal(
         _load_strict_json(
             output_directory / "natural_derivative_atlas.json"
@@ -974,6 +1371,56 @@ def verify_localized_chart_bundle(
     verify_residual_grading_audit(
         _load_strict_json(output_directory / "residual_grading.json")
     )
+    try:
+        verify_sparse_elimination_audit(
+            _load_strict_json(
+                output_directory / "sparse_elimination.json"
+            )
+        )
+    except KrennSparseEliminationError as error:
+        raise KrennLocalizedArtifactError(
+            "the sparse elimination audit failed replay"
+        ) from error
+    try:
+        verify_star_linearization_audit(
+            _load_strict_json(
+                output_directory / "star_linearization.json"
+            )
+        )
+    except KrennStarLinearizationError as error:
+        raise KrennLocalizedArtifactError(
+            "the exact star-linearization audit failed replay"
+        ) from error
+    try:
+        verify_star_pivot_chart_audit(
+            _load_strict_json(
+                output_directory / "star_pivot_charts.json"
+            )
+        )
+    except KrennStarPivotChartError as error:
+        raise KrennLocalizedArtifactError(
+            "the exact star-pivot cover failed replay"
+        ) from error
+    try:
+        verify_star_pivot_gauge_audit(
+            _load_strict_json(
+                output_directory / "star_pivot_gauge.json"
+            )
+        )
+    except KrennStarPivotGaugeError as error:
+        raise KrennLocalizedArtifactError(
+            "the exact star-pivot gauge normalization failed replay"
+        ) from error
+    try:
+        verify_star_pivot_affine_slice_audit(
+            _load_strict_json(
+                output_directory / "star_pivot_affine_slices.json"
+            )
+        )
+    except KrennStarPivotAffineSliceError as error:
+        raise KrennLocalizedArtifactError(
+            "the exact star-pivot affine slices failed replay"
+        ) from error
     bounded = _load_strict_json(
         output_directory / "bounded_degree_six.json"
     )

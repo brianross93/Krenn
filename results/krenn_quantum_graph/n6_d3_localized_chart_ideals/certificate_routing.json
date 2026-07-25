@@ -1,0 +1,206 @@
+{
+  "claim_boundary": {
+    "all_global_components_classified": false,
+    "corrected_cover_logic_proved": true,
+    "exact_affine_GHZ_membership_status": "undecided",
+    "expert_proposed_pair_implies_unit_ideal": false,
+    "natural_chart_6_decided": false,
+    "new_radical_membership_certificate_emitted": false,
+    "new_unit_ideal_certificate_emitted": false
+  },
+  "correct_open_closed_cover": {
+    "algebraic_composite": "q^m in I and 1=a+b*q with a in I imply 1=(a+b*q)^m in I",
+    "closed_branch_empty": "1 in I+(q)",
+    "geometric_cover": "V(I)=(V(I) intersect D(q)) union (V(I) intersect V(q))",
+    "open_branch_empty": "1 in I+(q*z-1), equivalently q^m in I",
+    "unit_ideal_equivalence": "1 in I iff both branches are empty"
+  },
+  "exact_checks": {
+    "Krenn_specialization_replays_exactly": true,
+    "correct_composite_is_q_power_plus_I_plus_q_unit": true,
+    "correct_cover_has_open_and_closed_branches": true,
+    "generic_counterexample_replays_exactly": true,
+    "proposed_two_conditions_are_equivalent_not_complementary": true,
+    "rabinowitsch_forward_uses_localization_and_denominator_clearing": true,
+    "rabinowitsch_reverse_uses_geometric_series_identity": true
+  },
+  "generic_counterexample": {
+    "closed_branch": {
+      "ideal": "I+(q)=(x)",
+      "unit_ideal": false
+    },
+    "coefficient_ring": "Q[x]",
+    "exact_checks": {
+      "I_equals_I_plus_q_and_is_proper": true,
+      "ideal_generator_vanishes_under_x_zero": true,
+      "one_survives_under_x_zero": true,
+      "open_branch_unit_identity_replays": true,
+      "proposed_pair_holds_but_I_is_not_unit": true,
+      "q_power_membership_holds_with_m_1": true
+    },
+    "extended_ring": "Q[x,z]",
+    "ideal": "I=(x)",
+    "open_branch_certificate": {
+      "identity": "1 = z*x - (x*z-1)",
+      "replayed_left_side_terms": [
+        {
+          "coefficient": 1,
+          "x_exponent": 0,
+          "z_exponent": 0
+        }
+      ]
+    },
+    "power_membership": {
+      "identity": "q=x is the generator of I",
+      "m": 1
+    },
+    "properness_certificate": {
+      "conclusion": "1 not in I",
+      "image_of_I_generator": {},
+      "image_of_one": {
+        "0": 1
+      },
+      "quotient_map": "Q[x] -> Q, x |-> 0"
+    },
+    "q": "x"
+  },
+  "krenn_replay": {
+    "Q": {
+      "ambient_weight_coordinates": [
+        [
+          0,
+          2,
+          1,
+          1
+        ],
+        [
+          0,
+          3,
+          2,
+          2
+        ],
+        [
+          1,
+          4,
+          1,
+          1
+        ],
+        [
+          1,
+          5,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          5,
+          0,
+          0
+        ]
+      ],
+      "ambient_weight_indices": [
+        13,
+        26,
+        67,
+        80,
+        81,
+        126
+      ],
+      "degree": 6,
+      "kind": "polynomial_monomial",
+      "vertex_degrees": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "claim_boundary": {
+      "Q_routing_simplifies_natural_chart_6": false,
+      "all_global_incidence_components_classified": false,
+      "global_GHZ_nonexistence_proved": false,
+      "global_affine_GHZ_membership_decided": false,
+      "natural_chart_6_decided": false,
+      "pole_law_asserted_only_for_known_natural_component": true
+    },
+    "exact_checks": {
+      "Q_has_six_distinct_polynomial_factors": true,
+      "Q_is_vertex_gauge_invariant": true,
+      "Q_substitutes_to_one_in_chart_6": true,
+      "all_six_Q_factors_are_fixed_in_chart_6": true,
+      "known_Laurent_pullback_Q_is_t_inverse": true,
+      "known_Laurent_pullback_u_is_t": true,
+      "known_Laurent_pullback_u_times_Q_is_one": true,
+      "natural_normalized_chart_is_orbit_6_seed_0_4_8": true,
+      "u_times_Q_is_certified_on_known_natural_component": true,
+      "victim_coloring_is_002121": true,
+      "victim_equation_is_70": true,
+      "victim_generator_has_all_15_matching_terms": true,
+      "victim_is_a_mixed_GHZ_generator": true
+    },
+    "known_Laurent_family": {
+      "Q_pullback": "t^-1",
+      "u_pullback": "t",
+      "u_times_Q_pullback": "1"
+    },
+    "known_natural_component": {
+      "component_wide": true,
+      "identity": "u*Q=1",
+      "unique_component_through_natural_unit_seed": true
+    },
+    "natural_normalized_chart": {
+      "Q_after_normalization": "1",
+      "fixed_Q_factor_count": 6,
+      "fixed_Q_factor_indices": [
+        13,
+        26,
+        67,
+        80,
+        81,
+        126
+      ],
+      "orbit_index": 6,
+      "routing_consequence": "q^m in I is exactly 1 in I on this chart; the q=0 branch is empty by normalization",
+      "seed": [
+        0,
+        4,
+        8
+      ]
+    },
+    "parameters": {
+      "d": 3,
+      "n": 6
+    },
+    "victim_generator": {
+      "coloring": [
+        0,
+        0,
+        2,
+        1,
+        2,
+        1
+      ],
+      "equation": 70,
+      "generator_kind": "mixed",
+      "natural_chart_maximum_degree": 3,
+      "natural_chart_term_count": 15,
+      "symbol": "u=F_002121",
+      "target_value": 0
+    }
+  },
+  "rabinowitsch_equivalence": {
+    "consequence": "testing both conditions repeats the same open-branch test",
+    "forward_argument": "substitute z=q^-1 in the localization R[q^-1] and clear a power of q",
+    "reverse_identity": "if q^m in I, then 1=(q*z)^m-(q*z-1)*sum_{k=0}^{m-1}(q*z)^k",
+    "statement": "1 in I+(q*z-1) iff q^m in I for some integer m>=1"
+  },
+  "schema": "krenn-n6-d3-certificate-routing-audit-v1"
+}

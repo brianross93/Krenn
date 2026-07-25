@@ -542,13 +542,294 @@ Gröbner or tropical calculations, but it does not itself enumerate tropical
 cones or decide an ideal. The two derivative opens also admit exact sparse
 gauge slices \(d=1\): each keeps 129 variables, has 730 generators and
 10,942 terms of degree at most four, replacing the older degree-six
-elimination formulation. Exact affine membership remains undecided.
+elimination formulation.
+
+Quotienting by the primitive derivative character gives a split
+\(\mathbf Z^8\) grading on each sparse slice. There are 105 variable
+character blocks and respectively 558 and 642 generator blocks. The
+selected derivative stabilizer has order two; averaging certificates under
+it never equates symmetry-related weights. Native character-zero Macaulay
+systems exactly exclude rational Nullstellensatz identities through total
+degree five on both slices. At degree six, the \(F_{1009}\) source and
+augmented ranks still differ by one, but the exact relation bounds leave
+rank gaps 123 and 117. Those degree-six rows are therefore reconnaissance,
+not characteristic-zero proofs.
+
+Two triangular two-pivot \(F_{1009}\) `std` probes and two leaf-free
+\(F_{31}\) initial-\(A_0\) saturation probes each parsed and then consumed
+their full 600-second engine budgets without completing. Removing inverse
+leaves nevertheless gives exact smaller formulations: the derivative
+systems have 126 variables, 727 generators, 10,894 terms, and degree at
+most three; the four repair systems have 124 or 125 variables, 726
+generators, 10,890 terms, and degree at most three. No saturation stage has
+completed, and exact affine membership remains undecided.
+
+These bounded-degree misses and engine timeouts carry no evidentiary weight
+toward either emptiness or nonemptiness of the affine fiber. In particular,
+degree seven is not a planned continuation: it would enlarge the same
+unresolved Macaulay formulation without approaching an effective
+Nullstellensatz bound.
+
+Nor is the raw count of 729 equations versus 135 weights evidence for
+emptiness. Exact border membership already puts GHZ in the closure of the
+tensor-map image, so naive overdetermination does not distinguish finite
+image membership from strict boundary membership.
+
+The next reduction instead uses an exact star factorization. For any apex
+vertex, all 729 equations are linear in its 45 incident weights. They split
+into three systems with one shared \(243\times15\) quadratic coefficient
+matrix and targets \(e_{00000},e_{11111},e_{22222}\). Primary and
+independent perfect-matching enumerators replay this identity for all six
+apices. One apex factorization is already equivalent to the full equation
+system; the other five are simultaneous cross-checks, not independent
+equations.
+
+The tempting one-column differencing shortcut is false. Changing one
+non-apex color changes the residual \(K_4\) tensor in the other four apex
+partner columns as well: a full row difference has 30 signed monomials,
+with 6 in the selected column and 24 omitted cross terms. Consequently the
+claimed constant-or-singleton-support dichotomy and its finite case tree do
+not follow.
+
+There is nevertheless a smaller exact consequence. Restrict the shared
+star matrix to the three target rows \(00000,11111,22222\). Any GHZ witness
+gives this \(3\times15\) matrix a right inverse, hence rank three. Of its
+455 three-column minors, 330 vanish structurally and the remaining
+\(125=5^3\) factor as one residual \(K_4\) value in each color. These 125
+nonzero opens form only three \(S_5\times S_3\) orbit types: the three
+chosen partner vertices are all equal, exactly two are equal, or all are
+distinct. Thus every finite witness lies in one of three exact pivot-chart
+types for any fixed apex. This finite cover, not the failed differencing
+case tree, is the next symbolic route.
+
+Each selected residual factor is a semi-invariant for the 15-dimensional
+direct-GHZ color gauge. On a pivot open, one product-one gauge parameter
+per color sends the three nonzero factors to \(1\), explicitly and without
+extracting roots. If \(B_{a',(v,b)}=\delta_{a'b}P_v(bbbb)\) and
+\(Y_{(v,b),a}=w_{1v}^{ab}\), the nine monochromatic residual equations are
+the single normal form \(BY=I_3\). After pivot normalization and column
+reordering, \(B=[I_3\mid C]\), hence
+\[
+Y=\begin{pmatrix}I_3-CZ\\ Z\end{pmatrix},
+\qquad Z\in\mathbb C^{12\times3}.
+\]
+This explains both the nine monic eliminations and the remaining
+\(3\cdot12=36\) free star parameters. Consequently the 125 localized opens are
+existence-equivalent to only three gauge-normalized polynomial slices—one
+per orbit type—with no Rabinowitsch variable, colon ideal, or saturation.
+
+The color-gauge action on the 90 nonstar weights has the generic stabilizer
+\(\mu_2\): setting every endpoint-color multiplier to \(-1\) fixes every
+edge weight. Its effective character lattice is therefore the index-two
+even-sum lattice. A complete 15-character anchor matrix is a root-free basis
+of the effective torus exactly when its determinant has absolute value two,
+not merely when it has rank 15. For each of the three pivot representatives,
+the exact audit supplies a 12-character nonstar complement with determinant
+\(+2\) and Smith factors \((1,\ldots,1,2)\). Those 12 coordinates are a
+lattice diagnostic only. Requiring them to be nonzero would shrink the
+exhaustive pivot open, so they are not used in the retained search.
+
+Keeping the pivots gives 135 variables, 732 generators, maximum degree
+three, and 10,950 collected terms. Eliminating the nine monic weights gives
+126 variables and 723 generators, but raises the maximum degree to five
+and the term count to 35,292, so the retained cubic form is the preferred
+first exact input. Both presentations now have deterministic sparse
+exports and independent matching-enumerator reconstruction; no CAS result
+has yet been promoted from them. The first retained-form \(F_{31}\)
+`slimgb` probes on all three orbit representatives parsed successfully and
+then timed out after 600 seconds each. These are performance receipts, not
+chart decisions.
+
+The corresponding numerical reformulation eliminates the 45 star weights
+at every iterate. For \(U\in\mathbb C^{90}\), let
+\(\Phi(U)\in\mathbb C^{243\times15}\) be the shared quadratic star matrix
+and let \(E=[e_{00000},e_{11111},e_{22222}]\). Exact affine membership is
+equivalent to the unrestricted equation \(\Phi(U)Y=E\). At radius \(r\),
+the numerical campaign instead optimizes
+\[
+\min_{\|Y\|_F\le r}\|\Phi(U)Y-E\|_F^2
+\]
+and records the unrestricted span distance separately as telemetry. The
+Euclidean distance itself is not color-gauge invariant. The search therefore
+normalizes only the three guaranteed nonzero pivot factors, projects every
+gradient into the tangent of \(P=1\) and orthogonally off the remaining 12
+gauge directions, and retracts root-free after each trial step. It uses no
+12-coordinate anchor slice and no intended mathematical cap on raw weights.
+It does hard-reject raw \(U\) beyond enormous, radius-dependent floating
+point overflow guards; these are enforced numerical domain cutoffs, not
+gauge-invariant bounds.
+
+Horizontal projection constrains each instantaneous velocity; it does not
+put independently initialized runs into one common residual-gauge slice and
+does not exclude accumulated second-order gauge drift. Consequently nonzero
+objective values from different seeds or pivot representatives are not
+intrinsically comparable. Their ordering below identifies only the smallest
+value recorded in these particular deterministic lifts.
+
+There is also no hidden norm-balancing shortcut. For every pivot color,
+the residual cocharacter with exponent \(+1\) at the apex and \(-1\) at
+the selected partner preserves \(P=1\) while weakly shrinking every
+affected nonstar coordinate. Thus residual orbit-norm minimization has an
+unattained recession direction generically. The known pole monomial \(Q\)
+is invariant under vertex-scalar gauge but not under the full direct-GHZ
+color gauge; its character remains independent of the three pivot
+characters in all three orbit types. Since the known Laurent family is
+itself a color-gauge one-parameter orbit, no invariant of that full gauge
+can diverge along it. The retained campaign therefore logs \(Q\) only as a
+chart-dependent path diagnostic. Laurent cross-ratio caps are reserved for
+an optional dense-torus subcampaign because imposing them would exclude
+zero-coordinate witnesses.
+
+The deterministic variable-projection census used six seeds
+2026072501--2026072506, cold starts on all three pivot orbit types, and
+natural-seed repair starts on the all-distinct type: 24 trajectories in
+total, with six workers, a 600-second per-trajectory deadline, 500 accepted
+steps, and a radius-two bound on the recovered \(Y\) in the \(P=1\) slice.
+The corresponding enforced numerical \(U\) guards were approximately
+\(\|U\|_\infty\le6.30\cdot10^{39}\) and
+\(\|U\|_2\le6.30\cdot10^{40}\). Twenty-two trajectories reached the
+iteration budget and two exhausted their line searches; none formed a
+detected two-cycle or reached a numerical zero. The smallest recorded
+lift-dependent residual occurred in the exactly-two-equal chart at seed
+2026072503: \(0.6467213054\), with \(\|U\|_2=97.22\),
+\(\|Y\|_F=0.324\), and inactive \(Y\) control.
+
+That telemetry-selected trajectory alone was continued for 5,000 accepted
+steps. This selection is not a gauge-invariant claim that its basin was
+globally best. It
+finished in 230 seconds at residual \(0.6178675811198806\), with target
+residuals \(0.2324310,0.2100928,0.5325384\),
+\(\|U\|_2=97.1536\), \(\max|U|=85.4038\),
+\(\|Y\|_F=0.832164\), and star-matrix condition number about 1215.
+The last 100 steps improved at only
+\(-3.38\cdot10^{-10}\) base-10 log residual per step, so the run was
+stopped as a numerical plateau rather than extended arbitrarily. Both
+perfect-matching enumerators replay all 729 outputs to \(1.12\cdot10^{-16}\)
+agreement. The maximum GHZ equation residual is still about \(0.45\);
+there is no numerical zero, no exact reconstruction, and no exact
+counterexample.
+
+The retained commands were:
+
+```text
+python -B -m experiments.krenn_quantum_graph.star_variable_projection_campaign --scratch-root D:\KrennScratch\counterexample_search\variable_projection_multistart_20260725_v1 --radii 2 --seeds 2026072501,2026072502,2026072503,2026072504,2026072505,2026072506 --initializations cold,natural-repair --workers 6 --maximum-iterations 500 --maximum-seconds-per-trajectory 600 --patience 500 --checkpoint-interval 25 --natural-repair-scale 0.01
+python -B -m experiments.krenn_quantum_graph.numerical_continuation --parent-result D:\KrennScratch\counterexample_search\variable_projection_multistart_20260725_v1\orbit_1_seed_2026072503_radius_2_cold.result.json --output-directory D:\KrennScratch\counterexample_search\variable_projection_selected_continuation_20260725_v1 --label orbit1_seed2026072503_step5000 --maximum-iterations 5000 --maximum-seconds 600 --patience 5000 --checkpoint-interval 50
+```
+
+The portable 24-trajectory summary is committed under
+`results/krenn_quantum_graph/n6_d3_counterexample_search/star_variable_projection`.
+It retains all compact trajectory rows and embeds three orbitwise recorded
+minima for scratch-independent replay with the current core. The archived
+runtime campaign source hash is preserved separately and intentionally does
+not equal the post-audit campaign source; the mathematical core source hash
+does match. Verify the two-file bundle with:
+
+```text
+python -B -m experiments.krenn_quantum_graph.star_variable_projection_artifact results/krenn_quantum_graph/n6_d3_counterexample_search/star_variable_projection --verify
+```
+
+A finite support-stratified residual-gauge atlas exists in principle:
+on each support, choose a lexicographically first basis of the supported
+residual characters, record its Smith form, normalize those nonzero
+coordinates, and quotient the remaining stabilizer. This handles zero
+coordinates without pretending that one determinant-two complement covers
+them. It still does not produce a coverage-complete fixed norm bound.
+Same-character ratios remain noncompact, and the exact recession
+cocharacters carry anchor charts into lower-support boundary strata.
+Accordingly the horizontal \(P=1\) campaign is a candidate finder, not the
+requested global bounded-135-variable comparison. A conclusive version of
+the proposed “compare the infinities” idea should instead compactify the
+remaining coordinates projectively or torically and separate the finite
+chart from its boundary exactly (for example by a homogenizing coordinate
+and saturation/initial-ideal checks).
+
+The first bounded higher-structure audit now makes that comparison exact on
+the natural series. On its nine moving coordinates the tropical valuation
+kernel is six-dimensional and equals the direct-GHZ color-gauge lineality:
+the known Laurent pole has no transverse direction after quotienting by
+gauge. Of 104 fixed-victim nine-coordinate seed orbits, 103 have a singleton
+equation and the four-node natural orbit is the only survivor. The residual
+\(\mathbf Z^9\) grading assigns character zero to every term of the defect
+equation, so it cannot separate the first repair choices.
+
+The six pairwise unions of natural nodes form one victim-stabilizer orbit.
+The canonical size-13 union has four singleton equations. All
+\(14^4=38{,}416\) simultaneous first repairs were checked exactly; the
+unique four-coordinate completion reaches support 17 but creates seven new
+singletons. The complete canonical-pair singleton closure through support
+21 contains 7,564 supports and one singleton-free terminal. Its 14 mixed
+equations are binomial, and two exact odd exponent identities force the
+corresponding pure-color sums to zero instead of one. Hence every pairwise
+natural-node bridge through support 21 is excluded. This says nothing about
+support 22+, other higher-support cones, or disconnected components with
+zero defect parameter.
+
+An exact projective preflight gives the next conclusive route without
+claiming it will finish quickly. The four-factor Cox form has 139
+coordinates, 732 generators, 10,950 terms, and maximum degree three; its 15
+nonfinite boundary subsets reduce to 7, 11, and 7 symmetry orbits for the
+three pivot types. The smaller first probe keeps \(U\) affine and
+projectivizes the three star blocks. It has 138 coordinates with the same
+generator and term counts. For the all-distinct pivot its first exact gate is
+\[
+  \operatorname{Sat}_{\langle Y^0_1,\ldots,Y^0_{15}\rangle}
+  (J+(h_0)):(h_1h_2)^\infty,
+\]
+or equivalently the union of the 15 charts \(Y^0_j\ne0\). The
+Cox-irrelevant saturation is essential: without it the spurious affine-cone
+point \(Y^0=0\) survives at \(h_0=0\). Only the saturated gate represents
+\(\operatorname{rank}A(U)\le14\) while the other two targets remain in
+\(\operatorname{im}A(U)\). No large saturation has been launched: previous
+600-second affine probes timed out, so there is currently no evidence that
+this computation is only hours from a decision. A short characteristic-zero
+growth preflight must pass before any longer CAS run.
+
+A completed 24-trajectory legacy ALS baseline used one narrower
+15-coordinate anchor chart, two initializations, seeds
+2026072501--2026072503, four explicit \((L_\infty,L_2)\) cap pairs, and a
+600-second budget per trajectory. All 24 runs ended by time budget; none
+reached numerical tolerance. The best residual was
+1.0309050035801723. All initial, final, and best vectors were replayed in
+all 729 equations by both enumerators. Because the anchors and raw caps are
+gauge-variant and define only one subopen, this baseline is retained solely
+as basin and implementation reconnaissance.
+
+Likewise, for an ideal \(I\) and polynomial \(q\), the two statements
+\(q^m\in I\) and \(1\in I+(qz-1)\) are equivalent descriptions of the same
+open-branch exclusion \(V(I)\cap D(q)=\varnothing\); together they do not
+prove \(1\in I\). A valid divisor split must also decide the closed branch,
+for example by proving \(1\in I+(q)\). Future exact work therefore uses
+star-matrix pivot minors to branch into \(q\ne0\) and \(q=0\) rank strata
+instead of routing through the known Laurent pole.
 
 ```text
 python -B -m experiments.krenn_quantum_graph.localized_chart_artifact verify
 python -B -m unittest tests.test_krenn_localized_chart_ideals -v
 python -B -m unittest tests.test_krenn_localized_chart_macaulay -v
+python -B -m unittest tests.test_krenn_localized_chart_graded_macaulay -v
+python -B -m unittest tests.test_krenn_localized_chart_leaf_free -v
+python -B -m unittest tests.test_krenn_star_linearization -v
+python -B -m unittest tests.test_krenn_star_pivot_charts -v
+python -B -m unittest tests.test_krenn_star_pivot_gauge -v
+python -B -m unittest tests.test_krenn_star_pivot_affine_slices -v
+python -B -m unittest tests.test_krenn_star_pivot_affine_cas_runner -v
+python -B -m unittest tests.test_krenn_star_als_artifact -v
+python -B -m unittest tests.test_krenn_star_variable_projection -v
+python -B -m unittest tests.test_krenn_star_variable_projection_campaign -v
+python -B -m unittest tests.test_krenn_star_variable_projection_artifact -v
+python -B -m unittest tests.test_krenn_numerical_continuation -v
+python -B -m unittest tests.test_krenn_tropical_series_structure -v
+python -B -m unittest tests.test_krenn_star_pivot_compactification -v
 ```
+
+The complete focused repository suite was replayed with
+
+```text
+python -B -m unittest discover -s tests -p "test_krenn_*.py" -v
+```
+
+and finished with 423 passing tests and 7 intentionally gated long tests
+skipped.
 
 ## Sharp deformation regression
 
