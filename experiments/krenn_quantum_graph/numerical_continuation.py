@@ -2053,6 +2053,232 @@ def random_bounded_initializer(
     )
 
 
+def projective_victim_repair_initializer(
+    support: Iterable[int],
+    seed: int | Sequence[int] | np.random.SeedSequence,
+    *,
+    numerator_indices: Sequence[int],
+    denominator_indices: Sequence[int],
+    expected_active_victim_matching_indices: Sequence[int],
+    repair_scale: float = 0.1,
+    chart: GaugeChart | None = None,
+    l2_bound: float = 8.0,
+    linf_bound: float = 8.0,
+) -> InitializerRecord:
+    """Initialize a direct-GHZ search on one projective victim branch.
+
+    The two selected victim matching amplitudes have ratio
+
+    ``r_N = prod(numerator_indices) / prod(denominator_indices)``.
+
+    Gauge anchors are fixed before any randomization.  All remaining repair
+    coordinates are assigned independent deterministic phases, after which
+    one *free* relation coordinate is solved for so that ``r_N = -1``.
+    Hard bounds are then checked without permitting clipping or radial
+    rescaling, either of which could silently destroy the relation.
+
+    This is an initialization condition only.  The subsequent direct-GHZ
+    solve is free to leave the projective branch.
+    """
+
+    canonical = _canonical_support(support)
+    if not NATURAL_SUPPORT_SET.issubset(canonical):
+        raise KrennNumericalContinuationError(
+            "projective victim initialization needs all natural coordinates"
+        )
+    numerator = tuple(map(int, numerator_indices))
+    denominator = tuple(map(int, denominator_indices))
+    expected_active = tuple(
+        sorted(map(int, expected_active_victim_matching_indices))
+    )
+    relation_indices = (*numerator, *denominator)
+    if (
+        len(numerator) != 2
+        or len(denominator) != 2
+        or len(set(relation_indices)) != 4
+        or not set(relation_indices).issubset(canonical)
+        or set(numerator).intersection(NATURAL_SUPPORT_SET)
+    ):
+        raise KrennNumericalContinuationError(
+            "projective victim relation must be a two-by-two branch "
+            "inside the declared support"
+        )
+    if (
+        len(expected_active) != 2
+        or len(set(expected_active)) != 2
+        or any(index < 0 or index >= MATCHINGS_PER_EQUATION for index in expected_active)
+    ):
+        raise KrennNumericalContinuationError(
+            "projective victim initialization needs two distinguished "
+            "active victim matchings"
+        )
+    support_set = set(canonical)
+    active_victim = tuple(
+        matching
+        for matching, monomial in enumerate(
+            _system().equation_monomials(
+                N6_D3_SEED_DEFECT_EQUATION
+            )
+        )
+        if set(monomial).issubset(support_set)
+    )
+    if active_victim != expected_active:
+        raise KrennNumericalContinuationError(
+            "projective support activates an unexpected victim matching; "
+            "a multinomial initializer is required"
+        )
+    scale = float(repair_scale)
+    if not math.isfinite(scale) or scale <= 0.0:
+        raise KrennNumericalContinuationError(
+            "projective repair scale must be positive and finite"
+        )
+    chart = (
+        natural_gauge_chart(
+            canonical,
+            action_group=GHZ_COLOR_DIAGONAL_GAUGE,
+        )
+        if chart is None
+        else chart
+    )
+    if (
+        chart.support != canonical
+        or chart.action_group != GHZ_COLOR_DIAGONAL_GAUGE
+        or not set(NATURAL_GAUGE_ANCHORS).issubset(chart.anchors)
+    ):
+        raise KrennNumericalContinuationError(
+            "projective victim initialization requires a direct-GHZ "
+            "natural gauge chart"
+        )
+
+    free_set = set(chart.free_indices)
+    pivot = next(
+        (index for index in numerator if index in free_set),
+        next(
+            (
+                index
+                for index in denominator
+                if index in free_set
+            ),
+            None,
+        ),
+    )
+    if pivot is None:
+        raise KrennNumericalContinuationError(
+            "projective victim relation has no free coordinate"
+        )
+
+    sequence = _seed_sequence(seed)
+    words = _seed_words(sequence)
+    generator = np.random.default_rng(sequence)
+    weights = np.zeros(AMBIENT_VARIABLES, dtype=np.complex128)
+    for index, value in n6_d3_seed_witness().entries:
+        weights[index] = complex(value)
+    anchor_array = np.asarray(chart.anchors, dtype=np.intp)
+    weights[anchor_array] = chart.anchor_value
+
+    relation_set = set(relation_indices)
+    randomized_repairs = tuple(
+        index
+        for index in chart.free_indices
+        if index not in NATURAL_SUPPORT_SET
+        and index not in relation_set
+    )
+    random_phases = generator.uniform(
+        0.0, 2.0 * math.pi, len(randomized_repairs)
+    )
+    if randomized_repairs:
+        weights[
+            np.asarray(randomized_repairs, dtype=np.intp)
+        ] = scale * np.exp(1.0j * random_phases)
+
+    free_relation = tuple(
+        index
+        for index in relation_indices
+        if index in free_set and index != pivot
+    )
+    relation_phases = generator.uniform(
+        0.0, 2.0 * math.pi, len(free_relation)
+    )
+    for index, phase in zip(
+        free_relation, relation_phases, strict=True
+    ):
+        if index not in NATURAL_SUPPORT_SET:
+            weights[index] = np.exp(1.0j * phase)
+
+    def product(indices: Sequence[int]) -> complex:
+        result = 1.0 + 0.0j
+        for index in indices:
+            result *= complex(weights[index])
+        return result
+
+    if pivot in numerator:
+        other = tuple(index for index in numerator if index != pivot)
+        divisor = product(other)
+        target_product = -product(denominator)
+    else:
+        other = tuple(index for index in denominator if index != pivot)
+        divisor = product(other)
+        target_product = -product(numerator)
+    if divisor == 0.0j:
+        raise KrennNumericalContinuationError(
+            "projective victim relation divisor vanished"
+        )
+    weights[pivot] = target_product / divisor
+
+    projected, report = project_hard_bounds(
+        weights,
+        chart,
+        l2_bound=l2_bound,
+        linf_bound=linf_bound,
+    )
+    if report.changed:
+        raise KrennNumericalContinuationError(
+            "projective victim initialization exceeded hard bounds; "
+            "resample or enlarge the declared bounds"
+        )
+    numerator_product = product(numerator)
+    denominator_product = product(denominator)
+    relation_error = numerator_product + denominator_product
+    relation_scale = max(
+        1.0, abs(numerator_product), abs(denominator_product)
+    )
+    if (
+        denominator_product == 0.0j
+        or abs(relation_error)
+        > 128.0 * np.finfo(np.float64).eps * relation_scale
+    ):
+        raise KrennNumericalContinuationError(
+            "projective victim relation failed numerical replay"
+        )
+    victim_amplitude = complex_output(projected)[
+        N6_D3_SEED_DEFECT_EQUATION
+    ]
+    if abs(victim_amplitude) > (
+        256.0 * np.finfo(np.float64).eps * relation_scale
+    ):
+        raise KrennNumericalContinuationError(
+            "projective victim initializer did not reach the full victim "
+            "hyperplane"
+        )
+
+    activation_indices = tuple(
+        index
+        for index in chart.free_indices
+        if index not in NATURAL_SUPPORT_SET
+    )
+    return InitializerRecord(
+        kind="projective-victim-repair",
+        support=canonical,
+        chart=chart,
+        weights=tuple(map(complex, projected)),
+        seed_words=words,
+        activation_indices=activation_indices,
+        activation_amplitude=scale,
+        laurent_t=None,
+        projection=report,
+    )
+
+
 def _validate_scratch_prefix(prefix: Path | str) -> Path:
     raw = Path(prefix)
     if not raw.is_absolute():
@@ -3622,6 +3848,7 @@ __all__ = (
     "natural_gauge_chart",
     "natural_laurent_initializer",
     "project_hard_bounds",
+    "projective_victim_repair_initializer",
     "random_bounded_initializer",
     "residual_and_jacobian",
     "run_continuation",
