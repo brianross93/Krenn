@@ -35,16 +35,51 @@ All 20736 fixed-parent repair decorations
 were ranked exactly.  The minimum positive quotient layer has four
 support-22 decorations in two symmetry classes and four oriented rays.
 
-| ray | noncancellable unique mixed minima at order <= target |
+The exclusion is gauge-invariant and comes from exact positive singleton
+incidence circuits, not from absolute orders on selected ray lifts:
+
+| class | positive singleton combination | tie-row-span witness |
+|---|---|---|
+| A | `3 E_571 + 2 E_851 + E_2438 + E_2493 + E_4048 + E_5792` | `[1,3,2,0,1,3]` |
+| B | `E_853 + E_2430 + E_6557` | `[0,1,1,0,1,0]` |
+
+Every listed mixed equation has exactly one support monomial under both
+independent perfect-matching enumerators.  In each class, the positive
+weighted sum of their nonseed incidence rows is exactly the displayed linear
+combination of the tie rows over `Q`; adjoining that row does not increase
+exact rank five.  Consequently the positive weighted sum of singleton orders
+is zero everywhere on the tie lattice, so at least one unique mixed singleton
+has order at most zero.
+
+The target comparison is also exact.  Both enumerators find two active
+monochromatic terms for color 0 and one each for colors 1 and 2.  Every one of
+their four nonseed incidence rows has a displayed witness in the same tie-row
+span.  Thus every active target support monomial has normalized order zero on
+the full tie lattice.  The target polynomial valuation is therefore at least
+zero (or infinite); cancellation among target terms can only raise it and
+strengthen the mixed-singleton obstruction.
+
+This excludes both quotient lines, hence all four orientations, throughout
+the depth-two local declared family: either the exact support torus, where all
+coordinates of the recorded support `S` have nonzero leading coefficient and
+outside coordinates vanish, or the conditional degeneration extension where
+every outside monomial stays strictly above every relevant active target and
+recorded singleton order.  Outside-term-entry cones remain unclassified.
+
+For audit only, the chosen normalized positive and negative lifts give these
+gauge-dependent counts:
+
+| chosen lift | unique mixed minima at order <= target |
 |---|---:|
 | A+ | 14 |
 | A- | 10 |
 | B+ | 12 |
 | B- | 12 |
 
-Both perfect-matching enumerators replay all 6,561 equations for every ray.
-All four rays are exactly excluded.  Support-24 positive-quotient branches
-remain unclassified beyond their exact census.
+Those absolute-order counts are not residual-gauge invariant and are not used
+as proof.  This unequal-rate bundle itself makes no support-24 classification.
+The declared exact-support/no-outside-entry positive layer is handled by the
+separate support-24 circuit gate.
 
 ## Boundary
 

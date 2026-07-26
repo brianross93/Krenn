@@ -18,6 +18,10 @@ class KrennN8ToricUnequalRatesTest(unittest.TestCase):
 
     def test_global_gauge_index_and_zero_skeleton_quotients(self):
         certificate = self.certificate
+        self.assertEqual(
+            certificate["schema"],
+            "krenn-n8-d3-toric-unequal-rates-v2",
+        )
         global_gauge = certificate["global_gauge_lattice_audit"]
         self.assertEqual(
             global_gauge["matrix_shape"],
@@ -354,6 +358,28 @@ class KrennN8ToricUnequalRatesTest(unittest.TestCase):
         )
         self.assertEqual(depth["oriented_quotient_ray_count"], 4)
         self.assertTrue(all(depth["exact_checks"].values()))
+        family = depth["declared_family"]
+        exact_support = family["exact_support_mode"]
+        self.assertTrue(exact_support["support_equals_each_recorded_class_S"])
+        self.assertTrue(exact_support["all_S_leading_coefficients_nonzero"])
+        self.assertTrue(
+            exact_support["outside_source_coordinates_zero_on_support_torus"]
+        )
+        extension = family["conditional_degeneration_extension"]
+        self.assertTrue(extension["allowed"])
+        self.assertTrue(
+            extension["outside_source_coordinates_may_have_higher_order"]
+        )
+        self.assertIn(
+            "strictly above every relevant active target",
+            extension["required_condition"],
+        )
+        self.assertTrue(
+            family[
+                "common_active_target_monomial_order_normalized_to_zero"
+            ]
+        )
+        self.assertFalse(family["outside_term_entry_cones_classified"])
 
         expected = {
             "A": ([15, 15, 21, 35], [30, 30, 22, 33]),
@@ -386,6 +412,24 @@ class KrennN8ToricUnequalRatesTest(unittest.TestCase):
                 record["oriented_rays_identified_by_symmetry"]
             )
             self.assertTrue(record["all_oriented_rays_excluded"])
+            self.assertEqual(
+                record["exclusion_basis"],
+                "positive-singleton-tie-row-span-circuit",
+            )
+            self.assertTrue(
+                record[
+                    "entire_declared_quotient_line_and_all_residual_gauge_lifts_excluded"
+                ]
+            )
+            self.assertEqual(
+                record["positive_singleton_circuit"]["exclusion_scope"],
+                "declared-exact-support-or-strictly-higher-outside-monomial-stratum",
+            )
+            self.assertFalse(
+                record["positive_singleton_circuit"][
+                    "outside_term_entry_strata_excluded"
+                ]
+            )
             self.assertTrue(all(record["exact_checks"].values()))
 
             detector = {
@@ -407,7 +451,158 @@ class KrennN8ToricUnequalRatesTest(unittest.TestCase):
                 1,
             )
 
-    def test_four_oriented_rays_have_exact_projective_obstructions(self):
+    def test_positive_singleton_circuits_and_target_orders_are_exact(self):
+        depth = self.certificate[
+            "bounded_H5_depth_two_quotient_fan"
+        ]
+        expected = {
+            "A": {
+                "coefficients": {
+                    "571": 3,
+                    "851": 2,
+                    "2438": 1,
+                    "2493": 1,
+                    "4048": 1,
+                    "5792": 1,
+                },
+                "weighted_row": [2, 2, 0, 3, 1, 2, 1, 3, 1, 1],
+                "witness": [1, 3, 2, 0, 1, 3],
+            },
+            "B": {
+                "coefficients": {"853": 1, "2430": 1, "6557": 1},
+                "weighted_row": [1, 1, 0, 1, 1, 0, 0, 1, 0, 0],
+                "witness": [0, 1, 1, 0, 1, 0],
+            },
+        }
+        target_counts = {0: 2, 3_280: 1, 6_560: 1}
+
+        for label, values in expected.items():
+            record = depth["classes"][label]
+            support = tuple(record["support"])
+            nonseed = tuple(record["nonseed_coordinates"])
+            ties = tuple(tuple(row) for row in record["tie_matrix"])
+            primary = unequal.first_shell._active_term_signature(
+                support,
+                unequal.first_shell._primary_matchings(),
+            )
+            independent = unequal.first_shell._active_term_signature(
+                support,
+                unequal.first_shell._independent_matchings(),
+            )
+            self.assertEqual(primary, independent)
+
+            circuit = record["positive_singleton_circuit"]
+            self.assertEqual(
+                circuit["equation_coefficients"],
+                values["coefficients"],
+            )
+            self.assertTrue(all(circuit["exact_checks"].values()))
+            weighted = [0] * len(nonseed)
+            for singleton in circuit["singleton_equations"]:
+                equation = singleton["equation"]
+                coefficient = singleton["positive_coefficient"]
+                terms = primary[equation]
+                self.assertEqual(len(terms), 1)
+                matching = tuple(
+                    tuple(edge) for edge in singleton["matching"]
+                )
+                monomial = tuple(
+                    singleton["monomial_variable_indices"]
+                )
+                self.assertEqual(terms[0], (matching, monomial))
+                incidence = [
+                    sum(1 for value in monomial if value == coordinate)
+                    for coordinate in nonseed
+                ]
+                self.assertEqual(
+                    incidence,
+                    singleton["nonseed_incidence_row"],
+                )
+                for position, value in enumerate(incidence):
+                    weighted[position] += coefficient * value
+            self.assertEqual(weighted, values["weighted_row"])
+            self.assertEqual(
+                circuit["weighted_nonseed_incidence_row"],
+                values["weighted_row"],
+            )
+            self.assertEqual(
+                circuit["tie_row_span_witness_coefficients"],
+                values["witness"],
+            )
+            reconstructed = [
+                sum(
+                    coefficient * row[column]
+                    for coefficient, row in zip(
+                        values["witness"], ties, strict=True
+                    )
+                )
+                for column in range(len(nonseed))
+            ]
+            self.assertEqual(reconstructed, weighted)
+            self.assertEqual(
+                unequal.first_shell._rank_over_q(ties),
+                unequal.first_shell._rank_over_q(
+                    (*ties, tuple(weighted))
+                ),
+            )
+
+            target = circuit[
+                "active_monochromatic_target_zero_order_audit"
+            ]
+            self.assertTrue(
+                target[
+                    "common_active_target_monomial_order_normalized_to_zero"
+                ]
+            )
+            self.assertTrue(
+                target["declared_scope_requires_no_outside_monomial_entry"]
+            )
+            self.assertIn(
+                "target coordinate valuation is at least zero",
+                target["consequence_in_declared_stratum"],
+            )
+            self.assertTrue(
+                target[
+                    "all_active_target_orders_identically_zero_on_tie_lattice"
+                ]
+            )
+            self.assertEqual(len(target["support_terms"]), 4)
+            observed_counts = {}
+            for term in target["support_terms"]:
+                equation = term["equation"]
+                observed_counts[equation] = observed_counts.get(equation, 0) + 1
+                matching = tuple(tuple(edge) for edge in term["matching"])
+                monomial = tuple(term["monomial_variable_indices"])
+                self.assertIn((matching, monomial), primary[equation])
+                incidence = [
+                    sum(1 for value in monomial if value == coordinate)
+                    for coordinate in nonseed
+                ]
+                self.assertEqual(incidence, term["nonseed_incidence_row"])
+                target_reconstruction = [
+                    sum(
+                        coefficient * row[column]
+                        for coefficient, row in zip(
+                            term["tie_row_span_witness_coefficients"],
+                            ties,
+                            strict=True,
+                        )
+                    )
+                    for column in range(len(nonseed))
+                ]
+                self.assertEqual(target_reconstruction, incidence)
+                self.assertEqual(
+                    unequal.first_shell._rank_over_q(
+                        (*ties, tuple(incidence))
+                    ),
+                    5,
+                )
+                self.assertTrue(
+                    term["order_identically_zero_on_tie_lattice"]
+                )
+            self.assertEqual(observed_counts, target_counts)
+
+    def test_four_canonical_lift_replays_are_diagnostic_only(self):
         depth = self.certificate[
             "bounded_H5_depth_two_quotient_fan"
         ]
@@ -422,7 +617,7 @@ class KrennN8ToricUnequalRatesTest(unittest.TestCase):
             obstruction_count,
             histogram,
         ) in expected.items():
-            ray = depth["classes"][label]["oriented_ray_replays"][
+            ray = depth["classes"][label]["diagnostic_oriented_lift_replays"][
                 orientation
             ]
             self.assertEqual(ray["target_minima"], [
@@ -455,11 +650,21 @@ class KrennN8ToricUnequalRatesTest(unittest.TestCase):
                 ray["obstructing_count"],
                 obstruction_count,
             )
-            self.assertTrue(
-                ray[
-                    "ray_excluded_from_projective_GHZ_initial_stratum"
-                ]
+            self.assertEqual(
+                ray["status"],
+                "diagnostic-canonical-lift-replay",
             )
+            self.assertTrue(ray["canonical_lift_diagnostic_only"])
+            self.assertTrue(
+                ray["chosen_lift_has_noncancellable_mixed_minimum"]
+            )
+            self.assertFalse(
+                ray["quotient_ray_exclusion_claimed_from_this_replay"]
+            )
+            self.assertFalse(
+                ray["absolute_orders_are_residual_gauge_invariant"]
+            )
+            self.assertIsNone(ray["exclusion_proof_basis"])
             self.assertTrue(all(ray["exact_checks"].values()))
 
             orders = [ray["outside_coordinate_guard_order"]] * 252
@@ -511,6 +716,8 @@ class KrennN8ToricUnequalRatesTest(unittest.TestCase):
             "bounded_H5_parent_20736_depth_two_branches_enumerated",
             "bounded_H5_minimum_positive_support22_layer_classified",
             "bounded_H5_depth_two_four_oriented_rays_excluded",
+            "bounded_H5_support22_declared_target_leading_two_lines_excluded_by_positive_singleton_circuits",
+            "bounded_H5_support22_declared_target_leading_all_residual_gauge_lifts_excluded",
         }
         self.assertTrue(true_claims.issubset(claims))
         for key, value in claims.items():
@@ -533,9 +740,23 @@ class KrennN8ToricUnequalRatesTest(unittest.TestCase):
 
         ray = deepcopy(self.certificate)
         ray["bounded_H5_depth_two_quotient_fan"]["classes"]["A"][
-            "oriented_ray_replays"
+            "diagnostic_oriented_lift_replays"
         ]["+"]["obstructing_count"] = 0
         corruptions.append(ray)
+
+        circuit = deepcopy(self.certificate)
+        circuit["bounded_H5_depth_two_quotient_fan"]["classes"]["A"][
+            "positive_singleton_circuit"
+        ]["equation_coefficients"]["571"] = 4
+        corruptions.append(circuit)
+
+        target = deepcopy(self.certificate)
+        target["bounded_H5_depth_two_quotient_fan"]["classes"]["B"][
+            "positive_singleton_circuit"
+        ]["active_monochromatic_target_zero_order_audit"][
+            "support_terms"
+        ][0]["tie_row_span_witness_coefficients"][0] = 1
+        corruptions.append(target)
 
         claim = deepcopy(self.certificate)
         claim["claim_boundary"]["n8_nonexistence_proved"] = True
@@ -570,7 +791,14 @@ class KrennN8ToricUnequalRatesTest(unittest.TestCase):
             )
             self.assertIn("Projectively the integral quotient is `Z/4`", readme)
             self.assertIn("Bounded H5 depth-two fan", readme)
-            self.assertIn("All four rays are exactly excluded", readme)
+            self.assertIn("positive singleton", readme)
+            self.assertIn(
+                "target polynomial valuation is therefore at least",
+                readme,
+            )
+            self.assertIn("This excludes both quotient lines", readme)
+            self.assertIn("exact support torus", readme)
+            self.assertIn("not residual-gauge invariant", readme)
             self.assertIn("not a construction of the full GIT quotient", readme)
 
             readme_path.write_text(

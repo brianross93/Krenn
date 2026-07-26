@@ -1,0 +1,81 @@
+{
+  "artifacts": [
+    {
+      "bytes": 3183080,
+      "path": "certificate.json",
+      "sha256": "e26f3ce774ae6ce9d0e32049856d38c132696bcbf617c1a30bd79c7e9d940706"
+    },
+    {
+      "bytes": 2179,
+      "path": "README.md",
+      "sha256": "309ae50f75fccd1f881023c6f8cb0da54a745be9b6853cf5fc9400c3d332c370"
+    }
+  ],
+  "claim_boundary": {
+    "all_20736_fixed_parent_branches_enumerated": true,
+    "all_31_n8_seed_orbits_classified": false,
+    "all_H5_depth_two_parents_excluded": false,
+    "all_support24_positive_quotient_branches_in_that_enumeration_excluded": true,
+    "another_H5_parent_excluded": false,
+    "bounded_fixed_H5_parent_support24_positive_quotient_layer_excluded": true,
+    "deeper_repair_closures_excluded": false,
+    "exclusion_is_on_declared_exact_support_or_no_outside_entry_stratum": true,
+    "finite_counterexample_found": false,
+    "n8_affine_membership_proved": false,
+    "n8_nonexistence_proved": false,
+    "n8_projective_border_membership_proved": false,
+    "n8_strict_border_membership_proved": false,
+    "outside_support_terms_at_leading_order_classified": false,
+    "support22_layer_reproved_here": false,
+    "support24_zero_quotient_branches_excluded_here": false
+  },
+  "inputs": [
+    {
+      "bytes": 43135,
+      "path": "experiments/krenn_quantum_graph/independent_verifier.py",
+      "sha256": "d7a07250807818c1aa59ae6e1e9db7bcfa82ae0489aa79c16c6b21b70e63301b"
+    },
+    {
+      "bytes": 37494,
+      "path": "experiments/krenn_quantum_graph/n8_seed_orbits.py",
+      "sha256": "e246feb4ca6ab4bd5be61a5145f082345f2e35ad0238c96bca5e8fe7e7d50a92"
+    },
+    {
+      "bytes": 51643,
+      "path": "experiments/krenn_quantum_graph/n8_toric_first_shell.py",
+      "sha256": "88964312c106ce7ab52bbccd8f1c7c7159f51f158e74f42c433f04598037b23c"
+    },
+    {
+      "bytes": 67390,
+      "path": "experiments/krenn_quantum_graph/n8_toric_support24_circuits.py",
+      "sha256": "f43b95d4a2c805a5979a63ea8edb7b57b0e526288bbcf01687a4df03ba255f01"
+    },
+    {
+      "bytes": 184183,
+      "path": "experiments/krenn_quantum_graph/n8_support24_positive_circuits.json",
+      "sha256": "6073d57c2c6323e6c48086572068107d6d1720c91202d0bb44543ade8221cf71"
+    },
+    {
+      "bytes": 11452,
+      "path": "experiments/krenn_quantum_graph/system.py",
+      "sha256": "3f64e42efc68b5391b3ec9798e801d1efa1f7c4a9c68c56a4b3b2e78540214a9"
+    },
+    {
+      "bytes": 13053,
+      "path": "experiments/krenn_quantum_graph/targets.py",
+      "sha256": "6b3d6239fcb2353352ea468103f920066273db8354a8d8fb60911b338c351baa"
+    },
+    {
+      "bytes": 26340,
+      "path": "tests/test_krenn_n8_toric_first_shell.py",
+      "sha256": "8fc768d0c5812706585b479433842f489d1bd77d902920a4a741954ac8613bde"
+    },
+    {
+      "bytes": 22989,
+      "path": "tests/test_krenn_n8_toric_support24_circuits.py",
+      "sha256": "6432ff6355f810ec84f6adcc342571cc7bd653899d4dd93c2c9395311b423fb9"
+    }
+  ],
+  "schema": "krenn-n8-d3-toric-support24-circuits-manifest-v1",
+  "scratch_data_required_for_verification": false
+}

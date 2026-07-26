@@ -53,9 +53,9 @@ N = 8
 D = 3
 SOURCE_VARIABLES = 252
 GAUGE_DIMENSION = 21
-UNEQUAL_RATE_SCHEMA = "krenn-n8-d3-toric-unequal-rates-v1"
+UNEQUAL_RATE_SCHEMA = "krenn-n8-d3-toric-unequal-rates-v2"
 UNEQUAL_RATE_MANIFEST_SCHEMA = (
-    "krenn-n8-d3-toric-unequal-rates-manifest-v1"
+    "krenn-n8-d3-toric-unequal-rates-manifest-v2"
 )
 DEFAULT_RESULTS_DIRECTORY = (
     Path("results")
@@ -71,6 +71,7 @@ SOURCE_PATHS = (
     "experiments/krenn_quantum_graph/n8_toric_first_shell.py",
     "experiments/krenn_quantum_graph/n8_toric_unequal_rates.py",
     "experiments/krenn_quantum_graph/system.py",
+    "experiments/krenn_quantum_graph/targets.py",
     "tests/test_krenn_n8_toric_first_shell.py",
     "tests/test_krenn_n8_toric_unequal_rates.py",
 )
@@ -185,6 +186,18 @@ DEPTH_TWO_EXPECTED = {
     },
     "minimum_positive_quotient_support_size": 22,
     "positive_minimum_support_branches": 4,
+    "target_term_tie_row_span_witnesses": {
+        0: {
+            (0, 117, 198, 243): (0, 0, 0, 0, 0, 0),
+            (9, 72, 198, 243): (0, 0, 1, 0, 0, 0),
+        },
+        3_280: {
+            (13, 85, 184, 238): (0, 0, 0, 0, 0, 0),
+        },
+        6_560: {
+            (26, 98, 161, 215): (0, 0, 0, 0, 0, 0),
+        },
+    },
     "classes": {
         "A": {
             "representative": (15, 15, 21, 35),
@@ -211,6 +224,18 @@ DEPTH_TWO_EXPECTED = {
                 "+": {-1: 7, 0: 7, 1: 2},
                 "-": {-1: 3, 0: 7, 1: 6},
             },
+            "positive_singleton_circuit": {
+                571: 3,
+                851: 2,
+                2_438: 1,
+                2_493: 1,
+                4_048: 1,
+                5_792: 1,
+            },
+            "weighted_nonseed_incidence": (
+                2, 2, 0, 3, 1, 2, 1, 3, 1, 1,
+            ),
+            "tie_row_span_witness": (1, 3, 2, 0, 1, 3),
         },
         "B": {
             "representative": (15, 15, 22, 33),
@@ -238,6 +263,15 @@ DEPTH_TWO_EXPECTED = {
                 "+": {-1: 4, 0: 8, 1: 3},
                 "-": {-1: 4, 0: 8, 1: 3},
             },
+            "positive_singleton_circuit": {
+                853: 1,
+                2_430: 1,
+                6_557: 1,
+            },
+            "weighted_nonseed_incidence": (
+                1, 1, 0, 1, 1, 0, 0, 1, 0, 0,
+            ),
+            "tie_row_span_witness": (0, 1, 1, 0, 1, 0),
         },
     },
 }
@@ -1436,7 +1470,277 @@ def _valuation_initial_signature(
     return tuple(signature)
 
 
+def _positive_singleton_circuit_replay(
+    label: str,
+    support: Sequence[int],
+    nonseed: Sequence[int],
+    tie_matrix: Sequence[Sequence[int]],
+) -> dict[str, object]:
+    """Replay a positive singleton incidence circuit exactly over Q.
+
+    Seed orders have already been normalized to zero in the depth-two
+    lattice.  A positive combination of singleton-monomial incidence rows
+    that lies in the span of the tie rows therefore has total order zero on
+    every point of the tie lattice.  Positivity forces at least one of the
+    singleton orders to be nonpositive, independently of the chosen
+    quotient representative or residual-gauge lift.
+    """
+
+    expected = DEPTH_TWO_EXPECTED["classes"][label]
+    coefficients = {
+        int(equation): int(coefficient)
+        for equation, coefficient in expected[
+            "positive_singleton_circuit"
+        ].items()
+    }
+    support = tuple(map(int, support))
+    nonseed = tuple(map(int, nonseed))
+    ties = tuple(tuple(map(int, row)) for row in tie_matrix)
+    if not coefficients or any(value <= 0 for value in coefficients.values()):
+        raise KrennN8ToricUnequalRateError(
+            f"depth-two class {label} lacks a positive circuit"
+        )
+    if any(len(row) != len(nonseed) for row in ties):
+        raise KrennN8ToricUnequalRateError(
+            f"depth-two class {label} has a malformed tie matrix"
+        )
+
+    primary = first_shell._active_term_signature(
+        support, first_shell._primary_matchings()
+    )
+    independent = first_shell._active_term_signature(
+        support, first_shell._independent_matchings()
+    )
+    if primary != independent:
+        raise KrennN8ToricUnequalRateError(
+            f"depth-two class {label} singleton enumerators disagree"
+        )
+
+    records = []
+    weighted_incidence = [0] * len(nonseed)
+    nonseed_positions = {
+        coordinate: position
+        for position, coordinate in enumerate(nonseed)
+    }
+    target_equations = {
+        first_shell.coloring_index(N, D, (color,) * N)
+        for color in range(D)
+    }
+    target_expected = DEPTH_TWO_EXPECTED[
+        "target_term_tie_row_span_witnesses"
+    ]
+    target_records = []
+    target_tie_rank = first_shell._rank_over_q(ties)
+    for equation in sorted(target_equations):
+        primary_terms = primary.get(equation, ())
+        independent_terms = independent.get(equation, ())
+        expected_terms = target_expected.get(equation, {})
+        observed_monomials = {
+            tuple(monomial)
+            for _matching, monomial in primary_terms
+        }
+        if (
+            not primary_terms
+            or primary_terms != independent_terms
+            or observed_monomials != set(expected_terms)
+        ):
+            raise KrennN8ToricUnequalRateError(
+                f"depth-two class {label} target equation {equation} "
+                "failed its exact support-term census"
+            )
+        for matching, monomial in primary_terms:
+            incidence = tuple(
+                sum(1 for value in monomial if value == coordinate)
+                for coordinate in nonseed
+            )
+            witness = tuple(
+                map(
+                    int,
+                    expected_terms[tuple(monomial)],
+                )
+            )
+            reconstructed = tuple(
+                sum(
+                    coefficient * row[column]
+                    for coefficient, row in zip(
+                        witness, ties, strict=True
+                    )
+                )
+                for column in range(len(nonseed))
+            )
+            augmented_rank = first_shell._rank_over_q(
+                (*ties, incidence)
+            )
+            if (
+                len(witness) != len(ties)
+                or reconstructed != incidence
+                or augmented_rank != target_tie_rank
+            ):
+                raise KrennN8ToricUnequalRateError(
+                    f"depth-two class {label} target equation "
+                    f"{equation} left the tie-row span"
+                )
+            target_records.append(
+                {
+                    "equation": equation,
+                    "coloring": list(
+                        first_shell.coloring_from_index(N, D, equation)
+                    ),
+                    "primary_support_term_count": len(primary_terms),
+                    "independent_support_term_count": len(independent_terms),
+                    "matching": [list(edge) for edge in matching],
+                    "monomial_variable_indices": list(monomial),
+                    "nonseed_incidence_row": list(incidence),
+                    "tie_row_span_witness_coefficients": list(witness),
+                    "tie_row_span_reconstruction": list(reconstructed),
+                    "augmented_row_rank_over_Q": augmented_rank,
+                    "enumerators_agree_exactly": True,
+                    "order_identically_zero_on_tie_lattice": True,
+                }
+            )
+    for equation, coefficient in sorted(coefficients.items()):
+        primary_terms = primary.get(equation, ())
+        independent_terms = independent.get(equation, ())
+        if (
+            len(primary_terms) != 1
+            or len(independent_terms) != 1
+            or primary_terms != independent_terms
+        ):
+            raise KrennN8ToricUnequalRateError(
+                f"depth-two class {label} equation {equation} is not "
+                "an enumerator-independent support singleton"
+            )
+        matching, monomial = primary_terms[0]
+        incidence = [0] * len(nonseed)
+        for coordinate in monomial:
+            position = nonseed_positions.get(int(coordinate))
+            if position is not None:
+                incidence[position] += 1
+        for position, value in enumerate(incidence):
+            weighted_incidence[position] += coefficient * value
+        coloring = first_shell.coloring_from_index(N, D, equation)
+        records.append(
+            {
+                "equation": equation,
+                "coloring": list(coloring),
+                "positive_coefficient": coefficient,
+                "primary_support_term_count": 1,
+                "independent_support_term_count": 1,
+                "matching": [list(edge) for edge in matching],
+                "monomial_variable_indices": list(monomial),
+                "nonseed_incidence_row": incidence,
+                "equation_is_mixed": equation not in target_equations,
+                "enumerators_agree_exactly": True,
+            }
+        )
+
+    weighted_incidence = tuple(weighted_incidence)
+    witness = tuple(map(int, expected["tie_row_span_witness"]))
+    if len(witness) != len(ties):
+        raise KrennN8ToricUnequalRateError(
+            f"depth-two class {label} tie-span witness has wrong height"
+        )
+    reconstructed = tuple(
+        sum(
+            coefficient * row[column]
+            for coefficient, row in zip(witness, ties, strict=True)
+        )
+        for column in range(len(nonseed))
+    )
+    tie_rank = first_shell._rank_over_q(ties)
+    augmented_rank = first_shell._rank_over_q(
+        (*ties, weighted_incidence)
+    )
+    checks = {
+        "primary_independent_support_signatures_agree": True,
+        "all_circuit_coefficients_are_positive": all(
+            value > 0 for value in coefficients.values()
+        ),
+        "all_circuit_equations_are_mixed": all(
+            record["equation_is_mixed"] for record in records
+        ),
+        "every_circuit_equation_is_a_support_singleton": all(
+            record["primary_support_term_count"] == 1
+            and record["independent_support_term_count"] == 1
+            and record["enumerators_agree_exactly"]
+            for record in records
+        ),
+        "active_target_support_term_counts_are_2_1_1": (
+            Counter(record["equation"] for record in target_records)
+            == Counter({0: 2, 3_280: 1, 6_560: 1})
+        ),
+        "all_active_target_terms_enumerator_independent": all(
+            record["enumerators_agree_exactly"]
+            for record in target_records
+        ),
+        "all_active_target_incidence_rows_in_tie_row_span": all(
+            record["nonseed_incidence_row"]
+            == record["tie_row_span_reconstruction"]
+            and record["augmented_row_rank_over_Q"] == target_tie_rank
+            for record in target_records
+        ),
+        "all_active_target_orders_identically_zero_on_tie_lattice": all(
+            record["order_identically_zero_on_tie_lattice"]
+            for record in target_records
+        ),
+        "weighted_nonseed_incidence_row_exact": (
+            weighted_incidence
+            == tuple(expected["weighted_nonseed_incidence"])
+        ),
+        "tie_row_span_witness_reconstructs_incidence": (
+            reconstructed == weighted_incidence
+        ),
+        "augmented_Q_rank_equals_tie_Q_rank": (
+            augmented_rank == tie_rank
+        ),
+        "tie_Q_rank_is_five": tie_rank == 5,
+    }
+    if not all(checks.values()):
+        failed = sorted(key for key, value in checks.items() if not value)
+        raise KrennN8ToricUnequalRateError(
+            f"depth-two class {label} positive circuit failed: {failed}"
+        )
+    return {
+        "proof_kind": "positive-singleton-tie-row-span-circuit",
+        "equation_coefficients": {
+            str(key): value for key, value in sorted(coefficients.items())
+        },
+        "singleton_equations": records,
+        "active_monochromatic_target_zero_order_audit": {
+            "common_active_target_monomial_order_normalized_to_zero": True,
+            "declared_scope_requires_no_outside_monomial_entry": True,
+            "target_support_term_counts": {"0": 2, "3280": 1, "6560": 1},
+            "support_terms": target_records,
+            "tie_row_rank_over_Q": target_tie_rank,
+            "all_active_target_orders_identically_zero_on_tie_lattice": all(
+                record["order_identically_zero_on_tie_lattice"]
+                for record in target_records
+            ),
+            "consequence_in_declared_stratum": (
+                "every active target support monomial has order zero, so "
+                "the target coordinate valuation is at least zero (or "
+                "infinite); cancellation only strengthens the comparison"
+            ),
+        },
+        "weighted_nonseed_incidence_row": list(weighted_incidence),
+        "tie_row_span_witness_coefficients": list(witness),
+        "tie_row_span_reconstruction": list(reconstructed),
+        "tie_row_rank_over_Q": tie_rank,
+        "augmented_row_rank_over_Q": augmented_rank,
+        "identity_on_tie_lattice": (
+            "the positive weighted sum of the recorded singleton "
+            "monomial orders is zero"
+        ),
+        "exclusion_scope": (
+            "declared-exact-support-or-strictly-higher-outside-monomial-stratum"
+        ),
+        "entire_declared_quotient_line_and_all_residual_gauge_lifts_excluded": True,
+        "outside_term_entry_strata_excluded": False,
+        "exact_checks": checks,
+    }
+
 def _depth_two_ray_replay(
+
     label: str,
     support: Sequence[int],
     nonseed: Sequence[int],
@@ -1573,7 +1877,12 @@ def _depth_two_ray_replay(
                 all_minimum_histogram.items()
             )
         },
-        "ray_excluded_from_projective_GHZ_initial_stratum": True,
+        "status": "diagnostic-canonical-lift-replay",
+        "canonical_lift_diagnostic_only": True,
+        "chosen_lift_has_noncancellable_mixed_minimum": bool(obstructing),
+        "quotient_ray_exclusion_claimed_from_this_replay": False,
+        "absolute_orders_are_residual_gauge_invariant": False,
+        "exclusion_proof_basis": None,
         "exact_checks": checks,
     }
 
@@ -1846,6 +2155,12 @@ def _build_depth_two_gate(
             raise KrennN8ToricUnequalRateError(
                 f"depth-two class {class_label} failed: {failed}"
             )
+        circuit = _positive_singleton_circuit_replay(
+            class_label,
+            support,
+            nonseed,
+            tie_matrix,
+        )
         rays = {
             orientation: _depth_two_ray_replay(
                 class_label,
@@ -1880,12 +2195,17 @@ def _build_depth_two_gate(
             "complete_decoration_stabilizer_order": 1,
             "oriented_rays_identified_by_symmetry": False,
             "fan": ["origin", "positive_ray", "negative_ray"],
-            "oriented_ray_replays": rays,
-            "all_oriented_rays_excluded": all(
-                record[
-                    "ray_excluded_from_projective_GHZ_initial_stratum"
+            "positive_singleton_circuit": circuit,
+            "exclusion_basis": circuit["proof_kind"],
+            "entire_declared_quotient_line_and_all_residual_gauge_lifts_excluded": (
+                circuit[
+                    "entire_declared_quotient_line_and_all_residual_gauge_lifts_excluded"
                 ]
-                for record in rays.values()
+            ),
+            "diagnostic_oriented_lift_replays": rays,
+            "all_oriented_rays_excluded": True,
+            "all_oriented_rays_excluded_basis": (
+                "entire quotient line excluded by positive singleton circuit"
             ),
             "exact_checks": class_checks,
         }
@@ -1913,16 +2233,39 @@ def _build_depth_two_gate(
         "two_complete_decoration_symmetry_classes": (
             len(class_records) == 2
         ),
-        "four_oriented_rays_excluded": all(
+        "both_positive_singleton_circuits_pass_exact_replay": all(
+            all(
+                record["positive_singleton_circuit"][
+                    "exact_checks"
+                ].values()
+            )
+            for record in class_records.values()
+        ),
+        "both_declared_exact_support_lines_and_all_gauge_lifts_excluded": all(
+            record[
+                "entire_declared_quotient_line_and_all_residual_gauge_lifts_excluded"
+            ]
+            for record in class_records.values()
+        ),
+        "four_oriented_rays_excluded_by_line_circuits": all(
             record["all_oriented_rays_excluded"]
             for record in class_records.values()
         ),
-        "both_matching_enumerators_replay_every_ray": all(
+        "both_matching_enumerators_replay_every_diagnostic_lift": all(
             ray_record["exact_checks"][
                 "primary_independent_enumerators_agree"
             ]
             for record in class_records.values()
-            for ray_record in record["oriented_ray_replays"].values()
+            for ray_record in record[
+                "diagnostic_oriented_lift_replays"
+            ].values()
+        ),
+        "no_diagnostic_lift_claims_quotient_ray_exclusion": all(
+            not ray_record["quotient_ray_exclusion_claimed_from_this_replay"]
+            for record in class_records.values()
+            for ray_record in record[
+                "diagnostic_oriented_lift_replays"
+            ].values()
         ),
     }
     if not all(checks.values()):
@@ -1951,6 +2294,26 @@ def _build_depth_two_gate(
             "floating_point_used": False,
             "random_seeds": [],
         },
+        "declared_family": {
+            "name": (
+                "bounded-H5-depth-two-support22-target-leading-stratum"
+            ),
+            "exact_support_mode": {
+                "support_equals_each_recorded_class_S": True,
+                "all_S_leading_coefficients_nonzero": True,
+                "outside_source_coordinates_zero_on_support_torus": True,
+            },
+            "conditional_degeneration_extension": {
+                "allowed": True,
+                "outside_source_coordinates_may_have_higher_order": True,
+                "required_condition": (
+                    "every outside monomial stays strictly above every "
+                    "relevant active target and recorded singleton order"
+                ),
+            },
+            "common_active_target_monomial_order_normalized_to_zero": True,
+            "outside_term_entry_cones_classified": False,
+        },
         "branch_support_size_and_quotient_dimension_histogram": {
             f"{support_size},{dimension}": count
             for (support_size, dimension), count in sorted(
@@ -1971,9 +2334,12 @@ def _build_depth_two_gate(
         "oriented_quotient_ray_count": 4,
         "classes": class_records,
         "consequence": (
-            "all four oriented rays in the first nonzero quotient fan "
-            "of this bounded H5 parent branch have a noncancellable "
-            "mixed minimum at order at most the common target order"
+            "within the depth-two local declared family, both "
+            "one-dimensional quotient lines in the first nonzero "
+            "bounded H5 fan are excluded by exact positive singleton "
+            "incidence circuits whose identities hold on the full tie "
+            "lattice, including every residual-gauge lift; the chosen "
+            "positive and negative lift minima are diagnostics only"
         ),
         "exact_checks": checks,
 
@@ -2065,7 +2431,8 @@ def _build_certificate() -> dict[str, object]:
             "affine_target_order_zero_root_extraction_required": False,
             "projective_integral_quotient": (
                 "ker_Z(B_proj)/im_Z([G_S|1]) is canonically Z/4 "
-                "through the common target order q modulo four"
+                "through the common selected active target-monomial "
+                "order q modulo four"
             ),
             "projective_q_surjectivity": (
                 "all 541 target-leading charts display a determinant-one "
@@ -2097,6 +2464,11 @@ def _build_certificate() -> dict[str, object]:
             ),
             "bounded_depth_two_oriented_quotient_rays": 4,
             "bounded_depth_two_oriented_rays_excluded": 4,
+            "bounded_depth_two_quotient_lines_excluded": 2,
+            "bounded_depth_two_exclusion_basis": (
+                "positive-singleton-tie-row-span-circuit"
+            ),
+            "canonical_lift_absolute_order_replays_used_as_proof": False,
             "flat_first_shell_obstruction_is_exhaustive_in_family": True,
             "interpretation": (
                 "within the declared minimal skeleton family every "
@@ -2106,9 +2478,14 @@ def _build_certificate() -> dict[str, object]:
                 "singleton obstruction applies whenever no outside term "
                 "enters its minimum"
                 "; the first nonzero quotient fan in the bounded H5 "
-                "depth-two parent branch has four oriented rays, all "
-                "excluded by exact mixed singleton minima of order at most "
-                "the common GHZ target order"
+                "depth-two parent branch has two quotient lines (four "
+                "orientations); within its local declared exact-support "
+                "or conditional-higher-outside-order family, both are "
+                "excluded by positive singleton incidence circuits after "
+                "all active target monomial orders are verified zero on "
+                "the tie lattice; outside-entry cones remain open and "
+                "absolute orders on selected positive and negative lifts "
+                "are retained only as non-gauge-invariant diagnostics"
             ),
         },
         "claim_boundary": {
@@ -2125,6 +2502,14 @@ def _build_certificate() -> dict[str, object]:
             "bounded_H5_parent_20736_depth_two_branches_enumerated": True,
             "bounded_H5_minimum_positive_support22_layer_classified": True,
             "bounded_H5_depth_two_four_oriented_rays_excluded": True,
+            "bounded_H5_support22_declared_target_leading_two_lines_excluded_by_positive_singleton_circuits": (
+                True
+            ),
+            "bounded_H5_support22_declared_target_leading_all_residual_gauge_lifts_excluded": (
+                True
+            ),
+            "canonical_lift_absolute_orders_claimed_gauge_invariant": False,
+            "canonical_lift_replays_used_as_exclusion_proof": False,
             "all_H5_depth_two_quotient_cones_classified": False,
             "unequal_monochromatic_minimum_layers_with_cancellation_classified": False,
             "outside_term_entry_cones_classified": False,
@@ -2277,16 +2662,51 @@ All {depth["policy"]["raw_branch_count"]} fixed-parent repair decorations
 were ranked exactly.  The minimum positive quotient layer has four
 support-22 decorations in two symmetry classes and four oriented rays.
 
-| ray | noncancellable unique mixed minima at order <= target |
-|---|---:|
-| A+ | {class_a["oriented_ray_replays"]["+"]["obstructing_count"]} |
-| A- | {class_a["oriented_ray_replays"]["-"]["obstructing_count"]} |
-| B+ | {class_b["oriented_ray_replays"]["+"]["obstructing_count"]} |
-| B- | {class_b["oriented_ray_replays"]["-"]["obstructing_count"]} |
+The exclusion is gauge-invariant and comes from exact positive singleton
+incidence circuits, not from absolute orders on selected ray lifts:
 
-Both perfect-matching enumerators replay all 6,561 equations for every ray.
-All four rays are exactly excluded.  Support-24 positive-quotient branches
-remain unclassified beyond their exact census.
+| class | positive singleton combination | tie-row-span witness |
+|---|---|---|
+| A | `3 E_571 + 2 E_851 + E_2438 + E_2493 + E_4048 + E_5792` | `[1,3,2,0,1,3]` |
+| B | `E_853 + E_2430 + E_6557` | `[0,1,1,0,1,0]` |
+
+Every listed mixed equation has exactly one support monomial under both
+independent perfect-matching enumerators.  In each class, the positive
+weighted sum of their nonseed incidence rows is exactly the displayed linear
+combination of the tie rows over `Q`; adjoining that row does not increase
+exact rank five.  Consequently the positive weighted sum of singleton orders
+is zero everywhere on the tie lattice, so at least one unique mixed singleton
+has order at most zero.
+
+The target comparison is also exact.  Both enumerators find two active
+monochromatic terms for color 0 and one each for colors 1 and 2.  Every one of
+their four nonseed incidence rows has a displayed witness in the same tie-row
+span.  Thus every active target support monomial has normalized order zero on
+the full tie lattice.  The target polynomial valuation is therefore at least
+zero (or infinite); cancellation among target terms can only raise it and
+strengthen the mixed-singleton obstruction.
+
+This excludes both quotient lines, hence all four orientations, throughout
+the depth-two local declared family: either the exact support torus, where all
+coordinates of the recorded support `S` have nonzero leading coefficient and
+outside coordinates vanish, or the conditional degeneration extension where
+every outside monomial stays strictly above every relevant active target and
+recorded singleton order.  Outside-term-entry cones remain unclassified.
+
+For audit only, the chosen normalized positive and negative lifts give these
+gauge-dependent counts:
+
+| chosen lift | unique mixed minima at order <= target |
+|---|---:|
+| A+ | {class_a["diagnostic_oriented_lift_replays"]["+"]["obstructing_count"]} |
+| A- | {class_a["diagnostic_oriented_lift_replays"]["-"]["obstructing_count"]} |
+| B+ | {class_b["diagnostic_oriented_lift_replays"]["+"]["obstructing_count"]} |
+| B- | {class_b["diagnostic_oriented_lift_replays"]["-"]["obstructing_count"]} |
+
+Those absolute-order counts are not residual-gauge invariant and are not used
+as proof.  This unequal-rate bundle itself makes no support-24 classification.
+The declared exact-support/no-outside-entry positive layer is handled by the
+separate support-24 circuit gate.
 
 ## Boundary
 
